@@ -59,7 +59,7 @@
 % Bold the 'Figure #' in the caption and separate it with a period
 % Captions will be left justified
 \usepackage[labelfont=bf,labelsep=period,justification=raggedright]{caption}
-
+\captionsetup[table]{name=Tabell}
 % Use the PLoS provided bibtex style
 \bibliographystyle{plos2009}
 
@@ -103,28 +103,33 @@
 % Projektets bakgrund
 \section{Bakgrund}
 \sloppy
-\noindent Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\noindent Utvecklingen av ett transportnät med en kontinuerligt förbättrad säkerhet och effektivitet är en för samhället mycket viktig utmaning och berör ekonomiska, hälsomässiga och, säkerhetsmässiga frågor. En allt större befolkning påverkar belastningen av vägnätet och förutsätter att det får en ökad kapacitet eller alternativt att transportflödena blir effektivare.
 
 % Projektets mål   
 \section{Mål}
 \sloppy
-\noindent Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\noindent Målet är att skapa ett styrsystem till en självkörande bil, som på ett säkert sätt kan köra på allmänna vägar. Bilen ska ta hänsyn till olika händelser i omgivning för att på ett säkert och för passageraren komfortabelt sätt anpassa sig till rådande trafiksituation. 
 
 % Projektets funktionalitet
 \section{Funktionalitet}
 \sloppy
-\noindent Lorem ipsum dolor sit amet: 
+\noindent Systemet ska
 \begin{itemize}
 	\setlength\itemsep{0.1em}
-	\item Lorem ipsum dolor sit amet
-	\item Lorem ipsum dolor sit amet
-	\item Lorem ipsum dolor sit amet
-	\item Lorem ipsum dolor sit amet
-	\item Lorem ipsum dolor sit amet
-	\item Lorem ipsum dolor sit amet
-	\item Lorem ipsum dolor sit amet
-	\item Lorem ipsum dolor sit amet
-	\item Lorem ipsum dolor sit amet
+	\item Alltid prioritera passagerarnas och omgivningens säkerhet högst.
+	\item När en bilolycka är oundviklig ska styrsystemet agera på ett sånt sätt att skada minimeras och räddande av människoliv prioriteras.
+	\item Följa svenska trafikregler.
+	\item Ta hänsyn till händelser i omgivningen och rådande trafiksitution när aktuell rutt bestäms.
+	\item Framföra fordonet på ett för passageraren komfortabelt sätt.
+	\item Hantera bränsle sparsamt.
+	\item Ta hänsyn till rådande och prognoser om framtida väderomständigheter vid säkerhetsvärdering.
+	\item Ta hänsyn till bilens skick utifrån sensordata vid säkerhetsvärdering.
+	\item Ta hänsyn till återstående räckvidd samt kunna lägga om rutten för att tanka vid behov.
+	\item Vid konflikt prioritera i följande ordning; säkerhet, trafikregler, komfort och bränsleeffiktivitet.
+	\item Autentisera förare med hjälp av en fingeravtryckssensor.
+	\item Stödja inmatning av destination genom röststyrning eller en tillgänglig pekskärm på bilens instrumentpanel och ge feedback på detta både med ljudmeddelanden och visuellt.
+	\item Kunna framföras utan passagerare.
+	\item Tillåta att bilen körs manuellt om detta läge valts.
 \end{itemize}
 
 
@@ -133,7 +138,7 @@
 \sloppy
 \noindent Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-\subsection{Kundteam: I}
+\subsection{Kundteam: grupp I}
 \noindent
 Johan Barkfors, zba10jan@student.lu.se (SCCVM)
 \\Olof Spångö, ain09osp@student.lu.se
@@ -144,7 +149,7 @@ Johan Barkfors, zba10jan@student.lu.se (SCCVM)
 \\Mattias Mellhorn, jcd11mto@student.lu.se
 
 
-\subsection{Utvecklingsteam: F}
+\subsection{Utvecklingsteam: grupp F}
 \noindent
 Alexander Badju, adi10aba@student.lu.se (P3RM)	
 \\*Fredrik Helander, gda10fhe@student.lu.se (EPM)
@@ -210,12 +215,12 @@ Därefter kommer projektet vara indelat i tre iterationer med tillhörande relea
         \hline
          & \emph{Vecka 2} & \emph{Vecka 3} & \emph{Vecka 4} & \emph{Vecka 5} &              \emph{Vecka 6} & \emph{Vecka 7} & \\
         \hline
-        Alexander & 2 h & 16 h & 15 h & 17 h & 16 h & 16 h & 83 h\\
-        David & 8 h & 13 h & 12 h & 17 h & 16 h & 17 h & 83 h\\
-        Fredrik & 8 h & 13 h & 12 h & 17 h & 16 h & 17 h & 83 h\\
-        Jonathan Kl & 6 h & 13 h & 14 h & 17 h & 16 h & 17 h & 83 h\\
-        Jonathan Kn & 7 h & 13 h & 13 h & 17 h & 16 h & 17 h & 83 h\\
-        Niklas & 9 h & 12 h & 12 h & 17 h & 16 h & 17 h & 83 h\\
+        Alexander Badju & 2 h & 16 h & 15 h & 17 h & 16 h & 16 h & 83 h\\
+        David Lundberg & 8 h & 13 h & 12 h & 17 h & 16 h & 17 h & 83 h\\
+        Fredrik Helander & 8 h & 13 h & 12 h & 17 h & 16 h & 17 h & 83 h\\
+        Jonathan Klingberg & 6 h & 13 h & 14 h & 17 h & 16 h & 17 h & 83 h\\
+        Jonathan Knorn & 7 h & 13 h & 13 h & 17 h & 16 h & 17 h & 83 h\\
+        Niklas Sjöberg & 9 h & 12 h & 12 h & 17 h & 16 h & 17 h & 83 h\\
         \hline
         \hline
          & 40 h & 80 h & 78 h & 102 h & 96 h & 102 h & 498 h\\

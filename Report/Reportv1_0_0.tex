@@ -77,11 +77,10 @@
 
 
 % Leave date blank
-\date{}
+\date{\today}
 
 \pagestyle{myheadings}
 %% ** EDIT HERE **
-
 
 %% ** EDIT HERE **
 %% PLEASE INCLUDE ALL MACROS BELOW
@@ -91,7 +90,7 @@
 \begin{document}
 
 % Title must be 150 characters or less
-\date{\today}
+%\date{\today}
 %\begin{center}
 \begin{titlepage}
 \clearpage
@@ -111,59 +110,40 @@
 \newpage
 \pagenumbering{arabic}
 
-\section{From the course description}
-\sloppy
-\noindent
-Project Experiences including the following information:
-\\(a) a description of your requirements engineering work, including experiences
-and reflections in relation to learning objectives.
-\\(b) Description of the chosen methods/techniques for elicitation, specifi-
-cation, validation, and prioritization.
-\\(c) Motivation for why you chose the used methods/techniques.
-\\(d) Reflection on the usage of these methods/techniques in terms of what
-was successful and what was challenging. Example questions for re-
-flection: What have you learned in relation to the learning objectives
-in this course program? What would you have done differently if you
-would do this project again as a ”real” project, based on what you know
-now? What have you learned in relation to the learning objectives?
-\\(e) A personal statement by each team member that briefly explains each
-individual’s contributions to the project results.
-\\(f) The Project Experiences should not include course evaluation issues,
-but focus on your own work and learning outcome.
-\newline
-
 %%%%% Requirement engineering work %%%%%%%%% 
 \section{Requirement engineering work}
-\noindent For this project we'll have three different releases which main objectives along with some other project experiences are described below.
+\noindent The project will be split up into three different releases which main objectives along with some project experiences are described below.
 \subsection{Release 1}
-The project started off by us setting up a group interview with the customers where they were allowed  to explain all of their thought and ideas without we even questioning them. Our questions After this meeting we realized the project scope would be too large to be able to handle within the scope of this course and needed to focus on the most vital functionalities.
-To get a first overview of the system features we started by creating a mind map where we could cut off branches not vital for the project and to reduce the project scope very easily.
-The main objective for release 1 was to focus on elicitation techniques to get a grip of the system requirements.
+The project started off by us setting up a group interview with the customer where they were encouraged to explain as much as possible about their ideas. After this meeting we realized the project scope would be too large to accomplish within the scope of this course. Further we needed to figure out and focus on the most vital functionalities for this system.
+To get a first overview of the system features we started by creating a mind map out of the material we've gathered from the initial customer meeting, with this the use of this map we could cut off branches with features not vital for the system to reduce the project scope.
+We had additional discussions with our customer about the cutted branches and in the end managed to negotiate a bit more reasonable project scope.
+\newline We've also created a context diagram to define the system interactions and different user roles.
+The main objective for release 1 was to focus on elicitation techniques in order to get a grip of the system requirements, which are summarized in the System Requirements Specification or SRS document, see reference \cite{srs}.
 
 %%%%% Elicitation %%%%%%%%% 
 \section{Elicitation}
 \sloppy
-\noindent Some description of elicitation.
+\noindent Elicitation is the process of finding and formulating requirements.
 \subsection{Elicitation barriers}
-The purpose of a system requirement and specification
-Elicitation barriers
-During the project elicitation phrase we experienced some elicitation barriers described below. 
-\subsubsection{Customers changes their minds}
-One of thing that was made clear after the first interview was that the system should focus on a private audience but soon after this interview they changed their minds and decided it should be possible to integrate into a taxi-activity for enterprise purposes.
+When converting stakeholders aspirations into requirements, we'll simply have to ask them questions about the purpose of the new system. During this process elicitation barriers often shows up where the stakeholders ideas are hard for them to explain or easily misunderstood in any other way.
+During the project elicitation phrase we experienced some of the most common elicitation barriers, which some examples are described below.
+
+\subsubsection{Customer changes their minds}
+One of the thing that was made clear after our first interview with our customer was that the system should focus on a private audience. Just a few days later we had another discussion with them and now they have changed their minds and decided it should be possible to integrate the system into a taxi-activity for enterprise purposes.
+
 \subsubsection{Luxury requirements}
-During our first interview we felt that the customers came up with too many requirements. Some of them were essential, while others were just “nice-to-have”, or so called luxury requirements. For example, they wanted the possibility for the autonomous cars to form a train so that the road network would be used more efficiently. While this was a nice feature to have, we did not feel that it was a necessity for achieving their main goals. This and similar disagreements were solved by negotiations and reasoning. 
+During our first interview we felt that the customer came up with too many requirements. Some of them were essential, while others were just “nice-to-have”, or so called luxury requirements. For example, they wanted the possibility for the autonomous cars to form a train so that the road network would be used more efficiently. While this was a nice feature to have, we did not feel that it was a necessity for achieving their main goals. This and similar disagreements were solved by further negotiations and reasoning. 
 
 \subsection{Elicitation techniques}
-For the first release of the requirements specification we decided to use the following elicitation techniques:
-Besides these we’ve tried observation but we found no use of this, document study.
-Task demostration kankse
-Focus group should be of great benefits but we don’t have resourses enough for this.
-Domain workshops aren’t applicable since there exists no expert users for this domain.
-We’re going to use prototyping for our next release.
-Main purpose of elicitation is to figure out our customer goals.
+Elicitation techniques are used to translate stakeholders aspirations into requirements.
+The elicitation techniques that we decided to use are described below.
+Besides these techniques we’ve also tried observation and document study but it didn't feel worth spending more time on those since they where time consuming and not that efficient at this point in the project.
+Putting together a Focus group should be of great benefits but we don’t feel like we have the resources enough to accomplish this.
+A domain workshop would be great but we don't feel like it's applicable since there exists no expert users for this domain as far as we know.
+However for our next release we're going to try prototyping as a new elicitation technique.
 
 \subsubsection{Stakeholder analysis}
-In a stakeholder analysis a research to find all the people who’s needed to ensure the success of the project is carried out. These people are then either interviewed or gathered to a joint meeting in order to get their ideas about the system. The goal of the meeting is to find answers to the following questions:
+In a stakeholder analysis different people which are needed to ensure the success of the project are first listed and then these people are either interviewed or invited to a joint meeting in order to collect their ideas about the system. These ideas are then gathered into a sustainable model where as many of the stakeholders as possible gets satisfied with the result. The goal of the analysis is to find answers to the following questions:
 \begin{itemize}
 \item What goals do they see for the system?
 \item Why would they like to contribute?
@@ -173,14 +153,13 @@ In a stakeholder analysis a research to find all the people who’s needed to en
 
 \paragraph{Execution}
 \hfill \break
-We listed all of the people and organizations that is needed to ensure the success of the project, the list can be found in reference \cite{pmv2}. All of the stakeholders have major interests in enhanced traffic-security.
+We listed all of the people and organizations that is needed to ensure the success of the project, the list can be found in reference \cite{pmv2}. But since most of the stakeholders were large organization we had to pretend what was their interests in this system and came up with features of interest for each of them.
 \paragraph{Motivation}
 \hfill \break
-It’s a simple way to summarize all partys that have interest in using this system and to get an overview of the people who probably will come in contact with this system.
+It’s a simple way to summarize and to get an overview of all groups and peoples who probably will come in contact with this system. Since this list consists of users of all different kinds it's very important to listen to what each of them feels like important for them so that all parties gets satisfied with the final result.
 \paragraph{Reflection}
 \hfill \break
-Most of our stakeholders are large organizations and don’t
-
+For example we found that one of the features that all of the stakeholders had in common was their major interests in enhanced traffic-security and further we realized the importance of implementing these features. We also realized that the insurance companies might lose income in case this system gets too secure and nobody buys traffic insurances anymore.
 
 \subsubsection{Interviewing}
 Interviewing is one of the most widely used eliciting techniques, but it has its pros and cons. It is a quite simple and straightforward technique that requires little planning and can be used in various situations. It is a good technique for getting information about the present work in the domain as well as present problems. It can also help identify where conflicts may lie, however other techniques are needed to resolve the conflicts (for example we used negotiation as a technique for resolving conflicts with our stakeholders, this will be discussed later in the report). Interviewing is not as good at identifying the goals and critical issues.
@@ -190,16 +169,16 @@ Structured -  the interviewer has prepared a set of questions that needs to be a
 Unstructured - the interviewer has not prepared any questions and instead openly discuss what is expected from the system. 
 \paragraph{Execution}
 \hfill \break
-We felt that a structured interview where we prepared a list of questions to ask where most fitting when meeting with our customers. Unstructured interviews requires more experience and are harder to perform. However, we did leave room for follow-up questions to confirm our understanding of what the customer asked for and why they asked for it. 
+We felt that a structured interview where we prepared a list of questions to ask where most fitting when meeting with our customer. Unstructured interviews requires more experience and are harder to perform. However, we did leave room for follow-up questions to confirm our understanding of what the customer asked for and why they asked for it. 
 \paragraph{Motivation}
 \hfill \break
-Since the Project Mission where quite vague and left out a lot of functionality (intentionally), we had a lot of questions about the system that needed to be answered before we could start working on the requirements specification. We felt that we needed to get clarification fairly soon, and as interviewing requires little planning and work, and doesn’t take to long to perform, it was deemed a fitting technique to use. Interviews also allows the interviewer and interviewee(s) to discuss and explain the questions and answers, which can give even further clarification. It also gives us the possibility to ask follow-up questions to confirm our understanding. 
+Since the Project Mission where quite vague and left out a lot of functionality (intentionally), we had a lot of questions about the system that needed to be answered before we could start working on the requirements specification. We felt that we needed to get clarification fairly soon, and as interviewing requires little planning and work and doesn’t take to long to perform, it was deemed a fitting technique to use. Interviews also allows the interviewer and interviewee(s) to discuss and explain the questions and answers, which can give even further clarification. It also gives us the possibility to ask follow-up questions to confirm our understanding. 
 \paragraph{Reflection}
 \hfill \break
-What to put here??????
+The interview elicitation technique has been of great success for our project. Even if we noticed some of the elicitation barriers it still feels like we've managed to gather the information needed to form a viable SRS and with little effort spent.
 
 \subsubsection{Brainstorming}
-Using brainstorming as an elicitation technique is an effective way of generating new ideas. During a brainstorm session it is of great importance not to criticize any idea. This creates an environment where no group member is afraid of being ridiculed and thus enable the group produce new ideas at a higher rate.
+Using brainstorming as an elicitation technique is an effective way of generating new ideas. During a brainstorm session it is of great importance not to criticize any idea. This creates an environment where no group member is afraid of being ridiculed and thus enable the group to produce new ideas at a higher rate.
 The process of separating good ideas from bad ones is saved until after the brainstorming session.
 \paragraph{Execution}
 \hfill \break
@@ -209,8 +188,7 @@ We held brainstorming sessions i a room where we had access to a whiteboard. Dur
 We decided to use this elicitation technique as it was a natural step in the beginning of the elicitation process. The technique enables us to quickly gather a set of ideas on how to handle new problems that occur.
 \paragraph{Reflection}
 \hfill \break
-The technique allowed us not only to come up with new requirements but also enabled us, in the beginning of the elicitation process, to get an overview of the system we are building.
-
+The technique allowed us not only to come up with new requirements but also enabled us, in the beginning of the elicitation process, to get an united overview of the system we are building.
 
 \subsubsection{Negotiation}
 The sole purpose of negotiation is to resolve conflicts. Conflicts can, for example, occur between supplier and customer, or between various stakeholders inside the organization. There are many ways of resolving conflicts, for example, having each party describe what they believe the other party wants and why they want it. However, when resolving a conflict in requirements engineering it is important to analyze the goals for each party. Conflicts are often about the solution, but the trick is to find solutions that don’t conflict, but support everybody’s goals.
@@ -222,21 +200,7 @@ As the conflicts with our customer group occured during the interviews we addres
 During the interviews with our customer we had a few disagreements, or conflicts if you may, that needed to be resolved. We also experienced conflicts within our organization (project group) during elicitation and while choosing what tools to use in the project. Since negotiation is a good way of resolving conflicts, we chose to apply it to both cases.
 \paragraph{Reflection}
 \hfill \break
-The negotiations resolved the conflicts we had internally in our project group as well as the ones we had with our customer group. This lead 
-
-
-\subsubsection{Domain-requirements analysis}
-\paragraph{Execution}
-\paragraph{Motivation}
-\paragraph{Reflection}
-
-
-\subsubsection{Similar companies}
-\paragraph{Execution}
-Studied similar companies/products. Mostly googled “autonomous cars” and read articles. 
-Since we’re no expert we wanted to look at possible
-\paragraph{Motivation}
-\paragraph{Reflection}
+The negotiations resolved the conflicts we had internally in our project group as well as the ones we had with our customer group.
 
 %%%%% INDIVIDUAL STATEMENTS %%%%%%%%%
 \section{Individual statements}
@@ -246,8 +210,9 @@ As project leader, my contribution to this weeks work has consisted of organizin
 \subsection{Fredrik Helander, EPM}
 I have participated in group meetings and discussions as well as been active in the requirement elicitation process. I have formulated tasks and requirements.  
 \subsection{Jonathan Klingberg, SCCVM/TDEVM}
-Besides the regular project work such as meetings and group discussions, Jonathan has also been working with setting up tools and some initial tool guidance for the other project members.
+Jonathan has written some parts of the project experiences document, besides this and the regular project work such as being active at meetings and group discussions, he has also been working with setting up tools and some initial tool guidance for the other project members.
 \subsection{Jonathan Knorn, TDEVM}
+Jonathan has mainly been working with requirements both elicitation, dependecies and mapping tools. He has also been active in the common group work and been active at meetings.
 \subsection{David Lundberg, QRM}
 David has been working mostly with the requirements, been active at the meetings, and worked with scenarios as well as finding elicitation methods.
 \subsection{Niklas Sjöberg, DRM}
@@ -255,7 +220,8 @@ Taken part in group meetings as well as customer meetings. Attended the reqT int
 
 %\addcontentsline{toc}{section}{References}
 \begin{thebibliography}{1}
-\bibitem{pmv2} Project Mission version 2. 
+\bibitem{pmv2} Crash Project Mission version 2. 
+\bibitem{srs} Crash Software Requirements Specification version 1. 
 
 \end{thebibliography}
 

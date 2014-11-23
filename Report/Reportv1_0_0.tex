@@ -37,7 +37,7 @@
 \\ Grupp F}
 
 
-
+\usepackage[nottoc,notlot,notlof]{tocbibind}
 
 \usepackage{titlesec}
 \titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
@@ -60,6 +60,7 @@
 \captionsetup[table]{name=Tabell}
 % Use the PLoS provided bibtex style
 \bibliographystyle{plos2009}
+
 
 % Remove brackets from numbering in List of References
 \makeatletter
@@ -164,7 +165,7 @@ In a stakeholder analysis a research to find all the people who’s needed to en
 \end{itemize}
 
 \paragraph{Integration}
-We listed all of the people and organizations that is needed to ensure the success of the project, the list can be found in reference [1]. All of the stakeholders have major intrests in enhanced traffic-security.
+We listed all of the people and organizations that is needed to ensure the success of the project, the list can be found in reference \cite{pmv2}. All of the stakeholders have major interests in enhanced traffic-security.
 \paragraph{Motivation}
 It’s a simple way to summarize all partys that have interest in using this system and to get an overview of the people who probably will come in contact with this system.
 \paragraph{Reflection}
@@ -212,9 +213,15 @@ Most of our stakeholders are large organizations and don’t
 \subsection{Alexander Badju, P3RM}
 \subsection{Fredrik Helander, EPM}
 \subsection{Jonathan Klingberg, SCCVM/TDEVM}
-Jonathan has been working with setting up tools and also some initial tool guidance for the other project members.
+Besides the regular project work such as meetings and group discussions, Jonathan has also been working with setting up tools and some initial tool guidance for the other project members.
 \subsection{Jonathan Knorn, TDEVM}
 \subsection{David Lundberg, QRM}
 \subsection{Niklas Sjöberg, DRM}
+
+%\addcontentsline{toc}{section}{References}
+\begin{thebibliography}{1}
+\bibitem{pmv2} Project Mission version 2. 
+
+\end{thebibliography}
 
 \end{document}

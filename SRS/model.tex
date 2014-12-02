@@ -1,0 +1,287 @@
+\section{Dependencies}
+
+\begin{lstlisting}
+Domain FDo1 requires
+  Product DPr1
+  Domain FDo4
+  Domain FDo7
+  Product FPr11
+Domain FDo2 requires
+  Domain FDo5
+Domain FDo3 requires
+  Product FPr11
+Domain FDo4a requires
+  Domain FDo5
+Domain FDo4b requires
+  Domain FDo5
+Domain FDo12 requires
+  Domain FDo7
+Domain FDo15a requires
+  Domain DDo1a
+  Domain DDo1b
+  Domain DDo1c
+  Domain DDo1d
+Domain FDo15b requires
+  Domain DDo1a
+  Domain DDo1b
+  Domain DDo1c
+  Domain DDo1d
+Product FPr1 requires
+  Domain FDo6
+Product FPr2 requires
+  Product DPr3
+  Product FPr1
+Product FPr3 requires
+  Domain FDo6
+Product FPr6 requires
+  Product FPr5
+Product FPr7 requires
+  Domain FDo8
+Product FPr9 requires
+  Domain FDo10
+Product FPr11 requires
+  Product DPr6
+Domain DDo2 requires
+  Product DPr3
+Domain DDo4 requires
+  Domain DDo3
+Product DPr7 requires
+  Product Dpr2
+Domain QDo1 requires
+  Domain FDo5
+Product QPr1 requires
+  Domain FDo6
+Product QPr2 requires
+  Domain FDo6
+Product QPr3 requires
+  Domain FDo5
+Product QPr4 requires
+  Domain FDo6
+Product FPr8 requires
+  Domain FDo1
+  Domain FDo8
+Domain DDo3 requires
+  Product Dpr2
+  Product DPr3
+Product FPr12 requires
+  Domain FDo5
+  Product FPr11
+
+\end{lstlisting}
+
+
+       \section{Functional requirements}
+
+
+\begin{lstlisting}
+
+\end{lstlisting}
+
+
+       \subsection{Functional goal requirements}
+
+
+\begin{lstlisting}
+Goal FGo1
+  Spec Autonomous car
+
+\end{lstlisting}
+    
+        
+       \subsection{Functional domain requirements}
+
+
+\begin{lstlisting}
+Domain FDo1
+  Spec The system must adhere to Swedish traffic laws
+Domain FDo2
+  Spec If an accident can be avoided, the system may break traffic laws.
+Domain FDo3
+  Spec When the car is in an unsafe state the car must not be able/allowed to drive.
+Domain FDo4a
+  Spec In the situation of an accident, the system must prioritize risks in the following order: Saving as many human lives as possible has top priority
+Domain FDo4b
+  Spec In the situation of an accident, the system must prioritize risks in the following order: Protecting humans inside the car is prioritized over humans outside the car
+Domain FDo5
+  Spec The system requires adequate sensors for monitoring the road and surroundings.
+Domain FDo6
+  Spec The system requires an Internet connection
+Domain FDo7
+  Spec The system requires a GPS-sensor
+Domain FDo8
+  Spec The system requires a breathalyzer.
+Domain FDo9
+  Spec The system requires a fingerprint-sensor.
+Domain FDo10
+  Spec The system requires a microphone.
+Domain FDo11
+  Spec The system functions without a GPS-signal once a route has been chosen.
+Domain FDo12
+  Spec The system needs GPS-signal at startup.
+Domain FDo13
+  Spec The system must strive to ecodrive.
+Domain FDo14
+  Spec All user interaction that is available in the system must be possible to enter remotely.
+Domain FDo15a
+  Spec The system must support: permanent user rights
+Domain FDo15b
+  Spec The system must support: temporary user rights
+
+\end{lstlisting}
+    
+        
+       \subsection{Functional product requirements}
+
+
+\begin{lstlisting}
+Product FPr1
+  Spec The system has to to retrieve current and future weather data using from the Internet when a  connection is available.
+Product FPr2
+  Spec The system must give a warning when dangerous weather conditions are predicted along the planned route.
+Product FPr3
+  Spec The system has to retrieve data of current and future traffic situations when an Internet connection is available.
+Product FPr4
+  Spec The system must always be able to stop via an emergency-break.
+Product FPr5
+  Spec It must always be possible to request to turn off the autonomous system and drive the car manually.
+Product FPr6
+  Spec When manual driving has been requested, the car has to be standing still before the autonomous system is turned off.
+Product FPr7
+  Spec For a passenger to be able to turn off the system and drive the car manually, the person has to blow under the legal limit in the breathalyzer.
+Product FPr8
+  Spec The breathalyzer must be configured according to Swedish traffic law
+Product FPr9
+  Spec The system must support voice controlled input
+Product FPr10
+  Spec The system must input from the car's dashboard
+Product FPr11
+  Spec The system has to be able to evaluate the car's status compared to current Swedish car inspection rules before driving off.
+Product FPr12
+  Spec The system must order a towing service when it is in an unsafe state.
+
+\end{lstlisting}
+    
+        
+       \subsection{Functional scenario requirements}
+
+
+\begin{lstlisting}
+Scenario FSc1
+Spec  Niklas Sjöberg’s football practice is over and he remotely tells his car to pick him and his friends up at the football pitch, he uses his phone and the CRASH-application. The next step is that the car drives to pick up Niklas and his friends. When the car arrives, Niklas authenticates himself by fingerprint with the cars fingerprint scanner located on the car key. When the authentication is done, Niklas and his friends enter the car and Niklas tells the car where to drive using voice control, when this is done, the car drives the passengers to the given addresses. One of Niklas’ friends lives further away than Niklas himself and he is tired and he wants to be dropped off first. Since Niklas was the driver and now leaves the car, the passenger left in the car has to authenticate himself and thus becomes a authenticated passenger, using the fingerprint scanner.
+Scenario FSc2
+  Spec Jonathan Klingberg is at work and something very important has just come up, which means that he cannot pick up his child at school as planned. Instead he uses his phone to remotely tell his car to pick up his child. The child receives a notification from the car that it is on its way for a pick up and how long it should take to arrive. When the car arrives, the child authenticates itself with the cars built-in fingerprint scanner and enters the car. The car drives the child home with the fathers predetermined route input.
+  
+\noindent\textbf{Scenario FSc3} Successful car driver creation  \\
+Precondition: Logged in as the owner on the touch panel in the car.
+\begin{enumerate}
+\item The administrator navigates to the users settings in the system preferences.
+\iten The administrator selects the option for adding a new system user.
+\item The system asks for user data of the new user.
+\item The administrator enters the information which fulfills DPr2a, DPr2b, DPr2c.
+\item The administrator chooses to submit the information.
+\item The system responds with a success message and returns the administrator to an updated version of the users page.
+\end{enumerate}
+
+\end{lstlisting}
+    
+        
+       \section{Data requirements}
+
+
+\begin{lstlisting}
+
+\end{lstlisting}
+
+
+       \subsection{Data domain requirements}
+
+
+\begin{lstlisting}
+Domain DDo1a
+  Spec The system must support the following authorized user types: Passenger
+Domain DDo1b
+  Spec The system must support the following authorized user types: Driver
+Domain DDo1c
+  Spec The system must support the following authorized user types: Owner
+Domain DDo1d
+  Spec The system must support the following authorized user types: Admin
+Domain DDo2
+  Spec A driver must be able to choose & change destination
+Domain DDo3
+  Spec An owner must be able to choose & change destination as well as handle users
+Domain DDo4
+  Spec An admin must have the same rights as an owner and the admin must be able to change system settings.
+
+\end{lstlisting}
+    
+        
+       \subsection{Data product requirements}
+
+
+\begin{lstlisting}
+Product DPr1
+  Spec The system must store Swedish traffic rules.
+Product DPr2a
+  Spec The system must store the following user data: Name
+Product DPr2b
+  Spec The system must store the following user data: User type
+Product DPr2c
+  Spec The system must store the following user data: Fingerprint
+Product DPr3
+  Spec The system must store route data
+Product DPr4
+  Spec The system must store a service log
+Product DPr5
+  Spec The system must be able to store future traffic laws.
+Product DPr6
+  Spec The system must store Swedish car inspections rules and regulations.
+Product DPr7
+  Spec If there are users in the car, at least one needs to be authenticated.
+
+\end{lstlisting}
+    
+        
+       \section{Quality requirements}
+
+
+\begin{lstlisting}
+
+\end{lstlisting}
+
+
+       \subsection{Quality goal requirements}
+
+
+\begin{lstlisting}
+Goal QGo1
+  Spec The system must strive for maximal safety
+Goal QGo2
+  Spec The system response time must be lower than 100 ms
+
+\end{lstlisting}
+    
+        
+       \subsection{Quality domain requirements}
+
+
+\begin{lstlisting}
+Domain QDo1
+  Spec The system is able to drive until the next connecting road without a GPS-signal
+
+\end{lstlisting}
+    
+        
+       \subsection{Quality product requirements}
+
+
+\begin{lstlisting}
+Product QPr1
+  Spec The system must query for new traffic laws/regulations at least once a day.
+Product QPr2
+  Spec The system must query for new car inspection rules/regulations online at least once a day.
+Product QPr3
+  Spec System updates must only be performed when the car is parked.
+Product QPr4
+  Spec Traffic and weather data must be fetched every minute when an Internet connection is available
+
+\end{lstlisting}

@@ -81,7 +81,7 @@ Title CRASH
     Domain DDo2
       Spec A driver should be able to choose & change destination
     Domain DDo3
-      Spec An owner should be able to choose & change destination as well as handle users
+      An owner should have the same rights as a driver and should also be able to handle users. 
     Domain DDo4
       Spec An admin should have the same rights as an owner and the admin should be able to change system settings.
   # DataProductRequirements
@@ -103,6 +103,8 @@ Title CRASH
       Spec The system should store Swedish car inspections rules and regulations.
     Product DPr7
       Spec If there are users in the car, at least one needs to be authenticated.
+    Product DPr8
+      The service log should contain the following data: date, service type, serviceprovider, Mileage, Description
 # QualityRequirements
   # QualityGoalRequirements
     Goal QGo1

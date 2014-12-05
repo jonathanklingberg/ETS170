@@ -3,6 +3,22 @@ Title CRASH
   # FunctionalGoalRequirements
     Goal FGo1
       Spec Autonomous car
+    Goal FGo2
+      Spec Reduce amount of traffic accidents on Swedish roads
+    Goal FGo3
+      Spec Maintain industry market shares
+    Goal FGo4
+      Spec Achieve maximal usability
+    Goal FGo5
+      Spec Avoid human deaths in traffic
+    Goal FGo6
+      Spec Achieve maximal security
+    Goal FGo7
+      Spec Expand to other markets than private use
+    Goal FGo8
+      Spec Achieve maximum comfort
+    Goal FGo9
+    Spec Reduce cars' negative impacts on the environment
   # FunctionalDomainRequirements
     Domain FDo1
       Spec The system must adhere to Swedish traffic laws
@@ -81,7 +97,7 @@ Title CRASH
     Domain DDo2
       Spec A driver must be able to choose & change destination
     Domain DDo3
-      An owner has the same rights as a driver and must also be able to handle users. 
+      An owner has the same rights as a driver and must also be able to handle users.
     Domain DDo4
       Spec An admin must have the same rights as an owner and the admin must be able to change system settings.
   # DataProductRequirements

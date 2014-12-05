@@ -1,0 +1,177 @@
+Title CRASH
+# FunctionalRequirements
+  # FunctionalGoalRequirements
+    Goal FGo1
+      Spec Autonomous car
+  # FunctionalDomainRequirements
+    Domain FDo1
+      Spec The system should adhere to Swedish traffic laws
+    Domain FDo2
+      Spec If an accident can be avoided, the system may break traffic laws.
+    Domain FDo3
+      Spec When the car is in an unsafe state the car should not be able/allowed to drive.
+    Domain FDo4a
+      Spec In the situation of an accident, the system should prioritize risks in the following order: Saving as many human lives as possible has top priority
+    Domain FDo4b
+      Spec In the situation of an accident, the system should prioritize risks in the following order: Protecting humans inside the car is prioritized over humans outside the car
+    Domain FDo5
+      Spec The system requires adequate sensors for monitoring the road and surroundings.
+    Domain FDo6
+      Spec The system requires an Internet connection
+    Domain FDo7
+      Spec The system requires a GPS-sensor
+    Domain FDo8
+      Spec The system requires a breathalyzer.
+    Domain FDo9
+      Spec The system requires a fingerprint-sensor.
+    Domain FDo10
+      Spec The system requires a microphone.
+    Domain FDo11
+      Spec The system doesn't need GPS-signal at all times.
+    Domain FDo12
+      Spec The system needs GPS-signal at startup.
+    Domain FDo13
+      Spec The system should strive to ecodrive.
+    Domain FDo14
+      Spec All user interaction that is available in the system should be possible to enter remotely.
+    Domain FDo15a
+      Spec The system should support: permanent user rights
+    Domain FDo15b
+      Spec The system should support: temporary user rights
+  # FunctionalProductRequirements
+    Product FPr1
+      Spec The system has to to retrieve current and future weather data using from the Internet when a  connection is available.
+    Product FPr2
+      Spec The system should give a warning when dangerous weather conditions are predicted along the planned route.
+    Product FPr3
+      Spec The system has to retrieve data of current and future traffic situations when an Internet connection is available.
+    Product FPr4
+      Spec The system should always be possible to stop via an emergency-break.
+    Product FPr5
+      Spec It should always be possible to request to turn off the autonomous system and drive the car manually.
+    Product FPr6
+      Spec When manual driving has been requested, the car has to be standing still before the autonomous system is turned off.
+    Product FPr7
+      Spec For a passenger to be able to turn off the system and drive the car manually, the person has to blow under the legal limit in the breathalyzer.
+    Product FPr8
+      Spec The breathalyzer should be configured according to Swedish traffic law
+    Product FPr9
+      Spec The system should support voice controlled input
+    Product FPr10
+      Spec The system should input from the car's dashboard
+    Product FPr11
+      Spec The system has to be able to evaluate the car's status compared to current Swedish car inspection rules before driving off.
+    Product FPr12
+      Spec The system should order a towing service when it is in an unsafe state.
+# DataRequirements
+  # DataDomainRequirements
+    Domain DDo1a
+      Spec The system should support the following authorized user types: Passenger
+    Domain DDo1b
+      Spec The system should support the following authorized user types: Driver
+    Domain DDo1c
+      Spec The system should support the following authorized user types: Owner
+    Domain DDo1d
+      Spec The system should support the following authorized user types: Admin
+    Domain DDo2
+      Spec A driver should be able to choose & change destination
+    Domain DDo3
+      Spec An owner should be able to choose & change destination as well as handle users
+    Domain DDo4
+      Spec An admin should have the same rights as an owner and the admin should be able to change system settings.
+  # DataProductRequirements
+    Product DPr1
+      Spec The system should store Swedish traffic rules.
+    Product DPr2a
+      Spec The system should store the following user data: Name
+    Product DPr2b
+      Spec The system should store the following user data: User type
+    Product DPr2c
+      Spec The system should store the following user data: Fingerprint
+    Product DPr3
+      Spec The system should store route data
+    Product DPr4
+      Spec The system should store a service log
+    Product DPr5
+      Spec The system should be able to store future traffic laws.
+    Product DPr6
+      Spec The system should store Swedish car inspections rules and regulations.
+    Product DPr7
+      Spec If there are users in the car, at least one needs to be authenticated.
+# QualityRequirements
+  # QualityGoalRequirements
+    Goal QGo1
+      Spec The system should strive for maximal safety
+    Goal QGo2
+      Spec The system response time should be lower than 100 ms
+  # QualityDomainRequirements
+    Domain QDo1
+      Spec If the system does not have a GPS-signal, it should be able to drive until the next connecting road
+  # QualityProductRequirements
+    Product QPr1
+      Spec The system should query for new traffic laws/regulations at least once a day.
+    Product QPr2
+      Spec The system should query for new car inspection rules/regulations online at least once a day.
+    Product QPr3
+      Spec System updates should only be performed when the car is parked.
+    Product QPr4
+      Spec Traffic and weather data should be fetched every minute when an Internet connection is available
+Domain FDo1 requires
+  Product DPr1
+  Domain FDo4
+  Domain FDo7
+  Product FPr11
+Domain FDo2 requires
+  Domain FDo5
+Domain FDo3 requires
+  Product FPr11
+Domain FDo4a requires
+  Domain FDo5
+Domain FDo4b requires
+  Domain FDo5
+Domain FDo12 requires
+  Domain FDo7
+Domain FDo15a requires
+  Domain DDo1
+Domain FDo15b requires
+  Domain DDo1
+Domain FPr1 requires
+  Domain FDo6
+Domain FPr2 requires
+  Product DPr3
+  Product FPr1
+Domain FPr3 requires
+  Domain FDo6
+Domain FPr6 requires
+  Product FPr5
+Domain FPr7 requires
+  Domain FDo8
+Domain FPr9 requires
+  Domain FDo10
+Domain FPr11 requires
+  Product DPr6
+Domain DDo2 requires
+  Product DPr3
+Domain DDo4 requires
+  Domain DDo3
+Domain DPr7 requires
+  Product Dpr2
+Domain QDo1 requires
+  Domain FDo5
+Domain QPr1 requires
+  Domain FDo6
+Domain QPr2 requires
+  Domain FDo6
+Domain QPr3 requires
+  Domain FDo5
+Domain QPr4 requires
+  Domain FDo6
+Domain FPr8 requires
+  Domain FDo1
+  Domain FDo8
+Domain DDo3 requires
+  Product Dpr2
+  Product DPr3
+Domain FPr12 requires
+  Domain FDo5
+  Product FPr11

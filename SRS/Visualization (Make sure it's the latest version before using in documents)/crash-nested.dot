@@ -1,0 +1,630 @@
+digraph "reqT.Model" { 
+
+  compound=true;overlap=false;rankdir=LR;clusterrank=local;
+  node [fontname="Sans", fontsize=9];
+  edge [fontname="Sans", fontsize=9];
+
+
+//subGraphPre(Product(FPr11),precedes,Domain(FDo1),/)
+
+  "/Product(FPr11)" [label="Product\nFPr11", shape=box];
+  "/Product(FPr11)" ->   "/Product(FPr11).precedes/Domain(FDo1)" [label=precedes, lhead="cluster_Product(FPr11)"];
+  subgraph "cluster_Product(FPr11)" { 
+    "/Product(FPr11).precedes/Domain(FDo1)" [label="Domain\nFDo1", shape=box];
+    "/Product(FPr11).precedes/Domain(FDo3)" [label="Domain\nFDo3", shape=box];
+    "/Product(FPr11).precedes/Product(FPr12)" [label="Product\nFPr12", shape=box];
+  }
+
+//subGraphPre(Domain(FDo5),precedes,Domain(FDo2),/)
+
+  "/Domain(FDo5)" [label="Domain\nFDo5", shape=box];
+  "/Domain(FDo5)" ->   "/Domain(FDo5).precedes/Domain(FDo2)" [label=precedes, lhead="cluster_Domain(FDo5)"];
+  subgraph "cluster_Domain(FDo5)" { 
+    "/Domain(FDo5).precedes/Domain(FDo2)" [label="Domain\nFDo2", shape=box];
+    "/Domain(FDo5).precedes/Domain(FDo4)" [label="Domain\nFDo4", shape=box];
+    "/Domain(FDo5).precedes/Domain(QDo1)" [label="Domain\nQDo1", shape=box];
+    "/Domain(FDo5).precedes/Product(QPr3)" [label="Product\nQPr3", shape=box];
+    "/Domain(FDo5).precedes/Product(FPr12)" [label="Product\nFPr12", shape=box];
+  }
+
+//subGraphPre(Product(DPr3),precedes,Product(FPr2),/)
+
+  "/Product(DPr3)" [label="Product\nDPr3", shape=box];
+  "/Product(DPr3)" ->   "/Product(DPr3).precedes/Product(FPr2)" [label=precedes, lhead="cluster_Product(DPr3)"];
+  subgraph "cluster_Product(DPr3)" { 
+    "/Product(DPr3).precedes/Product(FPr2)" [label="Product\nFPr2", shape=box];
+    "/Product(DPr3).precedes/Domain(DDo2)" [label="Domain\nDDo2", shape=box];
+    "/Product(DPr3).precedes/Domain(DDo3)" [label="Domain\nDDo3", shape=box];
+  }
+
+//subGraphPre(Product(Dpr2),precedes,Product(DPr7),/)
+
+  "/Product(Dpr2)" [label="Product\nDpr2", shape=box];
+  "/Product(Dpr2)" ->   "/Product(Dpr2).precedes/Product(DPr7)" [label=precedes, lhead="cluster_Product(Dpr2)"];
+  subgraph "cluster_Product(Dpr2)" { 
+    "/Product(Dpr2).precedes/Product(DPr7)" [label="Product\nDPr7", shape=box];
+    "/Product(Dpr2).precedes/Domain(DDo3)" [label="Domain\nDDo3", shape=box];
+  }
+
+//subGraphPre(Domain(FDo8),precedes,Product(FPr7),/)
+
+  "/Domain(FDo8)" [label="Domain\nFDo8", shape=box];
+  "/Domain(FDo8)" ->   "/Domain(FDo8).precedes/Product(FPr7)" [label=precedes, lhead="cluster_Domain(FDo8)"];
+  subgraph "cluster_Domain(FDo8)" { 
+    "/Domain(FDo8).precedes/Product(FPr7)" [label="Product\nFPr7", shape=box];
+    "/Domain(FDo8).precedes/Product(FPr8)" [label="Product\nFPr8", shape=box];
+  }
+
+//singleSubnodeLink(Domain(FDo1),precedes,Product(FPr8),/)
+
+  "/Domain(FDo1)" [label="Domain\nFDo1", shape=box];
+  "/Domain(FDo1).precedes/Product(FPr8)" [label="Product\nFPr8", shape=box];
+  "/Domain(FDo1)" ->   "/Domain(FDo1).precedes/Product(FPr8)"[label=precedes];
+
+//subGraphPre(Domain(FDo6),precedes,Product(FPr1),/)
+
+  "/Domain(FDo6)" [label="Domain\nFDo6", shape=box];
+  "/Domain(FDo6)" ->   "/Domain(FDo6).precedes/Product(FPr1)" [label=precedes, lhead="cluster_Domain(FDo6)"];
+  subgraph "cluster_Domain(FDo6)" { 
+    "/Domain(FDo6).precedes/Product(FPr1)" [label="Product\nFPr1", shape=box];
+    "/Domain(FDo6).precedes/Product(FPr3)" [label="Product\nFPr3", shape=box];
+    "/Domain(FDo6).precedes/Product(QPr1)" [label="Product\nQPr1", shape=box];
+    "/Domain(FDo6).precedes/Product(QPr2)" [label="Product\nQPr2", shape=box];
+    "/Domain(FDo6).precedes/Product(QPr4)" [label="Product\nQPr4", shape=box];
+  }
+
+//singleSubnodeLink(Domain(DDo3),precedes,Domain(DDo4),/)
+
+  "/Domain(DDo3)" [label="Domain\nDDo3", shape=box];
+  "/Domain(DDo3).precedes/Domain(DDo4)" [label="Domain\nDDo4", shape=box];
+  "/Domain(DDo3)" ->   "/Domain(DDo3).precedes/Domain(DDo4)"[label=precedes];
+
+//singleSubnodeLink(Product(DPr6),precedes,Product(FPr11),/)
+
+  "/Product(DPr6)" [label="Product\nDPr6", shape=box];
+  "/Product(DPr6).precedes/Product(FPr11)" [label="Product\nFPr11", shape=box];
+  "/Product(DPr6)" ->   "/Product(DPr6).precedes/Product(FPr11)"[label=precedes];
+
+//singleSubnodeLink(Domain(FDo10),precedes,Product(FPr9),/)
+
+  "/Domain(FDo10)" [label="Domain\nFDo10", shape=box];
+  "/Domain(FDo10).precedes/Product(FPr9)" [label="Product\nFPr9", shape=box];
+  "/Domain(FDo10)" ->   "/Domain(FDo10).precedes/Product(FPr9)"[label=precedes];
+
+//singleSubnodeLink(Product(FPr5),precedes,Product(FPr6),/)
+
+  "/Product(FPr5)" [label="Product\nFPr5", shape=box];
+  "/Product(FPr5).precedes/Product(FPr6)" [label="Product\nFPr6", shape=box];
+  "/Product(FPr5)" ->   "/Product(FPr5).precedes/Product(FPr6)"[label=precedes];
+
+//singleSubnodeLink(Product(FPr1),precedes,Product(FPr2),/)
+
+  "/Product(FPr1)" [label="Product\nFPr1", shape=box];
+  "/Product(FPr1).precedes/Product(FPr2)" [label="Product\nFPr2", shape=box];
+  "/Product(FPr1)" ->   "/Product(FPr1).precedes/Product(FPr2)"[label=precedes];
+
+//singleSubnodeLink(Domain(DDo1),precedes,Domain(FDo15),/)
+
+  "/Domain(DDo1)" [label="Domain\nDDo1", shape=box];
+  "/Domain(DDo1).precedes/Domain(FDo15)" [label="Domain\nFDo15", shape=box];
+  "/Domain(DDo1)" ->   "/Domain(DDo1).precedes/Domain(FDo15)"[label=precedes];
+
+//subGraphPre(Domain(FDo7),precedes,Domain(FDo1),/)
+
+  "/Domain(FDo7)" [label="Domain\nFDo7", shape=box];
+  "/Domain(FDo7)" ->   "/Domain(FDo7).precedes/Domain(FDo1)" [label=precedes, lhead="cluster_Domain(FDo7)"];
+  subgraph "cluster_Domain(FDo7)" { 
+    "/Domain(FDo7).precedes/Domain(FDo1)" [label="Domain\nFDo1", shape=box];
+    "/Domain(FDo7).precedes/Domain(FDo12)" [label="Domain\nFDo12", shape=box];
+  }
+
+//singleSubnodeLink(Domain(FDo4),precedes,Domain(FDo1),/)
+
+  "/Domain(FDo4)" [label="Domain\nFDo4", shape=box];
+  "/Domain(FDo4).precedes/Domain(FDo1)" [label="Domain\nFDo1", shape=box];
+  "/Domain(FDo4)" ->   "/Domain(FDo4).precedes/Domain(FDo1)"[label=precedes];
+
+//singleSubnodeLink(Product(DPr1),precedes,Domain(FDo1),/)
+
+  "/Product(DPr1)" [label="Product\nDPr1", shape=box];
+  "/Product(DPr1).precedes/Domain(FDo1)" [label="Domain\nFDo1", shape=box];
+  "/Product(DPr1)" ->   "/Product(DPr1).precedes/Domain(FDo1)"[label=precedes];
+
+//subGraphPre(Section(QualityRequirements),has,Section(QualityGoalRequirements),/)
+
+  "/Section(QualityRequirements)" [label="Section\nQualityRequirements", shape=box];
+  "/Section(QualityRequirements)" ->   "/Section(QualityRequirements).has/Section(QualityGoalRequirements)" [label=has, lhead="cluster_Section(QualityRequirements)"];
+  subgraph "cluster_Section(QualityRequirements)" { 
+
+//subGraphPre(Section(QualityGoalRequirements),has,Goal(QGo1),Section(QualityRequirements).has/)
+
+    "/Section(QualityRequirements).has/Section(QualityGoalRequirements)" [label="Section\nQualityGoalRequirements", shape=box];
+    "/Section(QualityRequirements).has/Section(QualityGoalRequirements)" ->   "/Section(QualityRequirements).has/Section(QualityGoalRequirements).has/Goal(QGo1)" [label=has, lhead="cluster_Section(QualityGoalRequirements)"];
+    subgraph "cluster_Section(QualityGoalRequirements)" { 
+
+//singleSubnodeLink(Goal(QGo1),has,Spec(The system must strive for maximal safety),Section(QualityRequirements).has/Section(QualityGoalRequirements).has/)
+
+      "/Section(QualityRequirements).has/Section(QualityGoalRequirements).has/Goal(QGo1)" [label="Goal\nQGo1", shape=box];
+      "/Section(QualityRequirements).has/Section(QualityGoalRequirements).has/Goal(QGo1).has/Spec(The system must strive for maximal safety)" [label="Spec\nThe system must strive for maximal safety", shape=box, style=rounded];
+      "/Section(QualityRequirements).has/Section(QualityGoalRequirements).has/Goal(QGo1)" ->   "/Section(QualityRequirements).has/Section(QualityGoalRequirements).has/Goal(QGo1).has/Spec(The system must strive for maximal safety)"[label=has];
+
+//singleSubnodeLink(Goal(QGo2),has,Spec(The system response time must be lower than 100 ms),Section(QualityRequirements).has/Section(QualityGoalRequirements).has/)
+
+      "/Section(QualityRequirements).has/Section(QualityGoalRequirements).has/Goal(QGo2)" [label="Goal\nQGo2", shape=box];
+      "/Section(QualityRequirements).has/Section(QualityGoalRequirements).has/Goal(QGo2).has/Spec(The system response time must be lower than 100 ms)" [label="Spec\nThe system response time must be lower than 100 ms", shape=box, style=rounded];
+      "/Section(QualityRequirements).has/Section(QualityGoalRequirements).has/Goal(QGo2)" ->   "/Section(QualityRequirements).has/Section(QualityGoalRequirements).has/Goal(QGo2).has/Spec(The system response time must be lower than 100 ms)"[label=has];
+    }
+
+//singleSubnodeLink(Section(QualityDomainRequirements),has,Domain(QDo1),Section(QualityRequirements).has/)
+
+    "/Section(QualityRequirements).has/Section(QualityDomainRequirements)" [label="Section\nQualityDomainRequirements", shape=box];
+    "/Section(QualityRequirements).has/Section(QualityDomainRequirements).has/Domain(QDo1)" [label="Domain\nQDo1", shape=box];
+    "/Section(QualityRequirements).has/Section(QualityDomainRequirements)" ->   "/Section(QualityRequirements).has/Section(QualityDomainRequirements).has/Domain(QDo1)"[label=has];
+
+//singleSubnodeLink(Domain(QDo1),has,Spec(The system is able to drive until the next connecting road without a GPS-signal),Section(QualityRequirements).has/Section(QualityDomainRequirements).has/)
+
+      "/Section(QualityRequirements).has/Section(QualityDomainRequirements).has/Domain(QDo1)" [label="Domain\nQDo1", shape=box];
+      "/Section(QualityRequirements).has/Section(QualityDomainRequirements).has/Domain(QDo1).has/Spec(The system is able to drive until the next connecting road without a GPS-signal)" [label="Spec\nThe system is able to drive until the next connecting road without a GPS-signal", shape=box, style=rounded];
+      "/Section(QualityRequirements).has/Section(QualityDomainRequirements).has/Domain(QDo1)" ->   "/Section(QualityRequirements).has/Section(QualityDomainRequirements).has/Domain(QDo1).has/Spec(The system is able to drive until the next connecting road without a GPS-signal)"[label=has];
+        "/Section(QualityRequirements).has/Section(QualityDomainRequirements).has/Domain(QDo1).has/Spec(The system is able to drive until the next connecting road without a GPS-signal)" [label="Spec\nThe system is able to drive until the next connecting road without a GPS-signal", shape=box, style=rounded];
+
+//subGraphPre(Section(QualityProductRequirements),has,Product(QPr1),Section(QualityRequirements).has/)
+
+    "/Section(QualityRequirements).has/Section(QualityProductRequirements)" [label="Section\nQualityProductRequirements", shape=box];
+    "/Section(QualityRequirements).has/Section(QualityProductRequirements)" ->   "/Section(QualityRequirements).has/Section(QualityProductRequirements).has/Product(QPr1)" [label=has, lhead="cluster_Section(QualityProductRequirements)"];
+    subgraph "cluster_Section(QualityProductRequirements)" { 
+
+//singleSubnodeLink(Product(QPr1),has,Spec(The system must query for new traffic laws/regulations at least once a day),Section(QualityRequirements).has/Section(QualityProductRequirements).has/)
+
+      "/Section(QualityRequirements).has/Section(QualityProductRequirements).has/Product(QPr1)" [label="Product\nQPr1", shape=box];
+      "/Section(QualityRequirements).has/Section(QualityProductRequirements).has/Product(QPr1).has/Spec(The system must query for new traffic laws/regulations at least once a day)" [label="Spec\nThe system must query for new traffic laws/regulations at least once a day", shape=box, style=rounded];
+      "/Section(QualityRequirements).has/Section(QualityProductRequirements).has/Product(QPr1)" ->   "/Section(QualityRequirements).has/Section(QualityProductRequirements).has/Product(QPr1).has/Spec(The system must query for new traffic laws/regulations at least once a day)"[label=has];
+
+//singleSubnodeLink(Product(QPr2),has,Spec(The system must query for new car inspection rules/regulations online at least once a day),Section(QualityRequirements).has/Section(QualityProductRequirements).has/)
+
+      "/Section(QualityRequirements).has/Section(QualityProductRequirements).has/Product(QPr2)" [label="Product\nQPr2", shape=box];
+      "/Section(QualityRequirements).has/Section(QualityProductRequirements).has/Product(QPr2).has/Spec(The system must query for new car inspection rules/regulations online at least once a day)" [label="Spec\nThe system must query for new car inspection rules/regulations online at least once a day", shape=box, style=rounded];
+      "/Section(QualityRequirements).has/Section(QualityProductRequirements).has/Product(QPr2)" ->   "/Section(QualityRequirements).has/Section(QualityProductRequirements).has/Product(QPr2).has/Spec(The system must query for new car inspection rules/regulations online at least once a day)"[label=has];
+
+//singleSubnodeLink(Product(QPr3),has,Spec(System updates must only be performed when the car is parked),Section(QualityRequirements).has/Section(QualityProductRequirements).has/)
+
+      "/Section(QualityRequirements).has/Section(QualityProductRequirements).has/Product(QPr3)" [label="Product\nQPr3", shape=box];
+      "/Section(QualityRequirements).has/Section(QualityProductRequirements).has/Product(QPr3).has/Spec(System updates must only be performed when the car is parked)" [label="Spec\nSystem updates must only be performed when the car is parked", shape=box, style=rounded];
+      "/Section(QualityRequirements).has/Section(QualityProductRequirements).has/Product(QPr3)" ->   "/Section(QualityRequirements).has/Section(QualityProductRequirements).has/Product(QPr3).has/Spec(System updates must only be performed when the car is parked)"[label=has];
+
+//singleSubnodeLink(Product(QPr4),has,Spec(Traffic and weather data must be fetched every minute when an Internet connection is available),Section(QualityRequirements).has/Section(QualityProductRequirements).has/)
+
+      "/Section(QualityRequirements).has/Section(QualityProductRequirements).has/Product(QPr4)" [label="Product\nQPr4", shape=box];
+      "/Section(QualityRequirements).has/Section(QualityProductRequirements).has/Product(QPr4).has/Spec(Traffic and weather data must be fetched every minute when an Internet connection is available)" [label="Spec\nTraffic and weather data must be fetched every minute when an Internet connection is available", shape=box, style=rounded];
+      "/Section(QualityRequirements).has/Section(QualityProductRequirements).has/Product(QPr4)" ->   "/Section(QualityRequirements).has/Section(QualityProductRequirements).has/Product(QPr4).has/Spec(Traffic and weather data must be fetched every minute when an Internet connection is available)"[label=has];
+    }
+  }
+
+//subGraphPre(Section(DataRequirements),has,Section(DataDomainRequirements),/)
+
+  "/Section(DataRequirements)" [label="Section\nDataRequirements", shape=box];
+  "/Section(DataRequirements)" ->   "/Section(DataRequirements).has/Section(DataDomainRequirements)" [label=has, lhead="cluster_Section(DataRequirements)"];
+  subgraph "cluster_Section(DataRequirements)" { 
+
+//subGraphPre(Section(DataDomainRequirements),has,Domain(DDo1),Section(DataRequirements).has/)
+
+    "/Section(DataRequirements).has/Section(DataDomainRequirements)" [label="Section\nDataDomainRequirements", shape=box];
+    "/Section(DataRequirements).has/Section(DataDomainRequirements)" ->   "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1)" [label=has, lhead="cluster_Section(DataDomainRequirements)"];
+    subgraph "cluster_Section(DataDomainRequirements)" { 
+
+//subGraphPre(Domain(DDo1),has,Domain(DDo1a),Section(DataRequirements).has/Section(DataDomainRequirements).has/)
+
+      "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1)" [label="Domain\nDDo1", shape=box];
+      "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1)" ->   "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/Domain(DDo1a)" [label=has, lhead="cluster_Domain(DDo1)"];
+      subgraph "cluster_Domain(DDo1)" { 
+
+//singleSubnodeLink(Domain(DDo1a),has,Spec(The system must support the following authorized user types: Passenger),Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/)
+
+        "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/Domain(DDo1a)" [label="Domain\nDDo1a", shape=box];
+        "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/Domain(DDo1a).has/Spec(The system must support the following authorized user types: Passenger)" [label="Spec\nThe system must support the following authorized user types: Passenger", shape=box, style=rounded];
+        "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/Domain(DDo1a)" ->   "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/Domain(DDo1a).has/Spec(The system must support the following authorized user types: Passenger)"[label=has];
+
+//singleSubnodeLink(Domain(DDo1b),has,Spec(The system must support the following authorized user types: Driver),Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/)
+
+        "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/Domain(DDo1b)" [label="Domain\nDDo1b", shape=box];
+        "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/Domain(DDo1b).has/Spec(The system must support the following authorized user types: Driver)" [label="Spec\nThe system must support the following authorized user types: Driver", shape=box, style=rounded];
+        "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/Domain(DDo1b)" ->   "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/Domain(DDo1b).has/Spec(The system must support the following authorized user types: Driver)"[label=has];
+
+//singleSubnodeLink(Domain(DDo1c),has,Spec(The system must support the following authorized user types: Owner),Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/)
+
+        "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/Domain(DDo1c)" [label="Domain\nDDo1c", shape=box];
+        "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/Domain(DDo1c).has/Spec(The system must support the following authorized user types: Owner)" [label="Spec\nThe system must support the following authorized user types: Owner", shape=box, style=rounded];
+        "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/Domain(DDo1c)" ->   "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/Domain(DDo1c).has/Spec(The system must support the following authorized user types: Owner)"[label=has];
+
+//singleSubnodeLink(Domain(DDo1d),has,Spec(The system must support the following authorized user types: Admin),Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/)
+
+        "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/Domain(DDo1d)" [label="Domain\nDDo1d", shape=box];
+        "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/Domain(DDo1d).has/Spec(The system must support the following authorized user types: Admin)" [label="Spec\nThe system must support the following authorized user types: Admin", shape=box, style=rounded];
+        "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/Domain(DDo1d)" ->   "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo1).has/Domain(DDo1d).has/Spec(The system must support the following authorized user types: Admin)"[label=has];
+      }
+
+//singleSubnodeLink(Domain(DDo2),has,Spec(A driver must be able to choose & change destination),Section(DataRequirements).has/Section(DataDomainRequirements).has/)
+
+      "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo2)" [label="Domain\nDDo2", shape=box];
+      "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo2).has/Spec(A driver must be able to choose & change destination)" [label="Spec\nA driver must be able to choose & change destination", shape=box, style=rounded];
+      "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo2)" ->   "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo2).has/Spec(A driver must be able to choose & change destination)"[label=has];
+
+//singleSubnodeLink(Domain(DDo3),has,Text(An owner has the same rights as a driver and must also be able to handle users),Section(DataRequirements).has/Section(DataDomainRequirements).has/)
+
+      "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo3)" [label="Domain\nDDo3", shape=box];
+      "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo3).has/Text(An owner has the same rights as a driver and must also be able to handle users)" [label="Text\nAn owner has the same rights as a driver and must also be able to handle users", shape=box, style=rounded];
+      "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo3)" ->   "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo3).has/Text(An owner has the same rights as a driver and must also be able to handle users)"[label=has];
+
+//singleSubnodeLink(Domain(DDo4),has,Spec(An admin must have the same rights as an owner and the admin must be able to change system settings),Section(DataRequirements).has/Section(DataDomainRequirements).has/)
+
+      "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo4)" [label="Domain\nDDo4", shape=box];
+      "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo4).has/Spec(An admin must have the same rights as an owner and the admin must be able to change system settings)" [label="Spec\nAn admin must have the same rights as an owner and the admin must be able to change system settings", shape=box, style=rounded];
+      "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo4)" ->   "/Section(DataRequirements).has/Section(DataDomainRequirements).has/Domain(DDo4).has/Spec(An admin must have the same rights as an owner and the admin must be able to change system settings)"[label=has];
+    }
+
+//subGraphPre(Section(DataProductRequirements),has,Product(DPr1),Section(DataRequirements).has/)
+
+    "/Section(DataRequirements).has/Section(DataProductRequirements)" [label="Section\nDataProductRequirements", shape=box];
+    "/Section(DataRequirements).has/Section(DataProductRequirements)" ->   "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr1)" [label=has, lhead="cluster_Section(DataProductRequirements)"];
+    subgraph "cluster_Section(DataProductRequirements)" { 
+
+//singleSubnodeLink(Product(DPr1),has,Spec(The system must store Swedish traffic rules),Section(DataRequirements).has/Section(DataProductRequirements).has/)
+
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr1)" [label="Product\nDPr1", shape=box];
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr1).has/Spec(The system must store Swedish traffic rules)" [label="Spec\nThe system must store Swedish traffic rules", shape=box, style=rounded];
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr1)" ->   "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr1).has/Spec(The system must store Swedish traffic rules)"[label=has];
+
+//subGraphPre(Product(DPr2),has,Product(DPr2a),Section(DataRequirements).has/Section(DataProductRequirements).has/)
+
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr2)" [label="Product\nDPr2", shape=box];
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr2)" ->   "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr2).has/Product(DPr2a)" [label=has, lhead="cluster_Product(DPr2)"];
+      subgraph "cluster_Product(DPr2)" { 
+
+//singleSubnodeLink(Product(DPr2a),has,Spec(The system must store the following user data: Name),Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr2).has/)
+
+        "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr2).has/Product(DPr2a)" [label="Product\nDPr2a", shape=box];
+        "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr2).has/Product(DPr2a).has/Spec(The system must store the following user data: Name)" [label="Spec\nThe system must store the following user data: Name", shape=box, style=rounded];
+        "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr2).has/Product(DPr2a)" ->   "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr2).has/Product(DPr2a).has/Spec(The system must store the following user data: Name)"[label=has];
+
+//singleSubnodeLink(Product(DPr2b),has,Spec(The system must store the following user data: User type),Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr2).has/)
+
+        "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr2).has/Product(DPr2b)" [label="Product\nDPr2b", shape=box];
+        "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr2).has/Product(DPr2b).has/Spec(The system must store the following user data: User type)" [label="Spec\nThe system must store the following user data: User type", shape=box, style=rounded];
+        "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr2).has/Product(DPr2b)" ->   "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr2).has/Product(DPr2b).has/Spec(The system must store the following user data: User type)"[label=has];
+
+//singleSubnodeLink(Product(DPr2c),has,Spec(The system must store the following user data: Fingerprint),Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr2).has/)
+
+        "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr2).has/Product(DPr2c)" [label="Product\nDPr2c", shape=box];
+        "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr2).has/Product(DPr2c).has/Spec(The system must store the following user data: Fingerprint)" [label="Spec\nThe system must store the following user data: Fingerprint", shape=box, style=rounded];
+        "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr2).has/Product(DPr2c)" ->   "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr2).has/Product(DPr2c).has/Spec(The system must store the following user data: Fingerprint)"[label=has];
+      }
+
+//singleSubnodeLink(Product(DPr3),has,Spec(The system must store route data),Section(DataRequirements).has/Section(DataProductRequirements).has/)
+
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr3)" [label="Product\nDPr3", shape=box];
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr3).has/Spec(The system must store route data)" [label="Spec\nThe system must store route data", shape=box, style=rounded];
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr3)" ->   "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr3).has/Spec(The system must store route data)"[label=has];
+
+//singleSubnodeLink(Product(DPr4),has,Spec(The system must store a service log),Section(DataRequirements).has/Section(DataProductRequirements).has/)
+
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr4)" [label="Product\nDPr4", shape=box];
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr4).has/Spec(The system must store a service log)" [label="Spec\nThe system must store a service log", shape=box, style=rounded];
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr4)" ->   "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr4).has/Spec(The system must store a service log)"[label=has];
+
+//singleSubnodeLink(Product(DPr5),has,Spec(The system must be able to store future traffic laws),Section(DataRequirements).has/Section(DataProductRequirements).has/)
+
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr5)" [label="Product\nDPr5", shape=box];
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr5).has/Spec(The system must be able to store future traffic laws)" [label="Spec\nThe system must be able to store future traffic laws", shape=box, style=rounded];
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr5)" ->   "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr5).has/Spec(The system must be able to store future traffic laws)"[label=has];
+
+//singleSubnodeLink(Product(DPr6),has,Spec(The system must store Swedish car inspections rules and regulations),Section(DataRequirements).has/Section(DataProductRequirements).has/)
+
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr6)" [label="Product\nDPr6", shape=box];
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr6).has/Spec(The system must store Swedish car inspections rules and regulations)" [label="Spec\nThe system must store Swedish car inspections rules and regulations", shape=box, style=rounded];
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr6)" ->   "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr6).has/Spec(The system must store Swedish car inspections rules and regulations)"[label=has];
+
+//singleSubnodeLink(Product(DPr7),has,Spec(If there are users in the car, at least one needs to be authenticated),Section(DataRequirements).has/Section(DataProductRequirements).has/)
+
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr7)" [label="Product\nDPr7", shape=box];
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr7).has/Spec(If there are users in the car, at least one needs to be authenticated)" [label="Spec\nIf there are users in the car, at least one needs to be authenticated", shape=box, style=rounded];
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr7)" ->   "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr7).has/Spec(If there are users in the car, at least one needs to be authenticated)"[label=has];
+
+//singleSubnodeLink(Product(DPr8),has,Text(The service log should contain the following data: date, service type, serviceprovider, Mileage, Description),Section(DataRequirements).has/Section(DataProductRequirements).has/)
+
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr8)" [label="Product\nDPr8", shape=box];
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr8).has/Text(The service log should contain the following data: date, service type, serviceprovider, Mileage, Description)" [label="Text\nThe service log should contain the following data: date, service type, serviceprovider, Mileage, Description", shape=box, style=rounded];
+      "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr8)" ->   "/Section(DataRequirements).has/Section(DataProductRequirements).has/Product(DPr8).has/Text(The service log should contain the following data: date, service type, serviceprovider, Mileage, Description)"[label=has];
+    }
+  }
+
+//subGraphPre(Section(FunctionalRequirements),has,Section(FunctionalGoalRequirements),/)
+
+  "/Section(FunctionalRequirements)" [label="Section\nFunctionalRequirements", shape=box];
+  "/Section(FunctionalRequirements)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements)" [label=has, lhead="cluster_Section(FunctionalRequirements)"];
+  subgraph "cluster_Section(FunctionalRequirements)" { 
+
+//subGraphPre(Section(FunctionalGoalRequirements),has,Goal(FGo1),Section(FunctionalRequirements).has/)
+
+    "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements)" [label="Section\nFunctionalGoalRequirements", shape=box];
+    "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo1)" [label=has, lhead="cluster_Section(FunctionalGoalRequirements)"];
+    subgraph "cluster_Section(FunctionalGoalRequirements)" { 
+
+//singleSubnodeLink(Goal(FGo1),has,Spec(Autonomous car),Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo1)" [label="Goal\nFGo1", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo1).has/Spec(Autonomous car)" [label="Spec\nAutonomous car", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo1)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo1).has/Spec(Autonomous car)"[label=has];
+
+//singleSubnodeLink(Goal(FGo2),has,Spec(Reduce amount of traffic accidents on Swedish roads),Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo2)" [label="Goal\nFGo2", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo2).has/Spec(Reduce amount of traffic accidents on Swedish roads)" [label="Spec\nReduce amount of traffic accidents on Swedish roads", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo2)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo2).has/Spec(Reduce amount of traffic accidents on Swedish roads)"[label=has];
+
+//singleSubnodeLink(Goal(FGo3),has,Spec(Maintain industry market shares),Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo3)" [label="Goal\nFGo3", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo3).has/Spec(Maintain industry market shares)" [label="Spec\nMaintain industry market shares", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo3)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo3).has/Spec(Maintain industry market shares)"[label=has];
+
+//singleSubnodeLink(Goal(FGo4),has,Spec(Achieve maximal usability),Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo4)" [label="Goal\nFGo4", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo4).has/Spec(Achieve maximal usability)" [label="Spec\nAchieve maximal usability", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo4)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo4).has/Spec(Achieve maximal usability)"[label=has];
+
+//singleSubnodeLink(Goal(FGo5),has,Spec(Avoid human deaths in traffic),Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo5)" [label="Goal\nFGo5", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo5).has/Spec(Avoid human deaths in traffic)" [label="Spec\nAvoid human deaths in traffic", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo5)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo5).has/Spec(Avoid human deaths in traffic)"[label=has];
+
+//singleSubnodeLink(Goal(FGo6),has,Spec(Achieve maximal security),Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo6)" [label="Goal\nFGo6", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo6).has/Spec(Achieve maximal security)" [label="Spec\nAchieve maximal security", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo6)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo6).has/Spec(Achieve maximal security)"[label=has];
+
+//singleSubnodeLink(Goal(FGo7),has,Spec(Expand to other markets than private use),Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo7)" [label="Goal\nFGo7", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo7).has/Spec(Expand to other markets than private use)" [label="Spec\nExpand to other markets than private use", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo7)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo7).has/Spec(Expand to other markets than private use)"[label=has];
+
+//singleSubnodeLink(Goal(FGo8),has,Spec(Achieve maximum comfort),Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo8)" [label="Goal\nFGo8", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo8).has/Spec(Achieve maximum comfort)" [label="Spec\nAchieve maximum comfort", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo8)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo8).has/Spec(Achieve maximum comfort)"[label=has];
+
+//singleSubnodeLink(Goal(FGo9),has,Spec(Reduce cars' negative impacts on the environment),Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo9)" [label="Goal\nFGo9", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo9).has/Spec(Reduce cars' negative impacts on the environment)" [label="Spec\nReduce cars' negative impacts on the environment", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo9)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalGoalRequirements).has/Goal(FGo9).has/Spec(Reduce cars' negative impacts on the environment)"[label=has];
+    }
+
+//subGraphPre(Section(FunctionalDomainRequirements),has,Domain(FDo1),Section(FunctionalRequirements).has/)
+
+    "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements)" [label="Section\nFunctionalDomainRequirements", shape=box];
+    "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo1)" [label=has, lhead="cluster_Section(FunctionalDomainRequirements)"];
+    subgraph "cluster_Section(FunctionalDomainRequirements)" { 
+
+//singleSubnodeLink(Domain(FDo1),has,Spec(The system must adhere to Swedish traffic laws as long as an accident is not imminent),Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo1)" [label="Domain\nFDo1", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo1).has/Spec(The system must adhere to Swedish traffic laws as long as an accident is not imminent)" [label="Spec\nThe system must adhere to Swedish traffic laws as long as an accident is not imminent", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo1)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo1).has/Spec(The system must adhere to Swedish traffic laws as long as an accident is not imminent)"[label=has];
+
+//singleSubnodeLink(Domain(FDo2),has,Spec(If an accident can be avoided, the system may break traffic laws),Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo2)" [label="Domain\nFDo2", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo2).has/Spec(If an accident can be avoided, the system may break traffic laws)" [label="Spec\nIf an accident can be avoided, the system may break traffic laws", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo2)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo2).has/Spec(If an accident can be avoided, the system may break traffic laws)"[label=has];
+
+//singleSubnodeLink(Domain(FDo3),has,Spec(When the car is in an unsafe state the car must not be able/allowed to drive),Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo3)" [label="Domain\nFDo3", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo3).has/Spec(When the car is in an unsafe state the car must not be able/allowed to drive)" [label="Spec\nWhen the car is in an unsafe state the car must not be able/allowed to drive", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo3)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo3).has/Spec(When the car is in an unsafe state the car must not be able/allowed to drive)"[label=has];
+
+//subGraphPre(Domain(FDo4),has,Domain(FDo4a),Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo4)" [label="Domain\nFDo4", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo4)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo4).has/Domain(FDo4a)" [label=has, lhead="cluster_Domain(FDo4)"];
+      subgraph "cluster_Domain(FDo4)" { 
+
+//singleSubnodeLink(Domain(FDo4a),has,Spec(In the situation of an accident, the system must prioritize risks in the following order: Saving as many human lives as possible has top priority),Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo4).has/)
+
+        "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo4).has/Domain(FDo4a)" [label="Domain\nFDo4a", shape=box];
+        "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo4).has/Domain(FDo4a).has/Spec(In the situation of an accident, the system must prioritize risks in the following order: Saving as many human lives as possible has top priority)" [label="Spec\nIn the situation of an accident, the system must prioritize risks in the following order: Saving as many human lives as possible has top priority", shape=box, style=rounded];
+        "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo4).has/Domain(FDo4a)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo4).has/Domain(FDo4a).has/Spec(In the situation of an accident, the system must prioritize risks in the following order: Saving as many human lives as possible has top priority)"[label=has];
+
+//singleSubnodeLink(Domain(FDo4b),has,Spec(In the situation of an accident, the system must prioritize risks in the following order: Protecting humans inside the car is prioritized over humans outside the car),Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo4).has/)
+
+        "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo4).has/Domain(FDo4b)" [label="Domain\nFDo4b", shape=box];
+        "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo4).has/Domain(FDo4b).has/Spec(In the situation of an accident, the system must prioritize risks in the following order: Protecting humans inside the car is prioritized over humans outside the car)" [label="Spec\nIn the situation of an accident, the system must prioritize risks in the following order: Protecting humans inside the car is prioritized over humans outside the car", shape=box, style=rounded];
+        "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo4).has/Domain(FDo4b)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo4).has/Domain(FDo4b).has/Spec(In the situation of an accident, the system must prioritize risks in the following order: Protecting humans inside the car is prioritized over humans outside the car)"[label=has];
+      }
+
+//singleSubnodeLink(Domain(FDo5),has,Spec(The system requires adequate sensors for monitoring the road and surroundings),Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo5)" [label="Domain\nFDo5", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo5).has/Spec(The system requires adequate sensors for monitoring the road and surroundings)" [label="Spec\nThe system requires adequate sensors for monitoring the road and surroundings", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo5)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo5).has/Spec(The system requires adequate sensors for monitoring the road and surroundings)"[label=has];
+
+//singleSubnodeLink(Domain(FDo6),has,Spec(The system requires an Internet connection),Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo6)" [label="Domain\nFDo6", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo6).has/Spec(The system requires an Internet connection)" [label="Spec\nThe system requires an Internet connection", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo6)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo6).has/Spec(The system requires an Internet connection)"[label=has];
+
+//singleSubnodeLink(Domain(FDo7),has,Spec(The system requires a GPS-sensor),Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo7)" [label="Domain\nFDo7", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo7).has/Spec(The system requires a GPS-sensor)" [label="Spec\nThe system requires a GPS-sensor", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo7)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo7).has/Spec(The system requires a GPS-sensor)"[label=has];
+
+//singleSubnodeLink(Domain(FDo8),has,Spec(The system requires a breathalyzer),Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo8)" [label="Domain\nFDo8", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo8).has/Spec(The system requires a breathalyzer)" [label="Spec\nThe system requires a breathalyzer", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo8)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo8).has/Spec(The system requires a breathalyzer)"[label=has];
+
+//singleSubnodeLink(Domain(FDo9),has,Spec(The system requires a fingerprint-sensor),Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo9)" [label="Domain\nFDo9", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo9).has/Spec(The system requires a fingerprint-sensor)" [label="Spec\nThe system requires a fingerprint-sensor", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo9)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo9).has/Spec(The system requires a fingerprint-sensor)"[label=has];
+
+//singleSubnodeLink(Domain(FDo10),has,Spec(The system requires a microphone),Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo10)" [label="Domain\nFDo10", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo10).has/Spec(The system requires a microphone)" [label="Spec\nThe system requires a microphone", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo10)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo10).has/Spec(The system requires a microphone)"[label=has];
+
+//singleSubnodeLink(Domain(FDo11),has,Spec(The system functions without a GPS-signal once a route has been chosen),Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo11)" [label="Domain\nFDo11", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo11).has/Spec(The system functions without a GPS-signal once a route has been chosen)" [label="Spec\nThe system functions without a GPS-signal once a route has been chosen", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo11)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo11).has/Spec(The system functions without a GPS-signal once a route has been chosen)"[label=has];
+
+//singleSubnodeLink(Domain(FDo12),has,Spec(The system needs a GPS-signal at startup),Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo12)" [label="Domain\nFDo12", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo12).has/Spec(The system needs a GPS-signal at startup)" [label="Spec\nThe system needs a GPS-signal at startup", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo12)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo12).has/Spec(The system needs a GPS-signal at startup)"[label=has];
+
+//singleSubnodeLink(Domain(FDo13),has,Spec(The system must strive to ecodrive when possible),Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo13)" [label="Domain\nFDo13", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo13).has/Spec(The system must strive to ecodrive when possible)" [label="Spec\nThe system must strive to ecodrive when possible", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo13)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo13).has/Spec(The system must strive to ecodrive when possible)"[label=has];
+
+//singleSubnodeLink(Domain(FDo14),has,Spec(All user interaction that is available in the system must be possible to enter remotely),Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo14)" [label="Domain\nFDo14", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo14).has/Spec(All user interaction that is available in the system must be possible to enter remotely)" [label="Spec\nAll user interaction that is available in the system must be possible to enter remotely", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo14)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo14).has/Spec(All user interaction that is available in the system must be possible to enter remotely)"[label=has];
+
+//subGraphPre(Domain(FDo15),has,Domain(FDo15a),Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo15)" [label="Domain\nFDo15", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo15)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo15).has/Domain(FDo15a)" [label=has, lhead="cluster_Domain(FDo15)"];
+      subgraph "cluster_Domain(FDo15)" { 
+
+//singleSubnodeLink(Domain(FDo15a),has,Spec(The system must support: permanent user rights),Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo15).has/)
+
+        "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo15).has/Domain(FDo15a)" [label="Domain\nFDo15a", shape=box];
+        "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo15).has/Domain(FDo15a).has/Spec(The system must support: permanent user rights)" [label="Spec\nThe system must support: permanent user rights", shape=box, style=rounded];
+        "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo15).has/Domain(FDo15a)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo15).has/Domain(FDo15a).has/Spec(The system must support: permanent user rights)"[label=has];
+
+//singleSubnodeLink(Domain(FDo15b),has,Spec(The system must support: temporary user rights),Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo15).has/)
+
+        "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo15).has/Domain(FDo15b)" [label="Domain\nFDo15b", shape=box];
+        "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo15).has/Domain(FDo15b).has/Spec(The system must support: temporary user rights)" [label="Spec\nThe system must support: temporary user rights", shape=box, style=rounded];
+        "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo15).has/Domain(FDo15b)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalDomainRequirements).has/Domain(FDo15).has/Domain(FDo15b).has/Spec(The system must support: temporary user rights)"[label=has];
+      }
+    }
+
+//subGraphPre(Section(FunctionalProductRequirements),has,Product(FPr1),Section(FunctionalRequirements).has/)
+
+    "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements)" [label="Section\nFunctionalProductRequirements", shape=box];
+    "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr1)" [label=has, lhead="cluster_Section(FunctionalProductRequirements)"];
+    subgraph "cluster_Section(FunctionalProductRequirements)" { 
+
+//singleSubnodeLink(Product(FPr1),has,Spec(The system has to to retrieve current and future weather data using from the Internet when a connection is available),Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr1)" [label="Product\nFPr1", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr1).has/Spec(The system has to to retrieve current and future weather data using from the Internet when a connection is available)" [label="Spec\nThe system has to to retrieve current and future weather data using from the Internet when a connection is available", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr1)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr1).has/Spec(The system has to to retrieve current and future weather data using from the Internet when a connection is available)"[label=has];
+
+//singleSubnodeLink(Product(FPr2),has,Spec(The system must give a warning when dangerous weather conditions are predicted along the planned route),Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr2)" [label="Product\nFPr2", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr2).has/Spec(The system must give a warning when dangerous weather conditions are predicted along the planned route)" [label="Spec\nThe system must give a warning when dangerous weather conditions are predicted along the planned route", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr2)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr2).has/Spec(The system must give a warning when dangerous weather conditions are predicted along the planned route)"[label=has];
+
+//singleSubnodeLink(Product(FPr3),has,Spec(The system has to retrieve data of current and future traffic situations when an Internet connection is available),Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr3)" [label="Product\nFPr3", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr3).has/Spec(The system has to retrieve data of current and future traffic situations when an Internet connection is available)" [label="Spec\nThe system has to retrieve data of current and future traffic situations when an Internet connection is available", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr3)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr3).has/Spec(The system has to retrieve data of current and future traffic situations when an Internet connection is available)"[label=has];
+
+//singleSubnodeLink(Product(FPr4),has,Spec(The system must always be possible to stop via an emergency-break),Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr4)" [label="Product\nFPr4", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr4).has/Spec(The system must always be possible to stop via an emergency-break)" [label="Spec\nThe system must always be possible to stop via an emergency-break", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr4)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr4).has/Spec(The system must always be possible to stop via an emergency-break)"[label=has];
+
+//singleSubnodeLink(Product(FPr5),has,Spec(It must always be possible to request to turn off the autonomous system and drive the car manually),Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr5)" [label="Product\nFPr5", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr5).has/Spec(It must always be possible to request to turn off the autonomous system and drive the car manually)" [label="Spec\nIt must always be possible to request to turn off the autonomous system and drive the car manually", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr5)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr5).has/Spec(It must always be possible to request to turn off the autonomous system and drive the car manually)"[label=has];
+
+//singleSubnodeLink(Product(FPr6),has,Spec(When manual driving has been requested, the car has to be standing still before the autonomous system is turned off),Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr6)" [label="Product\nFPr6", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr6).has/Spec(When manual driving has been requested, the car has to be standing still before the autonomous system is turned off)" [label="Spec\nWhen manual driving has been requested, the car has to be standing still before the autonomous system is turned off", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr6)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr6).has/Spec(When manual driving has been requested, the car has to be standing still before the autonomous system is turned off)"[label=has];
+
+//singleSubnodeLink(Product(FPr7),has,Spec(For a passenger to be able to turn off the system and drive the car manually, the person has to blow under the legal limit in the breathalyzer),Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr7)" [label="Product\nFPr7", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr7).has/Spec(For a passenger to be able to turn off the system and drive the car manually, the person has to blow under the legal limit in the breathalyzer)" [label="Spec\nFor a passenger to be able to turn off the system and drive the car manually, the person has to blow under the legal limit in the breathalyzer", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr7)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr7).has/Spec(For a passenger to be able to turn off the system and drive the car manually, the person has to blow under the legal limit in the breathalyzer)"[label=has];
+
+//singleSubnodeLink(Product(FPr8),has,Spec(The breathalyzer has to be configured according to Swedish traffic law),Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr8)" [label="Product\nFPr8", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr8).has/Spec(The breathalyzer has to be configured according to Swedish traffic law)" [label="Spec\nThe breathalyzer has to be configured according to Swedish traffic law", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr8)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr8).has/Spec(The breathalyzer has to be configured according to Swedish traffic law)"[label=has];
+
+//singleSubnodeLink(Product(FPr9),has,Spec(The system has to support voice controlled input),Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr9)" [label="Product\nFPr9", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr9).has/Spec(The system has to support voice controlled input)" [label="Spec\nThe system has to support voice controlled input", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr9)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr9).has/Spec(The system has to support voice controlled input)"[label=has];
+
+//singleSubnodeLink(Product(FPr10),has,Spec(The system has to support input from the car's dashboard),Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr10)" [label="Product\nFPr10", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr10).has/Spec(The system has to support input from the car's dashboard)" [label="Spec\nThe system has to support input from the car's dashboard", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr10)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr10).has/Spec(The system has to support input from the car's dashboard)"[label=has];
+
+//singleSubnodeLink(Product(FPr11),has,Spec(The system has to be able to evaluate the car's status compared to current Swedish car inspection rules before driving off),Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr11)" [label="Product\nFPr11", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr11).has/Spec(The system has to be able to evaluate the car's status compared to current Swedish car inspection rules before driving off)" [label="Spec\nThe system has to be able to evaluate the car's status compared to current Swedish car inspection rules before driving off", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr11)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr11).has/Spec(The system has to be able to evaluate the car's status compared to current Swedish car inspection rules before driving off)"[label=has];
+
+//singleSubnodeLink(Product(FPr12),has,Spec(The system has to order a towing service when it is in an unsafe state),Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr12)" [label="Product\nFPr12", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr12).has/Spec(The system has to order a towing service when it is in an unsafe state)" [label="Spec\nThe system has to order a towing service when it is in an unsafe state", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr12)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalProductRequirements).has/Product(FPr12).has/Spec(The system has to order a towing service when it is in an unsafe state)"[label=has];
+    }
+
+//subGraphPre(Section(FunctionalScenarioRequirements),has,Scenario(FSc1),Section(FunctionalRequirements).has/)
+
+    "/Section(FunctionalRequirements).has/Section(FunctionalScenarioRequirements)" [label="Section\nFunctionalScenarioRequirements", shape=box];
+    "/Section(FunctionalRequirements).has/Section(FunctionalScenarioRequirements)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalScenarioRequirements).has/Scenario(FSc1)" [label=has, lhead="cluster_Section(FunctionalScenarioRequirements)"];
+    subgraph "cluster_Section(FunctionalScenarioRequirements)" { 
+
+//singleSubnodeLink(Scenario(FSc1),has,Spec(Niklas Sjöberg’s football practice is over and he remotely tells his car to pick him and his friends up at the football pitch, he uses his phone and the CRASH-application. The next step is that the car drives to pick up Niklas and his friends. When the car arrives, Niklas authenticates himself by fingerprint with the cars fingerprint scanner located on the car key. When the authentication is done, Niklas and his friends enter the car and Niklas tells the car where to drive using voice control, when this is done, the car drives the passengers to the given addresses. One of Niklas’ friends lives further away than Niklas himself and he is tired and he wants to be dropped off first. Since Niklas was the official “Driver” and now leaves the car, the passenger left in the car has to authenticate himself and thus becomes a authenticated passenger, using the fingerprint scanner.),Section(FunctionalRequirements).has/Section(FunctionalScenarioRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalScenarioRequirements).has/Scenario(FSc1)" [label="Scenario\nFSc1", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalScenarioRequirements).has/Scenario(FSc1).has/Spec(Niklas Sjöberg’s football practice is over and he remotely tells his car to pick him and his friends up at the football pitch, he uses his phone and the CRASH-application. The next step is that the car drives to pick up Niklas and his friends. When the car arrives, Niklas authenticates himself by fingerprint with the cars fingerprint scanner located on the car key. When the authentication is done, Niklas and his friends enter the car and Niklas tells the car where to drive using voice control, when this is done, the car drives the passengers to the given addresses. One of Niklas’ friends lives further away than Niklas himself and he is tired and he wants to be dropped off first. Since Niklas was the official “Driver” and now leaves the car, the passenger left in the car has to authenticate himself and thus becomes a authenticated passenger, using the fingerprint scanner.)" [label="Spec\nNiklas Sjöberg’s football practice is over and he remotely tells his car to pick him and his friends up at the football pitch, he uses his phone and the CRASH-application. The next step is that the car drives to pick up Niklas and his friends. When the car arrives, Niklas authenticates himself by fingerprint with the cars fingerprint scanner located on the car key. When the authentication is done, Niklas and his friends enter the car and Niklas tells the car where to drive using voice control, when this is done, the car drives the passengers to the given addresses. One of Niklas’ friends lives further away than Niklas himself and he is tired and he wants to be dropped off first. Since Niklas was the official “Driver” and now leaves the car, the passenger left in the car has to authenticate himself and thus becomes a authenticated passenger, using the fingerprint scanner.", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalScenarioRequirements).has/Scenario(FSc1)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalScenarioRequirements).has/Scenario(FSc1).has/Spec(Niklas Sjöberg’s football practice is over and he remotely tells his car to pick him and his friends up at the football pitch, he uses his phone and the CRASH-application. The next step is that the car drives to pick up Niklas and his friends. When the car arrives, Niklas authenticates himself by fingerprint with the cars fingerprint scanner located on the car key. When the authentication is done, Niklas and his friends enter the car and Niklas tells the car where to drive using voice control, when this is done, the car drives the passengers to the given addresses. One of Niklas’ friends lives further away than Niklas himself and he is tired and he wants to be dropped off first. Since Niklas was the official “Driver” and now leaves the car, the passenger left in the car has to authenticate himself and thus becomes a authenticated passenger, using the fingerprint scanner.)"[label=has];
+
+//singleSubnodeLink(Scenario(FSc2),has,Spec(Jonathan Klingberg is at work and something very important has just come up, which means that he cannot pick up his daughter at school as planned. Instead he uses his phone to remotely tell his car to pick up his child. The child receives a notification on her phone from the car that it is on its way for a pick up and how long it should take to arrive. When the car arrives, Jonathan’s daughter authenticates herself with the cars built-in fingerprint scanner and enters the car. The car drives the child home with the fathers predetermined route input.),Section(FunctionalRequirements).has/Section(FunctionalScenarioRequirements).has/)
+
+      "/Section(FunctionalRequirements).has/Section(FunctionalScenarioRequirements).has/Scenario(FSc2)" [label="Scenario\nFSc2", shape=box];
+      "/Section(FunctionalRequirements).has/Section(FunctionalScenarioRequirements).has/Scenario(FSc2).has/Spec(Jonathan Klingberg is at work and something very important has just come up, which means that he cannot pick up his daughter at school as planned. Instead he uses his phone to remotely tell his car to pick up his child. The child receives a notification on her phone from the car that it is on its way for a pick up and how long it should take to arrive. When the car arrives, Jonathan’s daughter authenticates herself with the cars built-in fingerprint scanner and enters the car. The car drives the child home with the fathers predetermined route input.)" [label="Spec\nJonathan Klingberg is at work and something very important has just come up, which means that he cannot pick up his daughter at school as planned. Instead he uses his phone to remotely tell his car to pick up his child. The child receives a notification on her phone from the car that it is on its way for a pick up and how long it should take to arrive. When the car arrives, Jonathan’s daughter authenticates herself with the cars built-in fingerprint scanner and enters the car. The car drives the child home with the fathers predetermined route input.", shape=box, style=rounded];
+      "/Section(FunctionalRequirements).has/Section(FunctionalScenarioRequirements).has/Scenario(FSc2)" ->   "/Section(FunctionalRequirements).has/Section(FunctionalScenarioRequirements).has/Scenario(FSc2).has/Spec(Jonathan Klingberg is at work and something very important has just come up, which means that he cannot pick up his daughter at school as planned. Instead he uses his phone to remotely tell his car to pick up his child. The child receives a notification on her phone from the car that it is on its way for a pick up and how long it should take to arrive. When the car arrives, Jonathan’s daughter authenticates herself with the cars built-in fingerprint scanner and enters the car. The car drives the child home with the fathers predetermined route input.)"[label=has];
+    }
+  }
+  "/Title(CRASH)" [label="Title\nCRASH", shape=box, style=rounded];
+
+}

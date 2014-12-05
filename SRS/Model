@@ -21,54 +21,54 @@ Title CRASH
     Spec Reduce cars' negative impacts on the environment
   # FunctionalDomainRequirements
     Domain FDo1
-      Spec The system must adhere to Swedish traffic laws
+      Spec The system must adhere to Swedish traffic laws as long as an accident is not imminent
     Domain FDo2
-      Spec If an accident can be avoided, the system may break traffic laws.
+      Spec If an accident can be avoided, the system may break traffic laws
     Domain FDo3
-      Spec When the car is in an unsafe state the car must not be able/allowed to drive.
+      Spec When the car is in an unsafe state the car must not be able/allowed to drive
     Domain FDo4a
       Spec In the situation of an accident, the system must prioritize risks in the following order: Saving as many human lives as possible has top priority
     Domain FDo4b
       Spec In the situation of an accident, the system must prioritize risks in the following order: Protecting humans inside the car is prioritized over humans outside the car
     Domain FDo5
-      Spec The system requires adequate sensors for monitoring the road and surroundings.
+      Spec The system requires adequate sensors for monitoring the road and surroundings
     Domain FDo6
       Spec The system requires an Internet connection
     Domain FDo7
       Spec The system requires a GPS-sensor
     Domain FDo8
-      Spec The system requires a breathalyzer.
+      Spec The system requires a breathalyzer
     Domain FDo9
-      Spec The system requires a fingerprint-sensor.
+      Spec The system requires a fingerprint-sensor
     Domain FDo10
-      Spec The system requires a microphone.
+      Spec The system requires a microphone
     Domain FDo11
-      Spec The system doesn't need GPS-signal at all times.
+      Spec The system functions without a GPS-signal once a route has been chosen
     Domain FDo12
-      Spec The system needs GPS-signal at startup.
+      Spec The system needs a GPS-signal at startup
     Domain FDo13
-      Spec The system must strive to ecodrive.
+      Spec The system must strive to ecodrive when possible
     Domain FDo14
-      Spec All user interaction that is available in the system must be possible to enter remotely.
+      Spec All user interaction that is available in the system must be possible to enter remotely
     Domain FDo15a
       Spec The system must support: permanent user rights
     Domain FDo15b
       Spec The system must support: temporary user rights
   # FunctionalProductRequirements
     Product FPr1
-      Spec The system has to to retrieve current and future weather data using from the Internet when a  connection is available.
+      Spec The system has to to retrieve current and future weather data using from the Internet when a connection is available
     Product FPr2
-      Spec The system must give a warning when dangerous weather conditions are predicted along the planned route.
+      Spec The system must give a warning when dangerous weather conditions are predicted along the planned route
     Product FPr3
-      Spec The system has to retrieve data of current and future traffic situations when an Internet connection is available.
+      Spec The system has to retrieve data of current and future traffic situations when an Internet connection is available
     Product FPr4
-      Spec The system must always be possible to stop via an emergency-break.
+      Spec The system must always be possible to stop via an emergency-break
     Product FPr5
-      Spec It must always be possible to request to turn off the autonomous system and drive the car manually.
+      Spec It must always be possible to request to turn off the autonomous system and drive the car manually
     Product FPr6
-      Spec When manual driving has been requested, the car has to be standing still before the autonomous system is turned off.
+      Spec When manual driving has been requested, the car has to be standing still before the autonomous system is turned off
     Product FPr7
-      Spec For a passenger to be able to turn off the system and drive the car manually, the person has to blow under the legal limit in the breathalyzer.
+      Spec For a passenger to be able to turn off the system and drive the car manually, the person has to blow under the legal limit in the breathalyzer
     Product FPr8
       Spec The breathalyzer has to be configured according to Swedish traffic law
     Product FPr9
@@ -76,9 +76,9 @@ Title CRASH
     Product FPr10
       Spec The system has to support input from the car's dashboard
     Product FPr11
-      Spec The system has to be able to evaluate the car's status compared to current Swedish car inspection rules before driving off.
+      Spec The system has to be able to evaluate the car's status compared to current Swedish car inspection rules before driving off
     Product FPr12
-      Spec The system has to order a towing service when it is in an unsafe state.
+      Spec The system has to order a towing service when it is in an unsafe state
   # FunctionalScenarioRequirements
     Scenario FSc1
       Spec Niklas Sjöberg’s football practice is over and he remotely tells his car to pick him and his friends up at the football pitch, he uses his phone and the CRASH-application. The next step is that the car drives to pick up Niklas and his friends. When the car arrives, Niklas authenticates himself by fingerprint with the cars fingerprint scanner located on the car key. When the authentication is done, Niklas and his friends enter the car and Niklas tells the car where to drive using voice control, when this is done, the car drives the passengers to the given addresses. One of Niklas’ friends lives further away than Niklas himself and he is tired and he wants to be dropped off first. Since Niklas was the official “Driver” and now leaves the car, the passenger left in the car has to authenticate himself and thus becomes a authenticated passenger, using the fingerprint scanner.
@@ -97,48 +97,48 @@ Title CRASH
     Domain DDo2
       Spec A driver must be able to choose & change destination
     Domain DDo3
-      An owner has the same rights as a driver and must also be able to handle users.
+      An owner has the same rights as a driver and must also be able to handle users
     Domain DDo4
-      Spec An admin must have the same rights as an owner and the admin must be able to change system settings.
+      Spec An admin must have the same rights as an owner and the admin must be able to change system settings
   # DataProductRequirements
     Product DPr1
-      Spec The system should store Swedish traffic rules.
+      Spec The system must store Swedish traffic rules
     Product DPr2a
-      Spec The system should store the following user data: Name
+      Spec The system must store the following user data: Name
     Product DPr2b
-      Spec The system should store the following user data: User type
+      Spec The system must store the following user data: User type
     Product DPr2c
-      Spec The system should store the following user data: Fingerprint
+      Spec The system must store the following user data: Fingerprint
     Product DPr3
-      Spec The system should store route data
+      Spec The system must store route data
     Product DPr4
-      Spec The system should store a service log
+      Spec The system must store a service log
     Product DPr5
-      Spec The system should be able to store future traffic laws.
+      Spec The system must be able to store future traffic laws
     Product DPr6
-      Spec The system should store Swedish car inspections rules and regulations.
+      Spec The system must store Swedish car inspections rules and regulations
     Product DPr7
-      Spec If there are users in the car, at least one needs to be authenticated.
+      Spec If there are users in the car, at least one needs to be authenticated
     Product DPr8
       The service log should contain the following data: date, service type, serviceprovider, Mileage, Description
 # QualityRequirements
   # QualityGoalRequirements
     Goal QGo1
-      Spec The system should strive for maximal safety
+      Spec The system must strive for maximal safety
     Goal QGo2
-      Spec The system response time should be lower than 100 ms
+      Spec The system response time must be lower than 100 ms
   # QualityDomainRequirements
     Domain QDo1
-      Spec If the system does not have a GPS-signal, it should be able to drive until the next connecting road
+      Spec The system is able to drive until the next connecting road without a GPS-signal
   # QualityProductRequirements
     Product QPr1
-      Spec The system should query for new traffic laws/regulations at least once a day.
+      Spec The system must query for new traffic laws/regulations at least once a day
     Product QPr2
-      Spec The system should query for new car inspection rules/regulations online at least once a day.
+      Spec The system must query for new car inspection rules/regulations online at least once a day
     Product QPr3
-      Spec System updates should only be performed when the car is parked.
+      Spec System updates must only be performed when the car is parked
     Product QPr4
-      Spec Traffic and weather data should be fetched every minute when an Internet connection is available
+      Spec Traffic and weather data must be fetched every minute when an Internet connection is available
 Domain FDo1 requires
   Product DPr1
   Domain FDo4

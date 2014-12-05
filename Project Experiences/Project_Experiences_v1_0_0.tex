@@ -97,27 +97,25 @@
 
 %%%%% Requirement engineering work %%%%%%%%% 
 \section{Requirement engineering work}
-\noindent The project will be split up into three different releases whose main objectives along with some project experiences are described below.
+\noindent The project is split up into three different releases, each of which main objectives along with some project experiences are described in this chapter below.
 
-\todo{Style paranteser, ser lika dan ut som sub-subsections just nu. Eventuellt indent}
+\todo{Style paranteser, ser lika dan ut som sub-subsections just nu. Eventuellt indent. Det här var svårare än jag trodde, är nog inte värt det...}
 
 \subsection{Release 1}
 The project started off with us setting up a group interview with the customer where we encouraged them to explain as much as possible about their ideas. After this meeting we realized the project scope would be too large to accomplish within the scope of this course. Furthermore we needed to figure out and focus on the most vital functionalities for this system.
 To get a first overview of the system features we started by creating a mind map out of the material we had gathered from the initial customer meeting, with the use of this map we could cut off branches with features not vital for the system to reduce the project scope.
-We had additional discussions with our customer about the eliminated branches, and in the end we managed to negotiate a bit more reasonable project scope.
+We had additional discussions with our customer about the eliminated branches, and in the end we managed to negotiate a more reasonable project scope.
 \newline We've also created a context diagram to define the system interactions and different user roles.
 The main objective for release 1 was to focus on elicitation techniques in order to get a grip of the system requirements, which are summarized in the System Requirements Specification or SRS document, see reference \cite{srs}.
 
-\todo{varför fingerprint osv.}
-
 \subsection{Release 2}
-\todo{Fyll ut åtminstone lite om validation prioritazion and so on}
+For the second project release we've been focusing on the prioritization and of the requirements. We also had a walk-through of some scenarios from the tasks section in the SRS together with some customer representatives. For the SRS we've mainly focusing on improving the quality of existing requirements, create more requirements, scenarios and tasks, and also made an effort visualizing the different dependencies of requirements which wasn't that intuitive in our previous release. We've also created a checklist form which our customer will fill in during their validation of our SRS.
+For this release we've also created a data model and some improvements to our previous context diagram which can be found in the SRS \cite{srs}.
 
 %%%%% Elicitation %%%%%%%%% 
 \section{Elicitation}
 \sloppy
-\noindent Finding and formulating requirements is called elicitation. The process of elicitation can be performed in various ways. A common procedure is to start by eliciting overall goals of the system and from there go further into details as the process continues. For this process to be as effective as possible selecting the right elicitation techniques is of importance. 
-\todo{Fyll ut och skriv on "Is the process". DONE!}
+\noindent Finding and formulating requirements is called elicitation. The process of elicitation can be performed in various ways. A common procedure is to start by eliciting overall goals of the system and from there go further into details as the process continues. For this process to be as effective as possible selecting the right elicitation techniques is of importance.
 
 \subsection{Elicitation techniques}
 \todo{Fyll ut reflections men lämna diskussion till slutet}
@@ -137,7 +135,7 @@ In a stakeholder analysis different people which are needed to ensure the succes
 \item What kind of solutions and suppliers do they see?
 \end{itemize}
 
-\paragraph{Motivation}
+\paragraph[5pt]{Motivation}
 \hfill \break
 It’s a simple way to summarize and to get an overview of all groups and peoples who probably will come in contact with this system. Since this list consists of different kinds of users, it's very important to listen to what each of them feels like important for them so that all parties gets satisfied with the final result.
 
@@ -146,7 +144,6 @@ Since this list consists of different kinds of users, it's important
 \hfill \break
 We listed all of the people and organizations that are needed to ensure the success of the project. 
 Inner stakeholders:
-\todo{Översätt till engelska. DONE!}
 \begin{itemize}
 \item LADA - key customer. 
 \item Steve's Angels - develops the product. 
@@ -201,8 +198,7 @@ We decided to use this elicitation technique as it was a natural step in the beg
 
 \paragraph{Method}
 \hfill \break
-We held brainstorming sessions in a room where we had access to a whiteboard. During the sessions we wrote down the ideas and requirements we came up with on the board. The brainstorming sessions typically involved developers only.  
-\todo{Lägg till under Method vilka stakeholders som var inblandande.DONE!}
+Most of our brainstorming sessions were held in a room where we had access to a whiteboard which proved to be very helpful. During the sessions we wrote down the ideas and requirements we came up with on the board and soon got a great overview of the project scope. The brainstorming sessions typically involved developers only but our first customer meetings also involved some brainstorming where they came up with ideas which at this point we didn't criticize further. These ideas where summarized in a document which we then had internal discussions about withing the development team and cherry picked some of the great ideas to be used in our SRS.
 \paragraph{Reflection}
 \hfill \break
 The technique allowed us not only to come up with new requirements but also enabled us, in the beginning of the elicitation process, to get an united overview of the system we are building.
@@ -221,8 +217,6 @@ The negotiations resolved the conflicts we had internally in our project group a
 
 %%%%% ELICITATION BARRIERS %%%%%%%%%
 \subsection{Customer Interactions}
-\todo{gör om till flödande text och mindre teori mer egna erfarenheter}
-\\
 When converting stakeholders aspirations into requirements, we'll simply have to ask them questions about the purpose of the new system. During this process elicitation barriers often show up where the stakeholders ideas are hard for them to explain or easily misunderstood in any other way.
 During the project elicitation phase we experienced some of the most common elicitation barriers, some examples are described below.
 
@@ -233,8 +227,8 @@ One of the things that was made clear after our first interview with our custome
 During our first interview we felt that the customer came up with too many requirements. Some of them were essential, while others were just “nice-to-have”, or so called luxury requirements. For example, they wanted the possibility for the autonomous cars to form a train so that the road network would be used more efficiently. While this was a nice feature to have, we did not feel that it was a necessity for achieving their main goals. This and similar disagreements were solved by further negotiations and reasoning. 
 
 \subsection{Elicitation reflections}
-\todo{Fyll på med diskussion men låg prio. lämna till sist}
-
+During the elicitation process we asked our customer the question why? multiple times. Our customer was very liable to tell us how they wanted us to fix their problems, this is a natural behaviour of the customer but it's up to us to question their solutions and focus on their problem rather than their proposed solutions. If we manages to do this we're probably ending up with a system-solution that's more suitable for their needs but off course if we cannot convince the customer our solution is better than theirs then we might have to give up our solution.
+For example in our case the customer in the beginning told us they wanted some sort of parental control to be activated on the system but after further investigation we found that what they really wanted was just another user role for passengers who's not allowed to change destination.
 
 %%%%% TOOL REFLECTION %%%%%%%%%
 \section{Tool reflections}
@@ -252,8 +246,10 @@ It's nice
 \todo{Lägg till reflektioner}
 \subsection{Tests}
 The best way to validate the requirements specification during its development is to perform tests. The customer or some experts can act as a user of the system who perform certain task in different approaches depending on the test method. These tests makes sure that the system-solutions proposed in the SRS also works in reality and that the developers of the SRS are on the same page as the customer.
+\todo{kanske finns någon bättre synonym till "are on the same page"}
 \subsubsection{Walk-through}
-In a walk-through some of the test scenarios are carried out with expert users and any problems or reflections are documented and used for further development of the SRS. If paper slips with current data are used in the system interaction then it would've been a simulation.
+In a walk-through some of the test scenarios are carried out with expert users and any problems or reflections are documented and used for further development of the SRS. If paper slips with current data are used in the system interaction then it would've been called a simulation.
+\todo{vi refererar aldrig till Lausen? behövde man inte göra det?}
 \paragraph{Motivation}
 \hfill \break
 We decided to use this validation technique as it is an easy way for us to check so that we're building requirements for a system suited for our customers wishes. The technique enables us to easily make sure we're still on the same page about the system performances.
@@ -261,7 +257,7 @@ We decided to use this validation technique as it is an easy way for us to check
 \paragraph{Method}
 \hfill \break
 A walk-through is best be carried out with some experts in the domain but since we don't know any experts (there doesn't really exist any) we simply had two of our customer representatives to carry out this walk-through with us.
-We had prepared a number of scenarios from some of the tasks that are described in the SRS. These scenarios where then simply traversed through one by one and during the walt-through our customer representatives were allowed to give comments about our solutions and also to ask questions about further special cases we might not have thought of and which were important to them.
+We had prepared a number of scenarios from some of the tasks that are described in the SRS. These scenarios where then simply traversed through one by one and during the walt-through the customer representatives were allowed to give comments about our solutions and also to point out special cases we might not have thought of and which were important to them.
 The walk-through focused on different authentication problematics such as picking up unauthorized children, lending the car to a friend overnight and tell the car to pick up a person at a specified time and place.
 \paragraph{Reflection}
 \hfill \break
@@ -270,11 +266,12 @@ They also pointed out some special scenarios as for example when the car is runn
 This technique allowed us not only to validate our existing tasks and requirement but also worked as another elicitation technique since we also came up with some new requirements.
 
 \subsection{Checklists}
-To write a tailor maid validation checklist that is used by our customer while reading the requirements specification is a good way to ensure the quality of our SRS. Here the authors gets the opportunity to point out some of the things that's been especially complex during development and instead of hiding them under the carpet they are highlighted. This gives the customer a great overview of the complexity in their system requirement specification and in turn can point out some of the things that needs further development.
+To write a validation checklist that our customer can read while checking the requirements is a good way to ensure the quality of the SRS. Here the authors gets the opportunity to point out some of the things that's been especially complex during development and instead of hiding them under the carpet they are highlighted. This gives the customer a great overview of the complexity in their ordered system requirement specification and in turn can point out some of the things that needs further development before the SRS is signed.
 \subsubsection{Create a validation checklist form to the customer}
 To R2 we've created a validation checklist which will be used by our customer to validate our SRS. This list is tailor made to check some of the biggest challenges we've expirienced with our SRS. The customer goes through this list and reads our SRS simultaneously to check to which level the SRS fulfills each attribute in the list.
 
 \subsubsection{Validate SRS checklist by developers}
+After the second release we'll go through the checklist that was written by our developers and the outcome from that experience will be summarized here.
 
 %%%%% INDIVIDUAL STATEMENTS %%%%%%%%%
 \section{Individual statements}
@@ -285,9 +282,11 @@ As the project leader, Alexanders contribution to this weeks work has consisted 
 \subsection{Fredrik Helander, EPM}
 Fredrik has participated in group meetings and discussions as well as been active in the requirement elicitation process, he has also formulated tasks and requirements.  
 \subsection{Jonathan Klingberg, SCCVM/TDEVM}
-Jonathan has written some parts of the project experiences document, besides this and the regular project work such as being active at meetings and group discussions, he has also been working with setting up tools including some initial tool guidance for the other project members.
+Jonathan has written parts of the project experiences document, besides this and the regular project work such as being active at meetings and group discussions, he has also been working with setting up tools including some initial tool guidance for the other project members.
+Jonathan was responsible for setting up a validation technique with the customer, this ended up in a walk-through which result was of great benefit for the validation part of the second release.
 \subsection{Jonathan Knorn, TDEVM}
-Jonathan has mainly been working with requirements both elicitation, dependecies and mapping tools. He has also been active in the common group work and been active at meetings.
+Jonathan has mainly been working with requirements both elicitation, dependencies and mapping tools. 
+He has also been active in the common group work and been active at meetings.
 \subsection{David Lundberg, QRM}
 David has been working mostly with the requirements, been active at the meetings, and worked with scenarios as well as finding elicitation methods.
 \subsection{Niklas Sjöberg, DRM}
@@ -295,9 +294,8 @@ Niklas has taken part in group meetings as well as customer meetings. Attended t
 
 %\addcontentsline{toc}{section}{References}
 \begin{thebibliography}{1}
-\bibitem{pmv2} Crash Project Mission version 2. 
 \bibitem{srs} Crash Software Requirements Specification version 1. 
-
+\bibitem{pmv2} Crash Project Mission version 2.
 \end{thebibliography}
 
 \end{document}

@@ -5,15 +5,15 @@ Title CRASH
       Spec Autonomous car
   # FunctionalDomainRequirements
     Domain FDo1
-      Spec The system should adhere to Swedish traffic laws
+      Spec The system must adhere to Swedish traffic laws
     Domain FDo2
       Spec If an accident can be avoided, the system may break traffic laws.
     Domain FDo3
-      Spec When the car is in an unsafe state the car should not be able/allowed to drive.
+      Spec When the car is in an unsafe state the car must not be able/allowed to drive.
     Domain FDo4a
-      Spec In the situation of an accident, the system should prioritize risks in the following order: Saving as many human lives as possible has top priority
+      Spec In the situation of an accident, the system must prioritize risks in the following order: Saving as many human lives as possible has top priority
     Domain FDo4b
-      Spec In the situation of an accident, the system should prioritize risks in the following order: Protecting humans inside the car is prioritized over humans outside the car
+      Spec In the situation of an accident, the system must prioritize risks in the following order: Protecting humans inside the car is prioritized over humans outside the car
     Domain FDo5
       Spec The system requires adequate sensors for monitoring the road and surroundings.
     Domain FDo6
@@ -31,38 +31,38 @@ Title CRASH
     Domain FDo12
       Spec The system needs GPS-signal at startup.
     Domain FDo13
-      Spec The system should strive to ecodrive.
+      Spec The system must strive to ecodrive.
     Domain FDo14
-      Spec All user interaction that is available in the system should be possible to enter remotely.
+      Spec All user interaction that is available in the system must be possible to enter remotely.
     Domain FDo15a
-      Spec The system should support: permanent user rights
+      Spec The system must support: permanent user rights
     Domain FDo15b
-      Spec The system should support: temporary user rights
+      Spec The system must support: temporary user rights
   # FunctionalProductRequirements
     Product FPr1
       Spec The system has to to retrieve current and future weather data using from the Internet when a  connection is available.
     Product FPr2
-      Spec The system should give a warning when dangerous weather conditions are predicted along the planned route.
+      Spec The system must give a warning when dangerous weather conditions are predicted along the planned route.
     Product FPr3
       Spec The system has to retrieve data of current and future traffic situations when an Internet connection is available.
     Product FPr4
-      Spec The system should always be possible to stop via an emergency-break.
+      Spec The system must always be possible to stop via an emergency-break.
     Product FPr5
-      Spec It should always be possible to request to turn off the autonomous system and drive the car manually.
+      Spec It must always be possible to request to turn off the autonomous system and drive the car manually.
     Product FPr6
       Spec When manual driving has been requested, the car has to be standing still before the autonomous system is turned off.
     Product FPr7
       Spec For a passenger to be able to turn off the system and drive the car manually, the person has to blow under the legal limit in the breathalyzer.
     Product FPr8
-      Spec The breathalyzer should be configured according to Swedish traffic law
+      Spec The breathalyzer has to be configured according to Swedish traffic law
     Product FPr9
-      Spec The system should support voice controlled input
+      Spec The system has to support voice controlled input
     Product FPr10
-      Spec The system should input from the car's dashboard
+      Spec The system has to support input from the car's dashboard
     Product FPr11
       Spec The system has to be able to evaluate the car's status compared to current Swedish car inspection rules before driving off.
     Product FPr12
-      Spec The system should order a towing service when it is in an unsafe state.
+      Spec The system has to order a towing service when it is in an unsafe state.
   # FunctionalScenarioRequirements
     Scenario FSc1
       Spec Niklas Sjöberg’s football practice is over and he remotely tells his car to pick him and his friends up at the football pitch, he uses his phone and the CRASH-application. The next step is that the car drives to pick up Niklas and his friends. When the car arrives, Niklas authenticates himself by fingerprint with the cars fingerprint scanner located on the car key. When the authentication is done, Niklas and his friends enter the car and Niklas tells the car where to drive using voice control, when this is done, the car drives the passengers to the given addresses. One of Niklas’ friends lives further away than Niklas himself and he is tired and he wants to be dropped off first. Since Niklas was the official “Driver” and now leaves the car, the passenger left in the car has to authenticate himself and thus becomes a authenticated passenger, using the fingerprint scanner.
@@ -71,19 +71,19 @@ Title CRASH
 # DataRequirements
   # DataDomainRequirements
     Domain DDo1a
-      Spec The system should support the following authorized user types: Passenger
+      Spec The system must support the following authorized user types: Passenger
     Domain DDo1b
-      Spec The system should support the following authorized user types: Driver
+      Spec The system must support the following authorized user types: Driver
     Domain DDo1c
-      Spec The system should support the following authorized user types: Owner
+      Spec The system must support the following authorized user types: Owner
     Domain DDo1d
-      Spec The system should support the following authorized user types: Admin
+      Spec The system must support the following authorized user types: Admin
     Domain DDo2
-      Spec A driver should be able to choose & change destination
+      Spec A driver must be able to choose & change destination
     Domain DDo3
-      An owner should have the same rights as a driver and should also be able to handle users. 
+      An owner has the same rights as a driver and must also be able to handle users. 
     Domain DDo4
-      Spec An admin should have the same rights as an owner and the admin should be able to change system settings.
+      Spec An admin must have the same rights as an owner and the admin must be able to change system settings.
   # DataProductRequirements
     Product DPr1
       Spec The system should store Swedish traffic rules.

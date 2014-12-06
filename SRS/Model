@@ -32,7 +32,7 @@ Title CRASH
       Domain FDo4b
         Spec In the situation of an accident, the system must prioritize risks in the following order: Protecting humans inside the car is prioritized over humans outside the car
     Domain FDo5
-      Spec The system requires adequate sensors for monitoring the road and surroundings
+      Spec The system requires sensors for monitoring the road and surroundings
     Domain FDo6
       Spec The system requires a network connection
     Domain FDo7
@@ -70,9 +70,9 @@ Title CRASH
     Product FPr6
       Spec When manual driving has been requested, the car has to be standing still before the autonomous system is turned off
     Product FPr7
-      Spec For a passenger to be able to turn off the system and drive the car manually, the person has to blow under the legal limit in the breathalyzer
+      Spec For a passenger to be able to drive the car manually, the person must pass the intoxication test
     Product FPr8
-      Spec The breathalyzer has to be configured according to Swedish traffic law
+      Spec The intoxication test has to be configured according to Swedish traffic law
     Product FPr9
       Spec The system has to support voice controlled input
     Product FPr10
@@ -97,7 +97,20 @@ Title CRASH
       Spec When the emergency break is activated the system must stop completely at the earliest possible place without risking an accident and stay still until a new command is provided by an authenticated user
       Product FPr19
       Spec The voice control system must support Swedish and English
-
+    Product FPr20
+      Spec Traffic surroundings must be analyzed and taken into account in the decision making process
+    Product FPr21
+      Spec Road irregularities must be analyzed to give the passangers a safe and comfortable ride
+    Product FPr22
+      Spec To turn off the CRASH system the car must not be moving
+    Product FPr24
+      Spec The positioning instrument must be used in the calculations for the route
+    Product FPr24
+      Spec The positioning instrument must be used to remotely localize the car
+    Product FPr25
+      Spec The authentication sensor must be used to authenticate the users
+    Product FPr26
+      Spec The cars coordinates must be able to be pushed to a centralized server
 # DataRequirements
   # DataDomainRequirements
     Domain DDo1

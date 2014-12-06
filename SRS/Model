@@ -34,17 +34,17 @@ Title CRASH
     Domain FDo5
       Spec The system requires adequate sensors for monitoring the road and surroundings
     Domain FDo6
-      Spec The system requires an Internet connection
+      Spec The system requires a network connection in order to send the cars coordinates to a centralized server which then distributes the information to clients.
     Domain FDo7
-      Spec The system requires a GPS-sensor
+      Spec The system requires a localisation-system such as GPS in order to know the position of the car.
     Domain FDo8
-      Spec The system requires a breathalyzer
+      Spec The system requires a driver condition measuring instrument such as a breathalyzer in order to check the drivers driving ability for manual driving.
     Domain FDo9
-      Spec The system requires a fingerprint-sensor
+      Spec The system requires a system for authentication such as a fingerprint-sensor to identify the users system-interaction permissions.
     Domain FDo10
-      Spec The system requires a microphone
+      Spec The system requires a voice input tool such as a microphone that can be used for voice control.
     Domain FDo11
-      Spec The system functions without a GPS-signal once a route has been chosen
+      Spec The system functions without a GPS-signal once a route has been chosen.
     Domain FDo12
       Spec The system needs a GPS-signal at startup
     Domain FDo13
@@ -198,5 +198,5 @@ Product DPr3 precedes
   Domain DDo3
 Domain FDo5 precedes
   Product FPr12
-Product FPr11 precedes  
+Product FPr11 precedes
   Product FPr12

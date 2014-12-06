@@ -1,161 +1,198 @@
-Model(
-  Title("CRASH"), 
-  Section("GoalRequirements") has (
-    Goal("FGo1") has Spec("Autonomous car for Swedish traffic"), 
-    Goal("FGo2") has Spec("Reduce amount of traffic accidents on Swedish roads"), 
-    Goal("FGo3") has Spec("Maintain industry market shares"), 
-    Goal("FGo4") has Spec("Achieve maximal usability"), 
-    Goal("FGo5") has Spec("Avoid human deaths in traffic"), 
-    Goal("FGo6") has Spec("Achieve maximal security"), 
-    Goal("FGo7") has Spec("Expand to other markets than private use"), 
-    Goal("FGo8") has Spec("Achieve maximum comfort"), 
-    Goal("FGo9") has Spec("Reduce cars' negative impacts on the environment"), 
-    Goal("QGo1") has Spec("The system must strive for maximal safety"), 
-    Goal("QGo2") has Spec("The system response time must be lower than 100 ms")), 
-  Section("DomainRequirements") has (
-    Domain("FDo1") has 
-      Spec("The system must adhere to Swedish traffic laws as long as an accident is not imminent"), 
-    Domain("FDo2") has 
-      Spec("If an accident can be avoided, the system may break traffic laws"), 
-    Domain("FDo3") has 
-      Spec("When the car is in an unsafe state the car must not be able/allowed to drive"), 
-    Domain("FDo4") has (
-      Domain("FDo4a") has 
-        Spec("In the situation of an accident, the system must prioritize risks in the following order: Saving as many human lives as possible has top priority"), 
-      Domain("FDo4b") has 
-        Spec("In the situation of an accident, the system must prioritize risks in the following order: Protecting humans inside the car is prioritized over humans outside the car")), 
-    Domain("FDo5") has 
-      Spec("The system requires adequate sensors for monitoring the road and surroundings"), 
-    Domain("FDo6") has Spec("The system requires a network connection"), 
-    Domain("FDo7") has Spec("The system requires a positioning instrument"), 
-    Domain("FDo8") has Spec("The system requires a intoxication measuring instrument"), 
-    Domain("FDo9") has Spec("The system requires an authentication sensor"), 
-    Domain("FDo10") has Spec("The system requires a voice input device"), 
-    Domain("FDo11") has 
-      Spec("The system functions without a GPS-signal once a route has been chosen"), 
-    Domain("FDo12") has Spec("The system needs a GPS-signal at startup"), 
-    Domain("FDo13") has Spec("The system must strive to ecodrive when possible"), 
-    Domain("FDo14") has 
-      Spec("All user interaction that is available in the system must be possible to enter remotely"), 
-    Domain("FDo15") has (
-      Domain("FDo15a") has Spec("The system must support: permanent user rights"), 
-      Domain("FDo15b") has Spec("The system must support: temporary user rights")), 
-    Domain("DDo1") has (
-      Domain("DDo1a") has 
-        Spec("The system must support the following authorized user types: Passenger"), 
-      Domain("DDo1b") has 
-        Spec("The system must support the following authorized user types: Driver"), 
-      Domain("DDo1c") has 
-        Spec("The system must support the following authorized user types: Owner"), 
-      Domain("DDo1d") has 
-        Spec("The system must support the following authorized user types: Admin")), 
-    Domain("DDo2") has Spec("A driver must be able to choose & change destination"), 
-    Domain("DDo3") has 
-      Text("An owner has the same rights as a driver and must also be able to handle users"), 
-    Domain("DDo4") has 
-      Spec("An admin must have the same rights as an owner and the admin must be able to change system settings")), 
-  Section("ProductRequirements") has (
-    Section("FunctionalProductRequirements") has (
-      Product("FPr1") has 
-        Spec("The system has to to retrieve current and future weather data using from the Internet when a connection is available"), 
-      Product("FPr2") has 
-        Spec("The system must give a warning when dangerous weather conditions are predicted along the planned route"), 
-      Product("FPr3") has 
-        Spec("The system has to retrieve data of current and future traffic situations when an Internet connection is available"), 
-      Product("FPr4") has 
-        Spec("The system must always be possible to stop via an emergency-break"), 
-      Product("FPr5") has 
-        Spec("It must always be possible to request to turn off the autonomous system and drive the car manually"), 
-      Product("FPr6") has 
-        Spec("When manual driving has been requested, the car has to be standing still before the autonomous system is turned off"), 
-      Product("FPr7") has 
-        Spec("For a passenger to be able to turn off the system and drive the car manually, the person has to blow under the legal limit in the breathalyzer"), 
-      Product("FPr8") has 
-        Spec("The breathalyzer has to be configured according to Swedish traffic law"), 
-      Product("FPr9") has Spec("The system has to support voice controlled input"), 
-      Product("FPr10") has Spec("The system has to support input from the car's dashboard"), 
-      Product("FPr11") has 
-        Spec("The system has to be able to evaluate the car's status compared to current Swedish car inspection rules before driving off"), 
-      Product("FPr12") has 
-        Spec("The system has to order a towing service when it is in an unsafe state"), 
-      Product("FPr13") has 
-        Spec("When the system is in manual driving mode, the system must still be active and avoid accidents the same way as in autonomous mode"), 
-      Product("FPr14") has 
-        Spec("When a command is entered feedback must be provided to the user"), 
-      Product("FPr15") has Spec("The car must evaluate the amount of fuel left in the tank"), 
-      Product("FPr16") has 
-        Spec("When the fuel level in the car reaches the level where it cannot make it to the second nearest gas station along the route, the car must drive to the nearest gas station and reload with fuel"), 
-      Product("FPr17") has 
-        Spec("If the voice control system cannot interpret an incomming voice command, it must suggest to the user what it interpreted"), 
-      Product("FPr18") has 
-        Spec("The system must be able to drive with its sensor when the GPS and maps don't align with the reality"), 
-      Product("FPr19") has 
-        Spec("When the emergency break is activated the system must stop completely at the earliest possible place without risking an accident and stay still until a new command is provided by an authenticated user"), 
-      Product("FPr20") has Spec("The voice control system must support Swedish and English")), 
-    Section("DataProductRequirements") has (
-      Product("DPr1") has Spec("The system must store Swedish traffic rules"), 
-      Product("DPr2") has (
-        Product("DPr2a") has Spec("The system must store the following user data: Name"), 
-        Product("DPr2b") has 
-          Spec("The system must store the following user data: User type"), 
-        Product("DPr2c") has 
-          Spec("The system must store the following user data: Fingerprint")), 
-      Product("DPr3") has Spec("The system must store route data"), 
-      Product("DPr4") has Spec("The system must store a service log"), 
-      Product("DPr5") has Spec("The system must be able to store future traffic laws"), 
-      Product("DPr6") has 
-        Spec("The system must store Swedish car inspections rules and regulations"), 
-      Product("DPr7") has 
-        Spec("If there are users in the car, at least one needs to be authenticated"), 
-      Product("DPr8") has 
-        Text("The service log should contain the following data: date, service type, serviceprovider, Mileage, Description"))), 
-  Section("DesignRequirements") has (
-    Design("De1") has Spec("The touch screen must have brightness settings"), 
-    Design("De2") has Spec("The touch screen must be easily readable"), 
-    Design("De3") has 
-      Spec("The emergency break function must be easily accessible from all seats in the car"), 
-    Design("De4") has Spec("The emergency break function must be easy to find"), 
-    Design("De5") has Spec("The emergency break function must be easy to press"), 
-    Design("De6") has 
-      Spec("The voice control system must be intuitive, resembling human communication"), 
-    Design("De7") has Spec("Changing to manual mode must be easy")), 
-  Section("QualityRequirements") has (
-    Domain("QDo1") has 
-      Spec("The system is able to drive until the next connecting road without a GPS-signal"), 
-    Product("QPr1") has 
-      Spec("The system must query for new traffic laws/regulations at least once a day"), 
-    Product("QPr2") has 
-      Spec("The system must query for new car inspection rules/regulations online at least once a day"), 
-    Product("QPr3") has 
-      Spec("System updates must only be performed when the car is parked"), 
-    Product("QPr4") has 
-      Spec("Traffic and weather data must be fetched every minute when an Internet connection is available"), 
-    Quality("Qu1") has 
-      Spec("The car always needs to have fuel left in the tank to be able to drive to the nearest gas station when calculating the route the user has put in the system"), 
-    Quality("Qu2") has 
-      Spec("All traffic laws that apply to the LADA car or general traffic must be stored"), 
-    Quality("Qu3") has 
-      Spec("The system must respond to a potential accident before the accident is unavoidable"), 
-    Quality("Qu4") has 
-      Spec("The Internet connection must be fast enough to download the weather and traffic information within 1 minute"), 
-    Quality("Qu5") has 
-      Spec("When the emergency break is activated the system must start to process the request within 100 ms"), 
-    Quality("Qu6") has 
-      Spec("The sensors that monitor the road and surroundings must have a margin of error less than 0.01 %"), 
-    Quality("Qu7") has 
-      Spec("Ecodriving must be performed according to the current definition by Sveriges Trafikskolors Riksförbund"), 
-    Quality("Qu8") has 
-      Spec("When a command is entered remotely, the system must send a confirmation to the user that sent the command"), 
-    Quality("Qu9") has 
-      Spec("Any dangerous weather conditions must be notified when a route is selected, before a route is commenced"), 
-    Quality("Qu10") has 
-      Spec("The service log must store data about date, service type, service provider, mileage and description from every service done on the car"), 
-    Quality("Qu11") has 
-      Spec("The margin of error for the voice control system must be lower than 1 %"), 
-    Quality("Qu12") has Spec("The GPS system must be precise to within 1 meter"), 
-    Quality("Qu13") has Spec("The system must query for updates to its maps once a day"), 
-    Quality("Qu14") has 
-      Spec("The maps must be precise, compared to the reality, to within 3 meters"), 
-    Quality("Qu15") has 
-      Spec("The dashboard control must be precise to within 0.5 mm from the touch point of the user"), 
-    Quality("Qu16") has Spec("The touch screen responsiveness must be instant")))
+Title CRASH
+# GoalRequirements
+  Goal FGo1
+    Spec Autonomous car for Swedish traffic
+  Goal FGo2
+    Spec Reduce amount of traffic accidents on Swedish roads
+  Goal FGo3
+    Spec Maintain industry market shares
+  Goal FGo4
+    Spec Achieve maximal usability
+  Goal FGo5
+    Spec Avoid human deaths in traffic
+  Goal FGo6
+    Spec Achieve maximal security
+  Goal FGo7
+    Spec Expand to other markets than private use
+  Goal FGo8
+    Spec Achieve maximum comfort
+  Goal FGo9
+    Spec Reduce cars' negative impacts on the environment
+  Goal QGo1
+    Spec The system must strive for maximal safety
+  Goal QGo2
+    Spec The system response time must be lower than 100 ms
+# DomainRequirements
+  Domain FDo1
+    Spec The system must adhere to Swedish traffic laws as long as an accident is not imminent
+  Domain FDo2
+    Spec If an accident can be avoided, the system may break traffic laws
+  Domain FDo3
+    Spec When the car is in an unsafe state the car must not be able/allowed to drive
+  Domain FDo4
+    Domain FDo4a
+      Spec In the situation of an accident, the system must prioritize risks in the following order: Saving as many human lives as possible has top priority
+    Domain FDo4b
+      Spec In the situation of an accident, the system must prioritize risks in the following order: Protecting humans inside the car is prioritized over humans outside the car
+  Domain FDo5
+    Spec The system requires adequate sensors for monitoring the road and surroundings
+  Domain FDo6
+    Spec The system requires a network connection
+  Domain FDo7
+    Spec The system requires a positioning instrument
+  Domain FDo8
+    Spec The system requires a intoxication measuring instrument
+  Domain FDo9
+    Spec The system requires an authentication sensor
+  Domain FDo10
+    Spec The system requires a voice input device
+  Domain FDo11
+    Spec The system functions without a GPS-signal once a route has been chosen
+  Domain FDo12
+    Spec The system needs a GPS-signal at startup
+  Domain FDo13
+    Spec The system must strive to ecodrive when possible
+  Domain FDo14
+    Spec All user interaction that is available in the system must be possible to enter remotely
+  Domain FDo15
+    Domain FDo15a
+      Spec The system must support: permanent user rights
+    Domain FDo15b
+      Spec The system must support: temporary user rights
+  Domain DDo1
+    Domain DDo1a
+      Spec The system must support the following authorized user types: Passenger
+    Domain DDo1b
+      Spec The system must support the following authorized user types: Driver
+    Domain DDo1c
+      Spec The system must support the following authorized user types: Owner
+    Domain DDo1d
+      Spec The system must support the following authorized user types: Admin
+  Domain DDo2
+    Spec A driver must be able to choose & change destination
+  Domain DDo3
+    An owner has the same rights as a driver and must also be able to handle users
+  Domain DDo4
+    Spec An admin must have the same rights as an owner and the admin must be able to change system settings
+# ProductRequirements
+  # FunctionalProductRequirements
+    Product FPr1
+      Spec The system has to to retrieve current and future weather data using from the Internet when a connection is available
+    Product FPr2
+      Spec The system must give a warning when dangerous weather conditions are predicted along the planned route
+    Product FPr3
+      Spec The system has to retrieve data of current and future traffic situations when an Internet connection is available
+    Product FPr4
+      Spec The system must always be possible to stop via an emergency-break
+    Product FPr5
+      Spec It must always be possible to request to turn off the autonomous system and drive the car manually
+    Product FPr6
+      Spec When manual driving has been requested, the car has to be standing still before the autonomous system is turned off
+    Product FPr7
+      Spec For a passenger to be able to turn off the system and drive the car manually, the person has to blow under the legal limit in the breathalyzer
+    Product FPr8
+      Spec The breathalyzer has to be configured according to Swedish traffic law
+    Product FPr9
+      Spec The system has to support voice controlled input
+    Product FPr10
+      Spec The system has to support input from the car's dashboard
+    Product FPr11
+      Spec The system has to be able to evaluate the car's status compared to current Swedish car inspection rules before driving off
+    Product FPr12
+      Spec The system has to order a towing service when it is in an unsafe state
+    Product FPr13
+      Spec When the system is in manual driving mode, the system must still be active and avoid accidents the same way as in autonomous mode
+    Product FPr14
+      Spec When a command is entered feedback must be provided to the user
+    Product FPr15
+      Spec The car must evaluate the amount of fuel left in the tank
+    Product FPr16
+      Spec When the fuel level in the car reaches the level where it cannot make it to the second nearest gas station along the route, the car must drive to the nearest gas station and reload with fuel
+    Product FPr17
+      Spec If the voice control system cannot interpret an incomming voice command, it must suggest to the user what it interpreted
+    Product FPr18
+      Spec The system must be able to drive with its sensor when the GPS and maps don't align with the reality
+    Product FPr19
+      Spec When the emergency break is activated the system must stop completely at the earliest possible place without risking an accident and stay still until a new command is provided by an authenticated user
+    Product FPr20
+      Spec The voice control system must support Swedish and English
+  # DataProductRequirements
+    Product DPr1
+      Spec The system must store Swedish traffic rules
+    Product DPr2
+      Product DPr2a
+        Spec The system must store the following user data: Name
+      Product DPr2b
+        Spec The system must store the following user data: User type
+      Product DPr2c
+        Spec The system must store the following user data: Fingerprint
+    Product DPr3
+      Spec The system must store route data
+    Product DPr4
+      Spec The system must store a service log
+    Product DPr5
+      Spec The system must be able to store future traffic laws
+    Product DPr6
+      Spec The system must store Swedish car inspections rules and regulations
+    Product DPr7
+      Spec If there are users in the car, at least one needs to be authenticated
+    Product DPr8
+      The service log should contain the following data: date, service type, serviceprovider, Mileage, Description
+# DesignRequirements
+  Design De1
+    Spec The touch screen must have brightness settings
+  Design De2
+    Spec The touch screen must be easily readable
+  Design De3
+    Spec The emergency break function must be easily accessible from all seats in the car
+  Design De4
+    Spec The emergency break function must be easy to find
+  Design De5
+    Spec The emergency break function must be easy to press
+  Design De6
+    Spec The voice control system must be intuitive, resembling human communication
+  Design De7
+    Spec Changing to manual mode must be easy
+# QualityRequirements
+  Domain QDo1
+    Spec The system is able to drive until the next connecting road without a GPS-signal
+  Product QPr1
+    Spec The system must query for new traffic laws/regulations at least once a day
+  Product QPr2
+    Spec The system must query for new car inspection rules/regulations online at least once a day
+  Product QPr3
+    Spec System updates must only be performed when the car is parked
+  Product QPr4
+    Spec Traffic and weather data must be fetched every minute when an Internet connection is available
+  Quality Qu1
+    Spec The car always needs to have fuel left in the tank to be able to drive to the nearest gas station when calculating the route the user has put in the system
+  Quality Qu2
+    Spec All traffic laws that apply to the LADA car or general traffic must be stored
+  Quality Qu3
+    Spec The system must respond to a potential accident before the accident is unavoidable
+  Quality Qu4
+    Spec The Internet connection must be fast enough to download the weather and traffic information within 1 minute
+  Quality Qu5
+    Spec When the emergency break is activated the system must start to process the request within 100 ms
+  Quality Qu6
+    Spec The sensors that monitor the road and surroundings must have a margin of error less than 0.01 %
+  Quality Qu7
+    Spec Ecodriving must be performed according to the current definition by Sveriges Trafikskolors Riksförbund
+  Quality Qu8
+    Spec When a command is entered remotely, the system must send a confirmation to the user that sent the command
+  Quality Qu9
+    Spec Any dangerous weather conditions must be notified when a route is selected, before a route is commenced
+  Quality Qu10
+    Spec The service log must store data about date, service type, service provider, mileage and description from every service done on the car
+  Quality Qu11
+    Spec The margin of error for the voice control system must be lower than 1 %
+  Quality Qu12
+    Spec The GPS system must be precise to within 1 meter
+  Quality Qu13
+    Spec The system must query for updates to its maps once a day
+  Quality Qu14
+    Spec The maps must be precise, compared to the reality, to within 3 meters
+  Quality Qu15
+    Spec The dashboard control must be precise to within 0.5 mm from the touch point of the user
+  Quality Qu16
+    Spec The touch screen responsiveness must be instant

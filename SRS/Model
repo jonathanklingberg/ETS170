@@ -81,11 +81,6 @@ Title CRASH
       Spec The system has to be able to evaluate the car's status compared to current Swedish car inspection rules before driving off
     Product FPr12
       Spec The system has to order a towing service when it is in an unsafe state
-  # FunctionalScenarioRequirements
-    Scenario FSc1
-      Spec Niklas Sjöberg’s football practice is over and he remotely tells his car to pick him and his friends up at the football pitch, he uses his phone and the CRASH-application. The next step is that the car drives to pick up Niklas and his friends. When the car arrives, Niklas authenticates himself by fingerprint with the cars fingerprint scanner located on the car key. When the authentication is done, Niklas and his friends enter the car and Niklas tells the car where to drive using voice control, when this is done, the car drives the passengers to the given addresses. One of Niklas’ friends lives further away than Niklas himself and he is tired and he wants to be dropped off first. Since Niklas was the official “Driver” and now leaves the car, the passenger left in the car has to authenticate himself and thus becomes a authenticated passenger, using the fingerprint scanner.
-    Scenario FSc2
-      Spec Jonathan Klingberg is at work and something very important has just come up, which means that he cannot pick up his daughter at school as planned. Instead he uses his phone to remotely tell his car to pick up his child. The child receives a notification on her phone from the car that it is on its way for a pick up and how long it should take to arrive. When the car arrives, Jonathan’s daughter authenticates herself with the cars built-in fingerprint scanner and enters the car. The car drives the child home with the fathers predetermined route input.
 # DataRequirements
   # DataDomainRequirements
     Domain DDo1

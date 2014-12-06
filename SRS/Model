@@ -1,5 +1,5 @@
 Title CRASH
-# GoalRequirements
+# Goal requirements
   Goal FGo1
     Spec Autonomous car for Swedish traffic
   Goal FGo2
@@ -22,7 +22,7 @@ Title CRASH
     Spec The system must strive for maximal safety
   Goal QGo2
     Spec The system response time must be lower than 100 ms
-# DomainRequirements
+# Domain requirements
   Domain FDo1
     Spec The system must adhere to Swedish traffic laws as long as an accident is not imminent
   Domain FDo2
@@ -74,8 +74,8 @@ Title CRASH
     An owner has the same rights as a driver and must also be able to handle users
   Domain DDo4
     Spec An admin must have the same rights as an owner and the admin must be able to change system settings
-# ProductRequirements
-  # FunctionalProductRequirements
+# Product requirements
+  # Functional product requirements
     Product FPr1
       Spec The system has to to retrieve current and future weather data using from the Internet when a connection is available
     Product FPr2
@@ -120,7 +120,7 @@ Title CRASH
       Spec Road irregularities must be analyzed to give the passangers a safe and comfortable ride
     Product FPr22
       Spec To turn off the CRASH system the car must not be moving
-    Product FPr24
+    Product FPr23      
       Spec The positioning instrument must be used in the calculations for the route
     Product FPr24
       Spec The positioning instrument must be used to remotely localize the car
@@ -128,24 +128,7 @@ Title CRASH
       Spec The authentication sensor must be used to authenticate the users
     Product FPr26
       Spec The cars coordinates must be able to be pushed to a centralized server
-# DataRequirements
-  # DataDomainRequirements
-    Domain DDo1
-      Domain DDo1a
-        Spec The system must support the following authorized user types: Passenger
-      Domain DDo1b
-        Spec The system must support the following authorized user types: Driver
-      Domain DDo1c
-        Spec The system must support the following authorized user types: Owner
-      Domain DDo1d
-        Spec The system must support the following authorized user types: Admin
-    Domain DDo2
-      Spec A driver must be able to choose & change destination
-    Domain DDo3
-      An owner has the same rights as a driver and must also be able to handle users
-    Domain DDo4
-      Spec An admin must have the same rights as an owner and the admin must be able to change system settings
-  # DataProductRequirements
+  # Data product requirements
     Product DPr1
       Spec The system must store Swedish traffic rules
     Product DPr2
@@ -167,7 +150,7 @@ Title CRASH
       Spec If there are users in the car, at least one needs to be authenticated
     Product DPr8
       The service log should contain the following data: date, service type, serviceprovider, Mileage, Description
-# DesignRequirements
+# Design requirements
   Design De1
     Spec The touch screen must have brightness settings
   Design De2
@@ -182,7 +165,7 @@ Title CRASH
     Spec The voice control system must be intuitive, resembling human communication
   Design De7
     Spec Changing to manual mode must be easy
-# QualityRequirements
+# Quality requirements
   Domain QDo1
     Spec The system is able to drive until the next connecting road without a GPS-signal
   Product QPr1

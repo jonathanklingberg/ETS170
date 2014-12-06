@@ -34,17 +34,17 @@ Title CRASH
     Domain FDo5
       Spec The system requires adequate sensors for monitoring the road and surroundings
     Domain FDo6
-      Spec The system requires a network connection.
+      Spec The system requires a network connection
     Domain FDo7
-      Spec The system requires a positioning instrument.
+      Spec The system requires a positioning instrument
     Domain FDo8
-      Spec The system requires a intoxication measuring instrument.
+      Spec The system requires a intoxication measuring instrument
     Domain FDo9
-      Spec The system requires an authentication sensor.
+      Spec The system requires an authentication sensor
     Domain FDo10
-      Spec The system requires a voice input device.
+      Spec The system requires a voice input device
     Domain FDo11
-      Spec The system functions without a GPS-signal once a route has been chosen.
+      Spec The system functions without a GPS-signal once a route has been chosen
     Domain FDo12
       Spec The system needs a GPS-signal at startup
     Domain FDo13

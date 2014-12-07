@@ -10,270 +10,285 @@
 <h1>CRASH</h1>
 
   <ul>
-
-    <li><span class="entityColor">Product</span> DPr1 <span class="relationColor">precedes</span></li>
-
-    <ul>
-    <li><span class="entityColor">Domain</span> FDo1</li></ul>
-
-    <li><span class="entityColor">Domain</span> FDo4 <span class="relationColor">precedes</span></li>
-
-    <ul>
-    <li><span class="entityColor">Domain</span> FDo1</li></ul>
-
-    <li><span class="entityColor">Domain</span> FDo7 <span class="relationColor">precedes</span></li>
-
-    <ul>
-    <li><span class="entityColor">Domain</span> FDo1</li>
-        <li><span class="entityColor">Domain</span> FDo12</li></ul>
-
-    <li><span class="entityColor">Domain</span> DDo1 <span class="relationColor">precedes</span></li>
-
-    <ul>
-    <li><span class="entityColor">Domain</span> FDo15</li></ul>
-
-    <li><span class="entityColor">Product</span> FPr1 <span class="relationColor">precedes</span></li>
-
-    <ul>
-    <li><span class="entityColor">Product</span> FPr2</li></ul>
-
-    <li><span class="entityColor">Product</span> FPr5 <span class="relationColor">precedes</span></li>
-
-    <ul>
-    <li><span class="entityColor">Product</span> FPr6</li></ul>
-
-    <li><span class="entityColor">Domain</span> FDo10 <span class="relationColor">precedes</span></li>
-
-    <ul>
-    <li><span class="entityColor">Product</span> FPr9</li></ul>
-
-    <li><span class="entityColor">Product</span> DPr6 <span class="relationColor">precedes</span></li>
-
-    <ul>
-    <li><span class="entityColor">Product</span> FPr11</li></ul>
-
-    <li><span class="entityColor">Domain</span> DDo3 <span class="relationColor">precedes</span></li>
-
-    <ul>
-    <li><span class="entityColor">Domain</span> DDo4</li></ul>
-
-    <li><span class="entityColor">Domain</span> FDo6 <span class="relationColor">precedes</span></li>
-
-    <ul>
-    <li><span class="entityColor">Product</span> FPr1</li>
-        <li><span class="entityColor">Product</span> FPr3</li>
-        <li><span class="entityColor">Product</span> QPr1</li>
-        <li><span class="entityColor">Product</span> QPr2</li>
-        <li><span class="entityColor">Product</span> QPr4</li></ul>
-
-    <li><span class="entityColor">Domain</span> FDo1 <span class="relationColor">precedes</span></li>
-
-    <ul>
-    <li><span class="entityColor">Product</span> FPr8</li></ul>
-
-    <li><span class="entityColor">Domain</span> FDo8 <span class="relationColor">precedes</span></li>
-
-    <ul>
-    <li><span class="entityColor">Product</span> FPr7</li>
-        <li><span class="entityColor">Product</span> FPr8</li></ul>
-
-    <li><span class="entityColor">Product</span> Dpr2 <span class="relationColor">precedes</span></li>
-
-    <ul>
-    <li><span class="entityColor">Product</span> DPr7</li>
-        <li><span class="entityColor">Domain</span> DDo3</li></ul>
-
-    <li><span class="entityColor">Product</span> DPr3 <span class="relationColor">precedes</span></li>
-
-    <ul>
-    <li><span class="entityColor">Product</span> FPr2</li>
-        <li><span class="entityColor">Domain</span> DDo2</li>
-        <li><span class="entityColor">Domain</span> DDo3</li></ul>
-
-    <li><span class="entityColor">Domain</span> FDo5 <span class="relationColor">precedes</span></li>
-
-    <ul>
-    <li><span class="entityColor">Domain</span> FDo2</li>
-        <li><span class="entityColor">Domain</span> FDo4</li>
-        <li><span class="entityColor">Domain</span> QDo1</li>
-        <li><span class="entityColor">Product</span> QPr3</li>
-        <li><span class="entityColor">Product</span> FPr12</li></ul>
-
-    <li><span class="entityColor">Product</span> FPr11 <span class="relationColor">precedes</span></li>
-
-    <ul>
-    <li><span class="entityColor">Domain</span> FDo1</li>
-        <li><span class="entityColor">Domain</span> FDo3</li>
-        <li><span class="entityColor">Product</span> FPr12</li></ul>
 </ul>
 
 
 <h2>Contents</h2>
 <ul>
-  <li><a href="#FunctionalRequirements">FunctionalRequirements</a></li>
-      <li><a href="#DataRequirements">DataRequirements</a></li>
-      <li><a href="#QualityRequirements">QualityRequirements</a></li>
+  <li><a href="#Goal requirements">Goal requirements</a></li>
+      <li><a href="#Domain requirements">Domain requirements</a></li>
+      <li><a href="#Product requirements">Product requirements</a></li>
+      <li><a href="#Design requirements">Design requirements</a></li>
+      <li><a href="#Quality requirements">Quality requirements</a></li>
   
 </ul>
       
 
-       <h2><a id="FunctionalRequirements">FunctionalRequirements</a></h2>
+       <h2><a id="Domain requirements">Domain requirements</a></h2>
        
        
       <ul>
-      <li><span class="entityColor">Section</span> FunctionalGoalRequirements <span class="relationColor">has</span></li>
+      <li><span class="entityColor">Domain</span> Do1 <span class="relationColor">has</span></li>
 
         <ul>
-        <li><span class="entityColor">Goal</span> FGo1 <span class="relationColor">has</span></li>
+        <li><span class="attributeColor">Spec</span>: The system must adhere to Swedish traffic laws as long as an accident is not imminent</li></ul>
 
-          <ul>
-          <li><span class="attributeColor">Spec</span>: Autonomous car</li></ul>
-
-                <li><span class="entityColor">Goal</span> FGo2 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: Reduce amount of traffic accidents on Swedish roads</li></ul>
-
-                <li><span class="entityColor">Goal</span> FGo3 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: Maintain industry market shares</li></ul>
-
-                <li><span class="entityColor">Goal</span> FGo4 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: Achieve maximal usability</li></ul>
-
-                <li><span class="entityColor">Goal</span> FGo5 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: Avoid human deaths in traffic</li></ul>
-
-                <li><span class="entityColor">Goal</span> FGo6 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: Achieve maximal security</li></ul>
-
-                <li><span class="entityColor">Goal</span> FGo7 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: Expand to other markets than private use</li></ul>
-
-                <li><span class="entityColor">Goal</span> FGo8 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: Achieve maximum comfort</li></ul>
-
-                <li><span class="entityColor">Goal</span> FGo9 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: Reduce cars' negative impacts on the environment</li></ul>
-</ul>
-
-            <li><span class="entityColor">Section</span> FunctionalDomainRequirements <span class="relationColor">has</span></li>
+            <li><span class="entityColor">Domain</span> Do2 <span class="relationColor">has</span></li>
 
         <ul>
-        <li><span class="entityColor">Domain</span> FDo1 <span class="relationColor">has</span></li>
+        <li><span class="attributeColor">Spec</span>: If an accident can be avoided, the system may break traffic laws</li></ul>
+
+            <li><span class="entityColor">Domain</span> Do3 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: When the car is in an unsafe state the car must not be able/allowed to drive in automatic mode</li></ul>
+
+            <li><span class="entityColor">Domain</span> Do4 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: In the situation of an accident, the system must prioritize risks in the following order:</li>
+                <li><span class="entityColor">Domain</span> Do4a <span class="relationColor">has</span></li>
 
           <ul>
-          <li><span class="attributeColor">Spec</span>: The system must adhere to Swedish traffic laws as long as an accident is not imminent</li></ul>
+          <li><span class="attributeColor">Spec</span>: Saving as many human lives as possible has top priority</li></ul>
 
-                <li><span class="entityColor">Domain</span> FDo2 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: If an accident can be avoided, the system may break traffic laws</li></ul>
-
-                <li><span class="entityColor">Domain</span> FDo3 <span class="relationColor">has</span></li>
+                <li><span class="entityColor">Domain</span> Do4b <span class="relationColor">has</span></li>
 
           <ul>
-          <li><span class="attributeColor">Spec</span>: When the car is in an unsafe state the car must not be able/allowed to drive</li></ul>
-
-                <li><span class="entityColor">Domain</span> FDo4 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="entityColor">Domain</span> FDo4a <span class="relationColor">has</span></li>
-
-            <ul>
-            <li><span class="attributeColor">Spec</span>: In the situation of an accident, the system must prioritize risks in the following order: Saving as many human lives as possible has top priority</li></ul>
-
-                    <li><span class="entityColor">Domain</span> FDo4b <span class="relationColor">has</span></li>
-
-            <ul>
-            <li><span class="attributeColor">Spec</span>: In the situation of an accident, the system must prioritize risks in the following order: Protecting humans inside the car is prioritized over humans outside the car</li></ul>
+          <li><span class="attributeColor">Spec</span>: Protecting humans inside the car is prioritized over humans outside the car</li></ul>
 </ul>
 
-                <li><span class="entityColor">Domain</span> FDo5 <span class="relationColor">has</span></li>
+            <li><span class="entityColor">Domain</span> Do5 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The system requires sensors for monitoring the road and surroundings</li></ul>
+
+            <li><span class="entityColor">Domain</span> Do6 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The system requires a network connection</li></ul>
+
+            <li><span class="entityColor">Domain</span> Do7 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The system requires a positioning instrument</li></ul>
+
+            <li><span class="entityColor">Domain</span> Do8 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The system requires a intoxication measuring instrument</li></ul>
+
+            <li><span class="entityColor">Domain</span> Do9 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The system requires an authentication sensor</li></ul>
+
+            <li><span class="entityColor">Domain</span> Do10 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The system requires a voice input device</li></ul>
+
+            <li><span class="entityColor">Domain</span> Do11 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The system functions without a GPS-signal once a route has been chosen</li></ul>
+
+            <li><span class="entityColor">Domain</span> Do12 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The system needs a GPS-signal when starting on a new route</li></ul>
+
+            <li><span class="entityColor">Domain</span> Do13 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The system must ecodrive when it is possible without risking safety</li></ul>
+
+            <li><span class="entityColor">Domain</span> Do14 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: All user interaction that is available in the system must be possible to enter remotely</li></ul>
+
+            <li><span class="entityColor">Domain</span> Do15 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The system must support:</li>
+                <li><span class="entityColor">Domain</span> Do15a <span class="relationColor">has</span></li>
 
           <ul>
-          <li><span class="attributeColor">Spec</span>: The system requires adequate sensors for monitoring the road and surroundings</li></ul>
+          <li><span class="attributeColor">Spec</span>: Permanent user rights</li></ul>
 
-                <li><span class="entityColor">Domain</span> FDo6 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: The system requires an Internet connection</li></ul>
-
-                <li><span class="entityColor">Domain</span> FDo7 <span class="relationColor">has</span></li>
+                <li><span class="entityColor">Domain</span> Do15b <span class="relationColor">has</span></li>
 
           <ul>
-          <li><span class="attributeColor">Spec</span>: The system requires a GPS-sensor</li></ul>
-
-                <li><span class="entityColor">Domain</span> FDo8 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: The system requires a breathalyzer</li></ul>
-
-                <li><span class="entityColor">Domain</span> FDo9 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: The system requires a fingerprint-sensor</li></ul>
-
-                <li><span class="entityColor">Domain</span> FDo10 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: The system requires a microphone</li></ul>
-
-                <li><span class="entityColor">Domain</span> FDo11 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: The system functions without a GPS-signal once a route has been chosen</li></ul>
-
-                <li><span class="entityColor">Domain</span> FDo12 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: The system needs a GPS-signal at startup</li></ul>
-
-                <li><span class="entityColor">Domain</span> FDo13 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: The system must strive to ecodrive when possible</li></ul>
-
-                <li><span class="entityColor">Domain</span> FDo14 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: All user interaction that is available in the system must be possible to enter remotely</li></ul>
-
-                <li><span class="entityColor">Domain</span> FDo15 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="entityColor">Domain</span> FDo15a <span class="relationColor">has</span></li>
-
-            <ul>
-            <li><span class="attributeColor">Spec</span>: The system must support: permanent user rights</li></ul>
-
-                    <li><span class="entityColor">Domain</span> FDo15b <span class="relationColor">has</span></li>
-
-            <ul>
-            <li><span class="attributeColor">Spec</span>: The system must support: temporary user rights</li></ul>
+          <li><span class="attributeColor">Spec</span>: Temporary user rights</li></ul>
 </ul>
+
+            <li><span class="entityColor">Domain</span> Do16 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The system must support the following authorized user types:</li>
+                <li><span class="entityColor">Domain</span> Do16a <span class="relationColor">has</span></li>
+
+          <ul>
+          <li><span class="attributeColor">Spec</span>: Passenger</li></ul>
+
+                <li><span class="entityColor">Domain</span> Do16b <span class="relationColor">has</span></li>
+
+          <ul>
+          <li><span class="attributeColor">Spec</span>: Driver</li></ul>
+
+                <li><span class="entityColor">Domain</span> Do16c <span class="relationColor">has</span></li>
+
+          <ul>
+          <li><span class="attributeColor">Spec</span>: Owner</li></ul>
+
+                <li><span class="entityColor">Domain</span> Do16d <span class="relationColor">has</span></li>
+
+          <ul>
+          <li><span class="attributeColor">Spec</span>: Admin</li></ul>
 </ul>
 
-            <li><span class="entityColor">Section</span> FunctionalProductRequirements <span class="relationColor">has</span></li>
+            <li><span class="entityColor">Domain</span> Do17 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: A driver must be able to choose & change destination</li></ul>
+
+            <li><span class="entityColor">Domain</span> Do18 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: An owner has the same rights as a driver and must also be able to handle users</li></ul>
+
+            <li><span class="entityColor">Domain</span> Do19 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: An admin must have the same rights as an owner and the admin must be able to change system settings</li></ul>
+
+            <li><span class="entityColor">Domain</span> Do20 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The system must support the functionality in the context diagram in figure 1</li></ul>
+</ul>
+
+      
+        
+       <h2><a id="Quality requirements">Quality requirements</a></h2>
+       
+       
+      <ul>
+      <li><span class="entityColor">Quality</span> Qu1 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The system must query for new system and database updates at least once a day</li></ul>
+
+            <li><span class="entityColor">Quality</span> Qu2 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The system must query for new car inspection rules/regulations online at least once a day</li></ul>
+
+            <li><span class="entityColor">Quality</span> Qu3 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: System updates must only be performed when the car is parked</li></ul>
+
+            <li><span class="entityColor">Quality</span> Qu4 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: Traffic and weather data must be fetched every minute when an Internet connection is available</li></ul>
+
+            <li><span class="entityColor">Quality</span> Qu5 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The car always needs to have fuel left in the tank to be able to drive to the nearest gas station when calculating the route the user has put in the system</li></ul>
+
+            <li><span class="entityColor">Quality</span> Qu6 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The system must respond to a potential accident before the accident is unavoidable</li></ul>
+
+            <li><span class="entityColor">Quality</span> Qu7 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The Internet connection must be fast enough to download the weather and traffic information within 1 minute</li></ul>
+
+            <li><span class="entityColor">Quality</span> Qu8 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: When the emergency break is activated the system must start to process the request within 100 ms</li></ul>
+
+            <li><span class="entityColor">Quality</span> Qu9 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The sensors that monitor the road and surroundings must have a margin of error less than 0.01 %</li></ul>
+
+            <li><span class="entityColor">Quality</span> Qu10 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: Ecodriving must be performed according to the current definition by Sveriges Trafikskolors Riksförbund</li></ul>
+
+            <li><span class="entityColor">Quality</span> Qu11 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: When a command is entered remotely, the system must send a confirmation to the user that sent the command</li></ul>
+
+            <li><span class="entityColor">Quality</span> Qu12 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: Any dangerous weather conditions must be notified when a route is selected, before a route is commenced</li></ul>
+
+            <li><span class="entityColor">Quality</span> Qu13 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The service log must store data about date, service type, service provider, mileage and description from every service done on the car</li></ul>
+
+            <li><span class="entityColor">Quality</span> Qu14 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The margin of error for the voice control system must be lower than 1 %</li></ul>
+
+            <li><span class="entityColor">Quality</span> Qu15 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The GPS system must be precise to within 1 meter</li></ul>
+
+            <li><span class="entityColor">Quality</span> Qu16 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The system must query for updates to its maps once a day</li></ul>
+
+            <li><span class="entityColor">Quality</span> Qu17 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The maps must be precise, compared to the reality, to within 3 meters</li></ul>
+
+            <li><span class="entityColor">Quality</span> Qu18 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The dashboard control must be precise to within 0.5 mm from the touch point of the user</li></ul>
+
+            <li><span class="entityColor">Quality</span> Qu19 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The touch screen responsiveness must be instant</li></ul>
+
+            <li><span class="entityColor">Quality</span> Qu20 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The system response time must be lower than 100 ms</li></ul>
+</ul>
+
+      
+        
+       <h2><a id="Product requirements">Product requirements</a></h2>
+       
+       
+      <ul>
+      <li><span class="entityColor">Section</span> Functional product requirements <span class="relationColor">has</span></li>
 
         <ul>
         <li><span class="entityColor">Product</span> FPr1 <span class="relationColor">has</span></li>
 
           <ul>
-          <li><span class="attributeColor">Spec</span>: The system has to to retrieve current and future weather data using from the Internet when a connection is available</li></ul>
+          <li><span class="attributeColor">Spec</span>: The system has to to retrieve current and future weather data from the Internet when a connection is available</li></ul>
 
                 <li><span class="entityColor">Product</span> FPr2 <span class="relationColor">has</span></li>
 
@@ -303,12 +318,12 @@
                 <li><span class="entityColor">Product</span> FPr7 <span class="relationColor">has</span></li>
 
           <ul>
-          <li><span class="attributeColor">Spec</span>: For a passenger to be able to turn off the system and drive the car manually, the person has to blow under the legal limit in the breathalyzer</li></ul>
+          <li><span class="attributeColor">Spec</span>: For a passenger to be able to drive the car manually, the person must pass the intoxication test</li></ul>
 
                 <li><span class="entityColor">Product</span> FPr8 <span class="relationColor">has</span></li>
 
           <ul>
-          <li><span class="attributeColor">Spec</span>: The breathalyzer has to be configured according to Swedish traffic law</li></ul>
+          <li><span class="attributeColor">Spec</span>: The intoxication test has to be configured according to Swedish traffic law</li></ul>
 
                 <li><span class="entityColor">Product</span> FPr9 <span class="relationColor">has</span></li>
 
@@ -329,183 +344,245 @@
 
           <ul>
           <li><span class="attributeColor">Spec</span>: The system has to order a towing service when it is in an unsafe state</li></ul>
-</ul>
 
-            <li><span class="entityColor">Section</span> FunctionalScenarioRequirements <span class="relationColor">has</span></li>
-
-        <ul>
-        <li><span class="entityColor">Scenario</span> FSc1 <span class="relationColor">has</span></li>
+                <li><span class="entityColor">Product</span> FPr13 <span class="relationColor">has</span></li>
 
           <ul>
-          <li><span class="attributeColor">Spec</span>: Niklas Sjöberg’s football practice is over and he remotely tells his car to pick him and his friends up at the football pitch, he uses his phone and the CRASH-application. The next step is that the car drives to pick up Niklas and his friends. When the car arrives, Niklas authenticates himself by fingerprint with the cars fingerprint scanner located on the car key. When the authentication is done, Niklas and his friends enter the car and Niklas tells the car where to drive using voice control, when this is done, the car drives the passengers to the given addresses. One of Niklas’ friends lives further away than Niklas himself and he is tired and he wants to be dropped off first. Since Niklas was the official “Driver” and now leaves the car, the passenger left in the car has to authenticate himself and thus becomes a authenticated passenger, using the fingerprint scanner.</li></ul>
+          <li><span class="attributeColor">Spec</span>: When the system is in manual driving mode, the system must still be active and avoid accidents the same way as in autonomous mode</li></ul>
 
-                <li><span class="entityColor">Scenario</span> FSc2 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: Jonathan Klingberg is at work and something very important has just come up, which means that he cannot pick up his daughter at school as planned. Instead he uses his phone to remotely tell his car to pick up his child. The child receives a notification on her phone from the car that it is on its way for a pick up and how long it should take to arrive. When the car arrives, Jonathan’s daughter authenticates herself with the cars built-in fingerprint scanner and enters the car. The car drives the child home with the fathers predetermined route input.</li></ul>
-</ul>
-</ul>
-
-      
-        
-       <h2><a id="DataRequirements">DataRequirements</a></h2>
-       
-       
-      <ul>
-      <li><span class="entityColor">Section</span> DataDomainRequirements <span class="relationColor">has</span></li>
-
-        <ul>
-        <li><span class="entityColor">Domain</span> DDo1 <span class="relationColor">has</span></li>
+                <li><span class="entityColor">Product</span> FPr14 <span class="relationColor">has</span></li>
 
           <ul>
-          <li><span class="entityColor">Domain</span> DDo1a <span class="relationColor">has</span></li>
+          <li><span class="attributeColor">Spec</span>: When a command is entered feedback must be provided to the user</li></ul>
 
-            <ul>
-            <li><span class="attributeColor">Spec</span>: The system must support the following authorized user types: Passenger</li></ul>
-
-                    <li><span class="entityColor">Domain</span> DDo1b <span class="relationColor">has</span></li>
-
-            <ul>
-            <li><span class="attributeColor">Spec</span>: The system must support the following authorized user types: Driver</li></ul>
-
-                    <li><span class="entityColor">Domain</span> DDo1c <span class="relationColor">has</span></li>
-
-            <ul>
-            <li><span class="attributeColor">Spec</span>: The system must support the following authorized user types: Owner</li></ul>
-
-                    <li><span class="entityColor">Domain</span> DDo1d <span class="relationColor">has</span></li>
-
-            <ul>
-            <li><span class="attributeColor">Spec</span>: The system must support the following authorized user types: Admin</li></ul>
-</ul>
-
-                <li><span class="entityColor">Domain</span> DDo2 <span class="relationColor">has</span></li>
+                <li><span class="entityColor">Product</span> FPr15 <span class="relationColor">has</span></li>
 
           <ul>
-          <li><span class="attributeColor">Spec</span>: A driver must be able to choose & change destination</li></ul>
+          <li><span class="attributeColor">Spec</span>: The car must evaluate the amount of fuel left in the tank</li></ul>
 
-                <li><span class="entityColor">Domain</span> DDo3 <span class="relationColor">has</span></li>
-
-          <ul>
-</ul>
-
-                <li><span class="entityColor">Domain</span> DDo4 <span class="relationColor">has</span></li>
+                <li><span class="entityColor">Product</span> FPr16 <span class="relationColor">has</span></li>
 
           <ul>
-          <li><span class="attributeColor">Spec</span>: An admin must have the same rights as an owner and the admin must be able to change system settings</li></ul>
-</ul>
+          <li><span class="attributeColor">Spec</span>: When the fuel level in the car reaches the level where it cannot make it to the second nearest gas station along the route, the car must drive to the nearest gas station and reload with fuel</li></ul>
 
-            <li><span class="entityColor">Section</span> DataProductRequirements <span class="relationColor">has</span></li>
-
-        <ul>
-        <li><span class="entityColor">Product</span> DPr1 <span class="relationColor">has</span></li>
+                <li><span class="entityColor">Product</span> FPr17 <span class="relationColor">has</span></li>
 
           <ul>
-          <li><span class="attributeColor">Spec</span>: The system must store Swedish traffic rules</li></ul>
+          <li><span class="attributeColor">Spec</span>: If the voice control system cannot interpret an incoming voice command, it must suggest to the user what it interpreted</li></ul>
 
-                <li><span class="entityColor">Product</span> DPr2 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="entityColor">Product</span> DPr2a <span class="relationColor">has</span></li>
-
-            <ul>
-            <li><span class="attributeColor">Spec</span>: The system must store the following user data: Name</li></ul>
-
-                    <li><span class="entityColor">Product</span> DPr2b <span class="relationColor">has</span></li>
-
-            <ul>
-            <li><span class="attributeColor">Spec</span>: The system must store the following user data: User type</li></ul>
-
-                    <li><span class="entityColor">Product</span> DPr2c <span class="relationColor">has</span></li>
-
-            <ul>
-            <li><span class="attributeColor">Spec</span>: The system must store the following user data: Fingerprint</li></ul>
-</ul>
-
-                <li><span class="entityColor">Product</span> DPr3 <span class="relationColor">has</span></li>
+                <li><span class="entityColor">Product</span> FPr18 <span class="relationColor">has</span></li>
 
           <ul>
-          <li><span class="attributeColor">Spec</span>: The system must store route data</li></ul>
+          <li><span class="attributeColor">Spec</span>: The system must be able to drive with its sensor when the GPS and maps don't align with the reality</li></ul>
 
-                <li><span class="entityColor">Product</span> DPr4 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: The system must store a service log</li></ul>
-
-                <li><span class="entityColor">Product</span> DPr5 <span class="relationColor">has</span></li>
+                <li><span class="entityColor">Product</span> FPr19 <span class="relationColor">has</span></li>
 
           <ul>
-          <li><span class="attributeColor">Spec</span>: The system must be able to store future traffic laws</li></ul>
+          <li><span class="attributeColor">Spec</span>: When the emergency break is activated the system must stop completely at the earliest possible place without risking an accident and stay still until a new command is provided by an authenticated user</li></ul>
 
-                <li><span class="entityColor">Product</span> DPr6 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: The system must store Swedish car inspections rules and regulations</li></ul>
-
-                <li><span class="entityColor">Product</span> DPr7 <span class="relationColor">has</span></li>
+                <li><span class="entityColor">Product</span> FPr20 <span class="relationColor">has</span></li>
 
           <ul>
-          <li><span class="attributeColor">Spec</span>: If there are users in the car, at least one needs to be authenticated</li></ul>
+          <li><span class="attributeColor">Spec</span>: Traffic surroundings must be analyzed and taken into account in the decision making process</li></ul>
 
-                <li><span class="entityColor">Product</span> DPr8 <span class="relationColor">has</span></li>
-
-          <ul>
-</ul>
-</ul>
-</ul>
-
-      
-        
-       <h2><a id="QualityRequirements">QualityRequirements</a></h2>
-       
-       
-      <ul>
-      <li><span class="entityColor">Section</span> QualityGoalRequirements <span class="relationColor">has</span></li>
-
-        <ul>
-        <li><span class="entityColor">Goal</span> QGo1 <span class="relationColor">has</span></li>
+                <li><span class="entityColor">Product</span> FPr21 <span class="relationColor">has</span></li>
 
           <ul>
-          <li><span class="attributeColor">Spec</span>: The system must strive for maximal safety</li></ul>
+          <li><span class="attributeColor">Spec</span>: Road irregularities must be analyzed to give the passengers a safe and comfortable ride</li></ul>
 
-                <li><span class="entityColor">Goal</span> QGo2 <span class="relationColor">has</span></li>
+                <li><span class="entityColor">Product</span> FPr22 <span class="relationColor">has</span></li>
 
           <ul>
-          <li><span class="attributeColor">Spec</span>: The system response time must be lower than 100 ms</li></ul>
-</ul>
+          <li><span class="attributeColor">Spec</span>: To turn off the CRASH system the car must not be moving</li></ul>
 
-            <li><span class="entityColor">Section</span> QualityDomainRequirements <span class="relationColor">has</span></li>
+                <li><span class="entityColor">Product</span> FPr23 <span class="relationColor">has</span></li>
 
-        <ul>
-        <li><span class="entityColor">Domain</span> QDo1 <span class="relationColor">has</span></li>
+          <ul>
+          <li><span class="attributeColor">Spec</span>: The positioning instrument must be used in the calculations for the route</li></ul>
+
+                <li><span class="entityColor">Product</span> FPr24 <span class="relationColor">has</span></li>
+
+          <ul>
+          <li><span class="attributeColor">Spec</span>: The positioning instrument must be used to remotely localize the car</li></ul>
+
+                <li><span class="entityColor">Product</span> FPr25 <span class="relationColor">has</span></li>
+
+          <ul>
+          <li><span class="attributeColor">Spec</span>: The authentication sensor must be used to authenticate the users</li></ul>
+
+                <li><span class="entityColor">Product</span> FPr26 <span class="relationColor">has</span></li>
+
+          <ul>
+          <li><span class="attributeColor">Spec</span>: The cars coordinates must be able to be pushed to a centralized server</li></ul>
+
+                <li><span class="entityColor">Product</span> FPr27 <span class="relationColor">has</span></li>
+
+          <ul>
+          <li><span class="attributeColor">Spec</span>: The system must be able to install stored future system updates at a given date</li></ul>
+
+                <li><span class="entityColor">Product</span> FPr28 <span class="relationColor">has</span></li>
 
           <ul>
           <li><span class="attributeColor">Spec</span>: The system is able to drive until the next connecting road without a GPS-signal</li></ul>
 </ul>
 
-            <li><span class="entityColor">Section</span> QualityProductRequirements <span class="relationColor">has</span></li>
+            <li><span class="entityColor">Section</span> Data product requirements <span class="relationColor">has</span></li>
 
         <ul>
-        <li><span class="entityColor">Product</span> QPr1 <span class="relationColor">has</span></li>
+        <li><span class="entityColor">Product</span> DPr1 <span class="relationColor">has</span></li>
 
           <ul>
-          <li><span class="attributeColor">Spec</span>: The system must query for new traffic laws/regulations at least once a day</li></ul>
+          <li><span class="attributeColor">Spec</span>: The system must store the following user data:</li>
+                    <li><span class="entityColor">Product</span> DPr1a <span class="relationColor">has</span></li>
 
-                <li><span class="entityColor">Product</span> QPr2 <span class="relationColor">has</span></li>
+            <ul>
+            <li><span class="attributeColor">Spec</span>: Name</li></ul>
 
-          <ul>
-          <li><span class="attributeColor">Spec</span>: The system must query for new car inspection rules/regulations online at least once a day</li></ul>
+                    <li><span class="entityColor">Product</span> DPr1b <span class="relationColor">has</span></li>
 
-                <li><span class="entityColor">Product</span> QPr3 <span class="relationColor">has</span></li>
+            <ul>
+            <li><span class="attributeColor">Spec</span>: User type</li></ul>
 
-          <ul>
-          <li><span class="attributeColor">Spec</span>: System updates must only be performed when the car is parked</li></ul>
+                    <li><span class="entityColor">Product</span> DPr1c <span class="relationColor">has</span></li>
 
-                <li><span class="entityColor">Product</span> QPr4 <span class="relationColor">has</span></li>
-
-          <ul>
-          <li><span class="attributeColor">Spec</span>: Traffic and weather data must be fetched every minute when an Internet connection is available</li></ul>
+            <ul>
+            <li><span class="attributeColor">Spec</span>: Fingerprint</li></ul>
 </ul>
+
+                <li><span class="entityColor">Product</span> DPr2 <span class="relationColor">has</span></li>
+
+          <ul>
+          <li><span class="attributeColor">Spec</span>: The system must store route data</li></ul>
+
+                <li><span class="entityColor">Product</span> DPr3 <span class="relationColor">has</span></li>
+
+          <ul>
+          <li><span class="attributeColor">Spec</span>: The system must store a service log</li></ul>
+
+                <li><span class="entityColor">Product</span> DPr4 <span class="relationColor">has</span></li>
+
+          <ul>
+          <li><span class="attributeColor">Spec</span>: The system must be able to store future system updates</li></ul>
+
+                <li><span class="entityColor">Product</span> DPr5 <span class="relationColor">has</span></li>
+
+          <ul>
+          <li><span class="attributeColor">Spec</span>: The database must store current Swedish car inspection rules and regulations</li></ul>
+
+                <li><span class="entityColor">Product</span> DPr6 <span class="relationColor">has</span></li>
+
+          <ul>
+          <li><span class="attributeColor">Spec</span>: If there are users in the car, at least one needs to be authenticated</li></ul>
+
+                <li><span class="entityColor">Product</span> DPr7 <span class="relationColor">has</span></li>
+
+          <ul>
+          <li><span class="attributeColor">Spec</span>: The service log must contain the following data: date, repair nr, service provider, mileage, description</li></ul>
+
+                <li><span class="entityColor">Product</span> DPr8 <span class="relationColor">has</span></li>
+
+          <ul>
+          <li><span class="attributeColor">Spec</span>: The database must store the service log-entries in the way described in figure 3</li></ul>
+
+                <li><span class="entityColor">Product</span> DPr9 <span class="relationColor">has</span></li>
+
+          <ul>
+          <li><span class="attributeColor">Spec</span>: The database must store the user-entries in the way described in figure 2</li></ul>
+</ul>
+</ul>
+
+      
+        
+       <h2><a id="Design requirements">Design requirements</a></h2>
+       
+       
+      <ul>
+      <li><span class="entityColor">Design</span> De1 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The touch screen must have brightness settings</li></ul>
+
+            <li><span class="entityColor">Design</span> De2 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The touch screen must be easily readable</li></ul>
+
+            <li><span class="entityColor">Design</span> De3 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The emergency break function must be easily accessible from all seats in the car</li></ul>
+
+            <li><span class="entityColor">Design</span> De4 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The emergency break function must be easy to find</li></ul>
+
+            <li><span class="entityColor">Design</span> De5 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The emergency break function must be easy to press</li></ul>
+
+            <li><span class="entityColor">Design</span> De6 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: The voice control system must be intuitive, resembling human communication</li></ul>
+
+            <li><span class="entityColor">Design</span> De7 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: Changing to manual mode must be easy</li></ul>
+</ul>
+
+      
+        
+       <h2><a id="Goal requirements">Goal requirements</a></h2>
+       
+       
+      <ul>
+      <li><span class="entityColor">Goal</span> Go1 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: Autonomous car for Swedish traffic</li></ul>
+
+            <li><span class="entityColor">Goal</span> Go2 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: Reduce amount of traffic accidents on Swedish roads</li></ul>
+
+            <li><span class="entityColor">Goal</span> Go3 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: Maintain industry market shares</li></ul>
+
+            <li><span class="entityColor">Goal</span> Go4 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: Achieve maximal usability</li></ul>
+
+            <li><span class="entityColor">Goal</span> Go5 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: Avoid human deaths in traffic</li></ul>
+
+            <li><span class="entityColor">Goal</span> Go6 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: Achieve maximal security</li></ul>
+
+            <li><span class="entityColor">Goal</span> Go7 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: Expand to other markets than private use</li></ul>
+
+            <li><span class="entityColor">Goal</span> Go8 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: Achieve maximum comfort</li></ul>
+
+            <li><span class="entityColor">Goal</span> Go9 <span class="relationColor">has</span></li>
+
+        <ul>
+        <li><span class="attributeColor">Spec</span>: Reduce cars' negative impacts on the environment</li></ul>
 </ul>
 
       

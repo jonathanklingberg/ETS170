@@ -72,9 +72,11 @@ Title CRASH
   Domain DDo2
     Spec A driver must be able to choose & change destination
   Domain DDo3
-    An owner has the same rights as a driver and must also be able to handle users
+    Spec An owner has the same rights as a driver and must also be able to handle users
   Domain DDo4
     Spec An admin must have the same rights as an owner and the admin must be able to change system settings
+  Domain Do1
+    Spec The system must support the functionality in the context diagram in figure XXXX
 # Product requirements
   # Functional product requirements
     Product FPr1
@@ -151,7 +153,11 @@ Title CRASH
     Product DPr7
       Spec If there are users in the car, at least one needs to be authenticated
     Product DPr8
-      The service log should contain the following data: date, repair nr, service provider, mileage, description
+      Spec The service log must contain the following data: date, repair nr, service provider, mileage, description
+    Product DPr9
+      Spec The database must store the service log-entries in the way described in fig XXX
+    Product DPr10
+      Spec The database must store the user-entries in the way described in fig XXX
 # Design requirements
   Design De1
     Spec The touch screen must have brightness settings
@@ -180,8 +186,6 @@ Title CRASH
     Spec Traffic and weather data must be fetched every minute when an Internet connection is available
   Quality Qu1
     Spec The car always needs to have fuel left in the tank to be able to drive to the nearest gas station when calculating the route the user has put in the system
-  Quality Qu2
-    Spec All traffic laws that apply to the LADA car or general traffic must be stored
   Quality Qu3
     Spec The system must respond to a potential accident before the accident is unavoidable
   Quality Qu4

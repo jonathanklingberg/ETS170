@@ -74,7 +74,7 @@ Title CRASH
   Domain Do19
     Spec An admin must have the same rights as an owner and the admin must be able to change system settings
   Domain Do20
-    Spec The system must support the functionality in the context diagram in figure XXXX
+    Spec The system must support the functionality in the context diagram in figure 1
 # Product requirements
   # Functional product requirements
     Product FPr1
@@ -110,7 +110,7 @@ Title CRASH
     Product FPr16
       Spec When the fuel level in the car reaches the level where it cannot make it to the second nearest gas station along the route, the car must drive to the nearest gas station and reload with fuel
     Product FPr17
-      Spec If the voice control system cannot interpret an incomming voice command, it must suggest to the user what it interpreted
+      Spec If the voice control system cannot interpret an incoming voice command, it must suggest to the user what it interpreted
     Product FPr18
       Spec The system must be able to drive with its sensor when the GPS and maps don't align with the reality
     Product FPr19
@@ -118,7 +118,7 @@ Title CRASH
     Product FPr20
       Spec Traffic surroundings must be analyzed and taken into account in the decision making process
     Product FPr21
-      Spec Road irregularities must be analyzed to give the passangers a safe and comfortable ride
+      Spec Road irregularities must be analyzed to give the passengers a safe and comfortable ride
     Product FPr22
       Spec To turn off the CRASH system the car must not be moving
     Product FPr23
@@ -155,9 +155,9 @@ Title CRASH
     Product DPr7
       Spec The service log must contain the following data: date, repair nr, service provider, mileage, description
     Product DPr8
-      Spec The database must store the service log-entries in the way described in fig XXX
+      Spec The database must store the service log-entries in the way described in figure 3
     Product DPr9
-      Spec The database must store the user-entries in the way described in fig XXX
+      Spec The database must store the user-entries in the way described in figure 2
 # Design requirements
   Design De1
     Spec The touch screen must have brightness settings

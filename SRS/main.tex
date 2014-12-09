@@ -1,0 +1,338 @@
+\documentclass{article}
+
+% inputenc package, allows the user to input accented characters directly from the keyboard
+\usepackage[utf8]{inputenc}
+
+% The ti­tling pack­age pro­vides con­trol over the type­set­ting of the \maketi­tle com­mand and \thanks com­mands, and makes the \ti­tle, \au­thor and \date in­for­ma­tion per­ma­nently avail­able.
+\usepackage{titling}
+
+% graphicx package, useful for including eps and pdf graphics
+% include graphics with the command \includegraphics
+\usepackage{graphicx}
+
+% Tells latex that the images are kept in a folder named figures under the current directory. 
+\graphicspath{ {figures/} }
+
+% Package that makes it possible to place two images beside eachother.
+\usepackage{subcaption}
+
+% The package defins figures called SCfigure and SCtable (analogous to figure and table) to typeset caption sideways. Options include innercaption, outercaption, leftcaption and rightcaption.  IS THIS USED ANYWHERE?
+\usepackage{sidecap}
+
+% A pack­age pro­vid­ing an in­ter­face to sec­tion­ing com­mands for se­lec­tion from var­i­ous ti­tle styles. E.g., marginal ti­tles and to change the font of all head­ings with a sin­gle com­mand, also pro­vid­ing sim­ple one-step page styles. Also in­cludes a pack­age to change the page styles when there are floats in a page. You may as­sign head­ers/foot­ers to in­di­vid­ual floats, too.
+\usepackage[compact,explicit]{titlesec}
+
+% A companion for titlesec handling toc/lof/lot entries. 
+\usepackage{titletoc}
+
+% The package hyperref provides LaTeX the ability to create hyperlinks within the document.
+\usepackage{hyperref}
+
+% The todonotes package allows you to insert to{do items in your docu-ment. At any point in the document a list of all the inserted to{do items can be listed with the \listoftodos command
+\usepackage{todonotes}
+
+% Package is used for the tasks section //Nick
+\usepackage{tabto}
+
+\usepackage{mdwlist}
+
+
+%KNORN
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
+%\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{entityColor}{RGB}{0,100,200}
+\definecolor{attributeColor}{RGB}{0,100,50}
+\definecolor{relationColor}{RGB}{160,0,30}
+\usepackage{listings}
+\lstdefinestyle{reqT}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  showstringspaces=false,
+  basicstyle=\footnotesize\sffamily,
+  emph={Ent,Meta,Item,Label,Section,Term,Actor,App,Component,Domain,Module,Product,Release,Resource,Risk,Service,Stakeholder,System,User,Class,Data,Input,Member,Output,Relationship,Design,Screen,MockUp,Function,Interface,Epic,Feature,Goal,Idea,Issue,Req,Ticket,WorkPackage,Breakpoint,Barrier,Quality,Target,Scenario,Task,Test,Story,UseCase,VariationPoint,Variant},
+  emphstyle=\bfseries\color{entityColor},
+  emph={[2]has,is,superOf,binds,deprecates,excludes,helps,hurts,impacts,implements,interactsWith,precedes,requires,relatesTo,verifies},
+  emphstyle={[2]\bfseries\color{relationColor}},
+  emph={[3]Attr,Code,Constraints,Comment,Deprecated,Example,Expectation,FileName,Gist,Image,Spec,Text,Title,Why,Benefit,Capacity,Cost,Damage,Frequency,Min,Max,Order,Prio,Probability,Profit,Value,Status},
+  emphstyle={[3]\color{attributeColor}},  
+}
+\lstset{style=reqT}
+%KNORN
+
+
+\begin{document}
+
+%For the tasks, please do not alter/remove. 
+\TabPositions{0.22\linewidth, 0.30\linewidth, 0.38\linewidth}
+
+% Raden nedan ser till att nummret på en subsubsection kommer EFTER dess titel.
+% Det är nuvarande lösning för att få kraven på formatet "Requirement 6.1.3"
+\titleformat{\subsubsection}[runin]{\large\bfseries}{}{0pt}{#1\quad\thesubsubsection}
+
+\begin{titlepage}
+    \noindent
+    \textsc{Alexander Badju, Fredrik Helander, Jonathan Klingberg, Jonathan Knorn, David Lundberg, Niklas Sjöberg}\\ % Names of the authors of the document 
+    \textsc{7/12-14}\\ % The date
+    \vspace{10em}
+    \begin{flushright}
+    {\huge Software Requirements Specification R2}\\ % The document name
+    {\large Group F - Steve's Angels} \\
+    \par\end{flushright}\vskip 0.5em
+\end{titlepage}
+
+\begingroup
+\hypersetup{linkcolor=black}
+\tableofcontents
+\thispagestyle{empty}
+\endgroup
+\newpage
+\begingroup
+\hypersetup{linkcolor=black}
+\listoffigures
+\thispagestyle{empty}
+\endgroup
+\newpage
+\pagenumbering{arabic}
+
+\section{Introduction}
+The car manufacturer LADA are worried about losing market shares and through their new product, a selfdriving car, they hope to maintain their position on the global car market. LADA themselves do not feel that they can produce a requirement specification to the quality standard they know is needed, which is why they have hired our company, Steve's Angels, to produce the requirements specification for the autonomous system called CRASH. 
+
+\section{Background and goals}
+\subsection{Main goals}
+The goal is to deliver an autonomous vehicle system to the car manufacturer LADA. As the car manufacturing industry develops, it is of great importance to keep up with the latest progress in terms of technology. Introducing new technology to the market is one way to maintain or expand market shares. The system we develop is LADA's answer to the current market situation.
+
+The system must provide maximum traffic safety using the very latest achievements in the fields of navigation and anti-collision technology. This together with high passenger comfortability and excellent fuel economy will place LADA ahead of its competition.   
+
+
+
+
+\section{Actors and their objectives}
+To get a better understanding of the actors and their objectives see the context diagram in figure 1 on page 2.
+\newline
+%\begin{figure}[htb]      Om vi ska ha en bild
+ % \centering
+  %\includegraphics[width=0.9\textwidth]%
+   % {userHierarchy.jpg}% picture filename
+  %\caption{Showing the user hierarchy of the system.}
+  %\label{hierarchy}
+%\end{figure}
+
+\noindent
+\textbf{Passenger} There are two types of passengers, a passive passenger or an authenticated passenger. Both can press the emergency stop button, but only the authenticated passenger can ride in the car alone.\\
+\textbf{Driver} Can do anything that a passenger can.
+The driver can also drive the car manually, handle the voice control as well as choosing the destination. \\
+\textbf{Owner} Can do anything that a driver can. The owner also handles user management. Which users are allowed to be drivers and passengers. \\
+\textbf{Administrator} Can do anything that an owner can.
+The administrator can change the system settings as well as general admin management \\
+
+
+%\begin{figure}[htb]    En bild till
+ % \centering
+  %\includegraphics[width=0.9\textwidth]%
+   % {context_diagram1.png}% picture filename
+ % \caption{Context diagram showing actors and key components within the system.}
+  %\label{ContextDiagram}
+%\end{figure}
+
+
+\section{Terminology}
+\textbf{The system} - Throughout this document we will use the term "The System" when referring to CRASH. \\
+\textbf{Autonomous car} - An autonomous car is also known as a self driving car. \\
+\textbf{The system} - The delivered product. When nothing else is stated, requirements are specified for autonomous driving mode.\\
+\textbf{Ecodriving} - Ecodriving is a term used to describe energy efficient use of vehicles. It is a great and easy way to reduce fuel consumption from road transport so that less fuel is used to travel the same distance.\\
+\textbf{Unsafe state} - The unsafe state is the cars state when it does not fulfill Swedish car inspection regulations.\\
+\textbf{GPS} - Global Positioning System based on space satellite communication.\\
+\\
+The requirements are named in the following manner:
+\begin{description*}
+\item[GoXX] - Goal requirements 
+\item[DoXX] - Domain requirements 
+\item[FPrXX] - Functional Product requirements 
+\item[DPrXX] - Data Product requirements 
+\item[DeXX] - Design requirements 
+\item[QuXX] - Quality requirements 
+\end{description*}
+\medskip
+
+
+\section{Context diagram}
+A context diagram of the system can be seen in Figure \ref{ContextDiagram}.
+
+\begin{figure}[htb]    
+ \centering
+  \includegraphics[width=0.9\textwidth]
+    {"Context diagram v5".png}% bild på vårat context diagram
+  \caption{Context diagram with actors and key components within the system.}
+  \label{ContextDiagram}
+\end{figure}
+
+\subsection{Context diagram description}
+\textbf{Control system} - A system that interprets data from the surroundings sensory systems, and identifies appropriate navigation paths, obstacles, traffic lights and signage. \\
+\textbf{Weather forecast system} - A system that can provide weather forecasts that the car can download and use to warn about dangerous weather conditions along the current route.  \\
+\textbf{Position data system} - A system where the car can upload its current position. Used by the owner to locate the cars position and follow it along its path.  \\
+\textbf{Traffic information system} - A system that keeps track of the current traffic situation (e.g. accidents, queues etc). \\
+\textbf{Surroundings sensory system} - A system that consists of several different sensors that senses the cars surroundings.  \\
+
+
+\section{Scenarios}
+Scenarios are used to improve developer intuition. The described scenarios are so called vivid scenarios, they consist of a case story illustrating one or more user tasks. It is important to note that vivid scenarios are not suitable as test cases.
+\subsection {Scenario 1}
+Niklas Sjöberg is an owner of a CRASH-supported car and his football practice is over. He now remotely tells his car to pick him and his friends up at the football pitch, he uses his phone and the CRASH-application. The next step is that the car drives to pick up Niklas and his friends. When the car arrives, Niklas authenticates himself. When the authentication is done, Niklas and his friends enter the car and Niklas tells the car where to drive using voice control, when this is done, the car drives the passengers to the given addresses. One of Niklas’ friends lives further away than Niklas himself and he is tired and he wants to be dropped off first. Since Niklas was the official “Driver” and now leaves the car, the passenger left in the car has to authenticate himself and thus becomes a authenticated passenger. 
+
+\subsection {Scenario 2}
+Jonathan Klingberg is an Owner of a CRASH-supported car and he is at work when something very important has come up, which means that he cannot pick up his daughter at school as planned. Instead he uses his phone to remotely tell his car to pick up his child. The child receives a notification on her phone from the car that it is on its way for a pick up and how long it should take to arrive. When the car arrives, Jonathan’s daughter authenticates herself and enters the car. The car drives the child home with the fathers predetermined route input.
+
+\subsection {Scenario 3}
+David Lundberg is at his local LADA dealership to purchase a new LADA with the inbuilt CRASH system. At the dealership David’s fingerprint is configured and associated with the owner profile in the new car. The fingerprint is stored in LADA’s database. David connects to his new car by scanning his fingerprint on his phone using the CRASH-application that he downloaded earlier. In the mobile application he assigns driver permissions to his son Alexander by letting him scan his fingerprint on David’s phone. Alexander’s fingerprint is stored in LADA’s database and associated with David’s car. 
+Alexander authenticates himself as well and enters David’s car. David enters the car without authentication. David specifies a new destination to the car via voice command and the LADA car drives to the given destination.
+
+
+\section{Tasks}
+Tasks are, in contrast to vivid scenarios, suitable as test cases. A task should finish with a meaningful goal. It is important that completing the task makes the user feel that something as been achieved.
+\subsection {Task 1}
+\textbf{Task:} \tab{Authenticate user A.}\\
+\textbf{Purpose:} \tab{Authenticate A to retrieve user permissions.}\\
+\textbf{Trigger:} \tab{A presses the fingerprint verifier on mobile device or on vehicle.}\\
+\\
+\noindent
+\textbf{Variants:} \tab{1a.}    \tab{A is admin}\\
+\tab{ } \tab{1b.} \tab{A is owner}\\
+\tab{ } \tab{1c.} \tab{A is driver}\\
+\tab{ } \tab{1d.} \tab{A is passenger with special permissions}\\
+\tab{ } \tab{2.}  \tab{A is denied access}
+\medskip
+
+\subsection {Task 2}
+\textbf{Task:} \tab{User A specifies a destination to CRASH.}\\
+\textbf{Purpose:} \tab{Tell the system to drive from one place to another.}\\
+\textbf{Precondition:} \tab{A is inside the vehicle. The vehicle has no specified}\\ 
+\tab{ } \tab{destination.}\\
+\textbf{Trigger:} \tab{A gives a command via voice command or touch screen.}\\
+\\
+\textbf{Variants:} \tab{1.} \tab{Command accepted, CRASH confirms the destination}\\
+\tab{ } \tab{ } \tab{and drives A to the requested destination.}\\
+\tab{ } \tab{2a.} \tab{Command rejected, the requested destination does not}\\ \tab{ } \tab{ } \tab{exist.}\\
+\tab{ } \tab{2b.} \tab{Command rejected, no one in the car is}\\
+\tab{ } \tab{ } \tab{authorized.}\\
+\tab{ } \tab{2c.} \tab{Command rejected, CRASH has no GPS connection.}
+\medskip
+
+\subsection {Task 3}
+\textbf{Task:} \tab{User A specifies a new destination to CRASH.}\\
+\textbf{Purpose:} \tab{Tell the system to drive from one place to another.}\\
+\textbf{Precondition:} \tab{A is inside the vehicle. The vehicle already has a}\\
+\tab{ } \tab{specified destination.}\\
+\textbf{Trigger:} \tab{A gives a command via voice command or touch screen.}\\
+\\
+\noindent
+\textbf{Variants:} \tab{1} \tab{Command accepted, CRASH asks user for confirmation.}\\
+\tab{ } \tab{ } \tab{1a.} \tab{A confirms, CRASH drives A to the requested}\\ \tab{ } \tab{ } \tab{ } \tab{destination.}\\
+\tab{ } \tab{ } \tab{1b.} \tab{A rejects. CRASH will not change the}\\ 
+\tab{ } \tab{ } \tab{ } \tab{destination.}\\
+\tab{ } \tab{2a.} \tab{Command rejected, the requested destination does not}\\ \tab{ } \tab{ } \tab{exist.}\\
+\tab{ } \tab{2b.} \tab{Command rejected, no one in the car is}\\
+\tab{ } \tab{ }  \tab{authorized.}\\
+\tab{ } \tab{2b.} \tab{Command rejected, CRASH has no GPS connection.}
+\medskip
+
+\subsection {Task 4}
+\textbf{Task:} \tab{User A attempts to drive the vehicle manually.}\\
+\textbf{Purpose:} \tab{A requests to drive the vehicle manually.}\\
+\textbf{Precondition:} \tab{The vehicle is not moving.}\\ 
+\textbf{Trigger:} \tab{A selects manual mode via touchscreen or voice command.}\\
+\\
+\noindent
+\textbf{Subtasks:} \tab{1.}    \tab{A authenticates using fingerprint.}\\
+\tab{ } \tab{2.} \tab{A uses the breathalyser.}\\
+\\
+\noindent
+\textbf{Variants:} \tab{1.}    \tab{A is authenticated and gains access to manual control}\\
+\tab{ } \tab{ } \tab{mode.}\\
+\tab{ } \tab{2a.} \tab{A is denied access due to lack of manual control}\\ \tab{ } \tab{ } \tab{permission.}\\
+\tab{ } \tab{2b.} \tab{A is denied access due to recent alcohol consumption.}
+\medskip
+
+\subsection {Task 5}
+\textbf{Task:} \tab{User A specifies a destination from a distance.}\\
+\textbf{Purpose:} \tab{Request the system to drive from one place to another.}\\
+\textbf{Precondition:} \tab{A is outside the vehicle and has remote access permissions via}\\
+\tab{ } \tab{mobile device.}\\ 
+\textbf{Trigger:} \tab{A starts the application on mobile device.}\\
+\noindent
+\\
+\textbf{Subtasks:} \tab{1.} \tab{A authenticates to mobile device using fingerprint.}\\
+\tab{ } \tab{2.} \tab{A specifies a destination using voice command or touch}\\ 
+\tab{ } \tab{ } \tab{screen on mobile device.}\\
+\\
+\noindent
+\textbf{Variants:} \tab{1a.}    \tab{A is granted access to mobile application and CRASH}\\
+\tab{ } \tab{ } \tab{accepts the given command.}\\
+\tab{ } \tab{1b.} \tab{A is granted access to mobile application but voice}\\ \tab{ } \tab{ } \tab{command is not accepted.}\\
+\tab{ } \tab{2.} \tab{A is denied access to mobile application due to lack of}\\
+\tab{ } \tab{ } \tab{remote access permission.} 
+\medskip
+
+\subsection {Task 6}
+\textbf{Task:} \tab{The system adapts to- and informs user of current weather}\\ 
+\tab{ }  \tab{situation.}\\
+\textbf{Purpose:} \tab{Avoid danger caused by weather.}\\
+\textbf{Precondition:} \tab{The vehicle is not moving. User A has drive permissions.}\\ 
+\textbf{Trigger:} \tab{A specifies a new destination to the system using command.}\\
+\\
+\textbf{Variants:} \tab{1a.} \tab{The system accepts the command and drives to \tab{ } \tab{ } \tab{destination.}\\
+\tab{ } \tab{1b.} \tab{The system informs A of dangerous weather conditions,}\\
+\tab{ } \tab{ } \tab{however,  command is still accepted.}\\
+\tab{ } \tab{2.} \tab{The system informs A of dangerous weather conditions}\\ \tab{ } \tab{ } \tab{and rejects drive command.}
+
+
+\newpage
+\section{Virtual Windows}
+
+
+\begin{figure}[htb]   
+ \centering
+ \includegraphics[width=0.9\textwidth]
+    {"Users - VW".jpeg}
+  \caption{Virtual window that shows the data to be stored regarding users.}
+  \label{vw1}
+\end{figure}
+
+\begin{figure}[htb]    
+ \centering
+  \includegraphics[width=0.9\textwidth]
+    {"Service log - VW".jpeg}
+  \caption{Virtual window that shows the data to be stored regarding service logs.}
+  \label{fig:Virtual window Service log}
+\end{figure}
+
+\newpage
+\section{E/R diagram}
+
+
+\begin{figure}[htb]
+    \begin{subfigure}[b]{.5\linewidth}
+        \centering
+            \includegraphics[scale=0.3]{"User - ER".png}
+            \caption{E/R diagram of the users table.}
+        \label{fig:E/R diagram Users}
+    \end{subfigure}
+    \begin{subfigure}[b]{.5\linewidth}
+        \centering
+            \includegraphics[scale=0.3]{"Service log - ER".png}
+            \caption{ER diagram of the service log table.}
+        \label{fig:E/R diagram Service log}
+    \end{subfigure}
+    \caption{E/R diagrams of the database.}
+    \label{fig:E/R diagrams of the database}
+\end{figure}
+
+\input{model.tex}
+
+\newpage
+
+\begin{thebibliography}{1}
+\bibitem{srs} CRASH - Comfort, Reliability and Self Handling, Project Mission v2
+\end{thebibliography}
+
+\end{document}

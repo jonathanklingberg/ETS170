@@ -34,6 +34,9 @@
 % hyphenat package, can be used to disable all hyphenation in a document or in selected text within the document
 \usepackage[none]{hyphenat}
 
+% The package hyperref provides LaTeX the ability to create hyperlinks within the document.
+\usepackage{hyperref}
+
 % tocbibind package, automatically adds the bibliography and/or the index and/or the contents etc.., to the Table of content listing. 
 \usepackage[nottoc,notlot,notlof]{tocbibind}
 
@@ -97,35 +100,34 @@
 \section{Requirement engineering work}
 \noindent The project is split up into three different releases, each of which main objectives along with some project experiences are described in this chapter below.
 
-\todo{Style paranteser, ser lika dan ut som sub-subsections just nu. Eventuellt indent. Det här var svårare än jag trodde.../J}
+
 
 \subsection{Release 1}
-The project started off with us setting up a group interview with the customer where we encouraged them to explain as much as possible about their ideas. After this meeting we realized the project scope would be too large to accomplish within the scope of this course. Furthermore we needed to figure out and focus on the most vital functionalities for this system.
-To get a first overview of the system features we started by creating a mind map out of the material we had gathered from the initial customer meeting, with the use of this map we could cut off branches with features not vital for the system to reduce the project scope.
-We had additional discussions with our customer about the eliminated branches, and in the end we managed to negotiate a more reasonable project scope.
+The project started off with us setting up a group interview with the customer where we encouraged them to explain as much as possible about their ideas. After this meeting we realized the project scope would be too large to accomplish within the given time of this course. Furthermore we needed to figure out and focus on the most vital functionalities for this system.
+To get a overview of the system features we started by creating a mind map out of the material we had gathered from the initial customer meeting. With the use of this map we could cut off branches with features not vital for the system to reduce the project scope.
+We had additional discussions with our customer about the eliminated branches, and in the end we managed to negotiate a more reasonable extent of the project.
 \newline We've also created a context diagram to define the system interactions and different user roles.
 The main objective for release 1 was to focus on elicitation techniques in order to get a grip of the system requirements, which are summarized in the System Requirements Specification or SRS document, see reference \cite{srs}.
 
 \subsection{Release 2}
-For the second project release we've been focusing on the prioritization and of the requirements. We also had a walk-through of some scenarios from the tasks section in the SRS together with some customer representatives. For the SRS we've mainly focusing on improving the quality of existing requirements, create more requirements, scenarios and tasks, and also made an effort visualizing the different dependencies of requirements which wasn't that intuitive in our previous release. We've also created a checklist form which our customer will fill in during their validation of our SRS.
+For the second project release we've been focusing on the prioritization of the requirements. We also had a walk-through of some scenarios from the task section in the SRS together with some customer representatives. For the SRS we've mainly focused on improving the quality of existing requirements, create more requirements, scenarios and tasks. Moreover we have also made an effort visualizing the different dependencies of requirements, which wasn't that intuitive in our previous release. We've also created a checklist form which our customer will fill in during their validation of our SRS.
 For this release we've also created a data model and some improvements to our previous context diagram which can be found in the SRS \cite{srs}.
 
 %%%%% Elicitation %%%%%%%%% 
 \section{Elicitation}
 \sloppy
-\noindent Finding and formulating requirements is called elicitation. The process of elicitation can be performed in various ways. A common procedure is to start by eliciting overall goals of the system and from there go further into details as the process continues. For this process to be as effective as possible selecting the right elicitation techniques is of importance.
+\noindent Finding and formulating requirements is called elicitation. The process of elicitation can be performed in various ways. A common procedure is to start by eliciting overall goals for the system and from there go further into details as the process continues. For this process to be as effective as possible selecting the right elicitation techniques is of importance.
 
 \subsection{Elicitation techniques}
-\todo{Fyll ut reflections men lämna diskussion till slutet}
 Elicitation techniques are utilized when translating stakeholders' aspirations into requirements.
 The elicitation techniques that we decided to use are described below.
-Besides those techniques, we've also tried "observation" and "document study", but it didn't feel worth spending more time on those since they where time consuming and not that efficient at this point in the project.
-Putting together a Focus group should be of great benefit but we don’t feel like we have the resources enough to accomplish this.
-A domain workshop would be great but we don't feel like it's applicable since there exists no expert users for this domain as far as we know.
-However for our next release we're going to try prototyping as a new elicitation technique.
+Besides those techniques, we've also tried "observation" and "document study", but we didn't feel it was worth spending more time on those since they where time consuming and not that efficient at this point in the project.
+Putting together a Focus group would benefit us greatly but we don’t feel like we have enough resources to accomplish this.
+A domain workshop would be great but we don't believe it's applicable since there exists no expert users for this domain as far as we know.
+However for this release (R2) we have done a "Walk-through" as a new elicitation technique.
 
 \subsubsection{Stakeholder analysis}
-In a stakeholder analysis different people which are needed to ensure the success of the project are first listed. Then these people are either interviewed or invited to a joint meeting in order to collect their ideas about the system. These ideas are then gathered into a sustainable model where as many of the stakeholders as possible gets satisfied with the result. The goal of the analysis is to find answers to the following questions:
+In a stakeholder analysis different people whom are needed to ensure the success of the project are first listed. Then these people are either interviewed or invited to a joint meeting in order to collect their ideas about the system. These ideas are then gathered into a sustainable model where as many of the stakeholders as possible get satisfied with the result. The goal of the analysis is to find answers to the following questions:
 \begin{itemize}
 \item What goals do they see for the system?
 \item Why would they like to contribute?
@@ -135,9 +137,7 @@ In a stakeholder analysis different people which are needed to ensure the succes
 
 \paragraph[5pt]{Motivation}
 \hfill \break
-It’s a simple way to summarize and to get an overview of all groups and peoples who probably will come in contact with this system. Since this list consists of different kinds of users, it's very important to listen to what each of them feels like important for them so that all parties gets satisfied with the final result.
-
-Since this list consists of different kinds of users, it's important 
+It’s a simple way to summarize and to get an overview of all groups and people who probably will come in contact with this system. Since the stakeholders all have different relations to the system it is of great importance to take their opinion into account to assure that all parties are satisfied with the final result.
 \paragraph{Method}
 \hfill \break
 We listed all of the people and organizations that are needed to ensure the success of the project. 
@@ -154,7 +154,7 @@ Outer stakeholders:
 \item Swedish parliament - The Parliament decides on all laws in Sweden, and a change in the law would be needed to allow driverless technology.
 \item Swedish government - The government enforces the laws that Parliament decides on, see above.
 \item Trafikanalys - Provides policy makers with a basis for making decisions about transport policy.
-\item Transportstyrelsen - 
+\item Transportstyrelsen - Secure and environmentaltal friendly transports.
 \item Insurance companies - Cars without drivers, or with only passengers (the driver is seen as a passenger when the car is running automatically) poses new problems concerning insurance and liability in traffic.
 \item Car owners - end users
 \item Lantmäteriet - Develops maps of Sweden, which is needed for our product to work.
@@ -211,7 +211,7 @@ As the conflicts with our customer group occured during the interviews we addres
 \paragraph{Reflection}
 \hfill \break
 The negotiations resolved the conflicts we had internally in our project group as well as the ones we had with our customer. Negotiations where important in the process of narrowing the scope of the customers requested functionality. We deemed some functionality as unnecessary and, in some occasions, unrealistic.
-\todo{Mooooore}
+
 
 %%%%% ELICITATION BARRIERS AND CUSTOMER INTERACTION%%%%%%%%%
 \subsection{Customer Interaction}
@@ -248,10 +248,10 @@ ReqT allows us to build many complex dependencies
 During the development of a software requirement specification it's important to make sure the solution that is proposed in the specification are sustainable also in reality and that it lives up to the customers expectations. Therefore it's very important to perform some validation techniques to ensure the quality of the final SRS.
 \subsection{Tests}
 The best way to validate the requirements specification during its development is to perform tests. The customer or some experts can act as a user of the system who perform certain task in different approaches depending on the test method. These tests makes sure that the system-solutions proposed in the SRS also works in reality and that the developers of the SRS are on the same page as the customer.
-\todo{kanske finns någon bättre synonym till "are on the same page"}
+
 \subsubsection{Walk-through}
 In a walk-through some of the test scenarios are carried out with expert users and any problems or reflections are documented and used for further development of the SRS. If paper slips with current data are used in the system interaction then it would've been called a simulation.
-\todo{vi refererar aldrig till Lausen? behövde man inte göra det?}
+
 \paragraph{Motivation}
 \hfill \break
 We decided to use this validation technique as it is an easy way for us to check so that we're building requirements for a system suited for our customers wishes. The technique enables us to easily make sure we're still on the same page about the system performances.
@@ -279,10 +279,9 @@ After the second release we'll go through the checklist that was written by our 
 \section{Individual statements}
 \noindent
 \subsection{Alexander Badju, P3RM}
-As the project leader, Alexanders contribution to this weeks work has consisted of organizing some of the work load as well as having last draft of the reports. Besides the regular group work, such as creating the context diagram, meetings etc. He has mostly worked with developing and eliciting system requirements as well as developing scenarios. 
-\todo{Se bettans kommentarer}
+Alexander's contribution has consisted of organizing some of the work load as well as being responsible for the last draft of the reports. Besides regular group work and taking part of meetings he has mostly worked with developing and eliciting all types of system requirements as well as developing and altering scenarios. 
 \subsection{Fredrik Helander, EPM}
-Fredrik has participated in group meetings and discussions as well as been active in the requirement elicitation process, he has also formulated tasks and requirements.  
+Fredrik has participated in group meetings and discussions as well as been active in the requirement elicitation process. He has also formulated tasks and requirements, been working on scenarios, as well as documenting project experiences.
 \subsection{Jonathan Klingberg, SCCVM/TDEVM}
 Jonathan has written parts of the project experiences document, besides this and the regular project work such as being active at meetings and group discussions, he has also been working with setting up tools including some initial tool guidance for the other project members.
 Jonathan was responsible for setting up a validation technique with the customer, this ended up in a walk-through which result was of great benefit during internal validation of the second release SRS.
@@ -290,7 +289,7 @@ Jonathan was responsible for setting up a validation technique with the customer
 Jonathan has mainly been working with requirements both elicitation, dependencies and mapping tools. 
 He has also been active in the common group work and been active at meetings.
 \subsection{David Lundberg, QRM}
-David has been working mostly with the requirements. He has also been active at the meetings, worked with scenarios as well as finding elicitation methods. He has worked with all requirements categories with a focus on goal & quality. 
+David has been working mostly with the requirements. He has also been active at the meetings, worked with scenarios as well as finding elicitation methods. He has worked with all requirements categories with a focus on goal and quality. 
 \subsection{Niklas Sjöberg, DRM}
 Niklas has taken part in group meetings as well as customer meetings. Attended the reqT introduction meeting. Worked with elicitation techniques and requirements elicitation, and written parts of the project experiences document. 
 

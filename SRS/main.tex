@@ -98,25 +98,23 @@
 \section{Introduction}
 The car manufacturer LADA are worried about losing market shares and through their new product, a selfdriving car, they hope to maintain their position on the global car market. LADA themselves do not feel that they can produce a requirement specification to the quality standard they know is needed, which is why they have hired our company, Steve's Angels, to produce the requirements specification for the autonomous system called CRASH. 
 
-\section{Background and goals}
 \subsection{Main goals}
-The goal is to deliver an autonomous vehicle system to the car manufacturer LADA. As the car manufacturing industry develops, it is of great importance to keep up with the latest progress in terms of technology. Introducing new technology to the market is one way to maintain or expand market shares. The system we develop is LADA's answer to the current market situation.
+The goal is to deliver an autonomous vehicle system to the car manufacturer LADA for use in Sweden. As the car manufacturing industry develops, it is of great importance to keep up with the latest progress in terms of technology. Introducing new technology to the market is one way to maintain or expand market shares. The system we develop is LADA's answer to the current market situation.
 
 The system must provide maximum traffic safety using the very latest achievements in the fields of navigation and anti-collision technology. This together with high passenger comfortability and excellent fuel economy will place LADA ahead of its competition.   
 
-
-
-
-\section{Actors and their objectives}
-To get a better understanding of the actors and their objectives see the context diagram in figure 1 on page 2.
+\subsection{Actors and their objectives} \todo{ändra rubrik}
+To get a better understanding of the actors and their objectives see the context diagram in figure 1. 
+\todo{ta bort?}
 \newline
-%\begin{figure}[htb]      Om vi ska ha en bild
- % \centering
-  %\includegraphics[width=0.9\textwidth]%
-   % {userHierarchy.jpg}% picture filename
-  %\caption{Showing the user hierarchy of the system.}
-  %\label{hierarchy}
-%\end{figure}
+
+\begin{figure}[htb]    
+ \centering
+  \includegraphics[width=0.9\textwidth]
+    {"Context diagram v5".png}% bild på vårat context diagram
+  \caption{Context diagram with actors and key components within the system.}
+  \label{ContextDiagram}
+\end{figure}
 
 \noindent
 \textbf{Passenger} There are two types of passengers, a passive passenger or an authenticated passenger. Both can press the emergency stop button, but only the authenticated passenger can ride in the car alone.\\
@@ -125,23 +123,18 @@ The driver can also drive the car manually, handle the voice control as well as 
 \textbf{Owner} Can do anything that a driver can. The owner also handles user management. Which users are allowed to be drivers and passengers. \\
 \textbf{Administrator} Can do anything that an owner can.
 The administrator can change the system settings as well as general admin management \\
+\textbf{Control system} - A system that interprets data from the surroundings sensory systems, and identifies appropriate navigation paths, obstacles, traffic lights and signage. \\
+\textbf{Weather forecast system} - A system that can provide weather forecasts that the car can download and use to warn about dangerous weather conditions along the current route.  \\
+\textbf{Position data system} - A system where the car can upload its current position. Used by the owner to locate the cars position and follow it along its path.  \\
+\textbf{Traffic information system} - A system that keeps track of the current traffic situation (e.g. accidents, queues etc). \\
+\textbf{Surroundings sensory system} - A system that consists of several different sensors that senses the cars surroundings.  \\
 
-
-%\begin{figure}[htb]    En bild till
- % \centering
-  %\includegraphics[width=0.9\textwidth]%
-   % {context_diagram1.png}% picture filename
- % \caption{Context diagram showing actors and key components within the system.}
-  %\label{ContextDiagram}
-%\end{figure}
-
-
-\section{Terminology}
-\textbf{The system} - Throughout this document we will use the term "The System" when referring to CRASH. \\
-\textbf{Autonomous car} - An autonomous car is also known as a self driving car. \\
+\subsection{Terminology}
 \textbf{The system} - The delivered product. When nothing else is stated, requirements are specified for autonomous driving mode.\\
-\textbf{Ecodriving} - Ecodriving is a term used to describe energy efficient use of vehicles. It is a great and easy way to reduce fuel consumption from road transport so that less fuel is used to travel the same distance.\\
-\textbf{Unsafe state} - The unsafe state is the cars state when it does not fulfill Swedish car inspection regulations.\\
+\textbf{Autonomous car} - An autonomous car is also known as a self driving car i.e. a car that operates without a driver. \\
+\textbf{Ecodriving} - Ecodriving is a term used to describe energy efficient use of vehicles. It is a method for reducing fuel consumption when driving, so that less fuel is used to travel the same distance.\\
+\textbf{Safe state} - The safe state is the cars state when it fulfills Swedish car inspection regulations.
+REFERENCE: http://www.bilprovningen.se/Privat/Kontrollbesiktning/Vad-vi-kontrollerar.html\\
 \textbf{GPS} - Global Positioning System based on space satellite communication.\\
 \\
 The requirements are named in the following manner:
@@ -156,40 +149,24 @@ The requirements are named in the following manner:
 \medskip
 
 
-\section{Context diagram}
-A context diagram of the system can be seen in Figure \ref{ContextDiagram}.
-
-\begin{figure}[htb]    
- \centering
-  \includegraphics[width=0.9\textwidth]
-    {"Context diagram v5".png}% bild på vårat context diagram
-  \caption{Context diagram with actors and key components within the system.}
-  \label{ContextDiagram}
-\end{figure}
-
-\subsection{Context diagram description}
-\textbf{Control system} - A system that interprets data from the surroundings sensory systems, and identifies appropriate navigation paths, obstacles, traffic lights and signage. \\
-\textbf{Weather forecast system} - A system that can provide weather forecasts that the car can download and use to warn about dangerous weather conditions along the current route.  \\
-\textbf{Position data system} - A system where the car can upload its current position. Used by the owner to locate the cars position and follow it along its path.  \\
-\textbf{Traffic information system} - A system that keeps track of the current traffic situation (e.g. accidents, queues etc). \\
-\textbf{Surroundings sensory system} - A system that consists of several different sensors that senses the cars surroundings.  \\
-
-
 \section{Scenarios}
-Scenarios are used to improve developer intuition. The described scenarios are so called vivid scenarios, they consist of a case story illustrating one or more user tasks. It is important to note that vivid scenarios are not suitable as test cases.
-\subsection {Scenario 1}
-Niklas Sjöberg is an owner of a CRASH-supported car and his football practice is over. He now remotely tells his car to pick him and his friends up at the football pitch, he uses his phone and the CRASH-application. The next step is that the car drives to pick up Niklas and his friends. When the car arrives, Niklas authenticates himself. When the authentication is done, Niklas and his friends enter the car and Niklas tells the car where to drive using voice control, when this is done, the car drives the passengers to the given addresses. One of Niklas’ friends lives further away than Niklas himself and he is tired and he wants to be dropped off first. Since Niklas was the official “Driver” and now leaves the car, the passenger left in the car has to authenticate himself and thus becomes a authenticated passenger. 
+The following scenarios should be used to improve developer intuition. These scenarios are prioritized.
+%Scenarios are used to improve developer intuition. The described scenarios are so called vivid scenarios, they consist of a case story illustrating one or more user tasks. It is important to note that vivid scenarios are not suitable as test cases.
+\subsection {Remote pickup scenario}
+Niklas is an owner of a CRASH-supported car and his football practice is over. He now remotely tells his car to pick him and his friends up at the football pitch, using his phone. The next step is that the car drives to pick up Niklas and his friends. When the car arrives, Niklas and his friends enter the car. Niklas tells the car which addresses to drive to, when this is done, the car drives the passengers to the given addresses. One of Niklas's friends lives further away than Niklas himself but since Niklas is tired he wants to be dropped off first. Niklas leaves the car at his home, then the car drives to the friend's house. After dropping of the friend, the car drives back to Niklas's home and parks.
 
-\subsection {Scenario 2}
-Jonathan Klingberg is an Owner of a CRASH-supported car and he is at work when something very important has come up, which means that he cannot pick up his daughter at school as planned. Instead he uses his phone to remotely tell his car to pick up his child. The child receives a notification on her phone from the car that it is on its way for a pick up and how long it should take to arrive. When the car arrives, Jonathan’s daughter authenticates herself and enters the car. The car drives the child home with the fathers predetermined route input.
+\subsection {Predetermined route scenario}
+Jonathan is an Owner of a CRASH-supported car and he got stuck in a meeting at work, which means that he cannot pick up his daughter at school as planned. Instead he uses his phone to remotely tell his car to pick up his child. The child receives a notification on her phone from the car that it is on its way for a pick up and how long it should take to arrive. When the car arrives, Jonathan’s daughter enters the car and tells it to drive to the candy store. The car tells her no since the route is predetermined by her father. Therefore, the car drives the child home instead.
 
-\subsection {Scenario 3}
-David Lundberg is at his local LADA dealership to purchase a new LADA with the inbuilt CRASH system. At the dealership David’s fingerprint is configured and associated with the owner profile in the new car. The fingerprint is stored in LADA’s database. David connects to his new car by scanning his fingerprint on his phone using the CRASH-application that he downloaded earlier. In the mobile application he assigns driver permissions to his son Alexander by letting him scan his fingerprint on David’s phone. Alexander’s fingerprint is stored in LADA’s database and associated with David’s car. 
-Alexander authenticates himself as well and enters David’s car. David enters the car without authentication. David specifies a new destination to the car via voice command and the LADA car drives to the given destination.
+\subsection {Buying new car scenario}
+David is at his local LADA dealership to purchase a new LADA with the built-in CRASH system. At the dealership David’s is associated with the new car. Since David wants his son Alexander to be able to drive he assigns driver permissions to him as well.
 
+\subsection {Running out of gas scenario}
+Gordon is on his way to Stockholm to celebrate Christmas with his family. On the way, the system alerts him that it is running out of gas, thus the car stops at the nearest gas station and refuels itself.
 
 \section{Tasks}
-Tasks are, in contrast to vivid scenarios, suitable as test cases. A task should finish with a meaningful goal. It is important that completing the task makes the user feel that something as been achieved.
+Each of the following tasks must be supported and are suitable as test cases.
+%Tasks are, in contrast to vivid scenarios, suitable as test cases. A task should finish with a meaningful goal. It is important that completing the task makes the user feel that something as been achieved.
 \subsection {Task 1}
 \textbf{Task:} \tab{Authenticate user A.}\\
 \textbf{Purpose:} \tab{Authenticate A to retrieve user permissions.}\\
@@ -204,7 +181,7 @@ Tasks are, in contrast to vivid scenarios, suitable as test cases. A task should
 \medskip
 
 \subsection {Task 2}
-\textbf{Task:} \tab{User A specifies a destination to CRASH.}\\
+\textbf{Task:} \tab{User A instructs the car to drive to a destination.}\\
 \textbf{Purpose:} \tab{Tell the system to drive from one place to another.}\\
 \textbf{Precondition:} \tab{A is inside the vehicle. The vehicle has no specified}\\ 
 \tab{ } \tab{destination.}\\
@@ -219,7 +196,7 @@ Tasks are, in contrast to vivid scenarios, suitable as test cases. A task should
 \medskip
 
 \subsection {Task 3}
-\textbf{Task:} \tab{User A specifies a new destination to CRASH.}\\
+\textbf{Task:} \tab{User A instructs the car to drive to a new destination.}\\
 \textbf{Purpose:} \tab{Tell the system to drive from one place to another.}\\
 \textbf{Precondition:} \tab{A is inside the vehicle. The vehicle already has a}\\
 \tab{ } \tab{specified destination.}\\
@@ -254,7 +231,7 @@ Tasks are, in contrast to vivid scenarios, suitable as test cases. A task should
 \medskip
 
 \subsection {Task 5}
-\textbf{Task:} \tab{User A specifies a destination from a distance.}\\
+\textbf{Task:} \tab{User A instructs the car to drive to a new destination .}\\
 \textbf{Purpose:} \tab{Request the system to drive from one place to another.}\\
 \textbf{Precondition:} \tab{A is outside the vehicle and has remote access permissions via}\\
 \tab{ } \tab{mobile device.}\\ 

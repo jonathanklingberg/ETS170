@@ -21,6 +21,9 @@
 % graphicx package, useful for including eps and pdf graphics include graphics with the command \includegraphics
 \usepackage{graphicx}
 
+% Tells latex that the images are kept in a folder named figures under the current directory. 
+\graphicspath{ {figures/} }
+
 % cite package, to clean up citations in the main text. Do not remove.
 \usepackage{cite}
 
@@ -40,7 +43,18 @@
 % tocbibind package, automatically adds the bibliography and/or the index and/or the contents etc.., to the Table of content listing. 
 \usepackage[nottoc,notlot,notlof]{tocbibind}
 
-%\usepackage{titlesec}
+\usepackage{titlesec}
+\titlespacing{\paragraph}{15pt}{*4}{*1.5}
+
+%Sets the length of indents when beginning on a new line in a paragraph. 
+\setlength{\parindent}{1cm}
+
+% The todonotes package allows you to insert to{do items in your docu-ment. At any point in the document a list of all the inserted to{do items can be listed with the \listoftodos command
+\usepackage{todonotes}
+
+
+\usepackage[toc,page]{appendix}
+
 %\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}
@@ -62,7 +76,7 @@
 % Use the PLoS provided bibtex style
 \bibliographystyle{plos2009}
 
-\newcommand\todo[1]{\textcolor{red}{#1}}
+%\newcommand\todo[1]{\textcolor{red}{#1}}
 \begin{document}
 
 % Remove brackets from numbering in List of References
@@ -98,20 +112,20 @@
 
 %%%%% Requirement engineering work %%%%%%%%% 
 \section{Requirement engineering work}
-\noindent The project is split up into three different releases, each of which main objectives along with some project experiences are described in this chapter below.
-
-
+\noindent The project is divided into three different releases, each of which main objectives along with some project experiences are described in this chapter below.
 
 \subsection{Release 1}
 The project started off with us setting up a group interview with the customer where we encouraged them to explain as much as possible about their ideas. After this meeting we realized the project scope would be too large to accomplish within the given time of this course. Furthermore we needed to figure out and focus on the most vital functionalities for this system.
-To get a overview of the system features we started by creating a mind map out of the material we had gathered from the initial customer meeting. With the use of this map we could cut off branches with features not vital for the system to reduce the project scope.
+To get a overview of the system features we started by creating a mind map out of the material we had gathered from the initial customer meeting. With the use of this map we could cut off branches of features not vital for the system to reduce the project scope.
 We had additional discussions with our customer about the eliminated branches, and in the end we managed to negotiate a more reasonable extent of the project.
 \newline We've also created a context diagram to define the system interactions and different user roles.
 The main objective for release 1 was to focus on elicitation techniques in order to get a grip of the system requirements, which are summarized in the System Requirements Specification or SRS document, see reference \cite{srs}.
 
 \subsection{Release 2}
-For the second project release we've been focusing on the prioritization of the requirements. We also had a walk-through of some scenarios from the task section in the SRS together with some customer representatives. For the SRS we've mainly focused on improving the quality of existing requirements, create more requirements, scenarios and tasks. Moreover we have also made an effort visualizing the different dependencies of requirements, which wasn't that intuitive in our previous release. We've also created a checklist form which our customer will fill in during their validation of our SRS.
+For the second project release we've been focusing on the prioritization of the requirements. We also had a walk-through of some scenarios from the task section in the SRS together with some customer representatives. For the SRS we've mainly focused on improving the quality of existing requirements, create more requirements, scenarios and tasks. Moreover, we have also made an effort visualizing the different dependencies of requirements, which wasn't that intuitive in our previous release. We've also created a checklist form which our customer will fill in during their validation of our SRS.
 For this release we've also created a data model and some improvements to our previous context diagram which can be found in the SRS \cite{srs}.
+
+\subsection{Release 3}
 
 %%%%% Elicitation %%%%%%%%% 
 \section{Elicitation}
@@ -135,55 +149,58 @@ In a stakeholder analysis different people whom are needed to ensure the success
 \item What kind of solutions and suppliers do they see?
 \end{itemize}
 
-\paragraph[5pt]{Motivation}
+\paragraph{Motivation}
 \hfill \break
 It’s a simple way to summarize and to get an overview of all groups and people who probably will come in contact with this system. Since the stakeholders all have different relations to the system it is of great importance to take their opinion into account to assure that all parties are satisfied with the final result.
 \paragraph{Method}
 \hfill \break
-We listed all of the people and organizations that are needed to ensure the success of the project. 
-Inner stakeholders:
-\begin{itemize}
-\item LADA - key customer. 
-\item Steve's Angels - develops the product. 
-\end{itemize}
+To identify possible stakeholders we held a brainstorming session that all group members attended, and after the brainstorming session we discussed the different suggestions for possible stakeholders. This lead to some stakeholders being removed from our list and some were added.  
+Usually when conducting a stakeholder analysis you invite the different stakeholders to a joint meeting, alternatively interview them one by one. But since almost all of the stakeholders we identified were large organizations it would be hard to gather them all for a meeting and too time consuming to interview them all. As the Internet is a great source of information, we instead studied the organizations web pages and formed our own understanding of why they would have any interest in our product. 
 
-Outer stakeholders:
-\begin{itemize}
-\item Trafikverket - Responsible for the long-term planning of infrastructure in Sweden.
-\item Polismyndigheten - The police is responsible for enforcing traffic regulations, and thus influenced by this product.
-\item Swedish parliament - The Parliament decides on all laws in Sweden, and a change in the law would be needed to allow driverless technology.
-\item Swedish government - The government enforces the laws that Parliament decides on, see above.
-\item Trafikanalys - Provides policy makers with a basis for making decisions about transport policy.
-\item Transportstyrelsen - Secure and environmentaltal friendly transports.
-\item Insurance companies - Cars without drivers, or with only passengers (the driver is seen as a passenger when the car is running automatically) poses new problems concerning insurance and liability in traffic.
-\item Car owners - end users
-\item Lantmäteriet - Develops maps of Sweden, which is needed for our product to work.
-\end{itemize}
-
-Since most of the stakeholders are large organizations, we had to pretend what their interests in this system was and we came up with features of interest for each one of them.
 \paragraph{Reflection}
 \hfill \break
-For example we found that one of the features that all of the stakeholders had in common was their major interests in enhanced traffic-security and further we realized the importance of implementing these features. We also realized that the insurance companies might lose income in case this system gets too secure and nobody buys traffic insurances anymore.
+While conducting the stakeholder anaylsis we found that one of the features that all of the stakeholders had in common was their major interests in enhanced traffic-security and further we realized the importance of implementing these features. We also realized that the insurance companies might lose income in case this system gets too secure and nobody buys traffic insurances anymore. A list of all the stakeholders that we identified can be seen below. 
+
+\noindent Inner stakeholders:
+\begin{itemize}
+\item \textbf{LADA} - key customer. 
+\item \textbf{Steve's Angels} - develops the product. 
+\end{itemize}
+
+\noindent Outer stakeholders:
+\begin{itemize}
+\item \textbf{Trafikverket} - Responsible for the long-term planning of infrastructure in Sweden. Can probably save money if the roads are used more efficiently. 
+\item \textbf{Polismyndigheten} - The police is responsible for enforcing traffic regulations, and thus influenced by this product. With autonomous cars there will probably be less traffic offences, and thus they do not need to allocate as much resources in this area. 
+\item \textbf{Swedish parliament} - The Parliament decides on all laws in Sweden, and a change in the law would be needed to allow driverless technology.
+\item \textbf{Swedish government} - The government enforces the laws that Parliament decides on, see above.
+\item \textbf{Trafikanalys} - Provides policy makers with a basis for making decisions about transport policy.
+\item \textbf{Transportstyrelsen} - Secure and environmental friendly transports.
+\item \textbf{Insurance companies} - Cars without drivers, or with only passengers (the driver is seen as a passenger when the car is running automatically) poses new problems concerning insurance and liability in traffic.
+\item \textbf{Lantmäteriet} - Develops maps of Sweden, which is needed for our product to work.
+\end{itemize}
+As mentioned earlier most of the stakeholders are large organizations and it would be very hard and time consuming to contact them all. Therefore, we had to pretend what their interests in this system was and we came up with features of interest for each one of them. This means that our view of their interests in the product may not fully correspond with their actual views. 
 
 \subsubsection{Interviewing}
 Interviewing is one of the most widely used elicitation techniques, but it has its pros and cons. It is a quite simple and straightforward technique that requires little planning and can be used in various situations. It is a good technique for getting information about the present work in the domain as well as present problems. Interviews can be conducted with either individuals or in groups.
 Generally there are two types of interviews: 
 \begin{itemize}
     \item Structured - the interviewer has prepared a set of questions that needs to be answered. 
-    \item Unstructured - the interviewer has not prepared any questions and instead           openly discusses what is expected from the system. \ldots 
+    \item Unstructured - the interviewer has not prepared any questions and instead openly discusses what is expected from the system.
 \end{itemize}
 
 \paragraph{Motivation}
 \hfill \break
-Since the Project Mission was quite vague and left out a lot of functionality, we had a lot of questions about the system that needed to be answered before we could start working on the requirements specification. We felt that we needed to get clarification from our customers fairly soon, and as interviewing requires little planning and work, and doesn’t take to long to perform, it was deemed a fitting technique to use. Interviews also allows the interviewer and interviewee(s) to discuss and explain the questions and answers, which can give even further clarification. It also gives us the possibility to ask follow-up questions to confirm our understanding.
+Since the Project Mission was quite vague and left out a lot of functionality, we had a lot of questions about the system that needed to be answered before we could start working on the requirements specification. We felt that we needed to get clarification from our customers fairly soon, and as interviewing requires little planning and work, and doesn't take to long to perform, it was deemed a fitting technique to use. Interviews also allows the interviewer and interviewee(s) to discuss and explain the questions and answers, which can give even further clarification. It also gave us the possibility to ask follow-up questions to confirm our understanding.
 
 \paragraph{Method}
 \hfill \break
-As unstructured interviews requires a lot of experience and are difficult to perform, we felt that a structured interview were more fitting when meeting with our customer. We prepared a list of questions to ask and did leave room for follow-up questions to confirm our understanding of what the customer asked for and why they asked for it. During our interviews with our clients 2-3 persons of the customer group attended, so the interviews where conducted in groups.
+As unstructured interviews requires a lot of experience and are difficult to perform, we felt that a structured interview was more fitting when meeting with our customer. We prepared a list of questions to ask and did leave room for follow-up questions to confirm our understanding of what the customer asked for and why they asked for it. During our interviews with our clients 2-3 persons of the customer group attended, so the interviews where conducted in groups. To make sure that the whole group had a clear view of what the customer wanted, all project members attended the interview. The questioning was performed mainly by two members and one member took notes. The rest of the group listened and jumped in if they felt something was unclear. To validate our notes from the first interview we sent our notes to the customer and they approved them. 
+Before the second interview we sent our questions to the customer so they could review them and prepare before we met. 
 
 \paragraph{Reflection}
 \hfill \break
-The interview elicitation technique has been of great success for our project. Even if we noticed some of the elicitation barriers it still feels like we've managed to gather the information needed to begin form a viable SRS and with little effort spent.
+The interview elicitation technique has been of great success for our project since we got a clearer view of what the customers wanted and why they wanted it. For instance, before our first interview we did not know which country's traffic rules the car should follow or if the system should be developed for different car brands or just their own brand, LADA. But this and other uncertainties were made clear after our interviews. \\
+\indent Even if we noticed some of the elicitation barriers it still feels like we managed to gather the information needed to begin form a viable SRS and with little effort spent. The negotiation barriers are discussed further in section 2.2. 
 
 \subsubsection{Brainstorming}
 Using brainstorming as an elicitation technique is an effective way of generating new ideas. During a brainstorm session it is of great importance not to criticize any idea. This creates an environment where no group member is afraid of being ridiculed and thus enable the group to produce new ideas at a higher rate.
@@ -208,6 +225,7 @@ During the interviews with our customer we had a few disagreements, or conflicts
 \paragraph{Method}
 \hfill \break
 As the conflicts with our customer group occured during the interviews we addressed most of them directly by starting to negotiate. However, some of the conflicts needed further analysis of the goals for each party and therefore were addressed at a later meeting. The conflicts we had within our project group were addressed as they occured. For example, the issue with what tools to use in our project were solved by letting each project member describe why they wanted to use a certain tool and why it suited this project. 
+
 \paragraph{Reflection}
 \hfill \break
 The negotiations resolved the conflicts we had internally in our project group as well as the ones we had with our customer. Negotiations where important in the process of narrowing the scope of the customers requested functionality. We deemed some functionality as unnecessary and, in some occasions, unrealistic.
@@ -225,10 +243,42 @@ One of the things that was made clear after our first interview with our custome
 During our first interview we felt that the customer came up with too many requirements. Some of them were essential, while others were just “nice-to-have”, or so called luxury requirements. For example, they wanted the possibility for the autonomous cars to form a train so that the road network would be used more efficiently. While this was a nice feature to have, we did not feel that it was a necessity for achieving their main goals. This and similar disagreements were solved by further negotiations and reasoning. 
 
 \subsection{Elicitation reflections}
-During the elicitation process we asked our customer the question why? multiple times. Our customer was very liable to tell us how they wanted us to fix their problems, this is a natural behaviour of the customer but it's up to us to question their solutions and focus on their problem rather than their proposed solutions. If we manages to do this we're probably ending up with a system-solution that's more suitable for their needs but off course if we cannot convince the customer our solution is better than theirs then we might have to give up our solution.
+During the elicitation process we asked our customer the question "why?" multiple times. Our customer was very prone to tell us how they wanted us to fix their problems, this is a natural behaviour of the customer but it's up to us to question their solutions and focus on their problem rather than their proposed solutions. If we manage to do this we're probably ending up with a system-solution that's more suitable for their needs. But off course, if we cannot convince the customer our solution is better than theirs, then we might have to give up our solution.
 For example in our case the customer in the beginning told us they wanted some sort of parental control to be activated on the system but after further investigation we found that what they really wanted was just another user role for passengers who's not allowed to change destination.
 
-%%%%% TOOL REFLECTION %%%%%%%%%
+%%%%% REQUIREMENTS SPECIFICATION SECTION %%%%%%%%%
+\section{Specification}
+This section describes our work on the requirements specification as well as reflections on why we used certain methods. 
+
+\subsection{R1}
+\todo{Jag vet att engelskan här är ganska dålig, kör en omskrivning senare. Vill bara få ner all text först}
+After we had our first interview with our customers, as well as done some research on existing autonomous cars, we had gotten an image what the customer wanted. Of course there were still a few questions that were unanswered, but we felt that we had enough information to begin documenting some requirements. Therefore, the whole group sat down together and conducted a brainstorming session were we elicited some more requirements. The brainstorming session gave us a long list of that were not divided into different categories requirements. So, to divide the requirements into different types we used a table structure, where we had three main requirement levels; Functional, Data and Quality. We choose goal, domain and product as requirement sub-levels. See figure \ref{fi:classification} in the appendix to get a better view of our thought process. This meant that we got the following requirement types:  
+\begin{itemize}
+\item Functional goal requirements
+\item Functional domain requirements
+\item Functional product requirements
+\item Data domain requirements
+\item Data product requirements
+\item Quality goal requirements
+\item Quality domain requirements
+\item Quality product requirements
+\end{itemize}
+Our experience was that it was hard to divide the requirements into categories, and we felt quite uncertain of where to put the requirements throughout the process. It was especially hard to determine if the requirements should be on product level or domain level. We were also uncertain whether this was a good way or not, of dividing the requirements into different types. But we choose to keep it this way for R1 to discuss it further with our supervisor. 
+After we divided our requirements into different categories we gave them the following identification numbers: XYyN. Where X is the first character of the requirement level, i.e., Functional, Data or Quality. Yy is the first and second character of the sub requirement level, i.e., Goal, Domain or Product. N is the requirement number, which is incremented by one for each requirement in each category. 
+\todo{LÄGG TILL TEXT OM VARFÖR VI VALDE NUMMER ISTÄLLET FÖR STRÄNGAR}
+\newline
+\indent For the first release we decided to document all of our requirements as features. Feature requirements are quite straightforward, and easy to formulate and change, and as many of the requirements we had produced so far were not fully specified, we felt that the feature style was our best option for now. 
+\newline
+\indent Even if it can be quite time consuming to develop a context diagram we choose to allocate a lot time on it in the beginning of the project. This because it can be a great way to show which interfaces the product should communicate with, as well as great way for the customer to see if any interface is missing. Context diagram can also show product scope, and as we believed that the scope described in PMv1 \cite{pmv1} was too wide to fit this course, this was a good way to make sure that our customers agreed with the new reduced project scope. During our work on the context diagram we experienced a few difficulties. In particular, it was hard to identify which interfaces that should be included in the context diagram, and if the content we added was on product or domain level. 
+\newline
+\indent We decided early on that we should give reqT and a chance so all our 
+
+\subsection{R2}
+
+\subsection{R3}
+
+
+%%%%% TOOL REFLECTION section %%%%%%%%%
 \section{Tool reflections}
 \noindent
 \subsection{ReqT}
@@ -267,13 +317,23 @@ During the walk-through most of our solutions were approved by the customer repr
 They also pointed out some special scenarios as for example when the car is running out of gas on it's way to a pick-up spot.
 This technique allowed us not only to validate our existing tasks and requirement but also worked as another elicitation technique since we also came up with some new requirements.
 
-\subsection{Checklists}
-To write a validation checklist that our customer can read while checking the requirements is a good way to ensure the quality of the SRS. Here the authors gets the opportunity to point out some of the things that's been especially complex during development and instead of hiding them under the carpet they are highlighted. This gives the customer a great overview of the complexity in their ordered system requirement specification and in turn can point out some of the things that needs further development before the SRS is signed.
+\subsection{Validation Checklists}
+To write a validation checklist that our customer can read while checking the requirements is a good way to ensure the quality of the SRS. Here the authors gets the opportunity to point out some of the things that's been especially complex during development, instead of hiding them under the carpet they are highlighted. This gives the customer a great overview of the complexity in their ordered system requirement specification and in turn can point out some of the things that needs further development before the SRS is signed.
 \subsubsection{Create a validation checklist form to the customer}
 To R2 we've created a validation checklist which will be used by our customer to validate our SRS. This list is tailor made to check some of the biggest challenges we've expirienced with our SRS. The customer goes through this list and reads our SRS simultaneously to check to which level the SRS fulfills each attribute in the list.
-
+\todo{funderar på att ta bort dessa rubriker}
 \subsubsection{Validate SRS checklist by developers}
 After the second release we'll go through the checklist that was written by our developers and the outcome from that experience will be summarized here.
+
+\subsubsection{Reflection}
+There were unfortunately some problems regarding the structure of our validation checklist. Some of the content that we asked the customer to validate were left out of the SRS on purpose. In the checklist we requested validation of deliverables such as installation documents, documentation regarding support and maintenance together with functionality that was never planed to be delivered.
+This did not prevent us from receiving the feedback we needed as the checklist covered more relevant content as well. However, handing a validation checklist with partly irrelevant content, that is not covered in the SRS, to the customer might give the impression that developers are not on the right track. 
+
+%%%%% PRIORITIZATION %%%%%%%%%
+\section{Prioritization}
+
+
+\todo{Add text of how we used the mindmap to prioritize in the beginning of the project. Could be good to mention that we sent it to the customer for validation (should probably be under validation)}
 
 %%%%% INDIVIDUAL STATEMENTS %%%%%%%%%
 \section{Individual statements}
@@ -296,7 +356,138 @@ Niklas has taken part in group meetings as well as customer meetings. Attended t
 %\addcontentsline{toc}{section}{References}
 \begin{thebibliography}{1}
 \bibitem{srs} Crash Software Requirements Specification version 1. 
+\bibitem{pmv1} Crash Project Mission version 1.
 \bibitem{pmv2} Crash Project Mission version 2.
 \end{thebibliography}
+\newpage
+
+%%%%% APPENDIX %%%%%%%%%
+\appendix
+\section{Questions for interview 1}
+Påståendena inom citationstecken är tagna from kundens PMv1.
+
+\noindent”Följa rådande trafikregler”:
+\begin{itemize}
+\item Vilka länder trafikregler? (Kalifornien, Nevada, Michigan och Florida enda lagliga i USA)
+\item Ta hänsyn om regler för självstyrande bilar? Vilka finns det?
+\item Scenario: En gren ligger på vägen och det finns inga andra bilar åt någon utav sidorna men där är en heldragen linje – Får man då byta körfält för att undvika krock eller ska man stanna och riskera krock bakifrån eller bildande av köer? (Finns det för andra tillfällen då det är ok att bryta mot trafikregler?)
+\item Får man köra snabbare än hastighetsgränsen vid nödfall?
+\item Får man köra med t.ex. en trasig lampa om det är nödfall?
+\item Vad händer om det är lågt däcktryck (säkerhetsrisk) men det är ett nödfall?
+\end{itemize}
+\hfill \break
+
+\noindent ”Ta hänsyn till händelser i omgivningen”:
+\begin{itemize}
+\item Vilka typer av händelser? (se föregående fråga)
+\end{itemize}
+\hfill \break
+
+\noindent ”Ta hänsyn till rådande trafiksituation”:
+\begin{itemize}
+\item Vad innebär detta?
+\item Hur skiljer det sig från föregående två punkter?
+\end{itemize}
+\hfill \break
+
+\noindent ”Framföra fordonet på ett komfortabelt vis för eventuella passagerare”:
+\begin{itemize}
+\item Vad innebär komfortabelt i det här sammanhanget? 
+\item Vilka riktlinjer finns det?
+\item Räknas förare in som passagerare?
+\item Om bilen framförs utan förare/passagerare gäller samma regler för komfort då?
+\end{itemize}
+\hfill \break
+
+\noindent ”Använda bränsle sparsamt”:
+\begin{itemize}
+\item Hur sparsamt? 
+\item Vilka riktlinjer finns det?
+\end{itemize}
+\hfill \break
+
+\noindent ”Ta hänsyn till väderomständigheter”:
+\begin{itemize}
+\item På vilket sätt ska man ta hänsyn till väderomständigheter?
+\item Vilka väderomständigheter ska man ta hänsyn till?
+\item När är det för osäkert för att köra?
+\end{itemize}
+\hfill \break
+
+\noindent ”Ta hänsyn till återstående räckvidd”:
+\begin{itemize}
+\item På vilket sätt ska man ta hänsyn till återstående räckvidd?
+\item "Köra 10 km/h för att komma till målet"?
+\item Planera om rutt för bensinmack?
+\item Vända/ta en omväg om bränslet inte räcker?
+\end{itemize}
+\hfill \break
+
+\noindent ”Användaren ska kunna mata in destination”:
+\begin{itemize}
+\item Hur matar man in destination? (tangentbord/touch/voice)
+\item Hur ska man få feedback?
+\end{itemize}
+\hfill \break
+
+\noindent”Det ska finnas ett “föräldraläge”, om man placerar sitt barn ensamt i bilen så ska barnet inte kunna ändra destinationen”:
+\begin{itemize}
+\item Hur avancerat ska detta vara?
+\item Vilka begränsningar finns det?
+\item Är detta upp till oss att bestämma?
+\end{itemize}
+\hfill \break
+
+\noindent ”Flera självkörande bilar ska kunna länka sig samman och forma ett sorts tåg, och på så vis kunna spara bränsle, och utnyttja vägnätet mer effektivt”:
+\begin{itemize}
+\item Spara hur mycket bränsle?
+\item Förklara riktlinjerna för hur effektivt detta är.
+\item Hur eftersträvansvärt är detta?
+\item Får man köra om andra bilar för att komma ikapp en annan bil för att skapa tåg? (Problem om varannan bil är självstyrande isf)
+\item Är det inte farligt om man inte släpper in vanliga bilar för att behålla tåget? 
+\end{itemize}
+\hfill \break
+
+\noindent Övriga frågor:
+\begin{itemize}
+\item Vad finns det för prioriteringar mellan ovanstående krav? Går tex komfort eller bränsleförbrukning först?
+\item Hur gör man med cyklister vid övergångsställen? (man ska ju ej stanna enligt trafikregler)
+\item Vad finns det för hårdvarubegränsningar?
+\item Vilken bränsletyp går bilen på?
+\item Vad ska man ha för säkerhetsmarginaler?
+\item Ska föraren kunna ingripa/köra bilen?
+\item Hur gör man med ”manuella trafikljus”? (trafikpoliser och dylikt)
+\item Hur gör man vid trasiga trafikljus (gul-blinkande), poliskontroller etc?
+\item Ska den stödja alla typer av parkering?
+\item Vad finns det för säkerhet för att öppna dörrar?
+\item Vad ska bilen göra vid krock/skada?
+\item Vad händer om bilen blir stulen?
+\item Var mellan olika alternativ när krock är oundviklig? (Trolley problem)
+\item Vilken hastighet ska bilen köra i när maxhastighet inte finns?
+\item Vad händer om GPS inte är tillgänglig?
+\item Ska bilen kunna släppa fram blåljus?
+\end{itemize}
+
+\newpage
+\section{Mindmap of the system}
+
+\begin{figure}[htb]    
+ \centering
+  \includegraphics[width=1\textwidth]
+    {"Mindmap".png}% bild på vårat context diagram
+  \caption{Mindmap of the system. Created in the beginning of the project.}
+  \label{fi:Mindmap}
+\end{figure}
+
+\newpage
+\section{First requirement classification}
+
+\begin{figure}[htb]    
+ \centering
+  \includegraphics[width=1\textwidth]
+    {"kravindelning".jpg}% bild på vårat context diagram
+  \caption{Our first requirements classification.}
+  \label{fi:classification}
+\end{figure}
 
 \end{document}

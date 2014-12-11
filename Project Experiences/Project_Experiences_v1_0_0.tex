@@ -163,8 +163,9 @@ While conducting the stakeholder anaylsis we found that one of the features that
 
 \noindent Inner stakeholders:
 \begin{itemize}
-\item \textbf{LADA} - key customer. 
-\item \textbf{Steve's Angels} - develops the product. 
+\item \textbf{End user} - All users that interact with the system such as the car owner and passengers. The end users have demands on the system to be safe and easy to use.
+\item \textbf{LADA} - Car manufacturer and key customer of the requirement specification. LADA has a considerable amount of demands which the system must fulfill in order to meet their business goals. CRASH also integrates with their existing modules such as the control system and sensors.
+\item \textbf{Steve's Angels} - Develops the software requirement specification. They have demands such that the system solution described in the requirement specification is formed in a sustainable way. They might want to sell their solution to other companies since LADA is only the key customer and Steve's Angels owns the rights of the SRS.
 \end{itemize}
 
 \noindent Outer stakeholders:
@@ -176,7 +177,8 @@ While conducting the stakeholder anaylsis we found that one of the features that
 \item \textbf{Trafikanalys} - Provides policy makers with a basis for making decisions about transport policy.
 \item \textbf{Transportstyrelsen} - Secure and environmental friendly transports.
 \item \textbf{Insurance companies} - Cars without drivers, or with only passengers (the driver is seen as a passenger when the car is running automatically) poses new problems concerning insurance and liability in traffic.
-\item \textbf{Lantmäteriet} - Develops maps of Sweden, which is needed for our product to work.
+\item \textbf{Lantmäteriet} - Develops maps of Sweden, which is needed for the positining system to work.
+\item \textbf{Sveriges Trafikskolors Riksförbund} - The Swedish organization for driving schools.
 \end{itemize}
 As mentioned earlier most of the stakeholders are large organizations and it would be very hard and time consuming to contact them all. Therefore, we had to pretend what their interests in this system was and we came up with features of interest for each one of them. This means that our view of their interests in the product may not fully correspond with their actual views. 
 
@@ -237,7 +239,7 @@ When converting stakeholders aspirations into requirements, we'll simply have to
 During the project elicitation phase we experienced some of the most common elicitation barriers, some examples are described below.
 
 \subsubsection{Customer changes their minds}
-One of the things that was made clear after our first interview with our customer was that the system should focus on a private audience. Just a few days later we had another discussion with them, and now they had changed their minds and decided it should be possible to integrate the system into a taxi-activity for enterprise purposes.
+One of the things that was made clear after our first interview with our customer was that the system should focus on a private audience. Just a few days later we had another discussion with them, and now they had changed their minds and decided it should be possible to integrate the system into a taxi-activity for enterprise purposes. The customer is always right but since LADA only is our key customer we always have the option to deny their requests. We want our key customer to be satisfied with our solution and therefore it's important to take their request serious before consider denying it. There is no way to prevent the customer from changing their mind and this is one of the things that makes the life of a software requirement engineer so varying since you never know what crazy ideas the customer might come up with. However if the SRS is baselined we'll tell the customer to make a change request and then we'll do an impact analysis before accepting/denying the requested change.
 
 \subsubsection{Luxury requirements}
 During our first interview we felt that the customer came up with too many requirements. Some of them were essential, while others were just “nice-to-have”, or so called luxury requirements. For example, they wanted the possibility for the autonomous cars to form a train so that the road network would be used more efficiently. While this was a nice feature to have, we did not feel that it was a necessity for achieving their main goals. This and similar disagreements were solved by further negotiations and reasoning. 
@@ -252,7 +254,7 @@ This section describes our work on the requirements specification as well as ref
 
 \subsection{R1}
 \todo{Jag vet att engelskan här är ganska dålig, kör en omskrivning senare. Vill bara få ner all text först}
-After we had our first interview with our customers, as well as done some research on existing autonomous cars, we had gotten an image what the customer wanted. Of course there were still a few questions that were unanswered, but we felt that we had enough information to begin documenting some requirements. Therefore, the whole group sat down together and conducted a brainstorming session were we elicited some more requirements. The brainstorming session gave us a long list of that were not divided into different categories requirements. So, to divide the requirements into different types we used a table structure, where we had three main requirement levels; Functional, Data and Quality. We choose goal, domain and product as requirement sub-levels. See figure \ref{fi:classification} in the appendix to get a better view of our thought process. This meant that we got the following requirement types:  
+After we had our first interview with our customers, as well as done some research on existing autonomous cars, we had gotten an image what the customer wanted. There were of course still a few questions that were left unanswered, but we felt that we had enough information to begin documenting some requirements. Therefore, the whole group sat down together and conducted a brainstorming session were we elicited some more requirements. The brainstorming session gave us a long list of requirements, but they were not divided into different categories requirements. So, to divide the requirements into different types we used a table structure where we had three main requirement levels; Functional, Data and Quality. We choose goal, domain and product as requirement sub-levels. See figure \ref{fi:classification} in the appendix to get a better view of our thought process. This meant that we got the following requirement types:  
 \begin{itemize}
 \item Functional goal requirements
 \item Functional domain requirements
@@ -263,18 +265,30 @@ After we had our first interview with our customers, as well as done some resear
 \item Quality domain requirements
 \item Quality product requirements
 \end{itemize}
-Our experience was that it was hard to divide the requirements into categories, and we felt quite uncertain of where to put the requirements throughout the process. It was especially hard to determine if the requirements should be on product level or domain level. We were also uncertain whether this was a good way or not, of dividing the requirements into different types. But we choose to keep it this way for R1 to discuss it further with our supervisor. 
+Our experience was that it was hard to divide the requirements into categories, and we felt quite uncertain of where to put the requirements throughout the process. It was especially hard to determine if the requirements should be on product level or domain level. We were also uncertain whether this was a good way or not of dividing the requirements into different types. But we choose to keep it this way for R1 to discuss it further with our supervisor. 
 After we divided our requirements into different categories we gave them the following identification numbers: XYyN. Where X is the first character of the requirement level, i.e., Functional, Data or Quality. Yy is the first and second character of the sub requirement level, i.e., Goal, Domain or Product. N is the requirement number, which is incremented by one for each requirement in each category. 
 \todo{LÄGG TILL TEXT OM VARFÖR VI VALDE NUMMER ISTÄLLET FÖR STRÄNGAR}
 \newline
 \indent For the first release we decided to document all of our requirements as features. Feature requirements are quite straightforward, and easy to formulate and change, and as many of the requirements we had produced so far were not fully specified, we felt that the feature style was our best option for now. At this time we prioritized to develop requirements that covered large parts of the system rather than working with different requirements styles.
 \newline
-\indent Even if it can be quite time consuming to develop a context diagram we choose to allocate a lot time on it in the beginning of the project. This because it can be a great way to show which interfaces the product should communicate with, as well as great way for the customer to see if any interface is missing. Context diagram can also show product scope, and as we believed that the scope described in PMv1 \cite{pmv1} was too wide to fit this course, this was a good way to make sure that our customers agreed with the new reduced project scope. During our work on the context diagram we experienced a few difficulties. In particular, it was hard to identify which interfaces that should be included in the context diagram, and if the content we added was on product or domain level. 
+\indent Even if it can be quite time consuming to develop a context diagram we choose to allocate a lot time on it in the beginning of the project. This because it can be a great way to show which interfaces the product should communicate with, as well as great way for the customer to see if any interface is missing. Context diagram can also show product scope, and as we believed that the scope described in PMv1 \cite{pmv1} was too wide to fit this course, this was a good way to make sure that our customers agreed with our reduced project scope. During our work on the context diagram we experienced a few difficulties. In particular, it was hard to identify which interfaces that should be included in the context diagram and if the content we added was on product or domain level. 
 \newline
 \indent We decided early on that we should give reqT a chance so all our 
+\todo{Varför oavslutad mening?(Jag har ingen koll på arbetet dokumentet, slängde bara ett getöga på senaste comitten och såg att en ändring hade gjorts på den här raden, men att den ändå var oavslutad /Knorn}
 
 \subsection{R2}
-
+As we suspected while working on the first release, we had made an excessive categorization of the requirements that was quite hard to understand for people that had not been part of the development of the requirements specification. After feedback from the supervisor and discussion within the group, we instead chose to use the following categories: 
+\begin{itemize}
+\item Goal requirements
+\item Domain requirements
+\item Quality requirements
+\item Product requirements
+\begin{itemize}
+\item Functional product requirements
+\item Data product requirements
+\end{itemize} 
+\item Design requirements
+\end{itemize}
 
 \subsection{R3}
 
@@ -330,12 +344,23 @@ After the second release we'll go through the checklist that was written by our 
 There were unfortunately some problems regarding the structure of our validation checklist. Some of the content that we asked the customer to validate were left out of the SRS on purpose. In the checklist we requested validation of deliverables such as installation documents, documentation regarding support and maintenance together with functionality that was never planed to be delivered.
 This did not prevent us from receiving the feedback we needed as the checklist covered more relevant content as well. However, handing a validation checklist with partly irrelevant content, that is not covered in the SRS, to the customer might give the impression that developers are not on the right track. 
 
-We recieved feedback 
+We received useful feedback on functional and quality requirements. The validation checklist also solved some uncertainties regarding business goals.
+
+
+
+\subsection{Prioritization}
+\todo{We send the MindMap for validation to cut branches.}
+
 %%%%% PRIORITIZATION %%%%%%%%%
 \section{Prioritization}
 
+\subsection{Motivation}
+\subsection{Method}
+\subsection{Reflection}
 
-\todo{Add text of how we used the mindmap to prioritize in the beginning of the project. Could be good to mention that we sent it to the customer for validation (should probably be under validation)}
+\todo{
+Add text of how we used the MindMap to prioritize in the beginning of the project.
+Could be good to mention that we sent it to the customer for validation (should probably be under validation)}
 
 %%%%% INDIVIDUAL STATEMENTS %%%%%%%%%
 \section{Individual statements}

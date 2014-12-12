@@ -159,28 +159,9 @@ Usually when conducting a stakeholder analysis you invite the different stakehol
 
 \paragraph{Reflection}
 \hfill \break
-While conducting the stakeholder anaylsis we found that one of the features that all of the stakeholders had in common was their major interests in enhanced traffic-security and further we realized the importance of implementing these features. We also realized that the insurance companies might lose income in case this system gets too secure and nobody buys traffic insurances anymore. A list of all the stakeholders that we identified can be seen below. 
+While conducting the stakeholder anaylsis we found that one of the features that all of the stakeholders had in common was their major interests in enhanced traffic-security and further we realized the importance of implementing these features. We also realized that the insurance companies might lose income in case this system gets too secure and nobody buys traffic insurances anymore. A list of all the stakeholders that we identified and their interests can be found in the SRS\cite{srs}. 
 
-\noindent Inner stakeholders:
-\begin{itemize}
-\item \textbf{End user} - All users that interact with the system such as the car owner and passengers. The end users have demands on the system to be safe and easy to use.
-\item \textbf{LADA} - Car manufacturer and key customer of the requirement specification. LADA has a considerable amount of demands which the system must fulfill in order to meet their business goals. CRASH also integrates with their existing modules such as the control system and sensors.
-\item \textbf{Steve's Angels} - Develops the software requirement specification. They have demands such that the system solution described in the requirement specification is formed in a sustainable way. They might want to sell their solution to other companies since LADA is only the key customer and Steve's Angels owns the rights of the SRS.
-\end{itemize}
-
-\noindent Outer stakeholders:
-\begin{itemize}
-\item \textbf{Trafikverket} - Responsible for the long-term planning of infrastructure in Sweden. Can probably save money if the roads are used more efficiently. 
-\item \textbf{Polismyndigheten} - The police is responsible for enforcing traffic regulations, and thus influenced by this product. With autonomous cars there will probably be less traffic offences, and thus they do not need to allocate as much resources in this area. 
-\item \textbf{Swedish parliament} - The Parliament decides on all laws in Sweden, and a change in the law would be needed to allow driverless technology.
-\item \textbf{Swedish government} - The government enforces the laws that Parliament decides on, see above.
-\item \textbf{Trafikanalys} - Provides policy makers with a basis for making decisions about transport policy.
-\item \textbf{Transportstyrelsen} - Secure and environmental friendly transports.
-\item \textbf{Insurance companies} - Cars without drivers, or with only passengers (the driver is seen as a passenger when the car is running automatically) poses new problems concerning insurance and liability in traffic.
-\item \textbf{Lantmäteriet} - Develops maps of Sweden, which is needed for the positining system to work.
-\item \textbf{Sveriges Trafikskolors Riksförbund} - The Swedish organization for driving schools.
-\end{itemize}
-As mentioned earlier most of the stakeholders are large organizations and it would be very hard and time consuming to contact them all. Therefore, we had to pretend what their interests in this system was and we came up with features of interest for each one of them. This means that our view of their interests in the product may not fully correspond with their actual views. 
+\noindent As mentioned earlier most of the stakeholders are large organizations and it would be very hard and time consuming to contact them all. Therefore, we had to pretend what their interests in this system was and we came up with features of interest for each one of them. This means that our view of their interests in the product may not fully correspond with their actual views. 
 
 \subsubsection{Interviewing}
 Interviewing is one of the most widely used elicitation techniques, but it has its pros and cons. It is a quite simple and straightforward technique that requires little planning and can be used in various situations. It is a good technique for getting information about the present work in the domain as well as present problems. Interviews can be conducted with either individuals or in groups.
@@ -252,9 +233,9 @@ For example in our case the customer in the beginning told us they wanted some s
 \section{Specification}
 This section describes our work on the requirements specification as well as reflections on why we used certain methods. 
 
-\subsection{R1}
++\subsection{R1}
 \todo{Jag vet att engelskan här är ganska dålig, kör en omskrivning senare. Vill bara få ner all text först}
-After we had our first interview with our customers, as well as done some research on existing autonomous cars, we had gotten an image what the customer wanted. There were of course still a few questions that were left unanswered, but we felt that we had enough information to begin documenting some requirements. Therefore, the whole group sat down together and conducted a brainstorming session were we elicited some more requirements. The brainstorming session gave us a long list of requirements, but they were not divided into different categories requirements. So, to divide the requirements into different types we used a table structure where we had three main requirement levels; Functional, Data and Quality. We choose goal, domain and product as requirement sub-levels. See figure \ref{fi:classification} in the appendix to get a better view of our thought process. This meant that we got the following requirement types:  
+After we had our first interview with our customer, as well as done some research on existing autonomous cars, we had an improved understanding of what the customer wanted. There were of course still a few questions that were left unanswered, however, we felt that we had enough information to begin documenting some requirements. Therefore, the whole group sat down together and conducted a brainstorming session were we elicited some more requirements. The brainstorming session gave us a long list of requirements, but they were not divided into different categories requirements. So, to divide the requirements into different types we used a table structure where we had three main requirement levels; Functional, Data and Quality. We choose goal, domain and product as requirement sub-levels. See figure \ref{fi:classification} in the appendix to get a better view of our thought process. This meant that we got the following requirement types:  
 \begin{itemize}
 \item Functional goal requirements
 \item Functional domain requirements
@@ -274,9 +255,12 @@ After we divided our requirements into different categories we gave them the fol
 \indent Even if it can be quite time consuming to develop a context diagram we choose to allocate a lot time on it in the beginning of the project. This because it can be a great way to show which interfaces the product should communicate with, as well as great way for the customer to see if any interface is missing. Context diagram can also show product scope, and as we believed that the scope described in PMv1 \cite{pmv1} was too wide to fit this course, this was a good way to make sure that our customers agreed with our reduced project scope. During our work on the context diagram we experienced a few difficulties. In particular, it was hard to identify which interfaces that should be included in the context diagram and if the content we added was on product or domain level. 
 \newline
 \indent We decided early on that we should give reqT a chance so all our 
-\todo{Varför oavslutad mening?(Jag har ingen koll på arbetet dokumentet, slängde bara ett getöga på senaste comitten och såg att en ändring hade gjorts på den här raden, men att den ändå var oavslutad /Knorn}
+\todo{Varför oavslutad mening? (Jag har ingen koll på arbetet dokumentet, slängde bara ett getöga på senaste comitten och såg att en ändring hade gjorts på den här raden, men att den ändå var oavslutad) /Knorn}
 
 \subsection{R2}
+All of our requirements from our specification process for R1 were specified as feature requirements, and frankly, many of them were poorly specified. Therefore, we started our work on R2 with reviewing all of our requirements in the requirements specification. As expected, there was room for a lot of improvement and the review showed that some of the requirements, due to their complexity, needed more information and description. As a result, we introduced four new styles in our requirements specification, task descriptions, scenarios, virtual windows and E/R-diagrams. 
+At one point while specifying requirements, we found ourselves not knowing how to handle a certain user situation. Therefore we decided to document some scenarios to help ourselves clarify the situation, 
+
 As we suspected while working on the first release, we had made an excessive categorization of the requirements that was quite hard to understand for people that had not been part of the development of the requirements specification. After feedback from the supervisor and discussion within the group, we instead chose to use the following categories: 
 \begin{itemize}
 \item Goal requirements
@@ -289,6 +273,10 @@ As we suspected while working on the first release, we had made an excessive cat
 \end{itemize} 
 \item Design requirements
 \end{itemize}
+We were still not certain that this was a good categorization as it does not give a good overview over the system and can be quite hard to follow. So for the upcoming release we planned to divide the requirements into new categories that give more information of what is included in the system. This also gave us a chance to review our requirements once more. But for R2 we chose to allocate more time on other areas of the specification. 
+\newline
+\indent For R2 we continued to work on the context diagram, as it needed a few changes.  Some of the events/tasks needed to be rewritten so they were expressed on domain level.   
+
 
 \subsection{R3}
 
@@ -308,7 +296,7 @@ ReqT allows us to build many complex dependencies
 "So yeah, we tried Slack..."
 
 %%%%% CHECKING AND VALIDATION %%%%%%%%%
-\section{Checking and validation}
+\section{Checking and validation (CRASH)}
 \noindent
 During the development of a software requirement specification it's important to make sure the solution that is proposed in the specification are sustainable also in reality and that it lives up to the customers expectations. Therefore it's very important to perform some validation techniques to ensure the quality of the final SRS.
 \subsection{Tests}
@@ -346,10 +334,7 @@ This did not prevent us from receiving the feedback we needed as the checklist c
 
 We received useful feedback on functional and quality requirements. The validation checklist also solved some uncertainties regarding business goals.
 
-
-
-\subsection{Prioritization}
-\todo{We send the MindMap for validation to cut branches.}
+\section{Checking and validation (Compromizer)}
 
 %%%%% PRIORITIZATION %%%%%%%%%
 \section{Prioritization}

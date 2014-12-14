@@ -76,7 +76,7 @@
     \textsc{7/12-14}\\ % The date
     \vspace{10em}
     \begin{flushright}
-    {\huge Software Requirements Specification R2}\\ % The document name
+    {\huge Software Requirements Specification R3}\\ % The document name
     {\large Group F - Steve's Angels} \\
     \par\end{flushright}\vskip 0.5em
 \end{titlepage}
@@ -138,6 +138,7 @@ To get a better understanding of the actors and their objectives see the context
 \end{figure}
 
 \noindent
+\textbf{Inactive} - 
 \textbf{Passenger} There are two types of passengers, a passive passenger or an authenticated passenger. Both can press the emergency stop button, but only the authenticated passenger can ride in the car alone.\\
 \textbf{Driver} Can do anything that a passenger can.
 The driver can also drive the car manually, handle the voice control as well as choosing the destination. \\
@@ -145,6 +146,7 @@ The driver can also drive the car manually, handle the voice control as well as 
 \textbf{Administrator} Can do anything that an owner can.
 The administrator can change the system settings as well as general admin management \\
 \textbf{Control system} - A system that interprets data from the surroundings sensory systems, and identifies appropriate navigation paths, obstacles, traffic lights and signage. \\
+\todo{separate CRASH from control system // fredrik jonathan}
 \textbf{Weather forecast system} - A system that can provide weather forecasts that the car can download and use to warn about dangerous weather conditions along the current route.  \\
 \textbf{Position data system} - A system where the car can upload its current position. Used by the owner to locate the cars position and follow it along its path.  \\
 \textbf{Traffic information system} - A system that keeps track of the current traffic situation (e.g. accidents, queues etc). \\
@@ -153,10 +155,12 @@ The administrator can change the system settings as well as general admin manage
 \subsection{Terminology}
 \textbf{The system} - The delivered product. When nothing else is stated, requirements are specified for autonomous driving mode.\\
 \textbf{Autonomous car} - An autonomous car is also known as a self driving car i.e. a car that operates without a driver. \\
-\textbf{Ecodriving} - Ecodriving is a term used to describe energy efficient use of vehicles. It is a method for reducing fuel consumption when driving, so that less fuel is used to travel the same distance.\\
-\textbf{Safe state} - The safe state is the cars state when it fulfills Swedish car inspection regulations.
-REFERENCE: http://www.bilprovningen.se/Privat/Kontrollbesiktning/Vad-vi-kontrollerar.html\\
+\textbf{EcoDriving} - EcoDriving is a term used to describe energy efficient use of vehicles. It is a method for reducing fuel consumption when driving, so that less fuel is used to travel the same distance.\\
+\textbf{Unsafe state} - The unsafe state is the cars state when it does not fulfill Swedish car inspection regulations.
+REFERENCE to law: Fordonsförordning (2009:211) \\
 \textbf{GPS} - Global Positioning System based on space satellite communication.\\
+\textbf{Logged in} - \\
+\textbf{Parked} - The car is parked when the car is at a stand still and the engine is turned off and the gear lever is in Park mode.  \\
 \\
 The requirements are named in the following manner:
 \begin{description*}
@@ -206,7 +210,7 @@ Each of the following tasks must be supported and are suitable as test cases.
 \textbf{Purpose:} \tab{Tell the system to drive from one place to another.}\\
 \textbf{Precondition:} \tab{A is inside the vehicle. The vehicle has no specified}\\ 
 \tab{ } \tab{destination.}\\
-\textbf{Trigger:} \tab{A gives a command via voice command or touch screen.}\\
+\textbf{Trigger:} \tab{A gives a command via voice or touch screen.}\\
 \\
 \textbf{Variants:} \tab{1.} \tab{Command accepted, CRASH confirms the destination}\\
 \tab{ } \tab{ } \tab{and drives A to the requested destination.}\\
@@ -271,6 +275,7 @@ Each of the following tasks must be supported and are suitable as test cases.
 \tab{ } \tab{ } \tab{remote access permission.} 
 \medskip
 
+\todo{Product!}
 \subsection {Task 6}
 \textbf{Task:} \tab{The system adapts to- and informs user of current weather}\\ 
 \tab{ }  \tab{situation.}\\

@@ -234,8 +234,7 @@ For example in our case the customer in the beginning told us they wanted some s
 This section describes our work on the requirements specification as well as reflections on why we used certain methods. 
 
 
-
-+\subsection{R1}
+\subsection{R1}
 \todo{Jag vet att engelskan här är ganska dålig, kör en omskrivning senare. Vill bara få ner all text först}
 After we had our first interview with our customer, as well as done some research on existing autonomous cars, we had an improved understanding of what the customer wanted. There were of course still a few questions that were left unanswered, however, we felt that we had enough information to begin documenting some requirements. Therefore, the whole group sat down together and conducted a brainstorming session were we elicited some more requirements. The brainstorming session gave us a long list of requirements, but they were not divided into different categories requirements. So, to divide the requirements into different types we used a table structure where we had three main requirement levels; Functional, Data and Quality. We choose goal, domain and product as requirement sub-levels. See figure \ref{fi:classification} in the appendix to get a better view of our thought process. This meant that we got the following requirement types:  
 \begin{itemize}
@@ -249,15 +248,15 @@ After we had our first interview with our customer, as well as done some researc
 \item Quality product requirements
 \end{itemize}
 Our experience was that it was hard to divide the requirements into categories, and we felt quite uncertain of where to put the requirements throughout the process. It was especially hard to determine if the requirements should be on product level or domain level. We were also uncertain whether this was a good way or not of dividing the requirements into different types. But we choose to keep it this way for R1 to discuss it further with our supervisor. 
-After we divided our requirements into different categories we gave them the following identification numbers: XYyN. Where X is the first character of the requirement level, i.e., Functional, Data or Quality. Yy is the first and second character of the sub requirement level, i.e., Goal, Domain or Product. N is the requirement number, which is incremented by one for each requirement in each category. 
-\todo{LÄGG TILL TEXT OM VARFÖR VI VALDE NUMMER ISTÄLLET FÖR STRÄNGAR}
+After we divided our requirements into different categories we gave them the following identification numbers: XYyN. Where X is the first character of the requirement level, i.e., Functional, Data or Quality. Yy is the first and second character of the sub requirement level, i.e., Goal, Domain or Product. N is the requirement number, which is incremented by one for each requirement in each category. We chose to use this indexing method since some of the group members had used it in the PUSS course, and felt that it was a good and simple method to use. The drawback with this method is that the requirement name does not tell anything about what the requirement is about. Instead, we could have used strings as name for the requirements, but we felt that it would have been too time consuming to fit in our schedule for the first release. 
 \newline
 \indent For the first release we decided to document all of our requirements as features. Feature requirements are quite straightforward, and easy to formulate and change, and as many of the requirements we had produced so far were not fully specified, we felt that the feature style was our best option for now. At this time we prioritized to develop requirements that covered large parts of the system rather than working with different requirements styles.
 \newline
 \indent Even if it can be quite time consuming to develop a context diagram we choose to allocate a lot time on it in the beginning of the project. This because it can be a great way to show which interfaces the product should communicate with, as well as great way for the customer to see if any interface is missing. Context diagram can also show product scope, and as we believed that the scope described in PMv1 \cite{pmv1} was too wide to fit this course, this was a good way to make sure that our customers agreed with our reduced project scope. During our work on the context diagram we experienced a few difficulties. In particular, it was hard to identify which interfaces that should be included in the context diagram and if the content we added was on product or domain level. 
 \newline
 \indent We decided early on that we should give reqT a chance so all our 
-\todo{Varför oavslutad mening? (Jag har ingen koll på arbetet dokumentet, slängde bara ett getöga på senaste comitten och såg att en ändring hade gjorts på den här raden, men att den ändå var oavslutad) /Knorn}
+\todo{Varför oavslutad mening? (Jag har ingen koll på arbetet dokumentet, slängde bara ett getöga på senaste comitten och såg att en ändring hade gjorts på den här raden, men att den ändå var oavslutad) /Knorn.
+Ska skriva mer om reqT och dependencies //Niklas}
 
 \subsection{R2}
 All of our requirements from our specification process for R1 were specified as feature requirements, and frankly, many of them were poorly specified. Therefore, we started our work on R2 with reviewing all of our requirements in the requirements specification. As expected, there was room for improvement and the review showed that some of the requirements, due to their complexity, needed more information and description. As a result, we introduced four new styles in our requirements specification, task descriptions, scenarios, virtual windows and E/R-diagrams. 
@@ -277,8 +276,7 @@ As we suspected while working on the first release, we had made an excessive cat
 \end{itemize}
 We were still not certain that this was a good categorization as it does not give a good overview over the system and can be quite hard to follow. So for the upcoming release we planned to divide the requirements into new categories that give more information of what is included in the system. This also gave us a chance to review our requirements once more. But for R2 we chose to allocate more time on other areas of the specification. 
 \newline
-\indent For R2 we continued to work on the context diagram, as it needed a few changes.  Some of the events/tasks needed to be rewritten so they were expressed on domain level.   
-
+\indent For R2 we continued to work on the context diagram, as it needed a few changes.  Some of the events/tasks needed to be rewritten so they were expressed on domain level. This was actually a problem all through the SRS as we often focused on a product solution instead of working on the domain level. 
 
 \subsection{R3}
 We received our supervisor Elizabeth's comments and thoughts of our R2 by e-mail before having the meeting regarding the R2 with her in person. We took all the comments we received and put them on a Kanban board so we had a good and clear overview.
@@ -359,6 +357,17 @@ We received useful feedback on functional and quality requirements. The validati
 
 \section{Checking and validation (Compromizer)}
 
+\subsection{Validation Report}
+After release 2 we evaluated the SRS of Compromizer in two different approaches. First of all they send a checklist to us where we were able to leave comments on our observations during validation. After this we decided to setup a validation meeting with our developers to make sure they agreed on our concerns.
+
+\subsubsection{Validation Checklist}
+The developers of Compromizr send us a checklist of observation tasks along with their SRS, see Appendix \cite{CompromizrChecklist}. They wanted us to evaluate their SRS against this checklist and leave comments on those tasks needed. We did this by splitting up their checklist in five pieces and then four of us took one part each and started evaluating the SRS. Since the last part was about the overall structure of the specification it was filled by all of us that had read their specification.
+When we had finished the checklist we still had some comment about missing and ambiguous requirements. We therefore decided another meeting with the developers would be necessary.
+
+\subsubsection{Validation meeting WIP}
+During the validation process we found more comments than could fit into their validation checklist so we decided to setup a meeting with them where we were able to go through some of the the important notes we had taken in a more detailed level and to make sure they understood our concerns. During this meeting we documented the notes both parties agreed on and the summary is found in Appendix \cite{CompromizrValidationMeeting}.
+
+\todo{Jag förstår inte riktigt nu... Har detta hamnat fel eller vad har det med Compromizr att göra? Borde det inte ligga under CRASH validation? /JOKL}
 See feedback group I
 \begin{itemize}
 \item Business goal was removed.

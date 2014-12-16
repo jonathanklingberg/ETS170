@@ -138,8 +138,8 @@ To get a better understanding of the actors and their objectives see the context
 \end{figure}
 
 \noindent
-\textbf{Inactive} - 
-\textbf{Passenger} There are two types of passengers, a passive passenger or an authenticated passenger. Both can press the emergency stop button, but only the authenticated passenger can ride in the car alone.\\
+\textbf{Traveler} Flyttas hit, resten till terminiloogigigigio
+\textbf{Passenger} A Passenger can unlock the car, press the emergency stop button and ride in the car alone.\\
 \textbf{Driver} Can do anything that a passenger can.
 The driver can also drive the car manually, handle the voice control as well as choosing the destination. \\
 \textbf{Owner} Can do anything that a driver can. The owner also handles user management. Which users are allowed to be drivers and passengers. \\
@@ -159,8 +159,12 @@ The administrator can change the system settings as well as general admin manage
 \textbf{Unsafe state} - The unsafe state is the cars state when it does not fulfill Swedish car inspection regulations.
 REFERENCE to law: Fordonsförordning (2009:211) \\
 \textbf{GPS} - Global Positioning System based on space satellite communication.\\
-\textbf{Logged in} - \\
-\textbf{Parked} - The car is parked when the car is at a stand still and the engine is turned off and the gear lever is in Park mode.  \\
+\textbf{User} - A person that is authenticated by the system, and subsequently interacts with the system. A user must have a registered account in the system or it won't be able to authenticate itself. \\
+\textbf{Traveler} - Person som befinner sig i bilen, även autentiserade användare \\
+\textbf{In control} - \\
+\textbf{Manual mode} - \\
+\textbf{Initiate transportation} - When the user tells the system that he/she is ready to begin transportation to a predetermined destination. \\
+\textbf{Parked} - The car is parked when the car is at a stand still, the engine is turned off and the gear lever is in Park mode.  \\
 \\
 The requirements are named in the following manner:
 \begin{description*}
@@ -186,8 +190,17 @@ Jonathan is an Owner of a CRASH-supported car and he got stuck in a meeting at w
 \subsection {Buying new car scenario}
 David is at his local LADA dealership to purchase a new LADA with the built-in CRASH system. At the dealership David’s is associated with the new car. Since David wants his son Alexander to be able to drive he assigns driver permissions to him as well.
 
-\subsection {Running out of gas scenario}
-Gordon is on his way to Stockholm to celebrate Christmas with his family. On the way, the system alerts him that it is running out of gas, thus the car stops at the nearest gas station and refuels itself.
+\subsection {Running out of fuel scenario}
+Gordon is on his way to Stockholm to celebrate Christmas with his family. He has put the CRASH system on autonomous mode so that he can work on the way up. After two hours, the system alerts him that it is running out of fuel, thus the car stops at the nearest CRASH compatible refueling station and refuels itself.
+
+\subsection {Braking a traffic law to avoid an accident}
+Mathilda and her family are travelling along a road in their car, which has the built in CRASH-system. The road they are travelling on is divided in two lanes, one for each direction of travel and a traffic law stating that "you are not allowed to cross the dividing line" is in place. The truck, driving in front of Mathilda's car, suddenly drops a washing machine on the road behind it. The CRASH-system's sensors and radar register that there is a life threatening object ahead. To avoid an accident, CRASH assesses the situation, acknowledges that there are no cars on the opposite side of the road and avoids the obstacle by crossing the "do not cross"-line until the car has passed the obstacle, thereby braking a traffic law to avoid an accident.
+
+\subsection {Unknown position}
+A car, with the built in CRASH-system, looses its GPS-signal and therefore can't pin point exactly where it is. However, the car still drives on the road and relies on just its sensors until the GPS-signal returns and it can localize its position again.
+
+\subsection {Emergency braking}
+Alexander and his twin sons Jonathan and Niklas are on their way home from brunch at a hotel near their house in their CRASH-supported car. The car is in autonomous mode because Alexander has had a few drinks at the brunch. On the way, Niklas feels like he is about to throw up the food he ate, which he tells Alexander. Alexander immediately pushes the emergency brake function in the car. CRASH registers the activation and pulls over at a wide section of the road. When Niklas feels fine again, he tells CRASH to go, thus the car starts driving home again. 
 
 \section{Tasks}
 Each of the following tasks must be supported and are suitable as test cases.
@@ -245,7 +258,7 @@ Each of the following tasks must be supported and are suitable as test cases.
 \textbf{Trigger:} \tab{A selects manual mode via touchscreen or voice command.}\\
 \\
 \noindent
-\textbf{Subtasks:} \tab{1.}    \tab{A authenticates using fingerprint.}\\
+\textbf{Subtasks:} \tab{1.}    \tab{A attempts to authenticate.}\\
 \tab{ } \tab{2.} \tab{A uses the breathalyser.}\\
 \\
 \noindent
@@ -263,7 +276,7 @@ Each of the following tasks must be supported and are suitable as test cases.
 \textbf{Trigger:} \tab{A starts the application on mobile device.}\\
 \noindent
 \\
-\textbf{Subtasks:} \tab{1.} \tab{A authenticates to mobile device using fingerprint.}\\
+\textbf{Subtasks:} \tab{1.} \tab{A authenticates to mobile device.}\\
 \tab{ } \tab{2.} \tab{A specifies a destination using voice command or touch}\\ 
 \tab{ } \tab{ } \tab{screen on mobile device.}\\
 \\
@@ -277,11 +290,11 @@ Each of the following tasks must be supported and are suitable as test cases.
 
 \todo{Product!}
 \subsection {Task 6}
-\textbf{Task:} \tab{The system adapts to- and informs user of current weather}\\ 
+\textbf{Task:} \tab{User A is informed of current weather situation}\\ 
 \tab{ }  \tab{situation.}\\
 \textbf{Purpose:} \tab{Avoid danger caused by weather.}\\
-\textbf{Precondition:} \tab{The vehicle is not moving. User A has drive permissions.}\\ 
-\textbf{Trigger:} \tab{A specifies a new destination to the system using command.}\\
+\textbf{Precondition:} \tab{The vehicle is not moving. A has drive permissions.}\\ 
+\textbf{Trigger:} \tab{A gives a drive command to the car.}\\
 \\
 \textbf{Variants:} \tab{1a.} \tab{The system accepts the command and drives to \tab{ } \tab{ } \tab{destination.}\\
 \tab{ } \tab{1b.} \tab{The system informs A of dangerous weather conditions,}\\

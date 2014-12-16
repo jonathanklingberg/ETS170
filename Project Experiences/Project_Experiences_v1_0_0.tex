@@ -112,7 +112,6 @@
 
 %%%%% Requirement engineering work %%%%%%%%% 
 \section{Requirement engineering work}
-\noindent The project is divided into three different releases, each of which main objectives along with some project experiences are described in this chapter below.
 
 \subsection{Release 1}
 The project started off with us setting up a group interview with the customer where we encouraged them to explain as much as possible about their ideas. After this meeting we realized the project scope would be too large to accomplish within the given time of this course. Furthermore we needed to figure out and focus on the most vital functionalities for this system.
@@ -122,76 +121,49 @@ We had additional discussions with our customer about the eliminated branches, a
 The main objective for release 1 was to focus on elicitation techniques in order to get a grip of the system requirements, which are summarized in the System Requirements Specification or SRS document, see reference \cite{srs}.
 
 \subsection{Release 2}
-For the second project release we've been focusing on the prioritization of the requirements. We also had a walk-through of some scenarios from the task section in the SRS together with some customer representatives. For the SRS we've mainly focused on improving the quality of existing requirements, create more requirements, scenarios and tasks. Moreover, we have also made an effort visualizing the different dependencies of requirements, which wasn't that intuitive in our previous release. We've also created a checklist form which our customer will fill in during their validation of our SRS.
+In release two we put up a a walk-through together with some customer representatives. Here we simulated some scenarios described in the task section in our SRS. For the SRS we've mainly focused on improving the quality of existing requirements, create more requirements, scenarios as well as tasks. Moreover, we have also made an effort visualizing the different dependencies of requirements, which wasn't that intuitive in our previous release. We've also created a checklist form which our customer will fill in during their validation of our SRS and will help us to address the most critical issues.
 For this release we've also created a data model and some improvements to our previous context diagram which can be found in the SRS \cite{srs}.
 
 \subsection{Release 3}
+For the third project release we've been focusing on the prioritization of the requirements.
 
 %%%%% Elicitation %%%%%%%%% 
 \section{Elicitation}
 \sloppy
-\noindent Finding and formulating requirements is called elicitation. The process of elicitation can be performed in various ways. A common procedure is to start by eliciting overall goals for the system and from there go further into details as the process continues. For this process to be as effective as possible selecting the right elicitation techniques is of importance.
+\noindent
+\todo{Intro till elicitation}
 
 \subsection{Elicitation techniques}
-Elicitation techniques are utilized when translating stakeholders' aspirations into requirements.
-The elicitation techniques that we decided to use are described below.
-Besides those techniques, we've also tried "observation" and "document study", but we didn't feel it was worth spending more time on those since they where time consuming and not that efficient at this point in the project.
-Putting together a Focus group would benefit us greatly but we don’t feel like we have enough resources to accomplish this.
-A domain workshop would be great but we don't believe it's applicable since there exists no expert users for this domain as far as we know.
-However for this release (R2) we have done a "Walk-through" as a new elicitation technique.
+The elicitation techniques we've used in the project are described in this section. Besides from the techniques used we also discussed putting together a focus group since we thought we would have benefit of it. The reason why we didn't use it was that we came to the conclusion that it would require too much work to organize and that it was better for us to use this time to get experience in more techniques instead. We also discussed having a domain workshop, but had problem defining expert users in this domain since autonomous cars aren't a reality yet.
 
 \subsubsection{Stakeholder analysis}
-In a stakeholder analysis different people whom are needed to ensure the success of the project are first listed. Then these people are either interviewed or invited to a joint meeting in order to collect their ideas about the system. These ideas are then gathered into a sustainable model where as many of the stakeholders as possible get satisfied with the result. The goal of the analysis is to find answers to the following questions:
-\begin{itemize}
-\item What goals do they see for the system?
-\item Why would they like to contribute?
-\item What risks and costs do they see?
-\item What kind of solutions and suppliers do they see?
-\end{itemize}
+We decided to make a stakeholder analysis since is a simple way to get an overview of all stakeholders and their opinions. Since the stakeholders have different relations to the system it was important to take every ones opinion into account to assure that all parties would be satisfied with the final result. To identify the possible stakeholders we had an internal brainstorming session within the group, after this we discussed the different possible stakeholders and agreed on a final list.
 
-\paragraph{Motivation}
-\hfill \break
-It’s a simple way to summarize and to get an overview of all groups and people who probably will come in contact with this system. Since the stakeholders all have different relations to the system it is of great importance to take their opinion into account to assure that all parties are satisfied with the final result.
 \paragraph{Method}
 \hfill \break
-To identify possible stakeholders we held a brainstorming session that all group members attended, and after the brainstorming session we discussed the different suggestions for possible stakeholders. This lead to some stakeholders being removed from our list and some were added.  
-Usually when conducting a stakeholder analysis you invite the different stakeholders to a joint meeting, alternatively interview them one by one. But since almost all of the stakeholders we identified were large organizations it would be hard to gather them all for a meeting and too time consuming to interview them all. As the Internet is a great source of information, we instead studied the organizations web pages and formed our own understanding of why they would have any interest in our product. 
+Usually when conducting a stakeholder analysis you invite the different stakeholders to a joint meeting, alternatively interview them one by one. Since almost all of the stakeholders we identified were large organizations it was hard to gather them for a meeting and too time consuming to interview them. As the Internet is a great source of information, we instead chose to study the organizations and formed our own understanding of why they would have any interest in our product. 
+\todo{Skriva kort förklaring till vad vi gjorde med icke-organisationerna (Användare etc)?}
 
 \paragraph{Reflection}
 \hfill \break
-While conducting the stakeholder anaylsis we found that one of the features that all of the stakeholders had in common was their major interests in enhanced traffic-security and further we realized the importance of implementing these features. We also realized that the insurance companies might lose income in case this system gets too secure and nobody buys traffic insurances anymore. A list of all the stakeholders that we identified and their interests can be found in the SRS\cite{srs}. 
+While conducting the stakeholder analysis we found that one of the features that most of the stakeholders had in common was their interest in enhanced traffic-security. We also realized that driving schools might lose income in case our system would get widely used and people might loose interest in getting drivers licenses. A list of all the stakeholders identified and their interests can be found in the SRS\cite{srs}. 
 
-\noindent As mentioned earlier most of the stakeholders are large organizations and it would be very hard and time consuming to contact them all. Therefore, we had to pretend what their interests in this system was and we came up with features of interest for each one of them. This means that our view of their interests in the product may not fully correspond with their actual views. 
+\noindent As mentioned earlier we found it very hard and time consuming to contact all stakeholders since most of them are large organizations. Instead we decided to try to figure out their interests in our system and came up with features of interest for each one of them by ourself. This means that our view of their interests in the product may not fully correspond with their actual views, but for the scope of this project we thought it was a necessary compromise.
 
 \subsubsection{Interviewing}
-Interviewing is one of the most widely used elicitation techniques, but it has its pros and cons. It is a quite simple and straightforward technique that requires little planning and can be used in various situations. It is a good technique for getting information about the present work in the domain as well as present problems. Interviews can be conducted with either individuals or in groups.
-Generally there are two types of interviews: 
-\begin{itemize}
-    \item Structured - the interviewer has prepared a set of questions that needs to be answered. 
-    \item Unstructured - the interviewer has not prepared any questions and instead openly discusses what is expected from the system.
-\end{itemize}
-
-\paragraph{Motivation}
-\hfill \break
-Since the Project Mission was quite vague and left out a lot of functionality, we had a lot of questions about the system that needed to be answered before we could start working on the requirements specification. We felt that we needed to get clarification from our customers fairly soon, and as interviewing requires little planning and work, and doesn't take to long to perform, it was deemed a fitting technique to use. Interviews also allows the interviewer and interviewee(s) to discuss and explain the questions and answers, which can give even further clarification. It also gave us the possibility to ask follow-up questions to confirm our understanding.
+Since the project mission was quite vague and left out a lot of functionality, we had a lot of questions about the system that needed to be answered before we could start working on the requirements specification. We felt that we needed to get clarification from our key customer fairly soon, and as interviewing requires little planning and doesn't take long to perform, it was deemed a fitting technique to use. Interviews also allows the interviewer and interviewees to discuss the questions, which can give even further clarification. It also gave us the possibility to ask follow-up questions to confirm our understanding.
 
 \paragraph{Method}
 \hfill \break
-As unstructured interviews requires a lot of experience and are difficult to perform, we felt that a structured interview was more fitting when meeting with our customer. We prepared a list of questions to ask and did leave room for follow-up questions to confirm our understanding of what the customer asked for and why they asked for it. During our interviews with our clients 2-3 persons of the customer group attended, so the interviews where conducted in groups. To make sure that the whole group had a clear view of what the customer wanted, all project members attended the interview. The questioning was performed mainly by two members and one member took notes. The rest of the group listened and jumped in if they felt something was unclear. To validate our notes from the first interview we sent our notes to the customer and they approved them. 
-Before the second interview we sent our questions to the customer so they could review them and prepare before we met. 
+As unstructured interviews requires a lot of experience and are difficult to perform, we felt that a structured interview was more fitting when meeting with our key customer. We prepared a list of questions to ask, but left room for follow-up questions to confirm and deepen our understanding of what the customer where asking for and why they asked for it. During both our interviews, 2-3 persons from our customer group attended. To make sure that everyone in our group had a clear view of what the customer wanted, all project members attended these interviews. The questioning was performed mainly by two members, with a third member taking notes. The rest of the group listened and jumped in with questions if they felt something was unclear. To validate our notes from the first interview we sent our notes to the customer for approval. Before the second interview we sent our questions to the customer beforehand so they could review them and prepare before the meeting.
 
 \paragraph{Reflection}
 \hfill \break
-The interview elicitation technique has been of great success for our project since we got a clearer view of what the customers wanted and why they wanted it. For instance, before our first interview we did not know which country's traffic rules the car should follow or if the system should be developed for different car brands or just their own brand, LADA. But this and other uncertainties were made clear after our interviews. \\
-\indent Even if we noticed some of the elicitation barriers it still feels like we managed to gather the information needed to begin form a viable SRS and with little effort spent. The negotiation barriers are discussed further in section 2.2. 
+We found the interview elicitation technique valuable for our project since we got a clearer view both of what the customers wanted and why they wanted it. For instance, before our first interview we did not know  if they wanted the system to work in the entire world or just Sweden or why the system should take reach in to consideration.These and other uncertainties were made clear during the interviews. \\
+\indent Even if we noticed some of the elicitation barriers it still feels like we managed to gather the information needed for us to be able to begin forming a viable SRS. The negotiation barriers are discussed further in section 2.2. \todo{Fixa riktig referens} 
 
 \subsubsection{Brainstorming}
-Using brainstorming as an elicitation technique is an effective way of generating new ideas. During a brainstorm session it is of great importance not to criticize any idea. This creates an environment where no group member is afraid of being ridiculed and thus enable the group to produce new ideas at a higher rate.
-The process of separating good ideas from bad ones is saved until after the brainstorming session.
-
-\paragraph{Motivation}
-\hfill \break
-We decided to use this elicitation technique as it was a natural step in the beginning of the elicitation process. The technique enables us to quickly gather a set of ideas on how to handle new problems that occur.
+We decided to use brainstorming as our initial elicitation technique as it was a natural step in the beginning of the elicitation process. The technique enabled us to quickly gather a set of ideas on how to handle new problems that might occur.
 
 \paragraph{Method}
 \hfill \break
@@ -254,15 +226,12 @@ After we divided our requirements into different categories we gave them the fol
 \newline
 \indent Even if it can be quite time consuming to develop a context diagram we choose to allocate a lot time on it in the beginning of the project. This because it can be a great way to show which interfaces the product should communicate with, as well as great way for the customer to see if any interface is missing. Context diagram can also show product scope, and as we believed that the scope described in PMv1 \cite{pmv1} was too wide to fit this course, this was a good way to make sure that our customers agreed with our reduced project scope. During our work on the context diagram we experienced a few difficulties. In particular, it was hard to identify which interfaces that should be included in the context diagram and if the content we added was on product or domain level. 
 \newline
-\indent We decided early on that we should give reqT a chance so all our 
-\todo{Varför oavslutad mening? (Jag har ingen koll på arbetet dokumentet, slängde bara ett getöga på senaste comitten och såg att en ändring hade gjorts på den här raden, men att den ändå var oavslutad) /Knorn.
-Ska skriva mer om reqT och dependencies //Niklas}
+\indent We decided early on that we should give reqT a chance, so all our requirements were moved into a reqT model. We had earlier in the specification process noted all dependencies between requirements, and with the help of reqT we tried to visualize this. We ended up with a list of requirements and a huge graph that was hard to read. As the list only consisted of the requirement names, and we had chosen to name our requirements with numbers, it had a bad overview. 
 
 \subsection{R2}
-All of our requirements from our specification process for R1 were specified as feature requirements, and frankly, many of them were poorly specified. Therefore, we started our work on R2 with reviewing all of our requirements in the requirements specification. As expected, there was room for improvement and the review showed that some of the requirements, due to their complexity, needed more information and description. As a result, we introduced four new styles in our requirements specification, task descriptions, scenarios, virtual windows and E/R-diagrams. 
-At one point while specifying requirements, we found ourselves not knowing how to handle a certain user situation. Therefore we decided to document some scenarios to help ourselves clarify the situation, 
-
-As we suspected while working on the first release, we had made an excessive categorization of the requirements that was quite hard to understand for people that had not been part of the development of the requirements specification. After feedback from the supervisor and discussion within the group, we instead chose to use the following categories: 
+All of our requirements from our specification process for R1 were specified as feature requirements, and frankly, many of them were poorly specified. Therefore, we started our work on R2 with reviewing all of our requirements in the requirements specification. As expected, there was room for a lot of improvement and the review showed that some of the requirements, due to their complexity, needed more information and description. As a result, we introduced four new styles in our requirements specification; task descriptions, scenarios, virtual windows and E/R-diagrams. At one point while specifying requirements, we found ourselves not knowing how to handle certain user situations with various outcomes. Therefore we decided to document some scenarios and tasks to help ourselves clarify the situation, as well as make it easier for the developers to understand.
+\newline
+\indent As we suspected while working on the first release, we had made an excessive categorization of the requirements that was quite hard to understand for people that had not been part of the development of the requirements specification. It also made After feedback from the supervisor and discussion within the group, we instead chose to use the following categories: 
 \begin{itemize}
 \item Goal requirements
 \item Domain requirements
@@ -302,7 +271,7 @@ The sections we decided to categorize our requirements are as follows:
 
 
 
-%%%%% TOOL REFLECTION section %%%%%%%%%
+%%%%% TOOL REFLECTION section %%%%%%%
 \section{Tool reflections}
 \noindent
 \subsection{ReqT}
@@ -316,7 +285,7 @@ ReqT allows us to build many complex dependencies
 \subsection{Slack?}
 "So yeah, we tried Slack..."
 
-%%%%% CHECKING AND VALIDATION %%%%%%%%%
+%%%%% CHECKING AND VALIDATION %%%%%%%
 \section{Checking and validation (CRASH)}
 \noindent
 During the development of a software requirement specification it's important to make sure the solution that is proposed in the specification are sustainable also in reality and that it lives up to the customers expectations. Therefore it's very important to perform some validation techniques to ensure the quality of the final SRS.
@@ -333,8 +302,9 @@ We decided to use this validation technique as it is an easy way for us to check
 \paragraph{Method}
 \hfill \break
 A walk-through is best be carried out with some experts in the domain but since we don't know any experts (there doesn't really exist any) we simply had two of our customer representatives to carry out this walk-through with us.
-We had prepared a number of scenarios from some of the tasks that are described in the SRS. These scenarios where then simply traversed through one by one and during the walt-through the customer representatives were allowed to give comments about our solutions and also to point out special cases we might not have thought of and which were important to them.
+We had prepared a number of scenarios from some of the tasks that are described in the SRS. These scenarios where then simply traversed through one by one and during the walk-through the customer representatives were allowed to give comments about our solutions and also to point out special cases we might not have thought of and which were important to them.
 The walk-through focused on different authentication problematics such as picking up unauthorized children, lending the car to a friend overnight and tell the car to pick up a person at a specified time and place.
+
 \paragraph{Reflection}
 \hfill \break
 During the walk-through most of our solutions were approved by the customer representatives and they even sounded very satisfied with them.
@@ -343,37 +313,47 @@ This technique allowed us not only to validate our existing tasks and requiremen
 
 \subsection{Validation Checklists}
 To write a validation checklist that our customer can read while checking the requirements is a good way to ensure the quality of the SRS. Here the authors gets the opportunity to point out some of the things that's been especially complex during development, instead of hiding them under the carpet they are highlighted. This gives the customer a great overview of the complexity in their ordered system requirement specification and in turn can point out some of the things that needs further development before the SRS is signed.
+
 \subsubsection{Create a validation checklist form to the customer}
 To R2 we've created a validation checklist which will be used by our customer to validate our SRS. This list is tailor made to check some of the biggest challenges we've expirienced with our SRS. The customer goes through this list and reads our SRS simultaneously to check to which level the SRS fulfills each attribute in the list.
 \todo{funderar på att ta bort dessa rubriker}
-\subsubsection{Validate SRS checklist by developers}
-After the second release we'll go through the checklist that was written by our developers and the outcome from that experience will be summarized here.
 
 \subsubsection{Reflection}
 There were unfortunately some problems regarding the structure of our validation checklist. Some of the content that we asked the customer to validate were left out of the SRS on purpose. In the checklist we requested validation of deliverables such as installation documents, documentation regarding support and maintenance together with functionality that was never planed to be delivered.
 This did not prevent us from receiving the feedback we needed as the checklist covered more relevant content as well. However, handing a validation checklist with partly irrelevant content, that is not covered in the SRS, to the customer might give the impression that developers are not on the right track. 
+\subsubsection{Feedback conclusions}
+The feedback from our customer were of great help and the following list describes how their feedback led to improvements in our specification.
+\begin{itemize}
+\item "Some business goals have been defined but in vague terms (Maintain and expand market share). Business goals should be more concrete with metrics to make assessments of the results"
 
-We received useful feedback on functional and quality requirements. The validation checklist also solved some uncertainties regarding business goals.
+Some existing business goals were improved according to the feedback, some were completely removed but we also added some additional goal requrement for release 3.
+\item "Trace requirement -> goal" 
+
+Was fixed by adding more goals.
+\item "Move goal requirements higher up in the document" 
+
+This was just a mistake which was fixed for release 3.
+\item "Is it possible that the car might enter "unsafe state" during driving?" 
+
+Was solved by improving the definition of unsafe state.
+\item "In general, very strict quality requirements. Might be rather expensive to implement". and "Almost all of the quality requirements seem unrealistic, e.g. instant touch screen response (Qu19)"
+
+All quality requirements have been re-written in order to put them on a more reasonable level.
+\end{itemize}
+
+\noindent We received useful feedback on functional and quality requirements. The validation checklist also solved some uncertainties regarding business goals.
 
 \section{Checking and validation (Compromizer)}
 
 \subsection{Validation Report}
-After release 2 we evaluated the SRS of Compromizer in two different approaches. First of all they send a checklist to us where we were able to leave comments on our observations during validation. After this we decided to setup a validation meeting with our developers to make sure they agreed on our concerns.
+After release 2 we evaluated the SRS of Compromizer in two different approaches. First of all they had created a checklist where they highlighted some of the problems they wanted us to look into extra carefully. This list was of great help and also gave us the opportunity to leave additional comments on our observations during the validation process. However this list didn't feel enough and it felt complicated to describe some of our comments and we therefore decided to setup a validation meeting with our developers to make sure they agreed on our concerns.
 
 \subsubsection{Validation Checklist}
-The developers of Compromizr send us a checklist of observation tasks along with their SRS, see Appendix \cite{CompromizrChecklist}. They wanted us to evaluate their SRS against this checklist and leave comments on those tasks needed. We did this by splitting up their checklist in five pieces and then four of us took one part each and started evaluating the SRS. Since the last part was about the overall structure of the specification it was filled by all of us that had read their specification.
-When we had finished the checklist we still had some comment about missing and ambiguous requirements. We therefore decided another meeting with the developers would be necessary.
+The developers of Compromizr send us a checklist of observation tasks along with their SRS, see Appendix \cite{CompromizrChecklist}. They wanted us to evaluate their SRS and take extra care to the tasks listed in their checklist, we were also able to leave comments on those tasks needed further descriptions. We did this evaluation by splitting up their checklist in five pieces and then four of us took one part each and started evaluating the SRS with particular focus on the chosen items. The last part of the checklist was about the overall structure of the specification and this was filled by all of us.
+When we had finished the checklist we still had some comment about missing and ambiguous requirements. We decided a validation meeting with the developers was be necessary.
 
-\subsubsection{Validation meeting WIP}
-During the validation process we found more comments than could fit into their validation checklist so we decided to setup a meeting with them where we were able to go through some of the the important notes we had taken in a more detailed level and to make sure they understood our concerns. During this meeting we documented the notes both parties agreed on and the summary is found in Appendix \cite{CompromizrValidationMeeting}.
-
-\todo{Jag förstår inte riktigt nu... Har detta hamnat fel eller vad har det med Compromizr att göra? Borde det inte ligga under CRASH validation? /JOKL}
-See feedback group I
-\begin{itemize}
-\item Business goal was removed.
-\item Trace requirement -> goal. fixed by adding more goals.
-\item No explanation to why many different interfaces is used.
-\end{itemize}
+\subsubsection{Validation meeting}
+During the validation process we found more comments than could fit into their validation checklist so we decided to setup a meeting with them where we were able to go through some of the important notes we had taken in a more detailed level in order to make sure they understood our concerns. During this meeting we documented the notes both parties agreed on and the summary is found in Appendix \cite{CompromizrValidationMeeting}. We also ranked the issues for criticality A to C where A is severe and C just a note.
 
 
 %%%%% PRIORITIZATION %%%%%%%%%
@@ -383,9 +363,7 @@ See feedback group I
 \subsection{Method}
 \subsection{Reflection}
 
-\todo{
-Add text of how we used the MindMap to prioritize in the beginning of the project.
-Could be good to mention that we sent it to the customer for validation (should probably be under validation)}
+\todo{Add text of how we used the MindMap to prioritize in the beginning of the project.Could be good to mention that we sent it to the customer for validation (should probably be under validation)}
 
 %%%%% INDIVIDUAL STATEMENTS %%%%%%%%%
 \section{Individual statements}
@@ -420,9 +398,9 @@ Påståendena inom citationstecken är tagna from kundens PMv1.
 
 \noindent”Följa rådande trafikregler”:
 \begin{itemize}
-\item Vilka länder trafikregler? (Kalifornien, Nevada, Michigan och Florida enda lagliga i USA)
+\item Vilka länders trafikregler? (Kalifornien, Nevada, Michigan och Florida enda lagliga delstater i USA)
 \item Ta hänsyn om regler för självstyrande bilar? Vilka finns det?
-\item Scenario: En gren ligger på vägen och det finns inga andra bilar åt någon utav sidorna men där är en heldragen linje – Får man då byta körfält för att undvika krock eller ska man stanna och riskera krock bakifrån eller bildande av köer? (Finns det för andra tillfällen då det är ok att bryta mot trafikregler?)
+\item Scenario: En gren ligger på vägen och det finns inga andra bilar åt någon utav sidorna men där är en heldragen linje – Får man då byta körfält för att undvika krock eller ska man stanna och riskera krock bakifrån eller bildande av köer? (Finns det andra tillfällen då det är ok att bryta mot trafikregler?)
 \item Får man köra snabbare än hastighetsgränsen vid nödfall?
 \item Får man köra med t.ex. en trasig lampa om det är nödfall?
 \item Vad händer om det är lågt däcktryck (säkerhetsrisk) men det är ett nödfall?

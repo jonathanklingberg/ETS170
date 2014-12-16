@@ -96,7 +96,9 @@
 \pagenumbering{arabic}
 
 \section{Introduction}
-The car manufacturer LADA are worried about losing market shares and through their new product, a selfdriving car, they hope to maintain their position on the global car market. LADA themselves do not feel that they can produce a requirement specification to the quality standard they know is needed, which is why they have hired our company, Steve's Angels, to produce the requirements specification for the autonomous system called CRASH. 
+The car manufacturer LADA are worried about losing market shares and through their new product, a selfdriving car, they hope to maintain their position on the global car market. LADA themselves do not feel that they can produce a requirement specification to the quality standard they know is needed, which is why they have hired our company, Steve's Angels, to produce the requirements specification for the autonomous system called CRASH.
+
+\todo{Customers have asked for a summary, if you fix this then tell me //JOKL}
 
 \subsection{Stakeholders}
 \noindent Inner stakeholders:
@@ -137,6 +139,14 @@ To get a better understanding of the actors and their objectives see the context
   \label{ContextDiagram}
 \end{figure}
 
+\begin{figure}[htb]    
+ \centering
+  \includegraphics[width=0.9\textwidth]
+    {"DesignReq".png}
+  \caption{Design of the touch screen when a destination is set and the car is moving.}
+  \label{fi:designmockup}
+\end{figure}
+
 \noindent
 \textbf{Traveler} Flyttas hit, resten till terminiloogigigigio
 \textbf{Passenger} A Passenger can unlock the car, press the emergency stop button and ride in the car alone.\\
@@ -160,7 +170,9 @@ The administrator can change the system settings as well as general admin manage
 REFERENCE to law: Fordonsförordning (2009:211) \\
 \textbf{GPS} - Global Positioning System based on space satellite communication.\\
 \textbf{User} - A person that is authenticated by the system, and subsequently interacts with the system. A user must have a registered account in the system or it won't be able to authenticate itself. \\
-\textbf{Traveler} - Person som befinner sig i bilen, även autentiserade användare \\
+\textbf{Traveler} - A person that is in the car, can also be authenticated users. \\
+\textbf{Touch screen} - In this specification we refer touch screen as a touch screen on a device that is placed within the LADA car. Used by the users to  communicate with the C.R.A.S.H. system. \\
+\textbf{Inactive user} - A user that is stored in the system and has attribute isActive set to false. \\
 \textbf{In control} - \\
 \textbf{Manual mode} - \\
 \textbf{Initiate transportation} - When the user tells the system that he/she is ready to begin transportation to a predetermined destination. \\
@@ -221,8 +233,8 @@ Each of the following tasks must be supported and are suitable as test cases.
 \subsection {Task 2}
 \textbf{Task:} \tab{User A instructs the car to drive to a destination.}\\
 \textbf{Purpose:} \tab{Tell the system to drive from one place to another.}\\
-\textbf{Precondition:} \tab{A is inside the vehicle. The vehicle has no specified}\\ 
-\tab{ } \tab{destination.}\\
+\textbf{Precondition:} \tab{A is inside the vehicle.}\\ %The vehicle has no specified}\\ 
+%\tab{ } \tab{destination.}\\
 \textbf{Trigger:} \tab{A gives a command via voice or touch screen.}\\
 \\
 \textbf{Variants:} \tab{1.} \tab{Command accepted, CRASH confirms the destination}\\
@@ -233,7 +245,7 @@ Each of the following tasks must be supported and are suitable as test cases.
 \tab{ } \tab{2c.} \tab{Command rejected, CRASH has no GPS connection.}
 \medskip
 
-\subsection {Task 3}
+\subsection {Task 3} \todo{task 3 kan nog tas bort}
 \textbf{Task:} \tab{User A instructs the car to drive to a new destination.}\\
 \textbf{Purpose:} \tab{Tell the system to drive from one place to another.}\\
 \textbf{Precondition:} \tab{A is inside the vehicle. The vehicle already has a}\\
@@ -321,27 +333,7 @@ Each of the following tasks must be supported and are suitable as test cases.
   \caption{Virtual window that shows the data to be stored regarding service logs.}
   \label{fig:Virtual window Service log}
 \end{figure}
-
 \newpage
-\section{E/R diagram}
-
-
-\begin{figure}[htb]
-    \begin{subfigure}[b]{.5\linewidth}
-        \centering
-            \includegraphics[scale=0.3]{"User - ER".png}
-            \caption{E/R diagram of the users table.}
-        \label{fig:E/R diagram Users}
-    \end{subfigure}
-    \begin{subfigure}[b]{.5\linewidth}
-        \centering
-            \includegraphics[scale=0.3]{"Service log - ER".png}
-            \caption{ER diagram of the service log table.}
-        \label{fig:E/R diagram Service log}
-    \end{subfigure}
-    \caption{E/R diagrams of the database.}
-    \label{fig:E/R diagrams of the database}
-\end{figure}
 
 \input{model.tex}
 

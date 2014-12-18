@@ -132,6 +132,7 @@ For the third project release we've been focusing on the prioritization of the r
 \sloppy
 \noindent
 \todo{Intro till elicitation}
+In requirements engineering elicitation is an important process since its at this stage requirements and needs for the system becomes apparent. There are many different elicitation techniques and methods that can be used, the tricky part is knowing and recognizing which techniques are preferable in different situations and for certain purposes.
 
 \subsection{Elicitation techniques}
 The elicitation techniques we've used in the project are described in this section. Besides from the techniques used we also discussed putting together a focus group since we thought we would have benefit of it. The reason why we didn't use it was that we came to the conclusion that it would require too much work to organize and that it was better for us to use this time to get experience in more techniques instead. We also discussed having a domain workshop, but had problem defining expert users in this domain since autonomous cars aren't a reality yet.
@@ -198,8 +199,12 @@ One of the things that was made clear after our first interview with our custome
 During our first interview we felt that the customer came up with too many requirements. Some of them were essential, while others were just “nice-to-have”, or so called luxury requirements. For example, they wanted the possibility for the autonomous cars to form a train so that the road network would be used more efficiently. While this was a nice feature to have, we did not feel that it was a necessity for achieving their main goals. This and similar disagreements were solved by further negotiations and reasoning. 
 
 \subsection{Elicitation reflections}
-During the elicitation process we asked our customer the question "why?" multiple times. Our customer was very prone to tell us how they wanted us to fix their problems, this is a natural behaviour of the customer but it's up to us to question their solutions and focus on their problem rather than their proposed solutions. If we manage to do this we're probably ending up with a system-solution that's more suitable for their needs. But off course, if we cannot convince the customer our solution is better than theirs, then we might have to give up our solution.
+During the elicitation process we asked our customer the question "why?" multiple times. Our customer was very prone to tell us how they wanted us to fix their problems, this is a natural behaviour for customers but it's up to us to question their solutions and focus on their problem rather than their proposed solutions. If we manage to do this we're probably ending up with a system-solution that's more suitable for their needs. But off course, if we cannot convince the customer our solution is better than theirs, then we might have to give up our solution.
 For example in our case the customer in the beginning told us they wanted some sort of parental control to be activated on the system but after further investigation we found that what they really wanted was just another user role for passengers who's not allowed to change destination.
+\newline
+\indent
+\todo{Kan det här vara något som passar in på bettans kommentar om uppfyllnad av betygskritrie 4E?}
+In the process of eliciting requirements we discovered new problems and issues along the way when exploring different possibilities with the CRASH-system. Since the scope for the project is so large, it felt like we were constantly finding new fields to discover, this lead us to look into and use different elicitation techniques to find suitable requirements for different situations. We mostly did this through reflections, brainstorming, discussions with each other as well as complementing the process with writing down scenarios. E.g. When determining the requirement that states that the car may break traffic laws if an accident is imminent, we used a scenario and brainstormed how such a scenario might play out. 
 
 %%%%% REQUIREMENTS SPECIFICATION SECTION %%%%%%%%%
 \section{Specification}
@@ -208,7 +213,7 @@ This section describes our work on the requirements specification as well as ref
 
 \subsection{R1}
 \todo{Jag vet att engelskan här är ganska dålig, kör en omskrivning senare. Vill bara få ner all text först}
-After we had our first interview with our customer, as well as done some research on existing autonomous cars, we had an improved understanding of what the customer wanted. There were of course still a few questions that were left unanswered, however, we felt that we had enough information to begin documenting some requirements. Therefore, the whole group sat down together and conducted a brainstorming session were we elicited some more requirements. The brainstorming session gave us a long list of requirements, but they were not divided into different categories requirements. So, to divide the requirements into different types we used a table structure where we had three main requirement levels; Functional, Data and Quality. We choose goal, domain and product as requirement sub-levels. See figure \ref{fi:classification} in the appendix to get a better view of our thought process. This meant that we got the following requirement types:  
+After we had our first interview with our customer, as well as done some research on existing autonomous cars, we had an improved understanding of what the customer wanted. There were of course still a few questions that were left unanswered, however, we felt that we had enough information to begin documenting some requirements. Therefore, the whole group sat down together and conducted a brainstorming session were we elicited some more requirements. The brainstorming session gave us a long list of requirements, but they were not divided into different categories requirements. So, to divide the requirements into different types we used a table structure where we had three main requirement levels; Functional, Data and Quality. We choose goal, domain and product as requirement sub-levels. See figure \ref{fi:classification} in the appendix to get a better view of our thought process. We are fully aware that the text is very small in the picture, but the requirement categories can still be seen. We got the following requirement types:  
 \begin{itemize}
 \item Functional goal requirements
 \item Functional domain requirements
@@ -226,6 +231,7 @@ After we divided our requirements into different categories we gave them the fol
 \newline
 \indent Even if it can be quite time consuming to develop a context diagram we choose to allocate a lot time on it in the beginning of the project. This because it can be a great way to show which interfaces the product should communicate with, as well as great way for the customer to see if any interface is missing. Context diagram can also show product scope, and as we believed that the scope described in PMv1 \cite{pmv1} was too wide to fit this course, this was a good way to make sure that our customers agreed with our reduced project scope. During our work on the context diagram we experienced a few difficulties. In particular, it was hard to identify which interfaces that should be included in the context diagram and if the content we added was on product or domain level. 
 \newline
+\indent
 \indent We decided early on that we should give reqT a chance, so all our requirements were moved into a reqT model. We had earlier in the specification process noted all dependencies between requirements, and with the help of reqT we tried to visualize this. We ended up with a list of requirements and a huge graph that was hard to read. As the list only consisted of the requirement names, and we had chosen to name our requirements with numbers, it had a bad overview. 
 
 \subsection{R2}
@@ -253,20 +259,36 @@ We received our supervisor Elizabeth's comments and thoughts of our R2 by e-mail
 After the meeting we continued to work with R3. We began with reorganizing our requirements based on functions. All requirements that belonged to a certain function where grouped together. After the reorganization was done we split up into two persons/group and each group was responsible for a function and all requirements corresponding to that specific section. 
 The sections we decided to categorize our requirements are as follows:
 \begin{itemize}
-\item Comfort 
-\item Security
-\item Surroundings
-\item Traffic rules
-\item Car status
-\item Manual drive
-\item Users
-\item I/O
-\subitem Touch Screen
-\subitem Voice control
-\subitem Remote
-\subitem Authentication
 \item Goals
-\item CRASH
+\item General
+\item Safety
+\subitem Emergency break
+\subitem Traffic accidents
+\subitem Weather and traffic information
+\subitem Permissions
+\item Surroundings
+\subitem Positioning
+\subitem Traffic and maps
+\subitem Sensors
+\item Traffic rules
+\item Users
+\subitem Permissions
+\subitem Storage of data
+\item Manual driving
+\subitem Activation
+\subitem Personal safety
+\subitem Road safety
+\item I/O
+\subitem Voice control
+\subitem Touch screen
+\item Remote
+\item Updates
+\item Data storage
+\item Car status
+\subitem Service log
+\subitem Status and service
+\item Authentication
+\item Comfort
 \end{itemize}
 
 
@@ -359,9 +381,15 @@ During the validation process we found more comments than could fit into their v
 %%%%% PRIORITIZATION %%%%%%%%%
 \section{Prioritization}
 
-\subsection{Motivation}
-\subsection{Method}
-\subsection{Reflection}
+\subsection{Top-ten requirements}
+\subsubsection{Motivation}
+\subsubsection{Method}
+\subsubsection{Reflection}
+
+\subsection{The 100-dollar test}
+\subsubsection{Motivation}
+\subsubsection{Method}
+\subsubsection{Reflection}
 
 \todo{Add text of how we used the MindMap to prioritize in the beginning of the project.Could be good to mention that we sent it to the customer for validation (should probably be under validation)}
 
@@ -383,6 +411,7 @@ David has been working mostly with the requirements. He has also been active at 
 \subsection{Niklas Sjöberg, DRM}
 Niklas has taken part in group meetings as well as customer meetings. Attended the reqT introduction meeting. Worked with elicitation techniques and requirements elicitation, and written parts of the project experiences document. 
 
+\newpage
 %\addcontentsline{toc}{section}{References}
 \begin{thebibliography}{1}
 \bibitem{srs} Crash Software Requirements Specification version 1. 

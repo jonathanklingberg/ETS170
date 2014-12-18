@@ -231,20 +231,7 @@ Each of the following tasks must be supported and are suitable as test cases.
 %Tasks are, in contrast to vivid scenarios, suitable as test cases. A task should finish with a meaningful goal. It is important that completing the task makes the user feel that something as been achieved.
 
 
-\subsection {Task 2}
-\textbf{Task:} \tab{User A instructs the car to drive to a destination.}\\
-\textbf{Purpose:} \tab{Tell the system to drive from one place to another.}\\
-\textbf{Precondition:} \tab{A is inside the vehicle & the doors are shut.}\\ %The vehicle has no specified}\\ 
-%\tab{ } \tab{destination.}\\
-\textbf{Trigger:} \tab{A gives a command to  CRASH.}\\
-\\
-\textbf{Variants:} \tab{1.} \tab{Command accepted, CRASH confirms the destination}\\
-\tab{ } \tab{ } \tab{and drives A to the requested destination.}\\
-\tab{ } \tab{2a.} \tab{Command rejected, the requested destination does not}\\ \tab{ } \tab{ } \tab{exist.}\\
-\tab{ } \tab{2b.} \tab{Command rejected, no one in the car is}\\
-\tab{ } \tab{ } \tab{authorized.}\\
-\tab{ } \tab{2c.} \tab{Command rejected, CRASH has no GPS connection.}
-\medskip
+
 %Tror inte den behövs
 %\subsection {Task 3} 
 \todo{Här har jag tagit bort en task /Fredrik}
@@ -591,6 +578,22 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \- \- \-The system must respond to a potential accident before the accident is unavoidable
 
 \section{I/O}
+\subsubsection {Task 2}
+\textbf{Task:} \tab{User A instructs the car to drive to a destination.}\\
+\textbf{Purpose:} \tab{Tell the system to drive from one place to another.}\\
+\textbf{Precondition:} \tab{A is inside the vehicle & the doors are shut.}\\ %The vehicle has no specified}\\ 
+%\tab{ } \tab{destination.}\\
+\textbf{Trigger:} \tab{A gives a command to  CRASH.}\\
+\\
+\textbf{Variants:} \tab{1.} \tab{Command accepted, CRASH confirms the destination}\\
+\tab{ } \tab{ } \tab{and drives A to the requested destination.}\\
+\tab{ } \tab{2a.} \tab{Command rejected, the requested destination does not}\\ \tab{ } \tab{ } \tab{exist.}\\
+\tab{ } \tab{2b.} \tab{Command rejected, no one in the car is}\\
+\tab{ } \tab{ } \tab{authorized.}\\
+\tab{ } \tab{2c.} \tab{Command rejected, CRASH has no GPS connection.}
+\medskip
+
+
     \subsubsection{Requirement}
 \hfill \break 
 \- \- \-When a command is entered feedback must be provided to the user

@@ -1,216 +1,533 @@
 Title CRASH
-# Goal requirements
-  Goal Go1
-    Spec Autonomous car for Swedish traffic
-  Goal Go2
-    Spec Reduce amount of traffic accidents on Swedish roads
-  Goal Go3
-    Spec Maintain industry market shares
-  Goal Go4
-    Spec Achieve maximal usability
-  Goal Go5
-    Spec Avoid human deaths in traffic
-  Goal Go6
-    Spec Achieve maximal security
-  Goal Go7
-    Spec Expand to other markets than private use
-  Goal Go8
-    Spec Achieve maximum comfort
-  Goal Go9
-    Spec Reduce cars' negative impacts on the environment
-# Domain requirements
-  Domain Do1
-    Spec The system must adhere to Swedish traffic laws as long as an accident is not imminent
-  Domain Do2
-    Spec If an accident can be avoided, the system may break traffic laws
-  Domain Do3
-    Spec When the car is in an unsafe state the car must not be able/allowed to drive in automatic mode
-  Domain Do4
-    Spec In the situation of an accident, the system must prioritize risks in the following order:
-    Domain Do4a
-      Spec Saving as many human lives as possible has top priority
-    Domain Do4b
-      Spec Protecting humans inside the car is prioritized over humans outside the car
-  Domain Do5
-    Spec The system requires sensors for monitoring the road and surroundings
-  Domain Do6
-    Spec The system requires a network connection
-  Domain Do7
-    Spec The system requires a positioning instrument
-  Domain Do8
-    Spec The system requires a intoxication measuring instrument
-  Domain Do9
-    Spec The system requires an authentication sensor
-  Domain Do10
-    Spec The system requires a voice input device
-  Domain Do11
-    Spec The system functions without a GPS-signal once a route has been chosen
-  Domain Do12
-    Spec The system needs a GPS-signal when starting on a new route
-  Domain Do13
-    Spec The system must ecodrive when it is possible without risking safety
-  Domain Do14
-    Spec All user interaction that is available in the system must be possible to enter remotely
-  Domain Do15
-    Spec The system must support:
-    Domain Do15a
-      Spec Permanent user rights
-    Domain Do15b
-      Spec Temporary user rights
-  Domain Do16
-    Spec The system must support the following authorized user types:
-    Domain Do16a
-      Spec Passenger
-    Domain Do16b
-      Spec Driver
-    Domain Do16c
-      Spec Owner
-    Domain Do16d
-      Spec Admin
-  Domain Do17
-    Spec A driver must be able to choose & change destination
-  Domain Do18
-    Spec An owner has the same rights as a driver and must also be able to handle users
-  Domain Do19
-    Spec An admin must have the same rights as an owner and the admin must be able to change system settings
-  Domain Do20
+#Goals
+  Requirement X88
+    Spec Avoid human deaths in traffic for accidents where a car with the CRASH-system is involved
+  Requirement X89
+    Spec An autonomous car for Swedish traffic
+  Requirement X90
+    Spec Reduce amount of traffic accidents with cars that have the CRASH-system on Swedish roads
+  Requirement X133
+    Spec Within 10 years 1/3 autonomous cars shall use the CRASH system
+  Requirement X92
+    Spec The system shall strive for a usability level where 8/10 new users can interact with the system without instructions
+  Requirement X95
+    Spec The system shall give its passengers a comfortable ride through smooth driving
+  Requirement X96
+    Spec The system must reduce cars' negative impacts on the environment through fuel efficiency
+
+
+#General
+  Requirement X1
     Spec The system must support the functionality in the context diagram in figure 1
-# Product requirements
-  # Functional product requirements
-    Product FPr1
-      Spec The system has to to retrieve current and future weather data from the Internet when a connection is available
-    Product FPr2
+
+
+#Safety
+  #Emergency break
+    Requirement X123
+      Spec The system must have an emergency break function when the system is in automatic mode
+    Requirement X13
+      Spec When the emergency break is activated the system must stop the car completely at the earliest possible safe place without risking an accident and stay still until a new command is provided by an authenticated user
+    Requirement X7
+      Spec The emergency break function must be reachable from all seats in the car for 8/10 users
+    Requirement X8
+      Spec The emergency break function must be easy to find for 9/10 users
+    Requirement X9
+      Spec The emergency break function must be easy to press for 8/10 users
+    Requirement X15
+      Spec In automatic mode, the car must always be possible to stop via the emergency-break
+    Requirement X19
+      Spec When the emergency break is activated the system must start to process the request within 100 ms
+  #Traffic accidents
+    Requirement X4
+      Spec In the situation of an imminent accident, the system must prioritize in the following order:
+      Requirement X5
+        Spec Saving as many human lives as possible
+      Requirement X6
+        Spec Protecting humans inside the car
+      Requirement X131
+        Spec Protecting humans outside the car
+      Requirement X153
+        Spec Follow traffic rules
+  #Weather and traffic information
+    Requirement X14
       Spec The system must give a warning when dangerous weather conditions are predicted along the planned route
-    Product FPr3
-      Spec The system has to retrieve data of current and future traffic situations when an Internet connection is available
-    Product FPr4
-      Spec The system must always be possible to stop via an emergency-break
-    Product FPr5
-      Spec It must always be possible to request to turn off the autonomous system and drive the car manually
-    Product FPr6
-      Spec When manual driving has been requested, the car has to be standing still before the autonomous system is turned off
-    Product FPr7
-      Spec For a passenger to be able to drive the car manually, the person must pass the intoxication test
-    Product FPr8
-      Spec The intoxication test has to be configured according to Swedish traffic law
-    Product FPr9
-      Spec The system has to support voice controlled input
-    Product FPr10
-      Spec The system has to support input from the car's dashboard
-    Product FPr11
-      Spec The system has to be able to evaluate the car's status compared to current Swedish car inspection rules before driving off
-    Product FPr12
-      Spec The system has to order a towing service when it is in an unsafe state
-    Product FPr13
-      Spec When the system is in manual driving mode, the system must still be active and avoid accidents the same way as in autonomous mode
-    Product FPr14
-      Spec When a command is entered feedback must be provided to the user
-    Product FPr15
-      Spec The car must evaluate the amount of fuel left in the tank
-    Product FPr16
-      Spec When the fuel level in the car reaches the level where it cannot make it to the second nearest gas station along the route, the car must drive to the nearest gas station and reload with fuel
-    Product FPr17
-      Spec If the voice control system cannot interpret an incoming voice command, it must suggest to the user what it interpreted
-    Product FPr18
-      Spec The system must be able to drive with its sensor when the GPS and maps don't align with the reality
-    Product FPr19
-      Spec When the emergency break is activated the system must stop completely at the earliest possible place without risking an accident and stay still until a new command is provided by an authenticated user
-    Product FPr20
-      Spec Traffic surroundings must be analyzed and taken into account in the decision making process
-    Product FPr21
-      Spec Road irregularities must be analyzed to give the passengers a safe and comfortable ride
-    Product FPr22
-      Spec To turn off the CRASH system the car must not be moving
-    Product FPr23
-      Spec The positioning instrument must be used in the calculations for the route
-    Product FPr24
-      Spec The positioning instrument must be used to remotely localize the car
-    Product FPr25
-      Spec The authentication sensor must be used to authenticate the users
-    Product FPr26
-      Spec The cars coordinates must be able to be pushed to a centralized server
-    Product FPr27
-      Spec The system must be able to install stored future system updates at a given date
-    Product FPr28
+    Requirement X16
+      Spec Any dangerous weather conditions must be notified, to the user, when a route is selected, before a route is commenced
+    Requirement X17
+      Spec Traffic and weather data must be fetched every minute when an Internet connection is available
+    PERMISSIONS
+    Requirement X11
+      Spec The system requires a blood alcohol content measuring device
+    Requirement X47
+      Spec When the car is in an unsafe state the car must not be allowed to drive.
+
+
+#Surroundings
+  #Positioning
+    Requirement X23
+      Spec The system requires a positioning system
+    Requirement X27
+      Spec The positioning system must be used when calculating the route
+    Requirement X21
+      Spec The system needs a positioning signal when starting on a new route
+    Requirement X105
+      Spec The system must be able to drive a short distance without knowing its position
+    Requirement X28
       Spec The system is able to drive until the next connecting road without a GPS-signal
-  # Data product requirements
-    Product DPr1
+    Requirement X30
+      Spec The GPS system must be precise to within 1 meter
+  #Traffic and maps
+    Requirement X108
+      Spec The system must contain maps of Swedish roads
+    Requirement X107
+      Spec The system must be able to retrieve traffic information
+    Requirement X29
+      Spec The system has to retrieve data of current traffic situations when an Internet connection is available
+    Requirement X31
+      Spec The system must query for updates to its maps once a day
+    Requirement X32
+      Spec The maps must be precise, compared to reality, to within 3 meters
+  #Sensors
+    Requirement X22
+      Spec The system requires a sensor system for monitoring the road and surroundings
+    Requirement X25
+      Spec Traffic surroundings must be analyzed and taken into account by the system when driving
+    Requirement X24
+      Spec When the surrounding sensors and the positioning data combined with the maps give conflicting input, the system must rely on the surrounding sensor data
+    Requirement X33
+      Spec The sensors that monitor the road and surroundings must have a margin of error for misinterpreting distances less than one centimeter
+    Requirement X150
+      Spec The sensors that monitor the road and surroundings must have an update frequency of at least 100Hz
+    Requirement X156
+      Spec The sensor system must have a range of 300 m in all directions (360 degrees)
+    Requirement X157
+      Spec The sensor system must be able to identify objects larger than 2 m at a distance of 300 m
+
+
+#Traffic rules
+  Requirement X34
+    Spec The system must adhere to Swedish traffic laws
+  Requirement X116
+    Spec The system must adhere to Swedish car inspection rules and regulations (see def. for unsafe state) when evaluating the car status
+  Requirement X35
+    Spec The system must store current Swedish car inspection rules and regulations
+  Requirement X36
+    Spec The system must query for new car inspection rules & regulations once a day
+
+
+#Users
+  #Permissions
+    Requirement X122
+      Spec After authentication a traveller is recognized as an authenticated user by the system
+    Requirement 114
+      Spec Passengers can unlock the car and initiate transportation
+    Requirement 115
+      Spec A driver has the same rights as a passenger and must be able to select and change destination address as well as change to and from manual driving mode
+    Requirement X66
+      Spec An owner has the same rights as a driver and must be able to add, remove and edit users of user type passenger and driver
+    Requirement X132
+      Spec An owner must be able to edit its own address and phone number
+    Requirement X67
+      Spec An admin must have the same rights as an owner and must be able to add, remove and edit owners.
+    Requirement X113
+      Spec Inactive users have no system access
+    Requirement 143
+      Spec User types are ranked, from high to low, in the following order:
+      Requirement X144
+        Spec Admin
+      Requirement X145
+        Spec Owner
+      Requirement X146
+        Spec Driver
+      Requirement X147
+        Spec Passenger
+    Requirement X157
+      Spec If more than one traveler is authenticated, the one with the highest ranked user type is considered in control
+    Requirement X68
+      Spec If there are travelers in the car, at least one needs to be authenticated in order for the system to accept input or drive
+  #Storage of data
+    Requirement X106
+      Spec The system must be able to store user data
+    Requirement X54
+      Spec The system must support the following user types:
+      Requirement X55
+        Spec Passenger
+      Requirement X56
+        Spec Driver
+      Requirement X57
+        Spec Owner
+      Requirement X58
+        Spec Admin
+    Requirement X59
       Spec The system must store the following user data:
-      Product DPr1a
+      Requirement X60
         Spec Name
-      Product DPr1b
+      Requirement X110
+        Spec Address
+      Requirement X109
+        Spec Phone number
+      Requirement X61
         Spec User type
-      Product DPr1c
-        Spec Fingerprint
-    Product DPr2
-      Spec The system must store route data
-    Product DPr3
-      Spec The system must store a service log
-    Product DPr4
-      Spec The system must be able to store future system updates
-    Product DPr5
-      Spec The database must store current Swedish car inspection rules and regulations
-    Product DPr6
-      Spec If there are users in the car, at least one needs to be authenticated
-    Product DPr7
-      Spec The service log must contain the following data: date, repair nr, service provider, mileage, description
-    Product DPr8
-      Spec The database must store the service log-entries in the way described in figure 3
-    Product DPr9
-      Spec The database must store the user-entries in the way described in figure 2
-# Design requirements
-  Design De1
-    Spec The touch screen must have brightness settings
-  Design De2
-    Spec The touch screen must be easily readable
-  Design De3
-    Spec The emergency break function must be easily accessible from all seats in the car
-  Design De4
-    Spec The emergency break function must be easy to find
-  Design De5
-    Spec The emergency break function must be easy to press
-  Design De6
-    Spec The voice control system must be intuitive, resembling human communication
-  Design De7
-    Spec Changing to manual mode must be easy
-# Quality requirements
-  Quality Qu1
-    Spec The system must query for new system and database updates at least once a day
-  Quality Qu2
-    Spec The system must query for new car inspection rules/regulations online at least once a day
-  Quality Qu3
+      Requirement X142
+        Spec IsActive
+      Requirement X62
+        Spec Authentication data
+    Requirement X151
+      Spec The system must store data corresponding to the virtual window concerning users
+    Requirement X126
+      Spec There must be maximum one user with user type owner in the system
+    Requirement X124
+      Spec There must be one and only one user with user type admin in the system
+    Requirement X125
+      Spec The user type admin must have the name "Admin"
+    Requirement X69
+      Spec The system must store the user-entries according the data dictionary in figure DATA
+
+
+#Manual Drive
+  #Activation
+    Requirement X111
+      Spec The system must support manual driving of the car
+    Requirement X50
+      Spec It must be possible to request manual mode
+    Requirement X118
+      Spec The system must support task 4
+    Requirement X46
+      Spec 9/10 new users authorized for manual driving must be able to request manual driving mode within 2 min
+  #Personal safety
+    Requirement X52
+      Spec For a passenger to be able to drive the car manually, the person must pass the blood alcohol content test
+    Requirement X53
+      Spec The blood alcohol content test has to be configured according to Swedish traffic law, which states that you are not allowed to drive with an alcohol level of 0.2 per mille or higher.
+    Requirement X117
+      Spec The blood alcohol content measuring device needs to be approved acording to the european standard CENELEC 50436-1 and Swedish Transportstyrelesen regulation TSFS 2011:70
+  #Road safety
+    Requirement X49
+      Spec To turn on and off the automatic mode the car must be standing still
+    Requirement X51
+      Spec In order to initiate manual mode, the car must be standing still
+    Requirement X48
+      Spec When the system is in manual driving mode, the system must be active and avoid accidents the same way as in autonomous mode
+    Requirement X18
+      Spec The system must respond to a potential accident before the accident is unavoidable
+
+
+#I/O
+  Requirement X79
+    Spec When a command is entered feedback must be provided to the user
+  Requirement X103
+    Spec The system requires a network connection
+  Requirement X76
+    Spec A driver must be able to choose & change destination
+  #Voice control
+    Requirement X74
+      Spec The system requires a voice input device
+    Requirement X83
+      Spec The user must be able to interact with the system via voice controlled input
+    Requirement X80
+      Spec If the voice control system cannot interpret an incoming voice command, it must suggest to the user what it interpreted
+    Requirement X128
+      Spec 7/10 times the voice control system must interpret the user command correctly
+    Requirement X127
+      Spec 9/10 users must be able to select a route with the voice control system within 2 minutes
+  #Touch screen
+    Requirement X119
+      Spec The touch screen must have a touch precision more precise than 0.5 mm
+    Requirement X120
+      Spec The touch screen must have a resolution higher than 300 dots per inch
+    Requirement X121
+      Spec The touch screen must have a minimum size of 7 inches
+    Requirement X159
+      Spec 9/10 users using the touch screen must be able to change the destination within 30 seconds
+    Requirement X234
+      Spec The touch screen shall support the design in figure X.
+
+
+#Remote
+  Requirement X156
+    Spec All commands that are available in the car must be available remotely
+  Requirement X82
+    Spec All commands that are available in the car must be available remotely
+  Requirement X75
+    Spec A user must be able to interact with the system remotely
+  Requirement X81
+    Spec The remote device must be able to display the last known location of the car
+
+
+#Updates
+  Requirement X97
+    Spec The system must be able to store future system updates
+  Requirement X98
+    Spec The system must be able to install stored future system updates at a given date
+  Requirement X99
+    Spec The system must query for new system updates once a day
+  Requirement X100
     Spec System updates must only be performed when the car is parked
-  Quality Qu4
-    Spec Traffic and weather data must be fetched every minute when an Internet connection is available
-  Quality Qu5
-    Spec The car always needs to have fuel left in the tank to be able to drive to the nearest gas station when calculating the route the user has put in the system
-  Quality Qu6
-    Spec The system must respond to a potential accident before the accident is unavoidable
-  Quality Qu7
-    Spec The Internet connection must be fast enough to download the weather and traffic information within 1 minute
-  Quality Qu8
-    Spec When the emergency break is activated the system must start to process the request within 100 ms
-  Quality Qu9
-    Spec The sensors that monitor the road and surroundings must have a margin of error less than 0.01 %
-  Quality Qu10
-    Spec Ecodriving must be performed according to the current definition by Sveriges Trafikskolors Riksförbund
-  Quality Qu11
-    Spec When a command is entered remotely, the system must send a confirmation to the user that sent the command
-  Quality Qu12
-    Spec Any dangerous weather conditions must be notified when a route is selected, before a route is commenced
-  Quality Qu13
-    Spec The service log must store data about date, service type, service provider, mileage and description from every service done on the car
-  Quality Qu14
-    Spec The margin of error for the voice control system must be lower than 1 %
-  Quality Qu15
-    Spec The GPS system must be precise to within 1 meter
-  Quality Qu16
-    Spec The system must query for updates to its maps once a day
-  Quality Qu17
-    Spec The maps must be precise, compared to the reality, to within 3 meters
-  Quality Qu18
-    Spec The dashboard control must be precise to within 0.5 mm from the touch point of the user
-  Quality Qu19
-    Spec The touch screen responsiveness must be instant
-  Quality Qu20
-    Spec The system response time must be lower than 100 ms
+
+
+#Data storage
+  Requirement X148
+    Spec The virtual windows must be supported by the system
+  Requirement X102
+    Spec The system must store route data
+  Requirement X134
+    Spec The system must store the following route data:
+    Requirement X135
+      Spec Date
+    Requirement X136
+      Spec Distance
+    Requirement X137
+      Spec Estimated time to complete route
+    Requirement X138
+      Spec Actual time to complete route
+    Requirement X139
+      Spec Fuel consumption/km
+    Requirement X140
+      Spec Total fuel consumption
+    Requirement X141
+      Spec Name of the users in the car
+    Requirement X149
+      Spec User type of the users in the car
+
+
+#Car Status
+  #Service log
+    Requirement X37
+      Spec The system must store a service log
+    Requirement X152
+      Spec The system must store data corresponding to the virtual window concerning the service log
+    Requirement X44
+      Spec The service log must store data about date, service type, service provider, mileage and description from every service done on the car
+    Requirement X38
+      Spec The service log must contain the following data: date, repair nr, service provider, mileage, description
+    Requirement X39
+      Spec The system must store the service log-entries in the way described in figure 3
+  #Status & service
+    Requirement X104
+      Spec The system must notify the owner when the car needs a service
+    Requirement X43
+      Spec The car must be able to re-fuel on its own
+    Requirement X40
+      Spec The car must be able to re-fuel on its own
+
+
+#Authentication
+  Requirement X77
+    Spec The system requires an authentication sensor
+  Requirement 130
+    Spec The authentication sensor must have a margin of error less than 1 ppm
+
+
+
+#Comfort
+  Requirement X2
+    Spec The system must drive fuel efficiently
+  Requirement X26
+    Spec The ride must be comfortable for 9/10 users
+  Requirement X3
+    Spec EcoDriving must be performed according to the current definition by Sveriges Trafikskolors Riksförbund
+
+
+
+---------DEPENDENCIES----------
+Requirement X13 requires
+  Requirement X123
+  Requirement X15
+Requirement X7 requires
+  Requirement X123
+Requirement X8 requires
+  Requirement X123
+Requirement X9 requires
+  Requirement X123
+Requirement X15 requires
+  Requirement X123
+Requirement X19 requires
+  Requirement X123
+Requirement X5 requires
+  Requirement X4
+Requirement X6 requires
+  Requirement X4
+Requirement X131 requires
+  Requirement X4
+Requirement X153 requires
+  Requirement X4
+  Requirement X34
+Requirement X16 requires
+  Requirement X14
+Requirement X17 requires
+  Requirement X14
+  Requirement X103
+Requirement X27 requires
+  Requirement X23
+Requirement X21 requires
+  Requirement X23
+  Requirement X27
+Requirement X105 requires
+  Requirement X22
+  Requirement X25
+  Requirement X33
+  Requirement X150
+  Requirement X156
+Requirement X28 requires
+  Requirement X22
+  Requirement X105
+  Requirement X25
+  Requirement X33
+  Requirement X150
+  Requirement X156
+Requirement X30 requires
+  Requirement X23
+Requirement X107 requires
+  Requirement X103
+Requirement X29 requires
+  Requirement X103
+  Requirement X107
+Requirement X31 requires
+  Requirement X103
+  Requirement X107
+Requirement X32 requires
+  Requirement X108
+Requirement X25 requires
+  Requirement X22
+Requirement X24 requires
+  Requirement X22
+  Requirement X23
+  Requirement X150
+  Requirement X156
+  Requirement X157
+Requirement X33 requires
+  Requirement X22
+  Requirement X25
+Requirement X150 requires
+  Requirement X22
+Requirement X156 requires
+  Requirement X22
+Requirement X157 requires
+  Requirement X22
+Requirement X116 requires
+  Requirement X35
+Requirement X36 requires
+  Requirement X103
+Requirement X122 requires
+  Requirement X77
+Requirement X114 requires
+  Requirement X147
+  Requirement X56
+Requirement X115 requires
+  Requirement X114
+  Requirement X144
+  Requirement X56
+Requirement X66 requires
+  Requirement X115
+  Requirement X145
+  Requirement X57
+Requirement X132 requires
+  Requirement X109
+  Requirement X110
+  Requirement X145
+  Requirement X57
+Requirement X67 requires
+  Requirement X132
+  Requirement X144
+  Requirement X58
+Requirement X144 requires
+  Requirement X58
+Requirement X145 requires
+  Requirement X57
+Requirement X146 requires
+  Requirement X56
+Requirement X147 requires
+  Requirement X55
+Requirement X157 requires
+  Requirement X122
+Requirement X126 requires
+  Requirement X57
+Requirement X124 requires
+  Requirement X58
+Requirement X125 requires
+  Requirement X57
+Requirement X50 requires
+  Requirement X111
+Requirement X118 requires
+  Requirement X50
+  Requirement X111
+Requirement X46 requires
+  Requirement X50
+Requirement X52 requires
+  Requirement X11
+  Requirement X111
+Requirement X53 requires
+  Requirement X11
+Requirement X117 requires
+  Requirement X11
+Requirement X51 requires
+  Requirement X111
+Requirement X76 requires
+  Requirement X66
+Requirement X83 requires
+  Requirement X74
+Requirement X80 requires
+  Requirement X74
+Requirement X128 requires
+  Requirement X74
+Requirement X127 requires
+  Requirement X74
+Requirement X156 requires
+  Requirement X103
+Requirement X82 requires
+  Requirement X156
+  Requirement X103
+  Requirement X79
+Requirement X75 requires
+  Requirement X77
+  Requirement X103
+Requirement X81 requires
+  Requirement X75
+  Requirement X103
+Requirement X98 requires
+  Requirement X97
+Requirement X99 requires
+  Requirement X103
+Requirement X100 requires
+  Requirement X103
+  Requirement X98
+Requirement X102 requires
+  Requirement X23
+Requirement X134 requires
+  Requirement X102
+Requirement X135 requires
+  Requirement X134
+Requirement X136 requires
+  Requirement X134
+  Requirement X23
+Requirement X137 requires
+  Requirement X134
+  Requirement X23
+Requirement X138 requires
+  Requirement X134
+  Requirement X23
+Requirement X139 requires
+  Requirement X134
+Requirement X140 requires
+  Requirement X134
+Requirement X141 requires
+  Requirement X134
+Requirement X149 requires
+  Requirement X134
+Requirement X152 requires
+  Requirement X37
+Requirement X44 requires
+  Requirement X37
+Requirement X38 requires
+  Requirement X37
+Requirement X39 requires
+  Requirement X37
+Requirement X104 requires
+  Requirement X57
+Requirement X40 requires
+  Requirement X116
+  Requirement X35
+Requirement X130 requires
+  Requirement X77
+Requirement X3 requires
+  Requirement X2

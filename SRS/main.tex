@@ -226,12 +226,6 @@ A car, with the built in CRASH-system, looses its GPS-signal and therefore canno
 \subsection {Emergency braking}
 Alexander and his twin sons Jonathan and Niklas are on their way home from brunch at a hotel near their house in their CRASH-supported car. The car is in autonomous mode because Alexander has had a few drinks at the brunch. On the way, Niklas feels like he is about to throw up the food he ate, which he tells Alexander. Alexander immediately pushes the emergency brake function in the car. CRASH registers the activation and pulls over at a wide section of the road. When Niklas feels fine again, he tells CRASH to go, thus the car starts driving home again. 
 
-\section{Tasks}
-Each of the following tasks must be supported and are suitable as test cases.
-%Tasks are, in contrast to vivid scenarios, suitable as test cases. A task should finish with a meaningful goal. It is important that completing the task makes the user feel that something as been achieved.
-
-
-
 %Tror inte den behövs
 %\subsection {Task 3} 
 \todo{Här har jag tagit bort en task /Fredrik}
@@ -252,61 +246,6 @@ Each of the following tasks must be supported and are suitable as test cases.
 %\tab{ } \tab{2b.} \tab{Command rejected, CRASH has no GPS connection.}
 %\medskip
 
-\subsection {Task 3}
-\textbf{Task:} \tab{User A attempts to drive the vehicle manually.}\\
-\textbf{Purpose:} \tab{A requests to drive the vehicle manually.}\\
-\textbf{Precondition:} \tab{The vehicle is not moving.}\\ 
-\textbf{Trigger:} \tab{A selects manual mode via touchscreen or voice command.}\\
-\\
-\noindent
-\textbf{Subtasks:} \tab{1.}    \tab{A attempts to authenticate.}\\
-\tab{ } \tab{2.} \tab{A uses the breathalyser.}\\
-\\
-\noindent
-\textbf{Variants:} \tab{1.}    \tab{A is authenticated and gains access to manual control}\\
-\tab{ } \tab{ } \tab{mode.}\\
-\tab{ } \tab{2a.} \tab{A is denied access due to lack of manual control}\\ \tab{ } \tab{ } \tab{permission.}\\
-\tab{ } \tab{2b.} \tab{A is denied access due to recent alcohol consumption.}
-\medskip
-
-\subsection {Task 4}
-\textbf{Task:} \tab{User A remotely instructs the car to drive to a destination.}\\
-\textbf{Purpose:} \tab{Request the system to drive from one place to another.}\\
-\textbf{Precondition:} \tab{A is outside the vehicle and has remote access permissions via}\\
-\tab{ } \tab{mobile device.}\\ 
-\textbf{Trigger:} \tab{A starts the application on mobile device.}\\
-\noindent
-\\
-\textbf{Subtasks:} \tab{1.} \tab{A authenticates to mobile device.}\\
-\tab{ } \tab{2.} \tab{A specifies a destination}\\ 
-%\tab{ } \tab{ } \tab{screen on mobile device.}\\
-\\
-\noindent
-\textbf{Variants:} \tab{1a.}    \tab{A is granted access to mobile application and CRASH}\\
-\tab{ } \tab{ } \tab{accepts the given command.}\\
-\tab{ } \tab{1b.} \tab{A is granted access to mobile application but voice}\\ \tab{ } \tab{ } \tab{command is not accepted.}\\
-\tab{ } \tab{2.} \tab{A is denied access to mobile application due to lack of}\\
-\tab{ } \tab{ } \tab{remote access permission.} 
-\medskip
-
-\todo{Product!}
-\subsection {Task 5}
-\textbf{Task:} \tab{User A is informed of current weather situation}\\ 
-\tab{ }  \tab{situation.}\\
-\textbf{Purpose:} \tab{Avoid danger caused by weather.}\\
-\textbf{Precondition:} \tab{The vehicle is not moving. A has drive permissions.}\\ 
-\textbf{Trigger:} \tab{A gives a drive command to the car.}\\
-\\
-\textbf{Variants:} \tab{1a.} \tab{The system accepts the command and drives to \tab{ } \tab{ } \tab{destination.}\\
-\tab{ } \tab{1b.} \tab{The system informs A of dangerous weather conditions,}\\
-\tab{ } \tab{ } \tab{however,  command is still accepted.}\\
-\tab{ } \tab{2.} \tab{The system informs A of dangerous weather conditions}\\ \tab{ } \tab{ } \tab{and rejects drive command.}
-
-
-
-
-
-    
 \section{Safety}
   \subsection{Emergency break}
       \subsubsection{Requirement}
@@ -347,6 +286,23 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \indent
 4.Follow traffic rules
   \subsection{Weather and traffic information}
+  \todo{Product!}
+\subsubsection {Requirement}
+\hfill \break 
+\- \- \-The following task must be supported by the system:\\
+\hfill \break 
+\textbf{Task:} \tab{User A is informed of current weather situation}\\ 
+\tab{ }  \tab{situation.}\\
+\textbf{Purpose:} \tab{Avoid danger caused by weather.}\\
+\textbf{Precondition:} \tab{The vehicle is not moving. A has drive permissions.}\\ 
+\textbf{Trigger:} \tab{A gives a drive command to the car.}\\
+\\
+\textbf{Variants:} \tab{1a.} \tab{The system accepts the command and drives to \tab{ } \tab{ } \tab{destination.}\\
+\tab{ } \tab{1b.} \tab{The system informs A of dangerous weather conditions,}\\
+\tab{ } \tab{ } \tab{however,  command is still accepted.}\\
+\tab{ } \tab{2.} \tab{The system informs A of dangerous weather conditions}\\ \tab{ } \tab{ } \tab{and rejects drive command.}
+\bigskip
+  
       \subsubsection{Requirement}
 \hfill \break 
 \- \- \-The system must give a warning when dangerous weather conditions are predicted along the planned route
@@ -488,6 +444,16 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \- \- \-The system must be able to store user data
       \subsubsection{Requirement}
 \hfill \break 
+\- \- \-The system must store data corresponding to the virtual window in figure \ref{vw1}
+\begin{figure}[htb]   
+ \centering
+ \includegraphics[width=0.6\textwidth]
+    {VirtualWindow1.png}
+  \caption{Virtual window that shows the data to be stored regarding users.}
+  \label{vw1}
+\end{figure}
+      \subsubsection{Requirement}
+\hfill \break 
 \- \- \-The system must support the following user types:
 \hfill \break 
 \indent
@@ -501,30 +467,7 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \hfill \break 
 \indent
 \textbf{10.2.2.d} Admin
-      \subsubsection{Requirement}
-\hfill \break 
-\- \- \-The system must store the following user data:
-\hfill \break 
-\indent
-\textbf{10.2.3.a} Name
-\hfill \break 
-\indent
-\textbf{10.2.3.b} Address
-\hfill \break 
-\indent
-\textbf{10.2.3.c} Phone number
-\hfill \break 
-\indent
-\textbf{10.2.3.d} User type
-\hfill \break 
-\indent
-\textbf{10.2.3.e} IsActive
-\hfill \break 
-\indent
-\textbf{10.2.3.f} Authentication data
-      \subsubsection{Requirement}
-\hfill \break 
-\- \- \-The system must store data corresponding to the virtual window concerning users
+\todo{Kolla nummer}
       \subsubsection{Requirement}
 \hfill \break 
 \- \- \-There must be maximum one user with user type owner in the system
@@ -537,19 +480,40 @@ In the situation of an imminent accident, the system must prioritize in the foll
       \subsubsection{Requirement}
 \hfill \break 
 \- \- \-The system must store the user-entries according the data dictionary in figure DATA
-
+\todo{krav}
 
 \section{Manual Drive}
+
+
+
   \subsection{Activation}
+\subsubsection {Requirement}
+\hfill \break 
+\- \- \-The following task must be supported by the system:\\
+\hfill \break 
+\textbf{Task:} \tab{User A attempts to drive the vehicle manually.}\\
+\textbf{Purpose:} \tab{A requests to drive the vehicle manually.}\\
+\textbf{Precondition:} \tab{The vehicle is not moving.}\\ 
+\textbf{Trigger:} \tab{A selects manual mode via touchscreen or voice command.}\\
+\\
+\noindent
+\textbf{Subtasks:} \tab{1.}    \tab{A attempts to authenticate.}\\
+\tab{ } \tab{2.} \tab{A uses the breathalyser.}\\
+\\
+\noindent
+\textbf{Variants:} \tab{1.}    \tab{A is authenticated and gains access to manual control}\\
+\tab{ } \tab{ } \tab{mode.}\\
+\tab{ } \tab{2a.} \tab{A is denied access due to lack of manual control}\\ \tab{ } \tab{ } \tab{permission.}\\
+\tab{ } \tab{2b.} \tab{A is denied access due to recent alcohol consumption.}
+\bigskip
+  
+  
       \subsubsection{Requirement}
 \hfill \break 
 \- \- \-The system must support manual driving of the car
       \subsubsection{Requirement}
 \hfill \break 
 \- \- \-It must be possible to request manual mode
-      \subsubsection{Requirement}
-\hfill \break 
-\- \- \-The system must support task 4
       \subsubsection{Requirement}
 \hfill \break 
 \- \- \-9/10 new users authorized for manual driving must be able to request manual driving mode within 2 min
@@ -578,11 +542,13 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \- \- \-The system must respond to a potential accident before the accident is unavoidable
 
 \section{I/O}
-\subsubsection {Task 2}
+\subsubsection {Requirement}
+\hfill \break 
+\- \- \-The following task must be supported by the system:\\
+\hfill \break 
 \textbf{Task:} \tab{User A instructs the car to drive to a destination.}\\
 \textbf{Purpose:} \tab{Tell the system to drive from one place to another.}\\
-\textbf{Precondition:} \tab{A is inside the vehicle & the doors are shut.}\\ %The vehicle has no specified}\\ 
-%\tab{ } \tab{destination.}\\
+\textbf{Precondition:} \tab{A is inside the vehicle and the doors are shut.}\\
 \textbf{Trigger:} \tab{A gives a command to  CRASH.}\\
 \\
 \textbf{Variants:} \tab{1.} \tab{Command accepted, CRASH confirms the destination}\\
@@ -591,7 +557,7 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \tab{ } \tab{2b.} \tab{Command rejected, no one in the car is}\\
 \tab{ } \tab{ } \tab{authorized.}\\
 \tab{ } \tab{2c.} \tab{Command rejected, CRASH has no GPS connection.}
-\medskip
+\bigskip
 
 
     \subsubsection{Requirement}
@@ -634,10 +600,41 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \- \- \-9/10 users using the touch screen must be able to change the destination within 30 seconds
       \subsubsection{Requirement}
 \hfill \break 
-\- \- \-The touch screen shall support the design in figure X.
+\- \- \-The touch screen shall support the design in figure \ref{fi:designmockup}.
+\bigskip
+\begin{figure}[htb]    
+ \centering
+  \includegraphics[width=0.9\textwidth]
+    {"DesignReq".png}
+  \caption{Design of the touch screen when a destination is set and the car is moving.}
+  \label{fi:designmockup}
+\end{figure}
 
 
 \section{Remote}
+\subsubsection {Requirement}
+\hfill \break 
+\- \- \-The following task must be supported by the system:\\
+\hfill \break 
+\textbf{Task:} \tab{User A remotely instructs the car to drive to a destination.}\\
+\textbf{Purpose:} \tab{Request the system to drive from one place to another.}\\
+\textbf{Precondition:} \tab{A is outside the vehicle and has remote access permissions via}\\
+\tab{ } \tab{mobile device.}\\ 
+\textbf{Trigger:} \tab{A starts the application on mobile device.}\\
+\noindent
+\\
+\textbf{Subtasks:} \tab{1.} \tab{A authenticates to mobile device.}\\
+\tab{ } \tab{2.} \tab{A specifies a destination}\\ 
+%\tab{ } \tab{ } \tab{screen on mobile device.}\\
+\\
+\noindent
+\textbf{Variants:} \tab{1a.}    \tab{A is granted access to mobile application and CRASH}\\
+\tab{ } \tab{ } \tab{accepts the given command.}\\
+\tab{ } \tab{1b.} \tab{A is granted access to mobile application but voice}\\ \tab{ } \tab{ } \tab{command is not accepted.}\\
+\tab{ } \tab{2.} \tab{A is denied access to mobile application due to lack of}\\
+\tab{ } \tab{ } \tab{remote access permission.} 
+\bigskip
+
     \subsubsection{Requirement}
 \hfill \break 
 \- \- \-All commands that are available in the car must be available remotely
@@ -699,7 +696,7 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \hfill \break 
 \indent
 \textbf{15.0.16.h} User type of the users in the car
-
+\todo{Kolla nummer}
 
 
 \section{Car Status}
@@ -712,7 +709,23 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \- \- \- The system must store data corresponding to the virtual window concerning the service log
       \subsubsection{Requirement}
 \hfill \break 
-\- \- \-The service log must store data about date, service type, service provider, mileage and description from every service done on the car
+\- \- \-The service log must store the following data
+\todo{Kolla nummer}
+\hfill \break 
+\indent
+\textbf{15.1.3.a} Date
+\hfill \break 
+\indent
+\textbf{15.1.3.b} Service type
+\hfill \break 
+\indent
+\textbf{15.1.3.c} Service provider
+\hfill \break 
+\indent
+\textbf{15.1.3.d} Mileage
+\hfill \break 
+\indent
+\textbf{15.1.3.e} Optional description
       \subsubsection{Requirement}
 \hfill \break 
 \- \- \-The service log must contain the following data: date, repair nr, service provider, mileage, description
@@ -737,7 +750,7 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \hfill \break 
 \textbf{Task:} \tab{Authenticate user A.}\\
 \textbf{Purpose:} \tab{Authenticate A to retrieve user permissions.}\\
-\textbf{Trigger:} \tab{User A wants to enter the car.}\\
+\textbf{Trigger:} \tab{User A tries to authenticate.}\\
 \\
 \noindent
 \textbf{Variants:} \tab{1a.}    \tab{A is admin}\\
@@ -767,24 +780,12 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \- \- \-EcoDriving must be performed according to the current definition by Sveriges Trafikskolors Riksförbund
 
 
-\begin{figure}[htb]    
- \centering
-  \includegraphics[width=0.9\textwidth]
-    {"DesignReq".png}
-  \caption{Design of the touch screen when a destination is set and the car is moving.}
-  \label{fi:designmockup}
-\end{figure}
+
 
 \newpage
 
 
-\begin{figure}[htb]   
- \centering
- \includegraphics[width=0.9\textwidth]
-    {"Users - VW".jpeg}
-  \caption{Virtual window that shows the data to be stored regarding users.}
-  \label{vw1}
-\end{figure}
+
 
 \begin{figure}[htb]    
  \centering

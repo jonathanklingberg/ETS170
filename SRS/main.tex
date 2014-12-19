@@ -10,6 +10,8 @@
 % include graphics with the command \includegraphics
 \usepackage{graphicx}
 
+\appto\listoftables{\addtocontents{lot}{\protect\setcounter{tocdepth}{2}}}
+
 % Tells latex that the images are kept in a folder named figures under the current directory. 
 \graphicspath{ {figures/} }
 
@@ -62,7 +64,7 @@
 
 
 \begin{document}
-
+\todo{Det blir nått käbbel med raden som tar bort kraven från table of contents, kika sida 1 i förhandsgranskningen..}
 %For the tasks, please do not alter/remove. 
 \TabPositions{0.22\linewidth, 0.30\linewidth, 0.38\linewidth}
 
@@ -96,7 +98,7 @@
 \pagenumbering{arabic}
 
 \section{Introduction}
-Our company Steve's Angels have found out that car manufacturers have realized that self-driving cars will have an important role in the future transportation market. Although there are systems in place today, none of them are complete in terms of security and functionality. Car manufacturers are looking for a complete system solution that can be integrated into their cars and be implemented in actual traffic. Steve's Angels have come in contact with a car manufacturer, LADA, which are currently losing market shares and are in desperate need for a new product that will challenge the current market. 
+Our company Steve's Angels have found out that car manufacturers have realized that self-driving cars will have an important role in the future transportation market. Although there are systems in place today, none of them are complete in terms of security and functionality. Car manufacturers are looking for a complete system solution that can be integrated into their cars and be implemented in actual traffic. Steve's Angels have come in contact with the car manufacturer LADA, who are currently losing market shares and are in desperate need for a new product that will challenge the market. 
 
 \section{Summary}
 The system merges several existing systems in a car making it self-driven. Since human lives are at stake, CRASH puts high demands on stability and reliability of the systems integrated with CRASH. CRASH must make sure the ride is safe at all costs.
@@ -105,7 +107,7 @@ The system merges several existing systems in a car making it self-driven. Since
 \noindent Inner stakeholders:
 \begin{itemize}
 \item \textbf{End user} - All users that interact with the system such as the car owner and passengers. The end users have demands on the system to be safe and easy to use.
-\item \textbf{LADA} - A car manufacturer and key customer for the CRASH system. LADA has a considerable amount of demands, which the system must fulfill in order to meet their business goals. CRASH also integrates with their existing modules such as the control system and sensors.
+\item \textbf{LADA} - Car manufacturer and key customer for the CRASH system. LADA has a considerable amount of demands, which the system must fulfill in order to meet their business goals. CRASH also integrates with their existing modules such as the control system and sensors.
 \item \textbf{Steve's Angels} - The developers of the software requirement specification. They have demands such that the system solution described in the requirement specification is structured and well formed. They might want to sell their solution to other companies since LADA is only a key customer who helped form the requirements and Steve's Angels own the SRS.
 \end{itemize}
 
@@ -135,15 +137,16 @@ The system has a large number of external actors, which communicates with the sy
 
 
 \noindent
-\textbf{Traveler} A Traveler is just a person who sits in the car and can interact with the system even though he does not have to be authenticated by the system.\\
+\textbf{Traveler} A Traveler is a person who sits in the car and can interact with the system even though he does not have to be authenticated by the system.\\
 \textbf{Passenger} A Passenger can unlock the car, press the emergency stop button and ride in the car alone.\\
 \textbf{Driver} Can do anything that a passenger can.
 The driver can also drive the car manually, handle the voice control as well as choosing the destination. \\
-\textbf{Owner} Can do anything that a driver can. The owner also handles user management. Which users are allowed to be drivers and passengers. \\
+\textbf{Owner} Can do anything that a driver can. The owner also handles user management, in other words which users that are allowed to be drivers or passengers. \\
 \textbf{Administrator} Can do anything that an owner can.
 The administrator can change the system settings as well as general admin management \\
+\todo{Vi säger att en admin kan ändra system settings, men har inga krav på dessa, ska vi ta bort det istället?}
 \textbf{Control system} - A system that control the cars maneuvering components such as throttle and steering components. \\
-\textbf{Weather forecast system} - A system that can provide weather forecasts that the car can download and use to warn about dangerous weather conditions along the current route.  \\
+\textbf{Weather forecast system} - A system that  provide weather forecasts that the car can download and use to warn about dangerous weather conditions along the current route.  \\
 \textbf{Position data system} - A system where the car can upload its current position. Used by the owner to locate the cars position and follow it along its path.  \\
 \textbf{Traffic information system} - A system that keeps track of the current traffic situation (e.g. accidents, queues etc). \\
 \textbf{Surroundings sensory system} - A system that consists of several different sensors that senses the cars surroundings.  \\
@@ -155,21 +158,24 @@ The administrator can change the system settings as well as general admin manage
   \caption{Context diagram with actors and key components within the system.}
   \label{ContextDiagram}
 \end{figure}
-
+\todo{Måste uppdatera kontext till senaste och ändra Actors and objectives så att det stämmer överens}
 \subsection{Terminology}
 \textbf{The system} - The delivered product. When nothing else is stated, requirements are specified for autonomous driving mode.\\
 \textbf{Autonomous car} - An autonomous car is also known as a self driving car i.e. a car that operates without a driver. \\
 \textbf{EcoDriving} - EcoDriving is a term used to describe energy efficient use of vehicles. It is a method for reducing fuel consumption when driving, so that less fuel is used to travel the same distance.\\
 \textbf{Unsafe state} - The unsafe state is the cars state when it does not fulfill Swedish car inspection regulations.
 REFERENCE to law: Fordonsförordning (2009:211) \\
+\todo{Ska de va stora bokstäver i REFERENCE, eller är tanken att en referens ska lägga in här?}
 \textbf{GPS} - Global Positioning System based on space satellite communication.\\
+\todo{Ska vi verkligen ha GPS här? Sista versionen av kontextdiagrammet jag såg hade väl "positioning system" för att hålla det på domän-nivå?}
 \textbf{User} - A user is a person who has a profile registered in the system. \\
-\textbf{Traveler} - A person that is in the car, can also be authenticated users. \\
-\textbf{Touch screen} - In this specification we refer touch screen as a touch screen on a device that is placed within the car. Used by the users to  communicate with the cars inbuilt C.R.A.S.H. system. \\
-\textbf{Inactive user} - A user that is stored in the system and has attribute isActive set to false. \\
-\textbf{In control} - \\
-\textbf{Manual mode} - The car can be manually driven like in a regular car.\\
-\textbf{Initiate transportation} - When the user tells the system that he/she is ready to begin transportation to a predetermined destination. \\
+\textbf{Traveler} - A person that is in the car, if he has a user profile and authenticates, he can also be a user. \\
+\textbf{Touch screen} - In this specification we refer touch screen as a touch screen device that is placed on the cars dashboard. Used by travelers to  give commands and see route data. \\
+\textbf{Inactive user} - A user that is stored in the system and has the attribute isActive set to false. \\
+\textbf{In control} - \\ Since more than one user can be authenticated at the same time and all travelers in the car can give commands to the CRASH system, the term in control is used to describe the user with the highest ranked user type who is authenticated at a given moment. All travelers can give commands allowed by the user type in control at the given moment.
+\todo{La till beskrivning till In control, får gärna ses över}
+\textbf{Manual mode} - The state where the car is manually driven, like a regular car.\\
+\textbf{Initiate transportation} - When the user tells the system that he/she is ready to begin driving on a predetermined route. \\
 \textbf{Parked} - The car is parked when the car is at a stand still, the engine is turned off and the gear lever is in Park mode.  \\
 
 \section{Goals}
@@ -206,13 +212,14 @@ REFERENCE to law: Fordonsförordning (2009:211) \\
 The following scenarios should be used to improve developer intuition. These scenarios are prioritized.
 %Scenarios are used to improve developer intuition. The described scenarios are so called vivid scenarios, they consist of a case story illustrating one or more user tasks. It is important to note that vivid scenarios are not suitable as test cases.
 \subsection {Remote pickup scenario}
-Niklas is an owner of a CRASH-supported car and his football practice is over. He now remotely tells his car to pick him and his friends up at the football pitch, using his phone. The next step is that the car drives to pick up Niklas and his friends. When the car arrives, Niklas and his friends enter the car. Niklas tells the car which addresses to drive to, when this is done, the car drives the passengers to the given addresses. One of Niklas's friends lives further away than Niklas himself but since Niklas is tired he wants to be dropped off first. Niklas leaves the car at his home, then the car drives to the friend's house. After dropping of the friend, the car drives back to Niklas's home and parks.
+Niklas is an owner of a CRASH-supported car and his football practice is over. He now remotely tells his car to pick him and his friend up at the football pitch, using his phone. The car then drives to pick Niklas and his friend up. When the car arrives, Niklas and his friend enter the car. Niklas tells the car which addresses to drive to, when this is done, the car drives the passengers to the given addresses. Niklas's friends lives further away than Niklas but since Niklas is tired he wants to be dropped off first. Niklas exits the car at his home, which then drives to the friend's house. After dropping of the friend, the car drives back to Niklas's home and parks.
+\todo{Har vi verkligen krav som säger att man kan säga fler adresser samtidigt? Annars bör den här ändras så att han säger den första adressen..}
 
 \subsection {Predetermined route scenario}
-Jonathan is an Owner of a CRASH-supported car and he got stuck in a meeting at work, which means that he cannot pick up his daughter at school as planned. Instead he uses his phone to remotely tell his car to pick up his child. The child receives a notification on her phone from the car that it is on its way for a pick up and how long it should take to arrive. When the car arrives, Jonathan’s daughter enters the car and tells it to drive to the candy store. The car tells her no since the route is predetermined by her father. Therefore, the car drives the child home instead.
+Jonathan is an Owner of a CRASH-supported car and he got stuck in a meeting at work, which means that he cannot pick up his daughter at school as planned. Instead he uses his phone to remotely tell his car to pick her up. The child receives a notification on her phone from the car that it is on its way for a pick up and how long it should take to arrive. When the car arrives, Jonathan’s daughter enters the car and tells it to drive to the candy store. The car tells her that she isn't allowed to change the route since her user type is set to passenger and the route is predetermined by her father. Therefore, the car drives the child home.
 
 \subsection {Buying new car scenario}
-David is at his local LADA dealership to purchase a new LADA with the built-in CRASH system. At the dealership David is associated with the new car. Since David wants his son Alexander to be able to drive he assigns driver permissions to him as well.
+David is at his local LADA dealership to purchase a new LADA with a built-in CRASH system. At the dealership David is associated with owner rights for the new car by an Admin. Since David wants his son Alexander to be able to drive he assigns driver permissions to him as well.
 
 \subsection {Running out of fuel scenario}
 Gordon is on his way to Stockholm to celebrate Christmas with his family. He has put the CRASH system on autonomous mode so that he can work on the way up. After two hours, the system alerts him that it is running out of fuel, thus the car stops at the nearest CRASH compatible refueling station and refuels itself.
@@ -221,10 +228,10 @@ Gordon is on his way to Stockholm to celebrate Christmas with his family. He has
 Mathilda and her family are travelling along a road in their car, which has the built in CRASH-system. The road they are travelling on is divided in two lanes, one for each direction of travel and a traffic law stating that "you are not allowed to cross the dividing line" is in place. The truck, driving in front of Mathilda's car, suddenly drops a washing machine on the road behind it. The CRASH-system's sensors and radar register that there is a life threatening object ahead. To avoid an accident, CRASH assesses the situation, acknowledges that there are no cars on the opposite side of the road and avoids the obstacle by crossing the "do not cross"-line until the car has passed the obstacle, thereby braking a traffic law to avoid an accident.
 
 \subsection {Unknown position}
-A car, with the built in CRASH-system, looses its GPS-signal and therefore cannot pin point exactly where it is. However, the car still drives on the road and relies on just its sensors until the GPS-signal returns and it can localize its position again.
+A car with the built in CRASH-system looses its GPS-signal and therefore cannot pin point exactly where it is. However, the car is driving on a road and relies on just its sensors until the GPS-signal returns and it can localize its position again.
 
 \subsection {Emergency braking}
-Alexander and his twin sons Jonathan and Niklas are on their way home from brunch at a hotel near their house in their CRASH-supported car. The car is in autonomous mode because Alexander has had a few drinks at the brunch. On the way, Niklas feels like he is about to throw up the food he ate, which he tells Alexander. Alexander immediately pushes the emergency brake function in the car. CRASH registers the activation and pulls over at a wide section of the road. When Niklas feels fine again, he tells CRASH to go, thus the car starts driving home again. 
+Alexander and his twin sons Jonathan and Niklas are on their way home from brunch at a hotel near their house in their CRASH-supported car. The car is in autonomous mode because Alexander has had a few drinks at the brunch. On the way, Niklas feels like he is about to throw up the food he ate, which he tells Alexander. Alexander immediately activates the emergency brake function in the car. CRASH registers the activation and pulls over at a wide section of the road. When Niklas feels fine again, he tells CRASH to go, thus the car starts driving home again. 
 
 %Tror inte den behövs
 %\subsection {Task 3} 

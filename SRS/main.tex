@@ -10,13 +10,15 @@
 % include graphics with the command \includegraphics
 \usepackage{graphicx}
 
-%\appto\listoftables{\addtocontents{lot}{\protect\setcounter{tocdepth}{2}}}
-
 % Tells latex that the images are kept in a folder named figures under the current directory. 
 \graphicspath{ {figures/} }
 
 % Package that makes it possible to place two images beside eachother.
 \usepackage{subcaption}
+
+\usepackage[toc,page]{appendix}
+%\usepackage{etoolbox}
+%\appto\listoftables{\addtocontents{lot}{\protect\setcounter{tocdepth}{2}}}
 
 % The package defins figures called SCfigure and SCtable (analogous to figure and table) to typeset caption sideways. Options include innercaption, outercaption, leftcaption and rightcaption.  IS THIS USED ANYWHERE?
 \usepackage{sidecap}

@@ -117,7 +117,7 @@
 The project started off with us setting up a group interview with the customer where we encouraged them to explain as much as possible about their ideas. After this meeting we realized the project scope would be too large to accomplish within the given time of this course. Furthermore we needed to figure out and focus on the most vital functionalities for this system.
 To get an overview of the system features we started by creating a mind map out of the material we had gathered from the initial customer meeting. With the use of this map we could cut off branches of features not vital for the system to reduce the project scope.
 We had additional discussions with our customer about the eliminated branches, and in the end we managed to negotiate a more reasonable extent of the project.
-\todo{Under mind map prio så säger vi att vi inte lyckades förhandla bort nått?}
+
 \newline We have also created a context diagram to define the system interactions and different user roles.
 Our main objective for release 1 was to focus on elicitation techniques in order to get a grip of the system and get a good outline for the system requirements, which are summarized\todo{summarized!?} in the System Requirements Specification or SRS document, see reference \cite{srs}.\todo{Är det verkligen nödvändigt med referens, eller bara för sakens skull?}
 
@@ -191,13 +191,16 @@ The negotiations resolved the conflicts we had internally in our project group a
 When converting stakeholders aspirations into requirements, we  have to ask them questions about the purpose of the new system. During this process elicitation barriers often showed up where the stakeholders had a hard time describing their ideas or the ideas were easily misunderstood. During the project elicitation phase we experienced some of the most common elicitation barriers, some examples are described below.
 
 \subsubsection{Customer changes their minds}
-One of the things that was made clear after our first interview with our customer was that the system should focus on a private audience. Just a few days later we had another discussion with them, and this time they had changed their minds and decided it should be possible to integrate the system into taxi businesses for enterprise purposes. The old saying says that the customer is always right, but since LADA is only a key customer in our project, we had the option to deny their requests. We wanted our key customer to be satisfied with our solution and therefore it was important to take their request seriously before we considered excluding it. \todo{Oklart slut på det här stycket, behöver skrivas om så det blir tydligare och allt är skrivet i dåtid. Jag har försökt förstå, men ger upp nu}There is no way to prevent the customer from changing their mind and this is one of the things that makes the life of a software requirement engineer so varying since you never know what crazy ideas the customer might come up with. However if the SRS is baselined we will tell the customer to make a change request and then we will do an impact analysis before accepting/denying the requested change.
+One of the things that was made clear after our first interview with our customer was that the system would be made for the private market. Just a few days after our first meeting we had another discussion with them, and this time they had changed their minds and wanted the system to integrate with taxi businesses. The old saying says that "the customer is always right", but since LADA is only a key customer in our project, we had the option to deny their requests. We still wanted our key customer to be satisfied with our solution and therefore it was important to take their requests seriously before we considered excluding them.
+\newline 
+\indent
+There is no way to prevent the customer from changing their mind and this is one of the things that makes the life of a software requirements engineer so varying since you never know what ideas the customer might come up with. However if the SRS is baselined \todo{Har vi gjort det här nu i vid det här lager eller är det rent teoretiskt?}we will tell the customer to make a change request and then we will do an impact analysis before accepting/denying the requested change.
 
 \subsubsection{Luxury requirements}
 During our first interview we felt that the customer came up with too many requirements. Some of them were essential, while others were just “nice-to-have”, or so called luxury requirements. For example, they wanted the possibility for the autonomous cars to form a train so that the road network would be used more efficiently. While this was a nice feature to have, we did not feel that it was a necessity for achieving their main goals. This and similar disagreements were solved by further negotiations and reasoning. 
 
 \subsection{Elicitation reflections}
-During the elicitation process we asked our customer the question why they wanted certain features, often multiple times. Our customer was very prone to tell us how they wanted us to fix their problems, rather than specifying their problems. This is common behaviour for customers and it is always up to the developers to question their solutions and focus on their problem rather than their proposed solutions. If we manage to do this we are more likely to end up with a system-solution that is more suitable for their needs. However, if we cannot convince the customer that our solution is better than theirs, we might have to give up our solution. \todo{Stämmer det här verkligen när de är nyckelkunder?}
+During the elicitation process we asked our customer why they wanted certain features, often multiple times. Our customer was very prone to tell us how they wanted us to fix their problems, rather than specifying their problems. This is common behaviour for customers and it is always up to the developers to question their solutions and focus on their problem rather than their proposed solutions. If we manage to do this we are more likely to end up with a system-solution that is more suitable for their needs. However, if we cannot convince the customer that our solution is better than theirs, we might have to give up our solution. \todo{Stämmer det här verkligen när de är nyckelkunder?}
 For example, in our case the customer told us in the beginning that they wanted some sort of parental control in the system, but after further investigation we found out that what they really wanted was just another user type who would not be allowed to change destination.
 \newline
 \indent
@@ -207,9 +210,9 @@ In the process of eliciting requirements we discovered new problems and issues a
 \section{Specification}
 This section describes our work on the requirements specification as well as reflections on why we used certain methods. 
 \todo{Kanske är onödigt att nämna varför vi använt olika metoder, det gör vi väl i elicitation techniques bland annat..}
+\todo{Jag tror han menar olika specifikationsstilar snarare än eliciteringsmetoder, så "methods" borde nog ändras till "styles" //Niklas}
 
 \subsection{R1}
-\todo{Jag vet att engelskan här är ganska dålig, kör en omskrivning senare. Vill bara få ner all text först}
 After we had our first interview with our customer, as well as done some research on existing autonomous cars, we had an improved understanding of what the customer wanted. There were of course still a few questions that were left unanswered, however, we felt that we had enough information to begin documenting some requirements. Therefore, the whole group sat down together and conducted a brainstorming session were we elicited some more requirements. The brainstorming session gave us a long list of requirements, but they were not divided into different categories requirements. So, to divide the requirements into different types we used a table structure where we had three main requirement levels; Functional, Data and Quality. We choose goal, domain and product as requirement sub-levels. See figure \ref{fi:classification} in the appendix to get a better view of our thought process. We are fully aware that the text is very small in the picture, but the requirement categories can still be seen. We got the following requirement types:  
 \begin{itemize}
 \item Functional goal requirements
@@ -315,13 +318,13 @@ They pointed out some special cases we had missed, for example if the car is run
 This technique allowed us not only to validate our existing tasks and requirements, but also worked as another elicitation technique since we also found the need for some new requirements.
 
 \subsection{Validation Checklists}
-Before our second release we created a validation checklist which was used by our customer to validate our requirement specification. The list especially pointed out parts of the SRS which we had found complex to define. The customer went through the list and checked it against the SRS to grade the level the SRS fulfilled each attribute in the list.
-\todo{funderar på att ta bort dessa rubriker}
+Before our second release we created a validation checklist, which was used by our customer to validate our requirement specification. The list especially pointed out parts of the SRS which we had found complex to define. The customer went through the list and checked it against the SRS to grade the level the SRS fulfilled each attribute in the list.
+\todo{pekade checklisten verkligen ut delar som vi tyckte var extra komplexa? tror det är det som är tanken men vet inte om vår checklist gjorde detta. /Fredrik}
 \todo{Jag har kortat ned det efter att todon innan här skrevs(av nån annan) /Knorn}
 
 \subsubsection{Reflection}
 \todo{VAD BETYDER DET HÄR STYCKET!? Säger ju totalt emot stycket innan, vilket är rätt? Kanske kan fixas genom att skrivas om så att man förstår varför det gick fel, vems fel det var och vad som hade kunnat göras bättre?}
-There were unfortunately some problems regarding the structure of our validation checklist. Some of the content that we asked the customer to validate were left out of the SRS on purpose. In the checklist we requested validation of deliverables such as installation documents, documentation regarding support and maintenance together with functionality that was never planed to be delivered.
+There were unfortunately some problems regarding the structure of our validation checklist. Some of the content that we asked the customer to validate was left out of the SRS on purpose. In the checklist we requested validation of deliverables such as installation documents, documentation regarding support and maintenance together with functionality that was never planed to be delivered.
 This did not prevent us from receiving the feedback we needed as the checklist covered more relevant content as well. However, handing a validation checklist with partly irrelevant content, that is not covered in the SRS, to the customer might give the impression that developers are not on the right track. 
 
 \subsubsection{Feedback conclusions}
@@ -329,13 +332,11 @@ The feedback from our customer was very helpful and the following list describes
 \begin{itemize}
 \item "Summary missing" and "Add more describing texts to the report." 
 
-We wrote a summary in the introduction with a brief description of the system and added more text where needed to make the SRS easier to understand.
+We wrote a summary in the introduction with a brief description of the system and added more text where it was needed to make the SRS easier to understand.
 \item "Some business goals have been defined, but in vague terms (Maintain and expand market share). Business goals should be more concrete with metrics to make assessments of the results"
 
 Some existing business goals were improved according to the feedback, some were completely removed but we also added additional goal requirements for release 3.
-\item "Trace requirement -> goal" 
-\todo{-> blir fel, måste hitta esc-character}
-Was fixed by adding more goals.
+\item "Trace requirement to become goal" Was fixed by adding more goals.
 \item "Move goal requirements higher up in the document" 
 
 This was just a mistake due to a bug when exporting from reqT to LaTeX, which was fixed in release 3.
@@ -356,8 +357,8 @@ All quality requirements were re-written in order to make them more realistic.
 After release 2 we evaluated the SRS of Compromizr with two different approaches.\todo{Menas checklista + möte som 2 approaches, eller val report + checklista? Isf bör den första meningen flyttas utanför subsectionen. Förresten så nämner vi checklista under report-stycket nu, är det ens rätt?} They had created a checklist where they highlighted some of the problems they wanted us to look into extra carefully. This list was of great help and also gave us the opportunity to leave additional comments on our observations during the validation process. However their list was not detailed enough and it felt complicated to describe some of our comments using it. Therefore we decided to setup a validation meeting with our developers to make sure they agreed on our concerns.
 
 \subsubsection{Validation Checklist}
-The developers of Compromizr sent us a checklist of observation tasks along with their SRS, see Appendix \cite{CompromizrChecklist}. They wanted us to evaluate their SRS and take extra care to the tasks listed in their checklist, we were also able to leave comments on those tasks needed further descriptions. We did this evaluation by splitting up their checklist in five pieces and then four of us took one part each and started evaluating the SRS with particular focus on the chosen items. The last part of the checklist was about the overall structure of the specification, this was filled by all team members togheter.
-When we had finished the checklist we still had some comments about missing and ambiguous requirements. We decided a validation meeting with the developers was be necessary.\todo{Efter att ha läst det här stycket också är jag ännu mer kluven över vad vi menar med dem och om vi pratar om samma eller olika saker i de två styckena?? /Knorn}
+The developers of Compromizr sent us a checklist of observation tasks along with their SRS, see Appendix \cite{CompromizrChecklist}. They wanted us to evaluate their SRS and take extra care to the tasks listed in their checklist, we were also able to leave comments on those tasks that needed further descriptions. We did this evaluation by splitting up their checklist in five pieces and then four of us took one part each and started evaluating the SRS with particular focus on the chosen items. The last part of the checklist was about the overall structure of the specification, this was filled out by all team members.
+When we had finished the checklist we still had some comments about missing and ambiguous requirements. We decided that having a validation meeting with the developers would be necessary.\todo{Efter att ha läst det här stycket också är jag ännu mer kluven över vad vi menar med dem och om vi pratar om samma eller olika saker i de två styckena?? /Knorn}
 
 \subsubsection{Validation meeting}
 During the validation process we found more comments than could fit into their validation checklist so we decided to setup a meeting with them where we were able to go through some of the important notes we had taken in a more detailed level in order to make sure they understood our concerns. During this meeting we documented the notes both parties agreed on and the summary is found in Appendix \cite{CompromizrValidationMeeting}. We also ranked the issues for criticality A to C where A is severe and C just a note.
@@ -371,11 +372,15 @@ In order to set up a sustainable development plan it is important to focus on th
 \subsection{Top-ten requirements}
 When prioritizing requirements, one of the methods we chose to use was the "top ten"-method since it was easy and quick to produce and also simple to understand. Another benefit with this method was that it allowed a number of different stakeholders to participate in the prioritization process.
 \subsubsection{Method}
-We began with picking out 30 requirements from our requirements specification, which we then sent to our customer. Out of the 30 requirements they then picked out the ten most important ones without ranking them against each other. We also acted as users and developers of the system, picking out 10 requirements out of the same 30 requirements for both roles. When we had the ten requirements from all three stakeholders, we compared their answers to identify the ten most important requirements from the aggregated quantity. When combining the three stakeholders priorities, we did not weight them against each other. \todo{Bättre sätt att skriva sista meningen? Menar att alla SH hade samma "ranking"}
-\subsubsection{Reflection}
-When choosing the 30 requirements we wanted prioritized, we deliberately chose a few tricky and crucial requirements for the CRASH-system to see how the customer would react and how they would rank the importance of the requirements against each other. As a result of this approach we also used some sort of prioritization, even though it was a simple discussing and reasoning method. When we received their answers they had a few comments and views on why they prioritized the way they did. This helped us get a deeper understanding on their views of importance, as a key customer, regarding the CRASH-system. \todo{Är inte det här metod snarare än reflektion egentligen, säger väl inget om hur vi upplevde top 10? bara vad vi gjorde.. Stycket efter här liknar mer en reflektion, men måste formuleras om ifall den här ska flyttas..}
+We began with picking out 30 requirements from our requirements specification, which we then sent to our customer. When choosing the 30 requirements we wanted prioritized, we deliberately chose a few tricky and crucial requirements for the CRASH-system to see how the customer would react and how they would rank the importance of the requirements against each other. Out of the 30 requirements they then picked out the ten most important ones without ranking them against each other. We also acted as users and developers of the system, picking out 10 requirements out of the same 30 requirements for both roles. When we had the ten requirements from all three stakeholders, we compared their answers to identify the ten most important requirements from the aggregated quantity. When combining the three stakeholders priorities, we did not weight them against each other since the weight scale for each stakeholder was the same. \todo{Bättre sätt att skriva sista meningen? Menar att alla SH hade samma "ranking"./Knorn
 
-\noindent There was one drawback what so ever, since we only picked three stakeholders we did not allow all stakeholders to participate which might would have been a more accurate approach but the ones we picked out for this method were the three most important stakeholders so the result is probably accurate enough.
+Är det typ något sånt du menar (som jag lade till) /Badju}
+\subsubsection{Reflection}
+As a result of the approach regarding which 30 requirements to send, we also used some sort of prioritization, even though it was a simple discussing and reasoning method. When we received their answers they had a few comments and views on why they prioritized the way they did. This helped us get a deeper understanding on their views of importance, as a key customer, regarding the CRASH-system. \todo{Är inte det här metod snarare än reflektion egentligen, säger väl inget om hur vi upplevde top 10? bara vad vi gjorde.. Stycket efter här liknar mer en reflektion, men måste formuleras om ifall den här ska flyttas../Knorn.
+
+Ja fast jag beskriver ändå att deras kommentarer och tankar gav oss en djupare förståelse för vad de tyckte var viktigast genom en liten beskrivning av vår process. Har flyttat upp ett stycke till metod också.  /Badju}
+
+\noindent There was one drawback however, since we only picked three stakeholders we did not allow all stakeholders to participate which would have been a more accurate approach but the ones we picked out for this method were the three most important stakeholders so the result is probably accurate enough.
 During development of requirement specification it is hard to satisfy all the stakeholders and it is important to use this kind of methods in order to satisfy as many stakeholders as possible to be happy with the proposed solution.
 
 \subsection{The 100 dollar-method}
@@ -391,8 +396,8 @@ In the beginning of the project we made a mind map of what parts we thought woul
 \subsubsection{Method}
 Our strategy was to have one team member standing by a white board, adding the suggestions of what the CRASH-system needed from the team. After a while we had a web of entities, that we at that point believed was a complete description of the system. We digitalized the mind map and sent it to the customer for validation. 
 \subsubsection{Reflection}
-This was a first attempt to shrink the project scope but the customer didn't agree on removing any of the features we'd decided would be too much for this project. The response we got from our supervisor was that we needed to satisfy the customer by telling them we haven't removed the features just putted them in a later release which we had to take into account while developing the system solution anyhow.
-The mindmap approach however was a good way for everybody to have a say in what they thought the system needed as well as giving all project members a overview of the system.
+This was a first attempt to shrink the project scope but the customer didn't agree on removing too many the features we'd decided would be too much for this project. The response we got from our supervisor was that we needed to satisfy the customer by telling them we haven't removed the features just moved them to a later release which we had to take into account while developing the system solution anyhow.
+The mind map approach however was a good way for everybody to have a say in what they thought the system needed as well as giving all project members a overview of the system.
 
 
 %%%%% INDIVIDUAL STATEMENTS %%%%%%%%%
@@ -400,7 +405,7 @@ The mindmap approach however was a good way for everybody to have a say in what 
 \noindent
 \todo{Jag tycker inte vi behöver skriva de här i tredjeperson längre, blir bara konstigt om man ska ha med reflektioner etc, tycker också det känns onödigt att ha med att man varit med och aktiv på interna möten etc nu när vi har mer att skriva (till r1 var det ju vettigt för att få nått nerskrivet).. /Knorn}
 \subsection{Alexander Badju, P3RM}
-Alexander's contribution has consisted of organizing some of the work load as well as being responsible for the last draft of the reports. Besides regular group work and taking part of meetings he has mostly worked with developing and eliciting all types of system requirements as well as developing and altering scenarios. 
+My contribution has consisted of organizing some of the work load as well as being responsible for the last draft of the reports and sending in everything that needs to be sent in. I have mostly worked with developing and eliciting all types of system requirements. How they should be formulated, the grouping of the requirements. I have also worked with developing and altering scenarios. Regarding the project experience I have written some paragraphs but I have mostly edited some parts of the report and I have also done some language alterations.
 \subsection{Fredrik Helander, EPM}
 Fredrik has participated in group meetings and discussions as well as been active in the requirement elicitation process. He has also formulated tasks and requirements, been working on scenarios, as well as documenting project experiences.
 \subsection{Jonathan Klingberg, SCCVM/TDEVM}

@@ -10,6 +10,8 @@
 % include graphics with the command \includegraphics
 \usepackage{graphicx}
 
+\appto\listoftables{\addtocontents{lot}{\protect\setcounter{tocdepth}{2}}}
+
 % Tells latex that the images are kept in a folder named figures under the current directory. 
 \graphicspath{ {figures/} }
 
@@ -60,7 +62,6 @@
 \lstset{style=reqT}
 %KNORN
 
-%\appto\listoftables{\addtocontents{lot}{\protect\setcounter{tocdepth}{2}}}
 
 \begin{document}
 \todo{Det blir nått käbbel med raden som tar bort kraven från table of contents, kika sida 1 i förhandsgranskningen..}

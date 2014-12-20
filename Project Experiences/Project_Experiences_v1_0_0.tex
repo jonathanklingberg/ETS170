@@ -158,12 +158,10 @@ We decided to make a stakeholder analysis since it is a simple way to get an ove
 \paragraph{Method}
 \hfill \break
 Usually when conducting a stakeholder analysis you invite the different stakeholders to a joint meeting, alternatively interview them one by one. Since almost all of the stakeholders we identified were large organizations it was difficult to gather them for a meeting and too time consuming to interview them. As the Internet is a great source of information, we instead chose to study the organizations and formed our own understanding of why they would have any interest in our product. However, for the stakeholders that were not large organisations, such as users, developers, customers, we either simulated user and developer) or had an actual interview with the customer.
-\todo{Skriva kort förklaring till vad vi gjorde med icke-organisationerna (Användare etc)? /Knorn}
-\todo{Räcker det jag lade till längst ner på stycket? /Badju}
 
 \paragraph{Reflection}
 \hfill \break
-While conducting the stakeholder analysis we found that one of the features that most of the stakeholders had in common was their interest in enhanced traffic-security. We also realized that driving schools might lose income in the case that our system would get widely used and people might lose interest in getting driver's licenses. A list of all the stakeholders identified and their interests can be found in the SRS\cite{srs}. 
+While conducting the stakeholder analysis we found that one of the features that most of the stakeholders had in common was their interest in enhanced traffic security. We also realized that driving schools might lose income in the case that our system would get widely used and people might lose interest in getting driver's licenses. A list of all the stakeholders identified and their interests can be found in the SRS\cite{srs}. 
 
 \noindent As mentioned earlier we found it very hard and time consuming to contact all stakeholders since most of them are large organizations. Instead we decided to try to figure out their interests in our system and come up with features of interest for each one of them by ourselves. This means that our view of their interests in the product may not fully correspond with their actual views, but for the scope of this project we thought it was a necessary compromise.
 
@@ -200,13 +198,7 @@ When converting stakeholders aspirations into requirements, we  have to ask them
 One of the things that was made clear after our first interview with our customer was that the system would be made for the private market. Just a few days after our first meeting we had another discussion with them, and this time they had changed their minds and wanted the system to integrate with taxi businesses. The old saying "the customer is always right" can be tricky to follow sometimes, but since LADA is only a key customer in our project, we had the option to deny their requests. At the same time we still wanted our key customer to be satisfied with our solution and therefore it was important to take their requests seriously before we considered excluding them.
 \newline 
 \indent
-There is no way to prevent the customer from changing their mind and this is one of the things that makes the life of a software requirements engineer so varying since you never know what ideas the customer might come up with. However if we in our project would have baselined the SRS, \todo{Har vi gjort det här nu i vid det här lager eller är det rent teoretiskt? /Knorn
-
--Rent teoretiskt.. Har ni bättre saker vi gjort för att unvika att kunden ändrat sig så fyll på bara /JOKL
-
--Formulerade om så att det framgår att det är teoretiskt, känns inte som att egnelskan är den bästa (tror det kan va lite krångel med tempus-form och så bla), nån får gärna kolla över den med färska ögon.. /Knorn
-
-}we could tell the customer to make a change request and then an impact analysis could be carried out. This might discourage the customer to change their mind since they have to accept the additional costs found in the impact analysis.
+There is no way to prevent the customer from changing their mind and this is one of the things that makes the life of a software requirements engineer so varying since you never know what ideas the customer might come up with. However if we in our project would have baselined the SRS, we could have told the customer to make a change request and then an impact analysis could have been carried out. This might discourage the customer to change their mind since they have to accept the additional costs found in the impact analysis.
 
 \subsubsection{Luxury requirements}
 During our first interview we felt that the customer came up with too many requirements. Some of them were essential, while others were just “nice-to-have”, or so called luxury requirements. For example, they wanted the possibility for the autonomous cars to form a train so that the road network would be used more efficiently. While this was a nice feature to have, we did not feel that it was a necessity for achieving their main goals. This and similar disagreements were solved by further negotiations and reasoning. 
@@ -215,11 +207,7 @@ During our first interview we felt that the customer came up with too many requi
 During the elicitation process we asked our customer why they wanted certain features, often multiple times. Our customer was very prone to tell us how they wanted us to fix their problems, rather than specifying their problems. This is common behaviour for customers and it is always up to the developers to question their solutions and focus on their problem rather than their proposed solutions. If we manage to do this we are more likely to end up with a system-solution that is more suitable for their needs. However, if we cannot convince the customer that our solution is better than theirs, we might have to give up our solution or at least negotiate a solution that satisfies both parties.
 For example, in our case the customer told us in the beginning that they wanted some sort of parental control in the system, but after further investigation we found out that what they really wanted was just another user type who would not be allowed to change destination.
 \newline
-\indent In the process of eliciting requirements we discovered new problems and issues along the way when exploring different possibilities with the CRASH-system. Since the scope for the project is so large, it felt like we were constantly finding new fields to discover, this led us to look into and use different elicitation techniques in order to find suitable requirements for different situations. We mostly did this through reflections, brainstorming, discussions with each other as well as complementing the process with writing down scenarios. E.g. When determining the requirement that states that the car may break traffic laws if an accident is imminent, we used a scenario to further guide the reader \todo{Det är så här vi använder scenarios väl?, de är ju inte krav.. /Knorn
-
-Förstår inte riktigt den här TODO:n eller problemet den belyser, texten är väl bara ett exempel på hur ett scenario kompletterar krav som kan tolkas på olika sätt? /Badju
-
-Ingen TODO per se, i brist på kommentars-möjligheter i sharelatex la jag in det såhär.. Jag ändrade texten för att det stod att vi hade lagt till det som ett scenario med krav, men det är inte så vi använder scenarios (lucid scenarios eller nått sånt skit kallas det, Nick har koll), så jag formulerade om det så att det beskriver hur vi använder det, ville bara att ni skulle kolla så att jag beskrev det på rätt sätt.. /Knorn} and brainstormed how such a scenario might play out.
+\indent In the process of eliciting requirements we discovered new problems and issues along the way when exploring different possibilities with the CRASH-system. Since the scope for the project is so large, it felt like we were constantly finding new fields to discover, this led us to look into and use different elicitation techniques in order to find suitable requirements for different situations. We mostly did this through reflections, brainstorming, discussions with each other as well as complementing the process with writing down scenarios. E.g. When determining the requirement that states that the car may break traffic laws if an accident is imminent, we used a scenario to further guide the reader and brainstormed how such a scenario might play out.
 
 %%%%% REQUIREMENTS SPECIFICATION SECTION %%%%%%%%%
 \section{Specification}
@@ -404,6 +392,7 @@ For this prioritization method we used the ten requirements from the top ten met
 The interesting part of the 100 dollar-method is that the prioritization looks so different depending on which stakeholder does the weighted prioritization. This is important when looking for a broad view of what is important for the system as well as identifying, which requirements are most important. After a brief analyse of the result we found that developers though it was rather important for the system to have a positioning system whilst the customer and the users wanted the driver to be able to choose and change destination much more than the developer. After weighing the stakeholders against each other, the end result showed that the functionality of choosing and changing the destination was more important than the positioning system. This result is made us discuss if the weighing between the stakeholders was correct, since the system might not function without a positioning system.
 
 \subsection{Mind map prioritization}
+\noindent In our attempts to reduce the project scope we created a mindmap where all different features where presented, this allowed us to cut the least important branches and focus on the more important ones. The mind map are found in appendix B.
 \todo{Få gärna med en referens till bilden på mindmappen i appendix B}
 \subsubsection{Motivation}
 In the beginning of the project we made a mind map of what parts we thought would be most important for the system. This prioritization was done since we wanted to get an overview of the system and at the same time find the most important requirements as well as the most time consuming parts so we could allocate time and resources to those parts first.
@@ -411,15 +400,10 @@ In the beginning of the project we made a mind map of what parts we thought woul
 Our strategy was to have one team member standing by a white board, adding the suggestions of what the CRASH-system needed from the team. After a while we had a web of entities, that we at that point believed was a complete description of the system. We digitalized the mind map and sent it to the customer for validation. 
 \subsubsection{Reflection}
 This was a first attempt to shrink the project scope but the customer did not agree on removing too many the features we had decided would be too much for this project. The response we got from our supervisor was that we needed to satisfy the customer by telling them we have not removed the features just moved them to a later release which we had to take into account while developing the system solution anyhow.
+We also found dependencies between the features which in the end proved out to be rather complex dependencies such as the ones between safety and authentication.
 The mind map approach however was a good way for everybody to have a say in what they thought the system needed as well as giving all project members a overview of the system.
 
-
 \section{Release Planning}
-\noindent The 10 requirements that we've picked out for the release plan are the most important ones for our customer, the end-user and to the developers together, this was found out by using the top ten method. The release plan is based on the result from the \$100-method (Prio \$100-column) and on the developers effort estimates (cost-column). We've also estimated the resource capacities for release 3 and release 4 to 50 days each. Luckily the developers cost-estimates were matching the resources needed both for release 3 and release 4 meaning that if our plan proves to be correct all 10 requirements will have been implemented when release 4 is ready. \\
-
-\noindent The release plan also consists of some complexity since some of the dependencies are dependent on each other. This forces some of the requirements to be implemented in a previous release before they can be implemented. Luckily the developers have manage to implement all of the requirements needed for this plan to work out already in release 1, 2 and 3, see dependencies-column. However for those requirement that were lacking dependencies we've putted the most valuable ones in R3 until the capacity for R3 was filled and the rest will be implemented in R4.
-
-\todo{Fram till hit ar samma som sags i SRS, vet ej vad som ska vara var?/JOKL}
 \noindent We couldn't assume any requirements for the mock-up would have been implemented in release 1-3 simply since we didn't have any, therefore we instead decided to assume the requirements needed for the ten most valuable requirements were already implemented.
 
 %%%%% INDIVIDUAL STATEMENTS %%%%%%%%%
@@ -431,14 +415,13 @@ My contribution has consisted of organizing some of the work load as well as bei
 \subsection{Fredrik Helander, EPM}
 I have contributed in group meetings and discussions as well as been active in the requirement elicitation process. I have formulated tasks and scenarios as well contributed in the process of categorizing and formulating requirements. In the project experiences document I have reflected on some of the elicitation techniques used.
 \subsection{Jonathan Klingberg, SCCVM/TDEVM}
-Jonathan has written parts of the project experiences document, besides this and the regular project work such as being active at meetings and group discussions, he has also been working with setting up tools including some initial tool guidance for the other project members.
-Jonathan was responsible for setting up a validation technique with the customer, this ended up in a walk-through which result was of great benefit during internal validation of the second release SRS.
+In the beginning I was responsible for setting up tools which also including some initial tool guidance for the other project members, this proved to be a rather hard task since the first tool setup didn't work out as expected and we had to change approach for release 2. Throughout the project I've been the main communicator taking care of the mail conversations with both Compromizr and CRASH, this have worked out just fine and we had no problems with the other groups besides that they didn't help us to reduce the project scope. Besides the regular work with finding requirements for a sustainable system solution I've also put an extra effort to the checking and validation processes both for CRASH and Compromizr. This included responsibility for setting up a validation technique with the customer, which ended up in a walk-through. I was also responsible for the validation checklist and setting up the validation meeting.
 \subsection{Jonathan Knorn, TDEVM}
 
 \subsection{David Lundberg, QRM}
-David has been working mostly with the requirements. He has also been active at the meetings, worked with scenarios as well as finding elicitation methods. He has worked with all requirements categories with a focus on goal and quality. 
+I have mainly contributed to this project by eliciting, specifying, grouping and finding dependencies for requirements. Furthermore, I have worked with scenarios, data dictionaries and both writing and proofreading the report.
 \subsection{Niklas Sjöberg, DRM}
-Niklas has taken part in group meetings as well as customer meetings. Attended the reqT introduction meeting. Worked with elicitation techniques and requirements elicitation, and written parts of the project experiences document. 
+I have taken part in group meetings as well as customer meetings. Attended the reqT introduction meeting. Worked with elicitation techniques and requirements elicitation, and written parts of the project experiences document. 
 
 \newpage
 %\addcontentsline{toc}{section}{References}

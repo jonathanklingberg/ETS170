@@ -43,29 +43,6 @@
 \usepackage{mdwlist}
 
 
-%KNORN
-\usepackage{hyperref}
-\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
-%\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
-\definecolor{entityColor}{RGB}{0,100,200}
-\definecolor{attributeColor}{RGB}{0,100,50}
-\definecolor{relationColor}{RGB}{160,0,30}
-\usepackage{listings}
-\lstdefinestyle{reqT}{
-  belowcaptionskip=1\baselineskip,
-  breaklines=true,
-  showstringspaces=false,
-  basicstyle=\footnotesize\sffamily,
-  emph={Ent,Meta,Item,Label,Section,Term,Actor,App,Component,Domain,Module,Product,Release,Resource,Risk,Service,Stakeholder,System,User,Class,Data,Input,Member,Output,Relationship,Design,Screen,MockUp,Function,Interface,Epic,Feature,Goal,Idea,Issue,Req,Ticket,WorkPackage,Breakpoint,Barrier,Quality,Target,Scenario,Task,Test,Story,UseCase,VariationPoint,Variant},
-  emphstyle=\bfseries\color{entityColor},
-  emph={[2]has,is,superOf,binds,deprecates,excludes,helps,hurts,impacts,implements,interactsWith,precedes,requires,relatesTo,verifies},
-  emphstyle={[2]\bfseries\color{relationColor}},
-  emph={[3]Attr,Code,Constraints,Comment,Deprecated,Example,Expectation,FileName,Gist,Image,Spec,Text,Title,Why,Benefit,Capacity,Cost,Damage,Frequency,Min,Max,Order,Prio,Probability,Profit,Value,Status},
-  emphstyle={[3]\color{attributeColor}},  
-}
-\lstset{style=reqT}
-%KNORN
-
 % Denna rad ser till så att subsubsection (kraven) döljs i table of contents //Nick 
 \setcounter{tocdepth}{2}
 
@@ -101,7 +78,6 @@
 \listoffigures
 \thispagestyle{empty}
 \endgroup
-\todo{Ska vi lägga till "requirements" i rubrikerna kanske? General requirements, Safety requirements etc. Blir lättare att läsa innehållsförteckningen då. (Goals och Scenarios tycker jag vi skippar det på dock) /Knorn }
 \newpage
 \pagenumbering{arabic}
 
@@ -137,25 +113,23 @@
 
 The system must provide maximum traffic safety using the very latest achievements in the fields of navigation and anti-collision technology. This together with high passenger comfortability and excellent fuel economy will place CRASH ahead of its competition.
 
-\subsection{Actors and their objectives}
+\subsection{Context diagram}
 \noindent The system has a large number of external actors, which communicates with the system in one way or another. \\
-\todo{Jag la in det nya kontextdiagrammet och eftersom det endast finns med end-user föreslår jag att traveler, passenger, driver och owner flyttas ner till terminology. På så sätt bör vi också ändra rubriken här. End-users och samtliga interface borde vi dock beskriva här (eller i samband med bilden av kontextdiagrammet). Alternativt så flyttas kontextdiagrammet och dess beskrivning till ett annat ställe //Nick }
+
 \noindent
 \noindent\textbf{Surroundings sensory system} - A system that consists of several different sensors that senses the cars surroundings.  \\
-\textbf{Positioning system} - \\\todo{infoga beskrivning? /Knorn}
-\textbf{Service station} - \\
-\textbf{Gas station} - \\
-\textbf{Car control system} - A system that control the cars maneuvering components such as throttle and steering components. \\
-\textbf{Weather forecast system} - A system that  provide weather forecasts that the car can download and use to warn about dangerous weather conditions along the current route.  \\
-\textbf{Traffic information system} - A system that keeps track of the current traffic situation (e.g. accidents, queues etc). \\
-\textbf{Remote system} - \\
-\textbf{Map server} - \\
-\textbf{Traffic laws system} - \\
-\textbf{Car inspection rules and regulations system} - \\
+\textbf{Positioning system} - A system that tells the car its geographical position. \\
+\textbf{Service station} - A service station is a station where the car gets its service and repairs.\\
+\textbf{Gas station} - Gas stations which supports automatic refueling for CRASH supported cars.\\
+\textbf{Car control system} - A system that controls the cars maneuvering components such as throttle and steering components. \\
+\textbf{Weather forecast system} - A system that provides weather forecasts that the car can download and use to warn about dangerous weather conditions along the current route.  \\
+\textbf{Traffic information system} - A system that provides current traffic situations (e.g. accidents, queues etc). \\
+\textbf{Remote system} - A system making it possible for a user to communicate with the car remotely.\\
+\textbf{Map server} - A server which pushes new map updates to the system. \\
+\textbf{Traffic laws system} - The system that updates traffic laws used by the system.\\
+\textbf{Car inspection rules and regulations system} - The system that updates car inspection rules and regulations used when the system evaluates its status. \\
 %\textbf{Position data system} - A system where the car can upload its current position. Used by the owner to locate the cars position and follow it along its path.  \\
-\todo{All text är alldeles för liten just nu. Vet inte hur vi ska lösa det, men ett förslag att börja med är ju att ändra indragen för hela dokumentet (ser inget vidare ut just nu ändå i mitt tycke) //Nick
 
-Vi kan väl bara bifoga kontextdiagrammet separat annars? Ändå lika bra känner jag. /Badju}
 \begin{figure}[htb]    
  \centering
   \includegraphics[width=0.9\textwidth]
@@ -210,30 +184,29 @@ The driver can also drive the car manually, handle the voice control as well as 
 \- \- \-The system must reduce cars' negative impacts on the environment through fuel efficiency
 \bigskip
 
-\section{General}
+\section{General requirements}
 \setcounter{subsubsection}{0}
     \subsubsection{Requirement}
 \hfill \break 
 \- \- \-The system must support the functionality in the context diagram in figure \ref{ContextDiagram}
 
 \section{Scenarios}
-\noindent The following scenarios should be used to improve developer intuition. These scenarios are prioritized.
-\todo{Vad innebar prioritized? /Knorn. Låter jättekonstigt /David}
+\noindent The following scenarios should be used to improve developer intuition. 
 
-\subsection {Remote pickup scenario}
+\subsection {Remote pickup}
 %Niklas is an owner of a CRASH-supported car and his football practice is over. He now remotely tells his car to pick him and his friend up at the football pitch, using his phone. The car then drives to pick Niklas and his friend up. When the car arrives, Niklas and his friend enter the car. Niklas tells the car which addresses to drive to, when this is done, the car drives the passengers to the given addresses. Niklas's friends lives further away than Niklas but since Niklas is tired he wants to be dropped off first. Niklas exits the car at his home, which then drives to the friend's house. After dropping of the friend, the car drives back to Niklas's home and parks.
 \noindent Niklas is an owner of a CRASH-supported car and his football practice is over. He now remotely tells his car to pick him and his friend up at the football pitch. The car then drives to pick Niklas and his friend up. When the car arrives, Niklas and his friend enter the car. Niklas tells the car which address to drive to, when this is done, the car drives the passengers to the given address. Niklas's friends lives further away than Niklas but since Niklas is tired he wanted to be dropped off first. When the car arrives at Niklas's home he tells the car the new address to drive to and thereafter exits the car. The car then drives to the friend's house. After dropping of the friend, the car drives back to Niklas's home and parks.
 
-\subsection {Predetermined route scenario}
+\subsection {Predetermined route}
 \noindent Jonathan is an Owner of a CRASH-supported car and he got stuck in a meeting at work, which means that he cannot pick up his daughter at school as planned. Instead he uses his phone to remotely tell his car to pick her up. The child receives a notification on her phone from the car that it is on its way for a pick up and how long it should take to arrive. When the car arrives, Jonathan’s daughter enters the car and tells it to drive to the candy store. The car tells her that she isn't allowed to change the route since her user type is set to passenger and the route is predetermined by her father. Therefore, the car drives the child home.
 
-\subsection {Buying new car scenario}
+\subsection {Buying new car}
 \noindent David is at his local LADA dealership to purchase a new LADA with a built-in CRASH system. At the dealership David is associated with owner rights for the new car by an Admin. Since David wants his son Alexander to be able to drive he assigns driver permissions to him as well.
 
-\subsection {Running out of fuel scenario}
+\subsection {Running out of fuel}
 \noindent Gordon is on his way to Stockholm to celebrate Christmas with his family. He has put the CRASH system on autonomous mode so that he can work on the way up. After two hours, the system alerts him that it is running out of fuel, thus the car stops at the nearest CRASH compatible refueling station and refuels itself.
 
-\subsection {Braking a traffic law to avoid an accident}
+\subsection {Breaking a traffic law to avoid an accident}
 \noindent Mathilda and her family are travelling along a road in their car, which has the built in CRASH-system. The road they are travelling on is divided in two lanes, one for each direction of travel and a traffic law stating that "you are not allowed to cross the dividing line" is in place. The truck, driving in front of Mathilda's car, suddenly drops a washing machine on the road behind it. The CRASH-system's sensors and radar register that there is a life threatening object ahead. To avoid an accident, CRASH assesses the situation, acknowledges that there are no cars on the opposite side of the road and avoids the obstacle by crossing the "do not cross"-line until the car has passed the obstacle, thereby braking a traffic law to avoid an accident.
 
 \subsection {Unknown position}
@@ -261,7 +234,7 @@ The driver can also drive the car manually, handle the voice control as well as 
 %\tab{ } \tab{2b.} \tab{Command rejected, CRASH has no GPS connection.}
 %\medskip
 
-\section{Safety}
+\section{Safety requirements}
   \subsection{Emergency break}
       \subsubsection{Requirement}
 \hfill \break 
@@ -301,21 +274,18 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \indent
 4.Follow traffic rules
   \subsection{Weather and traffic information}
-  \todo{Product!}
-  \todo{Vad betyder product!?!?!?! /Knorn}
 \subsubsection {Requirement}
 \hfill \break 
 \- \- \-The following task must be supported by the system:\\
 \hfill \break 
-\textbf{Task:} \tab{User A is informed of current weather situation}\\ 
-\textbf{Purpose:} \tab{Avoid danger caused by weather.}\\
-\textbf{Precondition:} \tab{The vehicle is not moving. A has drive permissions.}\\ 
-\textbf{Trigger:} \tab{A gives a drive command to the car.}\\
+\textbf{Task:} \tab{User A is informed of the current weather situation}\\ 
+\textbf{Purpose:} \tab{Avoid danger caused by weather along the route.}\\
+\textbf{Precondition:} \tab{A route is selected but the vehicle has not received a command}\\
+ \tab{ } \tab{to start driving.}\\
+\textbf{Trigger:} \tab{A gives a command to initiate the route.}\\
 \\
-\textbf{Variants:} \tab{1a.} \tab{The system accepts the command and drives to \tab{ } \tab{ } \tab{destination.}\\
-\tab{ } \tab{1b.} \tab{The system informs A of dangerous weather conditions,}\\
-\tab{ } \tab{ } \tab{however,  command is still accepted.}\\
-\tab{ } \tab{2.} \tab{The system informs A of dangerous weather conditions}\\ \tab{ } \tab{ } \tab{and rejects drive command.}
+\textbf{Variants:} \tab{1.} \tab{The system accepts the command and drives to the \tab{ } \tab{ } \tab{destination.}\\
+\tab{ } \tab{2.} \tab{The system informs of dangerous weather along the route}\\ \tab{ } \tab{ } \tab{and asks the user to confirm the command.}
 \bigskip
   
       \subsubsection{Requirement}
@@ -323,7 +293,7 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \- \- \-The system must give a warning when dangerous weather conditions are predicted along the planned route
       \subsubsection{Requirement}
 \hfill \break 
-\- \- \-Any dangerous weather conditions must be notified, to the user, when a route is selected, before a route is commenced
+\- \- \-Any dangerous weather conditions must be notified, to the user, when a route is selected, before the route is commenced
       \subsubsection{Requirement}
 \hfill \break 
 \- \- \-Traffic and weather data must be fetched every minute when an Internet connection is available
@@ -335,7 +305,7 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \hfill \break 
 \- \- \-When the car is in an unsafe state the car must not be allowed to drive.
 
-\section{Surroundings}
+\section{Surroundings requirements}
   \subsection{Positioning}
       \subsubsection{Requirement}
 \hfill \break 
@@ -394,7 +364,7 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \hfill \break 
 \- \- \-The sensor system must be able to identify objects larger than 2 m at a distance of 300 m
 
-\section{Traffic rules}
+\section{Traffic rules requirements}
     \setcounter{subsubsection}{0}
     \subsubsection{Requirement}
 \hfill \break 
@@ -409,7 +379,7 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \hfill \break 
 \- \- \-The system must query for new car inspection rules and regulations once a day
 
-\section{Users}
+\section{Users requirements}
   \subsection{Permissions}
       \subsubsection{Requirement}
 \hfill \break 
@@ -419,7 +389,7 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \- \- \-Passengers must be able to unlock the car and initiate transportation
       \subsubsection{Requirement}
 \hfill \break 
-\- \- \-A driver has\todo{Är det ok med "has" i krav? /Knorn} the same rights as a passenger and must be able to select and change destination address as well as change to and from manual driving mode
+\- \- \-A driver has the same rights as a passenger and must be able to select and change destination address as well as change to and from manual driving mode
       \subsubsection{Requirement}
 \hfill \break 
 \- \- \-An owner has the same rights as a driver and must be able to add, remove and edit users of user type passenger and driver
@@ -496,7 +466,9 @@ In the situation of an imminent accident, the system must prioritize in the foll
       \subsubsection{Requirement}
 \hfill \break 
 \- \- \-The system must store the user-entries according the data dictionary in figure \ref{fi:dd1}
+\todo{Ser konstigt ut när bilden hamnar på nästa sida just nu, bör ses över innan inlämning (När all formattering är klar) /Knorn
 
+Ser bättre ut nu, men bör kollas innan inlämning /Knorn}
 \begin{figure}[!htb]   
  \centering
  \includegraphics[width=0.9\textwidth]
@@ -505,8 +477,8 @@ In the situation of an imminent accident, the system must prioritize in the foll
   \label{fi:dd1}
 \end{figure}
 \bigskip
-
-\section{Manual Drive}
+\todo{Nick fixar ny bild utan de röda stavnings-strecken när han kommer tillbaka}
+\section{Manual drive requirements}
   \subsection{Activation}
 \subsubsection {Requirement}
 \hfill \break 
@@ -562,7 +534,7 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \hfill \break 
 \- \- \-The system must respond to a potential accident before the accident is unavoidable
 
-\section{I/O}
+\section{I/O requirements}
 \setcounter{subsubsection}{0}
 \subsubsection {Requirement}
 \hfill \break 
@@ -632,7 +604,7 @@ In the situation of an imminent accident, the system must prioritize in the foll
   \label{fi:designmockup}
 \end{figure}
 
-\section{Remote}
+\section{Remote requirements}
 \setcounter{subsubsection}{0}
 \subsubsection {Requirement}
 \hfill \break 
@@ -670,7 +642,7 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \hfill \break 
 \- \- \-The remote device must be able to display the last known location of the car
 
-\section{Updates}
+\section{Update requirements}
 \setcounter{subsubsection}{0}
     \subsubsection{Requirement}
 \hfill \break 
@@ -685,7 +657,7 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \hfill \break 
 \- \- \-System updates must only be performed when the car is parked
 
-\section{Data storage}
+\section{Data storage requirements}
 \setcounter{subsubsection}{0}
     \subsubsection{Requirement}
 \hfill \break 
@@ -718,7 +690,7 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \indent
 \textbf{14.0.2.h} User type of the users in the car
 
-\section{Car Status}
+\section{Car status requirements}
   \subsection{Service log}
       \subsubsection{Requirement}
 \hfill \break 
@@ -746,7 +718,7 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \hfill \break 
 \- \- \-The car must be able to re-fuel on its own
 
-\section{Authentication}
+\section{Authentication requirements}
 \setcounter{subsubsection}{0}
 \subsubsection {Requirement}
 \hfill \break 
@@ -771,7 +743,7 @@ In the situation of an imminent accident, the system must prioritize in the foll
 \- \- \-The authentication sensor must have a margin of error less than 1 ppm
 \bigskip
 
-\section{Comfort}
+\section{Comfort requirements}
 \setcounter{subsubsection}{0}
     \subsubsection{Requirement}
 \hfill \break 
@@ -782,6 +754,11 @@ In the situation of an imminent accident, the system must prioritize in the foll
     \subsubsection{Requirement}
 \hfill \break 
 \- \- \-EcoDriving must be performed according to the current definition by Sveriges Trafikskolors Riksförbund
+
+\section{Release planning}
+\noindent The 10 requirements that we've picked out for the release plan are the most important ones for our customer, the end-user and to the developers together, this was found out by using the top ten method. The release plan is based on the result from the \$100-method (Prio \$100-column) and on the developers effort estimates (cost-column). We've also estimated the resource capacities for release 3 and release 4 to 50 days each. Luckily the developers cost-estimates were matching the resources needed both for release 3 and release 4 meaning that if our plan proves to be correct all 10 requirements will have been implemented when release 4 is ready. \\
+
+\noindent The release plan also consists of some complexity since some of the dependencies are dependent on each other. This forces some of the requirements to be implemented in a previous release before they can be implemented. Luckily the developers have manage to implement all of the requirements needed for this plan to work out already in release 1, 2 and 3, see dependencies-column. However for those requirement that were lacking dependencies we've putted the most valuable ones in R3 until the capacity for R3 was filled and the rest will be implemented in R4.
 
 \newpage
 
